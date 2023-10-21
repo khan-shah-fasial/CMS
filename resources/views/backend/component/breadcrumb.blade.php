@@ -1,5 +1,4 @@
-@extends('backend.layouts.app')
-@section('breadcrumb')
+
 <!---------------------- Header (Page header) ---------------->
 
     <div class="col-12">
@@ -21,7 +20,7 @@
                 </form>
             </div>
             <h4 class="page-title">Dashboard</h4>
+
         </div>
     </div>
 
-@endsection

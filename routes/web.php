@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/testing-page','backend.layouts.app');
+Route::get('testing-page1', function () {
+    return view('backend.pages.dashboard.index');
+});

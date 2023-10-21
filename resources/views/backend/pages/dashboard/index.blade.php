@@ -1,6 +1,6 @@
 @extends('backend.layouts.app') <!--, [$pageInfo]-->
-@section('content')
 
+@section('content')
 
 <div class="col-xl-5 col-lg-6">
 
@@ -73,8 +73,5 @@
     </div> <!-- end row -->
 
 </div> <!-- end col -->
-
-
-
 
 @endsection

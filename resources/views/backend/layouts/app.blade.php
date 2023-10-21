@@ -37,7 +37,7 @@
 
                         <!---------page header------->
                         <div class="row">
-                            @yield('breadcrumb')
+                        @include('backend.component.breadcrumb')
                         </div>
 
                         <!-------Page contain---------->
