@@ -15,11 +15,8 @@ use App\Http\Controllers\backend\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return redirect(route('backend.login'));
-});
-
 //authentication
+Route::get('/', function () { return redirect(route('backend.login')); });
 Route::get('/login', [AuthenticateController::class, 'index'])->name('backend.login');
 Route::post('/login', [AuthenticateController::class, 'login'])->name('backend.login');
 Route::get('/logout', [AuthenticateController::class, 'logout'])->name('backend.logout');
