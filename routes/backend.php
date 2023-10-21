@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BackendAuthenticateController;
+use App\Http\Controllers\backend\AuthenticateController;
+use App\Http\Controllers\backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,11 @@ Route::get('/', function () {
     return redirect(route('backend.login'));
 });
 
-Route::get('/login', [BackendAuthenticateController::class, 'login'])->name('backend.login');
+Route::get('/login', [AuthenticateController::class, 'index'])->name('backend.login');
+
+Route::post('/login', [AuthenticateController::class, 'login'])->name('backend.login');
+Route::get('/logout', [AuthenticateController::class, 'logout']);
+
+Route::get('/dashboard', function(){
+    return 'dashboard';
+})->name('backend.dashboard');
