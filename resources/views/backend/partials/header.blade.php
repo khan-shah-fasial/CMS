@@ -7,7 +7,7 @@
                         <!-- Topbar Brand Logo -->
                         <div class="logo-topbar">
                             <!-- Logo light -->
-                            <a href="https://coderthemes.com/hyper/modern/index.html" class="logo-light">
+                            <a href="#" class="logo-light">
                                 <span class="logo-lg">
                                     <img src="/assets/images/logo.png" alt="logo">
                                 </span>
@@ -17,7 +17,7 @@
                             </a>
 
                             <!-- Logo Dark -->
-                            <a href="https://coderthemes.com/hyper/modern/index.html" class="logo-dark">
+                            <a href="#" class="logo-dark">
                                 <span class="logo-lg">
                                     <img src="/assets/images/logo-dark.png" alt="dark logo">
                                 </span>
@@ -42,7 +42,8 @@
                         </button>
 
                         <!-- Topbar Search Form -->
-                        <div class="app-search dropdown d-none d-lg-block">
+                {{--    
+                     <div class="app-search dropdown d-none d-lg-block">
                             <form>
                                 <div class="input-group">
                                     <input type="search" class="form-control dropdown-toggle" placeholder="Search..." id="top-search">
@@ -103,12 +104,13 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
+                            </div> 
+                        </div> 
+                --}}
                     </div>
 
                     <ul class="topbar-menu d-flex align-items-center gap-3">
-                        <li class="dropdown d-lg-none">
+                    {{--    <li class="dropdown d-lg-none">
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="https://coderthemes.com/hyper/modern/index.html#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <i class="ri-search-line font-22"></i>
                             </a>
@@ -118,8 +120,8 @@
                                 </form>
                             </div>
                         </li>
-
-                        <li class="dropdown">
+                    --}}
+                    {{--    <li class="dropdown">
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="https://coderthemes.com/hyper/modern/index.html#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <img src="/assets/images/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
                                 <span class="align-middle d-none d-lg-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
@@ -148,8 +150,9 @@
 
                             </div>
                         </li>
+                    --}}
 
-                        <li class="dropdown notification-list">
+                    {{-- <li class="dropdown notification-list">
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="https://coderthemes.com/hyper/modern/index.html#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <i class="ri-notification-3-line font-22"></i>
                                 <span class="noti-icon-badge"></span>
@@ -278,8 +281,9 @@
 
                             </div>
                         </li>
+                    --}}
 
-                        <li class="dropdown d-none d-sm-inline-block">
+                    {{-- <li class="dropdown d-none d-sm-inline-block">
                             <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="https://coderthemes.com/hyper/modern/index.html#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <i class="ri-apps-2-line font-22"></i>
                             </a>
@@ -331,34 +335,37 @@
 
                             </div>
                         </li>
+                    --}}
 
-                        <li class="d-none d-sm-inline-block">
+                    {{--<li class="d-none d-sm-inline-block">
                             <a class="nav-link" data-bs-toggle="offcanvas" href="https://coderthemes.com/hyper/modern/index.html#theme-settings-offcanvas">
                                 <i class="ri-settings-3-line font-22"></i>
                             </a>
                         </li>
+                    --}}
 
-                        <li class="d-none d-sm-inline-block">
+                    {{--<li class="d-none d-sm-inline-block">
                             <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Theme Mode" data-bs-original-title="Theme Mode">
                                 <i class="ri-moon-line font-22"></i>
                             </div>
                         </li>
+                    --}}
 
 
                         <li class="d-none d-md-inline-block">
-                            <a class="nav-link" href="https://coderthemes.com/hyper/modern/index.html" data-toggle="fullscreen">
+                            <a class="nav-link" href="" data-toggle="fullscreen">
                                 <i class="ri-fullscreen-line font-22"></i>
                             </a>
                         </li>
 
                         <li class="dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="https://coderthemes.com/hyper/modern/index.html#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                 <span class="account-user-avatar">
-                                    <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/avatar-1.jpg" alt="user-image" width="32" class="rounded-circle">
+                                    <img src="/assets/images/avatar-1.jpg" alt="user-image" width="32" class="rounded-circle">
                                 </span>
                                 <span class="d-lg-flex flex-column gap-1 d-none">
-                                    <h5 class="my-0">Dominic Keller</h5>
-                                    <h6 class="my-0 fw-normal">Founder</h6>
+                                    <h5 class="my-0">{{ auth()->user()->name }}</h5>
+                                    <h6 class="my-0 fw-normal">Super Admin</h6>
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
@@ -366,7 +373,7 @@
                                 <div class=" dropdown-header noti-title">
                                     <h6 class="text-overflow m-0">Welcome !</h6>
                                 </div>
-
+                            {{--    
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item">
                                     <i class="mdi mdi-account-circle me-1"></i>
@@ -390,9 +397,9 @@
                                     <i class="mdi mdi-lock-outline me-1"></i>
                                     <span>Lock Screen</span>
                                 </a>
-
+                            --}}
                                 <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">
+                                <a href="{{ route('backend.logout') }}" class="dropdown-item">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Logout</span>
                                 </a>

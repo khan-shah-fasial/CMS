@@ -3,6 +3,7 @@
 
     <div class="col-12">
         <div class="page-title-box">
+            {{--
             <div class="page-title-right">
                 <form class="d-flex">
                     <div class="input-group">
@@ -19,6 +20,7 @@
                     </a>
                 </form>
             </div>
+            --}}
             <h4 class="page-title">Dashboard</h4>
 
         </div>
