@@ -21,3 +21,6 @@
 
 <!-- select2 css -->
 <link rel="stylesheet" href="/assets/backend/css/select2.min.css">
+
+<!-- toastr css -->
+<link rel="stylesheet" href="/assets/backend/css/toastr.min.css">

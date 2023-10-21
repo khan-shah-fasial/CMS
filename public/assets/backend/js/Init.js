@@ -1,3 +1,21 @@
+toastr.options = {
+    "showHideTransition": 'plain',
+    "closeButton": true,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "500",
+    "timeOut": "7000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+
 //bootstarp modals
 function largeModal(url, header) {  
     $('#largeModal .modal-body').html('Loading...');
@@ -73,4 +91,44 @@ function initValidate(selector)
 function initSelect2(selector)
 {
     $(selector).select2();
+}
+
+//Form Submition
+function ajaxSubmit(e, form, callBackFunction) {
+    if(form.valid()) {
+        e.preventDefault();
+        
+        var btn = $(form).find('button[type="submit"]');
+        var btn_text = $(btn).html();
+        $(btn).html('<i class="ri-refresh-line"></i>');
+        $(btn).css('opacity', '0.7');
+        $(btn).css('pointer-events', 'none');
+
+        var action = form.attr('action');
+        var form = e.target;
+        var data = new FormData(form);
+        $.ajax({
+            type: "POST",
+            url: action,
+            processData: false,
+            contentType: false,
+            dataType: 'json',
+            data: data,
+            success: function(response)
+            {
+                $(btn).html(btn_text);
+                $(btn).css('opacity', '1');
+                $(btn).css('pointer-events', 'inherit');
+
+                if (response.status) {
+                    Command: toastr["success"](response.notification, "Success");
+                    callBackFunction(response);
+                }else{
+                    Command: toastr["error"](response.notification, "Alert");
+                }
+            }
+        });
+    }else {
+        toastr.error('Please make sure to fill all the necessary fields');
+    }
 }
