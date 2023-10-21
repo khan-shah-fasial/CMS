@@ -11,6 +11,9 @@
     <!--Stylesheets-->
     @include('backend.partials.css')
 
+    <!-- Theme Config Js -->
+    <script src="/assets/backend/js/hyper-config.js"></script>
+
 </head>
 
     <body class="show">
