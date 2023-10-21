@@ -32,6 +32,7 @@
 <script src="/assets/backend/js/buttons.print.min.js"></script>
 <script src="/assets/backend/js/dataTables.keyTable.min.js"></script>
 <script src="/assets/backend/js/dataTables.select.min.js"></script>
+<script src="/assets/backend/js/demo.datatable-init.js"></script>
 
 <!--jQuery Validate-->
 <script src="/assets/backend/js/jquery.validate.min.js"></script>

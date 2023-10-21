@@ -9,7 +9,8 @@ use App\Models\Faq;
 class FaqController extends Controller
 {
     public function index() {
-        return view('backend.pages.faq.index');
+        $faq = Faq::all();
+        return view('backend.pages.faq.index', compact('faq'));
     }
 
     public function add() {
