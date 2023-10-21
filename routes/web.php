@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('testing-page1', function () {
+    return view('backend.pages.dashboard.index');
+});
