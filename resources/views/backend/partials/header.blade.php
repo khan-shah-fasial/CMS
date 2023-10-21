@@ -344,12 +344,12 @@
                         </li>
                     --}}
 
-                    {{--<li class="d-none d-sm-inline-block">
+                        <li class="d-none d-sm-inline-block">
                             <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Theme Mode" data-bs-original-title="Theme Mode">
                                 <i class="ri-moon-line font-22"></i>
                             </div>
                         </li>
-                    --}}
+                    
 
 
                         <li class="d-none d-md-inline-block">
