@@ -42,7 +42,7 @@
 
                         <!-------Page contain---------->
                         <div class="row">
-                            @yield('content')
+                            @yield('page.content')
                         </div> <!-- end row -->
 
                     </div>
@@ -66,9 +66,13 @@
 
         <!----------------------theme settings--------------------->
         @include('backend.component.theme_settings')
-        
+
+        <!--bootstrap modals-->
+        @include('backend.component.modal')    
+
         <!--javascript-->
         @include('backend.partials.js')
+        @yield('page.scripts')   
 
 </body>
 

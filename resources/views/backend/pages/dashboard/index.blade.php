@@ -1,11 +1,11 @@
 @extends('backend.layouts.app') <!--, [$pageInfo]-->
 
-@section('content')
+@section('page.content')
 
-<div class="col-xl-5 col-lg-6">
+<div class="col-xl-12 col-lg-12">
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="card widget-flat">
                 <div class="card-body">
                     <div class="float-end">
@@ -21,7 +21,7 @@
             </div> <!-- end card-->
         </div> <!-- end col-->
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="card widget-flat">
                 <div class="card-body">
                     <div class="float-end">
@@ -36,10 +36,7 @@
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
-    </div> <!-- end row -->
-
-    <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="card widget-flat">
                 <div class="card-body">
                     <div class="float-end">
@@ -55,7 +52,7 @@
             </div> <!-- end card-->
         </div> <!-- end col-->
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="card widget-flat">
                 <div class="card-body">
                     <div class="float-end">
@@ -69,9 +66,10 @@
                     </p>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
-        </div> <!-- end col-->
+        </div> <!-- end col-->        
     </div> <!-- end row -->
 
 </div> <!-- end col -->
+
 
 @endsection
