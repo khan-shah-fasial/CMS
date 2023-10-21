@@ -2,14 +2,18 @@
 <!-- Daterangepicker css -->
 <link rel="stylesheet" href="/assets/backend/css/daterangepicker.css">
 
- <!-- Vector Map css -->
- <link rel="stylesheet" href="/assets/backend/css/jquery-jvectormap-1.2.2.css">
+<!-- Vector Map css -->
+<link rel="stylesheet" href="/assets/backend/css/jquery-jvectormap-1.2.2.css">
 
- <!-- App css -->
- <link rel="stylesheet" href="/assets/backend/css/app-modern.min.css">
+<!-- App css -->
+<link href="/assets/backend/css/app-modern.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
- <!-- Icons css -->
- <link rel="stylesheet" href="/assets/backend/css/icons.min.css">
+<!-- Icons css -->
+<link href="/assets/backend/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
 
 <!-- Datatables css -->
 <link href="/assets/backend/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />

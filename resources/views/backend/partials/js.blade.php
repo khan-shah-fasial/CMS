@@ -1,6 +1,5 @@
 
-<!-- Theme Config Js -->
-<script src="/assets/backend/js/hyper-config.js"></script>
+
 
 <!-- Vendor js -->
 <script src="/assets/backend/js/vendor.min.js"></script>
