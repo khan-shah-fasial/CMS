@@ -19,11 +19,10 @@ Route::get('/', function () {
     return redirect(route('backend.login'));
 });
 
+//authentication
 Route::get('/login', [AuthenticateController::class, 'index'])->name('backend.login');
-
 Route::post('/login', [AuthenticateController::class, 'login'])->name('backend.login');
-Route::get('/logout', [AuthenticateController::class, 'logout']);
+Route::get('/logout', [AuthenticateController::class, 'logout'])->name('backend.logout');
 
-Route::get('/dashboard', function(){
-    return 'dashboard';
-})->name('backend.dashboard');
+//dashborad
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('backend.dashboard');
