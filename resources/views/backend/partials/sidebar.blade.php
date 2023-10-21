@@ -3,22 +3,22 @@
             <div class="leftside-menu menuitem-active">
 
                 <!-- Brand Logo Light -->
-                <a href="https://coderthemes.com/hyper/modern/index.html" class="logo logo-light">
+                <a href="#" class="logo logo-light">
                     <span class="logo-lg">
-                        <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/logo.png" alt="logo">
+                        <img src="/assets/images/logo.png" alt="logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/logo-sm.png" alt="small logo">
+                        <img src="/assets/images/logo-sm.png" alt="small logo">
                     </span>
                 </a>
 
                 <!-- Brand Logo Dark -->
-                <a href="https://coderthemes.com/hyper/modern/index.html" class="logo logo-dark">
+                <a href="#" class="logo logo-dark">
                     <span class="logo-lg">
-                        <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/logo-dark.png" alt="dark logo">
+                        <img src="/assets/images/logo-dark.png" alt="dark logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/logo-dark-sm.png" alt="small logo">
+                        <img src="/assets/images/logo-dark-sm.png" alt="small logo">
                     </span>
                 </a>
 
@@ -36,9 +36,9 @@
                 <div class="h-100 show" id="leftside-menu-container" data-simplebar="init"><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
                     <!-- Leftbar User -->
                     <div class="leftbar-user">
-                        <a href="https://coderthemes.com/hyper/modern/pages-profile.html">
-                            <img src="./Dashboard _ Hyper - Responsive Bootstrap 5 Admin Dashboard_files/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                            <span class="leftbar-user-name mt-2">Dominic Keller</span>
+                        <a href="#">
+                            <img src="/assets/images/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                            <span class="leftbar-user-name mt-2">{{ auth()->user()->name }}</span>
                         </a>
                     </div>
 
@@ -48,12 +48,12 @@
                         <li class="side-nav-title">Navigation</li>
 
                         <li class="side-nav-item menuitem-active">
-                            <a data-bs-toggle="collapse" href="https://coderthemes.com/hyper/modern/index.html#sidebarDashboards" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                            <a data-bs-toggle="collapse" href="{{ route('backend.dashboard') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="uil-home-alt"></i>
                                 <span class="badge bg-success float-end">5</span>
                                 <span> Dashboards </span>
                             </a>
-                            <div class="collapse show" id="sidebarDashboards">
+                        {{--<div class="collapse show" id="sidebarDashboards">
                                 <ul class="side-nav-second-level">
                                     <li>
                                         <a href="https://coderthemes.com/hyper/modern/dashboard-analytics.html">Analytics</a>
@@ -72,9 +72,10 @@
                                     </li>
                                 </ul>
                             </div>
+                        --}}
                         </li>
 
-                        <li class="side-nav-title">Apps</li>
+                    {{-- <li class="side-nav-title">Apps</li>
 
                         <li class="side-nav-item">
                             <a href="https://coderthemes.com/hyper/modern/apps-calendar.html" class="side-nav-link">
@@ -761,7 +762,7 @@
                             <a href="javascript: void(0);" class="btn btn-secondary btn-sm">Upgrade</a>
                         </div>
                         <!-- end Help Box -->
-
+                    --}}
 
                     </ul>
                     <!--- End Sidemenu -->
