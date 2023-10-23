@@ -6,6 +6,7 @@ use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\FaqController;
 use App\Http\Controllers\backend\TestimonialController;
 use App\Http\Controllers\backend\TeamController;
+use App\Http\Controllers\backend\AwardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,14 +51,25 @@ Route::group(['prefix' => 'testimonial'], function () {
     Route::get('/status/{id}/{status}', [TestimonialController::class, 'status'])->name('testimonial.status');
 });
 
-//faq
+//team
 Route::group(['prefix' => 'team'], function () {
     Route::get('/index', [TeamController::class, 'index'])->name('team.index');
     Route::get('/add', [TeamController::class, 'add'])->name('team.add');
     Route::get('/edit/{id}', [TeamController::class, 'edit'])->name('team.edit');
-    Route::get('/view/{id}', [TeamController::class, 'edit'])->name('team.view');
+    Route::get('/view/{id}', [TeamController::class, 'view'])->name('team.view');
     Route::post('/create', [TeamController::class, 'create'])->name('team.create');
     Route::post('/update', [TeamController::class, 'update'])->name('team.update');
     Route::post('/delete/{id}', [TeamController::class, 'delete'])->name('team.delete');
     Route::get('/status/{id}/{status}', [TeamController::class, 'status'])->name('team.status');
+});
+
+//Award
+Route::group(['prefix' => 'award'], function () {
+    Route::get('/index', [AwardController::class, 'index'])->name('award.index');
+    Route::get('/add', [AwardController::class, 'add'])->name('award.add');
+    Route::get('/edit/{id}', [AwardController::class, 'edit'])->name('award.edit');
+    Route::post('/create', [AwardController::class, 'create'])->name('award.create');
+    Route::post('/update', [AwardController::class, 'update'])->name('award.update');
+    Route::post('/delete/{id}', [AwardController::class, 'delete'])->name('award.delete');
+    Route::get('/status/{id}/{status}', [AwardController::class, 'status'])->name('award.status');
 });
