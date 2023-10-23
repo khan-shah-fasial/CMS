@@ -1,4 +1,4 @@
-<form id="edit_faq_form" action="{{url(route('backend.update'))}}" method="post" enctype="multipart/form-data">
+<form id="edit_faq_form" action="{{url(route('faq.update'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row">
     <div class="col-sm-12">
@@ -16,7 +16,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
-                <button type="submit" class="btn btn-block btn-primary">Create</button>
+                <button type="submit" class="btn btn-block btn-primary">Update</button>
             </div>
         </div>
     </div>

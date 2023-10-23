@@ -35,16 +35,37 @@ class FaqController extends Controller
         return view('backend.pages.faq.edit', compact('faq'));
     }  
     
-    public function delete() {
-        return true;
-    }    
+    public function delete($id) {
+        
+        $faq = Faq::find($id);
+        if (!$faq) {
+            $response = [
+                'status' => false,
+                'notification' => 'Record not found.!',
+            ];
+            return response()->json($response);
+        }
+        $faq->delete();
+
+        $response = [
+            'status' => true,
+            'notification' => 'Faq Deleted successfully!',
+        ];
+
+        return response()->json($response);
+    }  
+    
+    public function status($id, $status) { 
+        $faq = Faq::find($id);
+        $faq->status = $status;
+        $faq->save();
+    
+        return redirect(route('faq.index'))->with('success', 'Status Change successfully!');
+    }  
     
     public function update(Request $request) {
-
         $id = $request->input('id');
-
         $faq = Faq::find($id);
-        // Update product information based on the $request data
         $faq->update($request->all());
 
         $response = [

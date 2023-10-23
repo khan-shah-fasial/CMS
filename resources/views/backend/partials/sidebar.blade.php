@@ -77,10 +77,30 @@
 
                         
                         <li class="side-nav-item menuitem-active">
-                            <a href="{{ route('backend.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
-                                <i class="uil-home-alt"></i>
-                                {{--<span class="badge bg-success float-end">5</span>--}}
-                                <span> Faq </span>
+                            <a href="{{ route('faq.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class=" ri-questionnaire-line"></i> 
+                                <span> FAQs </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('testimonial.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-discuss-line"></i>                                
+                                <span> Testimonials </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('team.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-group-2-line"></i>                                
+                                <span> Teams </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('award.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-award-fill"></i>                                
+                                <span> Awards </span>
                             </a>
                         </li>
 
