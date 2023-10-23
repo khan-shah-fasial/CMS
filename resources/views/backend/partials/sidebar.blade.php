@@ -48,9 +48,9 @@
                         <li class="side-nav-title">Navigation</li>
 
                         <li class="side-nav-item menuitem-active">
-                            <a data-bs-toggle="collapse" href="{{ route('backend.dashboard') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                            <a href="{{ route('backend.dashboard') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="uil-home-alt"></i>
-                                <span class="badge bg-success float-end">5</span>
+                                {{--<span class="badge bg-success float-end">5</span>--}}
                                 <span> Dashboards </span>
                             </a>
                         {{--<div class="collapse show" id="sidebarDashboards">
@@ -73,6 +73,15 @@
                                 </ul>
                             </div>
                         --}}
+                        </li>
+
+                        
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('backend.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="uil-home-alt"></i>
+                                {{--<span class="badge bg-success float-end">5</span>--}}
+                                <span> Faq </span>
+                            </a>
                         </li>
 
                     {{-- <li class="side-nav-title">Apps</li>
