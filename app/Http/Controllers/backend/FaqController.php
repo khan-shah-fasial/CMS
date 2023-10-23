@@ -31,15 +31,28 @@ class FaqController extends Controller
         return response()->json($response);
     }     
 
-    public function edit() {
-        return true;
+    public function edit($id) {
+        $faq = Faq::find($id);
+        return view('backend.pages.faq.edit', compact('faq'));
     }  
     
     public function delete() {
         return true;
     }    
     
-    public function update() {
-        return true;
-    }      
+    public function update(Request $request) {
+
+        $id = $request->input('id');
+
+        $faq = Faq::find($id);
+        // Update product information based on the $request data
+        $faq->update($request->all());
+
+        $response = [
+            'status' => true,
+            'notification' => 'Faq Update successfully!',
+        ];
+
+        return response()->json($response);
+    }   
 }
