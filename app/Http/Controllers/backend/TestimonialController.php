@@ -83,7 +83,7 @@ class TestimonialController extends Controller
     
         if ($request->hasFile('image')) {
             // Update the image if a new one is uploaded
-            $imagePath = $request->file('image')->store('public/assets/image/testimonial');
+            $imagePath = $request->file('image')->store('assets/image/testimonial', 'public');
             $testimonial->image = $imagePath;
         }
     

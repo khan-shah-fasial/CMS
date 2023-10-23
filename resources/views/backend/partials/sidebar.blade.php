@@ -97,6 +97,13 @@
                             </a>
                         </li>
 
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('award.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-award-fill"></i>                                
+                                <span> Awards </span>
+                            </a>
+                        </li>
+
                     {{-- <li class="side-nav-title">Apps</li>
 
                         <li class="side-nav-item">
