@@ -1,4 +1,4 @@
-<form id="add_faq_form" action="{{url(route('backend.create'))}}" method="post" enctype="multipart/form-data">
+<form id="add_faq_form" action="{{url(route('faq.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row">
     <div class="col-sm-12">

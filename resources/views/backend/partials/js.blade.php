@@ -45,3 +45,10 @@
 
 <!--Init-->
 <script src="/assets/backend/js/Init.js"></script>
+
+<!--custom-->
+@if(session()->has("success"))
+    <script>
+        Command: toastr["success"]('{{session("success")}}', "Success");
+    </script>
+@endif
