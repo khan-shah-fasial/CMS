@@ -7,6 +7,8 @@ use App\Http\Controllers\backend\FaqController;
 use App\Http\Controllers\backend\TestimonialController;
 use App\Http\Controllers\backend\TeamController;
 use App\Http\Controllers\backend\AwardController;
+use App\Http\Controllers\backend\BlogCategoryController;
+use App\Http\Controllers\backend\BlogCommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,4 +74,22 @@ Route::group(['prefix' => 'award'], function () {
     Route::post('/update', [AwardController::class, 'update'])->name('award.update');
     Route::post('/delete/{id}', [AwardController::class, 'delete'])->name('award.delete');
     Route::get('/status/{id}/{status}', [AwardController::class, 'status'])->name('award.status');
+});
+
+//blogcategory
+Route::group(['prefix' => 'blogcategory'], function () {
+    Route::get('/index', [BlogCategoryController::class, 'index'])->name('blogcategory.index');
+    Route::get('/add', [BlogCategoryController::class, 'add'])->name('blogcategory.add');
+    Route::get('/edit/{id}', [BlogCategoryController::class, 'edit'])->name('blogcategory.edit');
+    Route::post('/create', [BlogCategoryController::class, 'create'])->name('blogcategory.create');
+    Route::post('/update', [BlogCategoryController::class, 'update'])->name('blogcategory.update');
+    Route::post('/delete/{id}', [BlogCategoryController::class, 'delete'])->name('blogcategory.delete');
+    Route::get('/status/{id}/{status}', [BlogCategoryController::class, 'status'])->name('blogcategory.status');
+});
+
+//blogcomments
+Route::group(['prefix' => 'blogs/comment'], function () {
+    Route::get('/index', [BlogCommentController::class, 'index'])->name('blogcomment.index');
+    Route::post('/delete/{id}', [BlogCommentController::class, 'delete'])->name('blogcomment.delete');
+    Route::get('/status/{id}/{status}', [BlogCommentController::class, 'status'])->name('blogcomment.status');
 });

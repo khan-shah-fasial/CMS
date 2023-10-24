@@ -104,6 +104,25 @@
                             </a>
                         </li>
 
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="{{ url('#sidebarEcommerce') }}" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                                <i class="ri-article-line"></i>
+                                <span> Blogs </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEcommerce">
+                                <ul class="side-nav-second-level">
+                                    <li>
+                                        <a href="{{ route('blogcategory.index') }}">Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('blogcomment.index') }}">Comment</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+
                     {{-- <li class="side-nav-title">Apps</li>
 
                         <li class="side-nav-item">
