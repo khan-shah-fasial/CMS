@@ -11,10 +11,6 @@
 <!-- Icons css -->
 <link href="/assets/backend/css/icons.min.css" rel="stylesheet" type="text/css" />
 
-
-
-
-
 <!-- Datatables css -->
 <link href="/assets/backend/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/backend/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -28,3 +24,7 @@
 
 <!-- toastr css -->
 <link rel="stylesheet" href="/assets/backend/css/toastr.min.css">
+
+<!--trumbowyg css-->
+<link rel="stylesheet" href="/assets/backend/css/trumbowyg/trumbowyg.min.css" />
+<link rel="stylesheet" href="/assets/backend/css/trumbowyg/trumbowyg.table.min.css" />

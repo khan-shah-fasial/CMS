@@ -1,6 +1,3 @@
-
-
-
 <!-- Vendor js -->
 <script src="/assets/backend/js/vendor.min.js"></script>
 
@@ -42,6 +39,12 @@
 
 <!-- toastr js -->
 <script src="/assets/backend/js/toastr.min.js"></script>
+
+<!-- trumbowyg js -->
+<script src="/assets/backend/js/trumbowyg/trumbowyg.min.js"></script>
+<script src="/assets/backend/js/trumbowyg/trumbowyg.upload.min.js"></script>
+<script src="/assets/backend/js/trumbowyg/trumbowyg.table.min.js"></script>
+<script src="/assets/backend/js/trumbowyg/trumbowyg.resizimg.min.js"></script>
 
 <!--Init-->
 <script src="/assets/backend/js/Init.js"></script>
