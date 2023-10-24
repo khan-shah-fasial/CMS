@@ -41,11 +41,7 @@
                 </td>
                 <td>{{$row->created_at}}</td>
                 <td>
-<<<<<<< HEAD
-                    <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                    <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-=======
-                    <a href="{{ url(route('backend.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
+                    <a href="{{ url(route('faq.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
                             <i class="ri-eye-off-fill"></i>
                         @else
@@ -53,10 +49,9 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('faq..edit',['id' => $row->id])) }}', 'Edit Faq')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('faq.edit',['id' => $row->id])) }}', 'Edit Faq')"> <i class="mdi mdi-square-edit-outline"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('faq..delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
->>>>>>> main
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('faq.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>
             </tr>
             @endforeach
