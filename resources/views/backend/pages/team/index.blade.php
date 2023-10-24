@@ -9,7 +9,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="smallModal('{{ url(route('faq.add')) }}', 'Add Faq')"><i class="mdi mdi-plus-circle me-2"></i> Add Faq</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('team.add')) }}', 'Add Team')"><i class="mdi mdi-plus-circle me-2"></i> Add Team</a>
             </div>
          </div>
          <!-- end col-->
@@ -19,29 +19,29 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Question</th>
-                <th>Answer</th>
+                <th>Name</th>
+                <th>Designation</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($faq as $row)
+            @foreach($team as $row)
             <tr>
                 <td>{{$row->id}}</td>
-                <td>{{$row->question}}</td>
-                <td>{{$row->answer}}</td>
+                <td>{{$row->name}}</td>
+                <td>{{$row->designation}}</td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
                     @else
-                    <span class="badge bg-success">Inctive</span>
+                    <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
                 <td>{{$row->created_at}}</td>
                 <td>
-                    <a href="{{ url(route('faq.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
+                    <a href="{{ url(route('team.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
                             <i class="ri-eye-off-fill"></i>
                         @else
@@ -49,9 +49,11 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('faq.edit',['id' => $row->id])) }}', 'Edit Faq')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('team.view',['id' => $row->id])) }}', 'View Team')"> <i class="mdi mdi-account-eye"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('faq.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('team.edit',['id' => $row->id])) }}', 'Edit Team')"> <i class="mdi mdi-square-edit-outline"></i></a>
+
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('team.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>
             </tr>
             @endforeach
