@@ -37,6 +37,9 @@
 <!--select2-->
 <script src="/assets/backend/js/select2.full.min.js"></script>
 
+<!--select2-->
+<script src="/assets/backend/js/select2.min.js"></script>
+
 <!-- toastr js -->
 <script src="/assets/backend/js/toastr.min.js"></script>
 

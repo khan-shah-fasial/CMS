@@ -9,6 +9,9 @@ use App\Http\Controllers\backend\TeamController;
 use App\Http\Controllers\backend\AwardController;
 use App\Http\Controllers\backend\BlogCategoryController;
 use App\Http\Controllers\backend\BlogCommentController;
+use App\Http\Controllers\backend\BlogController;
+use App\Http\Controllers\backend\NewsCategoryController;
+use App\Http\Controllers\backend\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +80,7 @@ Route::group(['prefix' => 'award'], function () {
 });
 
 //blogcategory
-Route::group(['prefix' => 'blogcategory'], function () {
+Route::group(['prefix' => 'blogs/category'], function () {
     Route::get('/index', [BlogCategoryController::class, 'index'])->name('blogcategory.index');
     Route::get('/add', [BlogCategoryController::class, 'add'])->name('blogcategory.add');
     Route::get('/edit/{id}', [BlogCategoryController::class, 'edit'])->name('blogcategory.edit');
@@ -92,4 +95,40 @@ Route::group(['prefix' => 'blogs/comment'], function () {
     Route::get('/index', [BlogCommentController::class, 'index'])->name('blogcomment.index');
     Route::post('/delete/{id}', [BlogCommentController::class, 'delete'])->name('blogcomment.delete');
     Route::get('/status/{id}/{status}', [BlogCommentController::class, 'status'])->name('blogcomment.status');
+});
+
+//blogs
+Route::group(['prefix' => 'blogs'], function () {
+    Route::get('/index', [BlogController::class, 'index'])->name('blogs.index');
+    Route::get('/add', [BlogController::class, 'add'])->name('blogs.add');
+    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blogs.edit');
+    Route::get('/view/{id}', [BlogController::class, 'view'])->name('blogs.view');
+    Route::post('/create', [BlogController::class, 'create'])->name('blogs.create');
+    Route::post('/update', [BlogController::class, 'update'])->name('blogs.update');
+    Route::post('/delete/{id}', [BlogController::class, 'delete'])->name('blogs.delete');
+    Route::get('/status/{id}/{status}', [BlogController::class, 'status'])->name('blogs.status');
+});
+
+
+//Newscategory
+Route::group(['prefix' => 'news/category'], function () {
+    Route::get('/index', [NewsCategoryController::class, 'index'])->name('newscategory.index');
+    Route::get('/add', [NewsCategoryController::class, 'add'])->name('newscategory.add');
+    Route::get('/edit/{id}', [NewsCategoryController::class, 'edit'])->name('newscategory.edit');
+    Route::post('/create', [NewsCategoryController::class, 'create'])->name('newscategory.create');
+    Route::post('/update', [NewsCategoryController::class, 'update'])->name('newscategory.update');
+    Route::post('/delete/{id}', [NewsCategoryController::class, 'delete'])->name('newscategory.delete');
+    Route::get('/status/{id}/{status}', [NewsCategoryController::class, 'status'])->name('newscategory.status');
+});
+
+//News
+Route::group(['prefix' => 'news'], function () {
+    Route::get('/index', [NewsController::class, 'index'])->name('news.index');
+    Route::get('/add', [NewsController::class, 'add'])->name('news.add');
+    Route::get('/edit/{id}', [NewsController::class, 'edit'])->name('news.edit');
+    Route::get('/view/{id}', [NewsController::class, 'view'])->name('news.view');
+    Route::post('/create', [NewsController::class, 'create'])->name('news.create');
+    Route::post('/update', [NewsController::class, 'update'])->name('news.update');
+    Route::post('/delete/{id}', [NewsController::class, 'delete'])->name('news.delete');
+    Route::get('/status/{id}/{status}', [NewsController::class, 'status'])->name('news.status');
 });

@@ -9,7 +9,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="smallModal('{{ url(route('blogcategory.add')) }}', 'Add Blogs Category')"><i class="mdi mdi-plus-circle me-2"></i> Add Blogs Category</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('news.add')) }}', 'Add News')"><i class="mdi mdi-plus-circle me-2"></i> Add News</a>
             </div>
          </div>
          <!-- end col-->
@@ -19,17 +19,20 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Name</th>
+                <th>Title</th>
+                <th>Short Description</th>
+                <th>Comment</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($blogcategory as $row)
+            @foreach($news as $row)
             <tr>
                 <td>{{$row->id}}</td>
-                <td>{{$row->name}}</td>
+                <td>{{$row->title}}</td>
+                <td>{{$row->short_description}}</td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -39,7 +42,7 @@
                 </td>
                 <td>{{$row->created_at}}</td>
                 <td>
-                    <a href="{{ url(route('blogcategory.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
+                    <a href="{{ url(route('news.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
                             <i class="ri-eye-off-fill"></i>
                         @else
@@ -47,9 +50,11 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('blogcategory.edit',['id' => $row->id])) }}', 'Edit Blog Category')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('news.view',['id' => $row->id])) }}', 'View News')"> <i class="mdi mdi-account-eye"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('blogcategory.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('news.edit',['id' => $row->id])) }}', 'Edit News')"> <i class="mdi mdi-square-edit-outline"></i></a>
+
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('news.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>
             </tr>
             @endforeach

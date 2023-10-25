@@ -4,74 +4,74 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\BlogCategory;
+use App\Models\NewsCategory;
 
-class BlogCategoryController extends Controller
+class NewsCategoryController extends Controller
 {
     public function index() {
-        $blogcategory = BlogCategory::all();
-        return view('backend.pages.blogcategory.index', compact('blogcategory'));
+        $newscategory = NewsCategory::all();
+        return view('backend.pages.newscategory.index', compact('newscategory'));
     }
 
     public function add() {
-        return view('backend.pages.blogcategory.add');
+        return view('backend.pages.newscategory.add');
     }  
     
     public function create(Request $request) {
-        $blogcategory = BlogCategory::create([
+        $newscategory = NewsCategory::create([
             'parent_id' => $request->input('parent_id'),
             'name' => $request->input('name'),
         ]);
 
         $response = [
             'status' => true,
-            'notification' => 'BlogCategory added successfully!',
+            'notification' => 'NewsCategory added successfully!',
         ];
         
         return response()->json($response);
     }     
 
     public function edit($id) {
-        $blogcategory = BlogCategory::find($id);
-        return view('backend.pages.blogcategory.edit', compact('blogcategory'));
+        $newscategory = NewsCategory::find($id);
+        return view('backend.pages.newscategory.edit', compact('newscategory'));
     }  
     
     public function delete($id) {
         
-        $blogcategory = BlogCategory::find($id);
-        if (!$blogcategory) {
+        $newscategory = NewsCategory::find($id);
+        if (!$newscategory) {
             $response = [
                 'status' => false,
                 'notification' => 'Record not found.!',
             ];
             return response()->json($response);
         }
-        $blogcategory->delete();
+        $newscategory->delete();
 
         $response = [
             'status' => true,
-            'notification' => 'BlogCategory Deleted successfully!',
+            'notification' => 'NewsCategory Deleted successfully!',
         ];
 
         return response()->json($response);
     }  
     
     public function status($id, $status) { 
-        $blogcategory = BlogCategory::find($id);
-        $blogcategory->status = $status;
-        $blogcategory->save();
+        $newscategory = NewsCategory::find($id);
+        $newscategory->status = $status;
+        $newscategory->save();
     
-        return redirect(route('blogcategory.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('newscategory.index'))->with('success', 'Status Change successfully!');
     }  
     
     public function update(Request $request) {
         $id = $request->input('id');
-        $blogcategory = BlogCategory::find($id);
-        $blogcategory->update($request->all());
+        $newscategory = NewsCategory::find($id);
+        $newscategory->update($request->all());
 
         $response = [
             'status' => true,
-            'notification' => 'BlogCategory Update successfully!',
+            'notification' => 'NewsCategory Update successfully!',
         ];
 
         return response()->json($response);
