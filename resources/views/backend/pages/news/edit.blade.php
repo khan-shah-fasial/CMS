@@ -42,7 +42,7 @@
         <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Content</label>
-                <textarea class="form-control" name="content" rows="4" required>{{ $news->content }}</textarea>
+                <textarea class="form-control trumbowyg" name="content" rows="5" required>{{ $news->content }}</textarea>
             </div>
         </div>
         <div class="col-sm-12">
@@ -69,6 +69,7 @@
 <script>
 $(document).ready(function() {
     initValidate('#edit_news_form');
+    initTrumbowyg('.trumbowyg');
 });
 
 $("#edit_news_form").submit(function(e) {

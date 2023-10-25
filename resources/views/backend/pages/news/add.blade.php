@@ -39,7 +39,7 @@
         <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Content</label>
-                <textarea class="form-control" name="content" rows="4" required></textarea>
+                <textarea class="form-control trumbowyg" name="content" rows="5" required></textarea>
             </div>
         </div>
         <div class="col-sm-12">
@@ -67,6 +67,7 @@
 $(document).ready(function() {
     initValidate('#add_news_form');
     initSelect2('.select2');
+    initTrumbowyg('.trumbowyg');
 });
 
 $("#add_news_form").submit(function(e) {
