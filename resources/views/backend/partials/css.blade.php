@@ -24,7 +24,7 @@
 <link href="/assets/backend/css/select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
 
 <!-- select2 css -->
-<link rel="stylesheet" href="/assets/backend/css/select2.min.css">
+<link href="/assets/backend/css/select2.min.css" rel="stylesheet" type="text/css" />
 
 <!-- toastr css -->
 <link rel="stylesheet" href="/assets/backend/css/toastr.min.css">

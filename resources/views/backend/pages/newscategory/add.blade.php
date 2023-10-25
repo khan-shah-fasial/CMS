@@ -1,4 +1,4 @@
-<form id="add_blogcategory_form" action="{{url(route('blogcategory.create'))}}" method="post" enctype="multipart/form-data">
+<form id="add_newscategory_form" action="{{url(route('newscategory.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row">
     <div class="col-sm-12">
@@ -7,13 +7,6 @@
                 <input type="text" class="form-control" name="name" value="" required>
             </div>
         </div> 
-        {{--       
-        <div class="col-sm-12">
-            <div class="form-group mb-3">
-                <label>Slug</label>
-                <input type="text" class="form-control" name="slug" value="" required>
-            </div>
-        </div> --}}
         <input type="hidden" name="parent_id" value="0">
         <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
@@ -25,10 +18,10 @@
 
 <script>
 $(document).ready(function() {
-    initValidate('#add_blogcategory_form');
+    initValidate('#add_newscategory_form');
 });
 
-$("#add_blogcategory_form").submit(function(e) {
+$("#add_newscategory_form").submit(function(e) {
     var form = $(this);
     ajaxSubmit(e, form, responseHandler);
 });

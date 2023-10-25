@@ -36,7 +36,7 @@
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
                     @else
-                    <span class="badge bg-success">Inctive</span>
+                    <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
                 <td>{{$row->created_at}}</td>
