@@ -132,3 +132,53 @@ function ajaxSubmit(e, form, callBackFunction) {
         toastr.error('Please make sure to fill all the necessary fields');
     }
 }
+
+//trumbowyg Editor
+function initTrumbowyg(target) {
+    $(target).trumbowyg({
+        btnsDef: {
+            // Create a new dropdown
+            image: {
+                dropdown: ['insertImage', 'upload'],
+                ico: 'insertImage'
+            },
+            // Define the heading button with different levels
+            heading: {
+                dropdown: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+                ico: 'pencil' // You can use an appropriate icon
+            }            
+        },
+        // Redefine the button pane
+        btns: [
+            ['viewHTML'],
+            ['formatting'],
+            ['strong', 'em', 'del'],
+            ['superscript', 'subscript'],
+            ['link'],
+            ['image'], // Our fresh created dropdown
+            ['table'],
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+            ['unorderedList', 'orderedList'],
+            ['horizontalRule'],
+            ['removeformat'],
+            ['fullscreen']
+        ],
+        plugins: {
+            // Add imagur parameters to upload plugin for demo purposes
+            upload: {
+                serverPath: $('#baseUrl').attr('href') + '/upload_file_trumbowyg',
+                fileFieldName: 'image',
+                headers: {},
+                urlPropertyName: 'file'
+            },
+            resizimg: {
+                minSize: 64,
+                step: 16,
+            }                
+        },
+        svgPath: true
+    });
+}
+function destroyTrumbowyg(target) {
+    $(target).trumbowyg('destroy');
+}   

@@ -41,13 +41,13 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label for="about">About</label>
-                <textarea class="form-control" name="about" id="about" rows="5" required>{{$team->about}}</textarea>
+                <textarea class="form-control trumbowyg" name="about" id="about" rows="5" required>{{$team->about}}</textarea>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label for="description">Description</label>
-                <textarea class="form-control" name="description" id="description" rows="5" required>{{$team->description}}</textarea>
+                <label for="description">Practice Area</label>
+                <textarea class="form-control trumbowyg" name="description" id="description" rows="5" required>{{$team->description}}</textarea>
             </div>
         </div>
         <div class="col-sm-12">
@@ -61,6 +61,7 @@
 <script>
 $(document).ready(function() {
     initValidate('#edit_team_form');
+    initTrumbowyg('.trumbowyg');
 });
 
 $("#edit_team_form").submit(function(e) {
