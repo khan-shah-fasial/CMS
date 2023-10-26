@@ -15,6 +15,8 @@ class PracticeArea extends Model
         'parent_id',
         'thumnail_image',
         'title',
+        'short_description',
+        'slug',
         'content',
         'why_choose_us',
         'faq',

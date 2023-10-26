@@ -1,4 +1,6 @@
-@extends('backend.layouts.app') <!--, [$pageInfo]-->
+@extends('backend.layouts.app')
+
+@section('page.name', 'Dashboard')
 
 @section('page.content')
 

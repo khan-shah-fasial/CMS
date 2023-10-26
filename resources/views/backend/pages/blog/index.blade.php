@@ -1,4 +1,6 @@
-@extends('backend.layouts.app') <!--, [$pageInfo]-->
+@extends('backend.layouts.app')
+
+@section('page.name', 'Blogs')
 
 @section('page.content')
 <div class="card">
@@ -21,7 +23,6 @@
                 <th>#</th>
                 <th>Title</th>
                 <th>Short Description</th>
-                <th>Comment</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>

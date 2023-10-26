@@ -1,4 +1,6 @@
-@extends('backend.layouts.app') <!--, [$pageInfo]-->
+@extends('backend.layouts.app')
+
+@section('page.name', 'Blogs Category')
 
 @section('page.content')
 <div class="card">
