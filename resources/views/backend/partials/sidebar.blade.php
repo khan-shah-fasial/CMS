@@ -75,10 +75,16 @@
                         --}}
                         </li>
 
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('practicearea.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-suitcase-line"></i> 
+                                <span> Practice Area </span>
+                            </a>
+                        </li>
                         
                         <li class="side-nav-item menuitem-active">
                             <a href="{{ route('faq.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
-                                <i class=" ri-questionnaire-line"></i> 
+                                <i class="ri-questionnaire-line"></i> 
                                 <span> FAQs </span>
                             </a>
                         </li>

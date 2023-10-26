@@ -12,6 +12,7 @@ use App\Http\Controllers\backend\BlogCommentController;
 use App\Http\Controllers\backend\BlogController;
 use App\Http\Controllers\backend\NewsCategoryController;
 use App\Http\Controllers\backend\NewsController;
+use App\Http\Controllers\backend\PracticeAreaController;
 use App\Http\Controllers\backend\TrumbowygController;
 
 /*
@@ -134,6 +135,16 @@ Route::group(['prefix' => 'news'], function () {
     Route::get('/status/{id}/{status}', [NewsController::class, 'status'])->name('news.status');
 });
 
+//PracticeArea
+Route::group(['prefix' => 'practicearea'], function () {
+    Route::get('/index', [PracticeAreaController::class, 'index'])->name('practicearea.index');
+    Route::get('/add', [PracticeAreaController::class, 'add'])->name('practicearea.add');
+    Route::get('/edit/{id}', [PracticeAreaController::class, 'edit'])->name('practicearea.edit');
+    Route::get('/view/{id}', [PracticeAreaController::class, 'view'])->name('practicearea.view');
+    Route::post('/create', [PracticeAreaController::class, 'create'])->name('practicearea.create');
+    Route::post('/update', [PracticeAreaController::class, 'update'])->name('practicearea.update');
+    Route::post('/delete/{id}', [PracticeAreaController::class, 'delete'])->name('practicearea.delete');
+    Route::get('/status/{id}/{status}', [PracticeAreaController::class, 'status'])->name('practicearea.status');
 //News
 Route::group(['prefix' => 'trumbowyg'], function () {
     Route::post('/upload', [TrumbowygController::class, 'upload'])->name('trumbowyg.upload');

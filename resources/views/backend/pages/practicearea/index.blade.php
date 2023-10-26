@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('page.name', 'Team')
+@section('page.name', 'Practice Area')
 
 @section('page.content')
 <div class="card">
@@ -11,7 +11,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('team.add')) }}', 'Add Team')"><i class="mdi mdi-plus-circle me-2"></i> Add Team</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('practicearea.add')) }}', 'Add Practice Area')"><i class="mdi mdi-plus-circle me-2"></i> Add Practice Area</a>
             </div>
          </div>
          <!-- end col-->
@@ -21,19 +21,19 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Name</th>
-                <th>Designation</th>
+                <th>Title</th>
+                <th>Short Description</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($team as $row)
+            @foreach($practicearea as $row)
             <tr>
                 <td>{{$row->id}}</td>
-                <td>{{$row->name}}</td>
-                <td>{{$row->designation}}</td>
+                <td>{{$row->title}}</td>
+                <td>{{$row->short_description}}</td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -43,7 +43,7 @@
                 </td>
                 <td>{{$row->created_at}}</td>
                 <td>
-                    <a href="{{ url(route('team.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
+                    <a href="{{ url(route('practicearea.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
                             <i class="ri-eye-off-fill"></i>
                         @else
@@ -51,11 +51,11 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('team.view',['id' => $row->id])) }}', 'View Team')"> <i class="mdi mdi-account-eye"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('practicearea.view',['id' => $row->id])) }}', 'View Practice Area')"> <i class="mdi mdi-account-eye"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('team.edit',['id' => $row->id])) }}', 'Edit Team')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('practicearea.edit',['id' => $row->id])) }}', 'Edit Practice Area')"> <i class="mdi mdi-square-edit-outline"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('team.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('practicearea.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>
             </tr>
             @endforeach

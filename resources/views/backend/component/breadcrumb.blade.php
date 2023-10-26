@@ -21,7 +21,7 @@
                 </form>
             </div>
             --}}
-            <h4 class="page-title">Dashboard</h4>
+            <h4 class="page-title"> @yield('page.name') </h4>
 
         </div>
     </div>
