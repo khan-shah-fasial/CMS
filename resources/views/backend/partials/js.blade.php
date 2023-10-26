@@ -20,8 +20,8 @@
 <script src="/assets/backend/js/dataTables.bootstrap5.min.js"></script>
 <script src="/assets/backend/js/dataTables.responsive.min.js"></script>
 <script src="/assets/backend/js/responsive.bootstrap5.min.js"></script>
-<script src="/assets/backend/js/fixedColumns.bootstrap5.min.js"></script>
-<script src="/assets/backend/js/dataTables.fixedHeader.min.js"></script>
+<!--<script src="/assets/backend/js/fixedColumns.bootstrap5.min.js"></script>
+<script src="/assets/backend/js/dataTables.fixedHeader.min.js"></script>-->
 <script src="/assets/backend/js/dataTables.buttons.min.js"></script>
 <script src="/assets/backend/js/buttons.bootstrap5.min.js"></script>
 <script src="/assets/backend/js/buttons.html5.min.js"></script>

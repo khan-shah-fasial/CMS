@@ -98,7 +98,7 @@ class NewsController extends Controller
             $news->main_image = $imagePath;
         }
     
-        $news->News_category_ids = json_encode($request->input('News_category_ids'));
+        $news->News_category_ids = json_encode($request->input('news_category_ids'));
         $news->title = $request->input('title');
         $news->slug = $request->input('slug');
         $news->short_description = $request->input('short_description');

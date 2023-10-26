@@ -1,0 +1,11 @@
+.select2-container {
+    z-index: 9999;
+}
+
+.trumbowyg-box {
+    z-index: 9999;
+}
+
+.trumbowyg-box {
+    overflow: visible !important;
+}

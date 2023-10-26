@@ -12,6 +12,7 @@ use App\Http\Controllers\backend\BlogCommentController;
 use App\Http\Controllers\backend\BlogController;
 use App\Http\Controllers\backend\NewsCategoryController;
 use App\Http\Controllers\backend\NewsController;
+use App\Http\Controllers\backend\TrumbowygController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,4 +132,9 @@ Route::group(['prefix' => 'news'], function () {
     Route::post('/update', [NewsController::class, 'update'])->name('news.update');
     Route::post('/delete/{id}', [NewsController::class, 'delete'])->name('news.delete');
     Route::get('/status/{id}/{status}', [NewsController::class, 'status'])->name('news.status');
+});
+
+//News
+Route::group(['prefix' => 'trumbowyg'], function () {
+    Route::post('/upload', [TrumbowygController::class, 'upload'])->name('trumbowyg.upload');
 });
