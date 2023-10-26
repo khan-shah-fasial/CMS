@@ -13,6 +13,7 @@ use App\Http\Controllers\backend\BlogController;
 use App\Http\Controllers\backend\NewsCategoryController;
 use App\Http\Controllers\backend\NewsController;
 use App\Http\Controllers\backend\PracticeAreaController;
+use App\Http\Controllers\backend\TrumbowygController;
 
 /*
 |--------------------------------------------------------------------------
@@ -144,4 +145,7 @@ Route::group(['prefix' => 'practicearea'], function () {
     Route::post('/update', [PracticeAreaController::class, 'update'])->name('practicearea.update');
     Route::post('/delete/{id}', [PracticeAreaController::class, 'delete'])->name('practicearea.delete');
     Route::get('/status/{id}/{status}', [PracticeAreaController::class, 'status'])->name('practicearea.status');
+//News
+Route::group(['prefix' => 'trumbowyg'], function () {
+    Route::post('/upload', [TrumbowygController::class, 'upload'])->name('trumbowyg.upload');
 });

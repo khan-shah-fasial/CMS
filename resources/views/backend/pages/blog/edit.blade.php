@@ -11,8 +11,8 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Category</label>
-                <select class="form-select" name="blog_category_ids[]" required>
-                    <option value="">Select blog Category</option>
+                <select class="form-select select2" name="blog_category_ids[]" multiple required>
+                    <option value="" disabled>Select blog Category</option>
                     @foreach($blogcategory as $row)
                         <option value="{{ $row->id }}" @if(in_array($row->id, json_decode($blog->blog_category_ids, true))) selected @endif>
                             {{ $row->name }}
@@ -70,6 +70,7 @@
 $(document).ready(function() {
     initValidate('#edit_blog_form');
     initTrumbowyg('.trumbowyg');
+    initSelect2('.select2');
 });
 
 $("#edit_blog_form").submit(function(e) {

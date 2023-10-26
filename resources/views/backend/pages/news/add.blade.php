@@ -10,8 +10,8 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Category</label>
-                <select class="form-select" name="news_category_ids[]" required>
-                    <option value="">Select News Category</option>
+                <select class="form-select select2" name="news_category_ids[]" multiple required>
+                    <option value="" disabled>Select News Category</option>
                     @foreach($newscategory as $row)
                         <option value="{{ $row->id }}">{{ $row->name }}</option>
                     @endforeach

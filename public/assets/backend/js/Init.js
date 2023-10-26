@@ -166,7 +166,7 @@ function initTrumbowyg(target) {
         plugins: {
             // Add imagur parameters to upload plugin for demo purposes
             upload: {
-                serverPath: $('#baseUrl').attr('href') + '/upload_file_trumbowyg',
+                serverPath: $('#baseUrl').attr('href') + '/backend/trumbowyg/upload',
                 fileFieldName: 'image',
                 headers: {},
                 urlPropertyName: 'file'
@@ -176,7 +176,7 @@ function initTrumbowyg(target) {
                 step: 16,
             }                
         },
-        svgPath: true
+        svgPath: false
     });
 }
 function destroyTrumbowyg(target) {
