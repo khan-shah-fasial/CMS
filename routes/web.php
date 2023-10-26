@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('testing-page1', function () {
-    return view('backend.pages.dashboard.index');
-});
+// Home START
+Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/practice-area', [IndexController::class, 'practice_area'])->name('practicearea');
+Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
+Route::get('/blog-detail', [IndexController::class, 'blog_detail'])->name('blog.detail');
+Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
+Route::get('/team-detail', [IndexController::class, 'team_detail'])->name('team.detail');
+Route::get('/contact-us', [IndexController::class, 'contact_us'])->name('contact');
+Route::any('/about-us', [IndexController::class, 'about_us'])->name('about');
+Route::get('/faq', [IndexController::class, 'faq'])->name('faq');
+Route::get('/career', [IndexController::class, 'career'])->name('career');
+// Home END
