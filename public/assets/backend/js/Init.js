@@ -171,12 +171,8 @@ function initTrumbowyg(target) {
                 headers: {},
                 urlPropertyName: 'file'
             },
-            resizimg: {
-                minSize: 64,
-                step: 16,
-            }                
-        },
-        svgPath: false
+            resizimg: true                
+        }
     });
 }
 function destroyTrumbowyg(target) {

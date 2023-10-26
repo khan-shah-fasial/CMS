@@ -1,6 +1,12 @@
 <!-- Vendor js -->
 <script src="/assets/backend/js/vendor.min.js"></script>
 
+<!-- jQuery UI js -->
+<script src="/assets/backend/js/jquery-ui.min.js"></script>
+
+<!-- jQuery resize js -->
+<script src="/assets/backend/js/jquery-resizable.min.js"></script>
+
 <!-- Daterangepicker js -->
 <script src="/assets/backend/js/moment.min.js"></script>
 <script src="/assets/backend/js/daterangepicker.js"></script>

@@ -1,11 +1,15 @@
 .select2-container {
-    z-index: 9999;
+    z-index: 9990 !important;
 }
 
 .trumbowyg-box {
-    z-index: 9999;
+    z-index: 9990 !important;
 }
 
 .trumbowyg-box {
     overflow: visible !important;
+}
+
+.trumbowyg-modal {
+    z-index: 99999 !important; /* Set a value higher than the Bootstrap modal's z-index */
 }
