@@ -9,7 +9,7 @@
                 <input type="text" class="form-control" name="title" value="{{ $award->title }}" required>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Image</label>
                 <input class="form-control" type="file" id="image" name="image">

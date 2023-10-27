@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -29,11 +30,13 @@ class BlogController extends Controller
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/blog', 'public');
 
+        $slug = Str::slug($request->input('slug'), '-');
+
         // Create the Blog record with 'blog_category_ids' included
         Blog::create([
             'blog_category_ids' => json_encode($request->input('blog_category_ids')),
             'title' => $request->input('title'),
-            'slug' => $request->input('slug'),
+            'slug' => $slug,
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
             'main_image' => $imagePath,
@@ -98,10 +101,12 @@ class BlogController extends Controller
             $imagePath = $request->file('image')->store('assets/image/blog', 'public');
             $blog->main_image = $imagePath;
         }
-    
+        
+        $slug = Str::slug($request->input('slug'), '-');
+
         $blog->blog_category_ids = json_encode($request->input('blog_category_ids'));
         $blog->title = $request->input('title');
-        $blog->slug = $request->input('slug');
+        $blog->slug = $slug;
         $blog->short_description = $request->input('short_description');
         $blog->content = $request->input('content');
         $blog->meta_title = $request->input('meta_title');

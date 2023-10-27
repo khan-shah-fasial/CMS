@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\NewsCategory;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -28,11 +29,13 @@ class NewsController extends Controller
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/news', 'public');
 
+        $slug = Str::slug($request->input('slug'), '-');
+
         // Create the News record with 'News_category_ids' included
         News::create([
             'news_category_ids' => json_encode($request->input('news_category_ids')),
             'title' => $request->input('title'),
-            'slug' => $request->input('slug'),
+            'slug' => $slug,
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
             'main_image' => $imagePath,
@@ -97,10 +100,12 @@ class NewsController extends Controller
             $imagePath = $request->file('image')->store('assets/image/News', 'public');
             $news->main_image = $imagePath;
         }
+
+        $slug = Str::slug($request->input('slug'), '-');
     
         $news->News_category_ids = json_encode($request->input('news_category_ids'));
         $news->title = $request->input('title');
-        $news->slug = $request->input('slug');
+        $news->slug = $slug;
         $news->short_description = $request->input('short_description');
         $news->content = $request->input('content');
         $news->meta_title = $request->input('meta_title');
