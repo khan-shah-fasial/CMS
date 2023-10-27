@@ -22,13 +22,19 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Thumnail Image</label>
-                <input class="form-control" type="file" id="image" name="image">
+                <input class="form-control" type="file" id="image" name="image" required>
             </div>
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Content</label>
                 <textarea class="form-control trumbowyg" name="content" rows="5" required></textarea>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group mb-3">
+                <label>Focus Area</label>
+                <input type="text" class="form-control" name="focus_area" value="" >
             </div>
         </div>
         <div class="col-sm-12">
@@ -74,7 +80,7 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Breadcrumb Image</label>
-                <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image">
+                <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image" required>
             </div>
         </div>
         <div class="col-sm-6">

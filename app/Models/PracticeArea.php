@@ -18,6 +18,7 @@ class PracticeArea extends Model
         'short_description',
         'slug',
         'content',
+        'focus_area',
         'why_choose_us',
         'faq',
         'meta_title',

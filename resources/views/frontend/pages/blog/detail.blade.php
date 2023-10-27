@@ -7,7 +7,7 @@
 
     <!-- -------------------- blog details banner start ---------------- -->
 
-    <section class="blog_details_page_banner mt105"></section>
+    <section class="blog_details_page_banner mt105" style="background-image: url({{ asset('storage/' . $detail->main_image) }});"></section>
 
     <!-- -------------------- blog details banner end   ---------------- -->
 
@@ -21,7 +21,7 @@
               data-aos-once="true"  >
               <li>Home</li>
               <li>></li>
-              <li>Strategy for Norway's Peion Fund Global.</li>
+              <li>{{ $detail->title }}</li>
             </ul>
           </div>
           <div class="col-md-6">
@@ -29,12 +29,12 @@
               <p class="d-flex align-items-center gap-2 author" data-aos="fade-up"
               data-aos-once="true">
                 <img src="/assets/frontend/images/author.png" alt="" />
-                <span>Author</span>
+                <span>{{ $author->name }}</span>
               </p>
               <p class="d-flex align-items-center gap-2 author" data-aos="fade-up"
               data-aos-once="true" >
                 <img src="/assets/frontend/images/calender.png" alt="" />
-                <span>July 30,2022</span>
+                <span>{{ $detail->created_at }}</span>
               </p>
             </div>
           </div>
@@ -49,69 +49,7 @@
     <section class="blog_details_page_title_desc">
       <div class="container">
         <div class="row">
-          <h1 class="main_heading" data-aos="fade-up" data-aos-once="true"
-              >Strategy for Norway's Peion Fund Global.</h1>
-          <h2 class="heading" data-aos="fade-up" data-aos-once="true">
-            Aliquam augue eros, for pulvinar et rutrum non.
-          </h2>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            The man, who is in a stable condition in hospital, has "potentially
-            life-changing injuries" after the overnight attack in Garvagh,
-            County Londonderry. He was shot in the arms and legs."What sort of
-            men would think it is acceptable to subject a young girl to this
-            level of brutality and violence?
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            "Every child has the right to feel safe and protected in their own
-            home - how is this poor child going to sleep tonight or in coming
-            nights? What are the long term effects on her going to be?"
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            "It's quite obvious the hypocrites who carried out this dreadful
-            attack don't care at all about the children in their community. I
-            wonder how they would feel if their own child witnessed such a level
-            of violence?
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            "There is absolutely no justification for an attack like this in our
-            communities and we must all work together to bring those responsible
-            to justice and to stop this from happening to another child."
-          </p>
-          <p class="desc mb-5" data-aos="fade-up" data-aos-once="true" >
-            Earlier this month, the PSNI launched a hard-hitting advertisement
-            campaign aimed at changing public attitudes to paramilitary attacks.
-          </p>
-          <div class="testimonial">
-            <div class="img_container" >
-              <span>"</span>
-            </div>
-            <div class="d-flex align-items-center justify-content-center text">
-              <p data-aos="fade-up" data-aos-once="true">
-                What sort of men would think it is acceptable to subject a young
-                girl to this level of brutality and violence? an attack like
-                this in ourcommunities and we must all work together.
-              </p>
-            </div>
-          </div>
-          <h2 class="heading" data-aos="fade-up" data-aos-once="true">A Kentucky woman who was accused last year.</h2>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            The intruders chased the girl in the house and threatened her when
-            she hid from them, according to the PSNI Limavady Facebook page.
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            "She came out petrified with her Piggy Bank, HER PIGGY BANK! hoping
-            that the men would take it and leave her dad alone," one outraged
-            officer wrote.
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            The intruders chased the girl in the house and threatened her when
-            she hid from them, according to the PSNI Limavady Facebook page.
-          </p>
-          <p class="desc" data-aos="fade-up" data-aos-once="true">
-            "She came out petrified with her Piggy Bank, HER PIGGY BANK! hoping
-            that the men would take it and leave her dad alone," one outraged
-            officer wrote.
-          </p>
+          @php echo html_entity_decode($detail->content) @endphp
         </div>
       </div>
     </section>

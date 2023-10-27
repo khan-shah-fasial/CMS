@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('short_description')->nullable();
             $table->longText('content');
+            $table->string('focus_area')->nullable();
             $table->longText('why_choose_us')->nullable();
             $table->longText('faq')->nullable();
             $table->string('meta_title')->nullable();
