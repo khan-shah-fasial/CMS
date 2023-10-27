@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PracticeArea;
+use Illuminate\Support\Str;
 
 class PracticeAreaController extends Controller
 {
@@ -47,14 +48,17 @@ class PracticeAreaController extends Controller
     
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
+
+        $slug = Str::slug($request->input('slug'), '-');
         
         // Create the PracticeArea record with 'PracticeArea_category_ids' included
         PracticeArea::create([
             'parent_id' => $request->input('parent_id'),
             'title' => $request->input('title'),
-            'slug' => $request->input('slug'),
+            'slug' => $slug,
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
+            'focus_area' => $request->input('focus_area'),
             'why_choose_us' => $request->input('why_choose_us'),
             'faq' => $data['faq'],
             'thumnail_image' => $imagePath,
@@ -146,12 +150,15 @@ class PracticeAreaController extends Controller
     
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
+
+        $slug = Str::slug($request->input('slug'), '-');
     
         $practicearea->parent_id = $request->input('parent_id');
         $practicearea->title = $request->input('title');
-        $practicearea->slug = $request->input('slug');
+        $practicearea->slug = $slug;
         $practicearea->short_description = $request->input('short_description');
         $practicearea->content = $request->input('content');
+        $practicearea->focus_area = $request->input('focus_area');
         $practicearea->why_choose_us = $request->input('why_choose_us');
         $practicearea->faq = $data['faq'];
         $practicearea->meta_title = $request->input('meta_title');

@@ -34,6 +34,12 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
+                <label>Focus Area</label>
+                <input type="text" class="form-control" name="focus_area" value="{{ $practicearea->focus_area }}" >
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group mb-3">
                 <label>Why Choose Us</label>
                 <textarea class="form-control trumbowyg" name="why_choose_us" rows="5" required>{{ $practicearea->why_choose_us }}</textarea>
             </div>
