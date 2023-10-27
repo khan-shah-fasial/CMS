@@ -27,3 +27,17 @@ Route::any('/about-us', [IndexController::class, 'about_us'])->name('about');
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');
 Route::get('/career', [IndexController::class, 'career'])->name('career');
 // Home END
+
+
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('view:clear');
+    //$exitCode = Artisan::call('route:cache');
+    //$exitCode = Artisan::call('key:generate');
+});
+
+Route::get('/key-generate', function () {
+    Artisan::call('key:generate', ['--show' => true]);
+    return 'Application key generated successfully!';
+});
