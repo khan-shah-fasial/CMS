@@ -21,7 +21,7 @@ class TeamController extends Controller
     public function create(Request $request) {
         // Validate the incoming request data
         $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Customize validation rules
+            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Customize validation rules
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',
@@ -85,7 +85,7 @@ class TeamController extends Controller
 
         // Validate the incoming request data
         $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',

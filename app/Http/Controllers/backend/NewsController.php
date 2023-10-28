@@ -21,10 +21,6 @@ class NewsController extends Controller
     }  
     
     public function create(Request $request) {
-        // Validate form data
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
 
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/news', 'public');

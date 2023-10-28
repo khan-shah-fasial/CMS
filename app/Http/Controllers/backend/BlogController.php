@@ -23,7 +23,7 @@ class BlogController extends Controller
     public function create(Request $request) {
         // Validate form data
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            //'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'blog_category_ids' => 'required', // Add validation for category IDs
         ]);
 
