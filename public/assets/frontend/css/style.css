@@ -1485,7 +1485,7 @@ hr {
     line-height: 26px;
 }
 .faq_page_accordion .accordion .accordion-item .accordion-button {
-    padding: 2rem 2.25rem;
+    padding: 1.5rem 2.25rem;
 }
 .faq_page_accordion .accordion .accordion-item .accordion-body {
     padding: 0 2.25rem 2rem 2.25rem;
@@ -1520,6 +1520,10 @@ hr {
 
 
 /*--responsive css start--*/
+.faq_page_accordion .accordion-button
+{
+	font-weight:700;
+}
 .heading2 {
     font-size: 24px;
     font-weight: 700;
@@ -1531,17 +1535,7 @@ hr {
 }
 @media(max-width:767px)
 {
-	header {
-    display: none;
-}
 
-.top_baar {
-    display: none;
-}
-
-.menu_left_fixed {
-    display: none;
-}
 .footer_bottom.d-flex.align-items-center.justify-content-between {
     display: block !important;
 }
@@ -1587,7 +1581,16 @@ body .about_right_counter {
 .about_counter_para {
     font-size: 13px;
 }
-section.career_page_content ol {
+.career_page_content ol {
     padding-left: 20px;
+}
+.heading2 {
+    font-size: 20px;
+}
+.faq_page_accordion .accordion .accordion-item .accordion-button {
+    padding: 1.5rem 1rem;
+}
+.faq_page_accordion .accordion .accordion-item .accordion-body {
+    padding: 0 1rem 1rem 1rem;
 }
 }

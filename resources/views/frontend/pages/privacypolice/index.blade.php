@@ -3,7 +3,7 @@
 @section('page.content')
     <!-- -------------------- blog banner start ---------------- -->
 
-    <section class="blog_page_banner mt105">
+    <section class="blog_page_banner mt105 breadcrumes_padd">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -31,7 +31,7 @@
     <section class="privacy_content">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 padd00mb">
                     <p class="desc mb-3">
                         At Ahlawat & Associates (“A&A”), we prioritize the privacy of all
                         users who visit and use our website (www.ahlawatassociates.com).
@@ -42,8 +42,8 @@
                         are published on the website, unless stated otherwise.
                     </p>
 
-                    <h1 class="heading2 mt-4">I. APPLICABILITY OF THE POLICY</h1>
-                    <p class="desc mb-4">
+                    <h1 class="heading2 mt-5">I. Applicability of the policy</h1>
+                    <p class="desc mb-3">
                         A&A’s Privacy Policy is relevant to anyone who uses the website or
                         provides personal data relating to a natural person who can be
                         identified. We collect personal data with your consent, usually
@@ -56,7 +56,7 @@
                         encourage users to read the Privacy Policy in conjunction with the
                         terms and conditions of the website.
                     </p>
-                    <h1 class="heading2">II. TYPES OF INFORMATION COLLECTED</h1>
+                    <h1 class="heading2 mt-5">II. Types of information collected</h1>
                     <p class="desc">
                         We collect the following types of information from you: User Data:
                     </p>
@@ -85,7 +85,7 @@
                             identify any user
                         </li>
                     </ul>
-                    <h1 class="heading2">III. PURPOSE OF COLLECTION OF INFORMATION</h1>
+                    <h1 class="heading2">III. Purpose of collection of information</h1>
                     <p class="desc">We collect your data for the following purposes:</p>
                     <ul>
                         <li class="desc">
@@ -109,7 +109,7 @@
                             your feedback on your engagement with us.
                         </li>
                     </ul>
-                    <h1 class="heading2">IV. SHARING OF INFORMATION</h1>
+                    <h1 class="heading2">IV. Sharing of information</h1>
                     <p class="desc mb-5">
                         We may share your information with third-party service providers,
                         agents, or contractors who handle or will handle your information
@@ -121,7 +121,7 @@
                         rights or properties, prevent a crime, protect national security,
                         or ensure the personal safety of our users or the public.
                     </p>
-                    <h1 class="heading2">V. SAFEGUARDS FOR SECURING YOUR INFORMATION</h1>
+                    <h1 class="heading2">V. Safeguards for securing your information</h1>
                     <p class="desc mb-5">
                         At A&A, protecting your privacy is of utmost importance to us. We
                         maintain the security of your personal information by monitoring
@@ -136,7 +136,7 @@
                         beyond our control. This includes events such as government
                         actions, computer hacking, and security breaches.
                     </p>
-                    <h1 class="heading2">VI. CHANGES TO INFORMATION</h1>
+                    <h1 class="heading2">VI. Changes to information</h1>
                     <p class="desc mb-5">
                         If you need to correct, update, or review your personal
                         information, please send an email to contact@ahlawatassociates.in.
@@ -146,7 +146,7 @@
                         it infringes on someone else’s rights or is against applicable
                         laws.
                     </p>
-                    <h1 class="heading2">VII. CONTACT DETAILS</h1>
+                    <h1 class="heading2">VII. Contact details</h1>
                     <p class="desc">
                         In case of any doubts, queries or grievances pertaining to the
                         contents of the Privacy Policy, please write to us at –
