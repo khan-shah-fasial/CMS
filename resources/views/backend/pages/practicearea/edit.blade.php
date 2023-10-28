@@ -40,8 +40,14 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
+                <label>Section Image</label>
+                <input class="form-control" type="file" id="section_image" name="section_image">
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group mb-3">
                 <label>Why Choose Us</label>
-                <textarea class="form-control trumbowyg" name="why_choose_us" rows="5" required>{{ $practicearea->why_choose_us }}</textarea>
+                <textarea class="form-control trumbowyg" name="why_choose_us" rows="5">{{ $practicearea->why_choose_us }}</textarea>
             </div>
         </div>
         <div class="col-sm-12">

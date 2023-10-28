@@ -24,12 +24,14 @@ class PracticeAreaController extends Controller
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'breadcrumb_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'section_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
     
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
         $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
-    
+        $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
+
         // Extract and handle FAQ data
         $faq = $request->input('faq');
         $faq_description = $request->input('faq_description');
@@ -62,6 +64,7 @@ class PracticeAreaController extends Controller
             'why_choose_us' => $request->input('why_choose_us'),
             'faq' => $data['faq'],
             'thumnail_image' => $imagePath,
+            'section_image' => $imagePath2,
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'breadcrumb_title' => $request->input('breadcrumb_title'),
@@ -130,6 +133,12 @@ class PracticeAreaController extends Controller
             // Update the image if a new one is uploaded
             $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
             $practicearea->breadcrumb_image = $imagePath1;
+        }
+
+        if ($request->hasFile('section_image')) {
+            // Update the image if a new one is uploaded
+            $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
+            $practicearea->section_image = $imagePath2;
         }
 
         // Extract and handle FAQ data

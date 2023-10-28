@@ -8,4 +8,5 @@
     <p><strong>Breadcrumb Title:</strong> {{ $practicearea->breadcrumb_title }}</p>
     <p><strong>Breadcrumb Subtitle:</strong> {{ $practicearea->breadcrumb_subtitle }}</p>
     <p><strong>Breadcrumb Image:</strong></p> <img src="{{ asset('storage/' . $practicearea->breadcrumb_image) }}" class="img-thumbnail">
+    <p><strong>Section Image:</strong></p> <img src="{{ asset('storage/' . $practicearea->section_image) }}" class="img-thumbnail">
 </div>
