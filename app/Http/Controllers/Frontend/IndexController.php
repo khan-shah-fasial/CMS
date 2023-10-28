@@ -16,7 +16,9 @@ class IndexController extends Controller
     }
 
     public function practice_area(){
-        return view('frontend.pages.practicearea.index');
+        $practiceAreas = PracticeArea::where('parent_id', null)->get();
+        //return $practiceAreas;
+        return view('frontend.pages.practicearea.index', compact('practiceAreas'));
     }
 
     public function practice_area_detail($slug){
