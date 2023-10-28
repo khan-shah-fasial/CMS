@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('phone', 20)->nullable();
             $table->string('email', 55)->nullable();
             $table->string('linkedin_link')->nullable();
-            $table->integer('series', 5)->nullable();
+            $table->unsignedBigInteger('series')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

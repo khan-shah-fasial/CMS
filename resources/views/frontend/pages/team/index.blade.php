@@ -40,7 +40,7 @@
     
             <div class="col-md-3">
                 <div class="team_box">
-                    <img src="{{ asset('storage/' . $detail->image) }}" alt="" data-aos="fade-up" data-aos-once="true" />
+                    <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up" data-aos-once="true" />
                     <p class="name" data-aos="fade-up" data-aos-once="true">
                         {{ ucfirst($row->name) }}
                     </p>
