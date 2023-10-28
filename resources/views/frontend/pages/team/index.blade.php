@@ -47,9 +47,9 @@
                     <p class="desc">{{ ucfirst($row->designation) }}</p>
                     <hr />
                     <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Litigation & Dispute Resolution Employment & Labour Law
+                        {{ str_replace('&amp;', ', ',strip_tags($row->description)) }}
                     </p>
-                    <a href="" data-aos="fade-up" data-aos-once="true">View Profile</a>
+                    <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
                 </div>
             </div>
 
