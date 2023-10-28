@@ -283,6 +283,15 @@ header ul.dropdown li a:hover {
     color: black;
 }
 
+@media (max-width: 1023px) {
+    .menu_left_fixed {
+        display: none;
+    }
+    body .nav_bar {
+        display: none !important;
+    }
+}
+
 @media (min-width: 1701px) and (max-width: 2499px) {
     .menu_left_fixed {
         width: 266px !important;
@@ -1487,3 +1496,5 @@ hr {
 }
 
 /* ---------------practice area white End ------------- */
+
+/* ----------------- mobile css ------------------ */

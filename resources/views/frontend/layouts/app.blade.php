@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
     <!----------Meta Information---------->
     @include('frontend.partials.meta')
 
     <!-----------Stylesheets------------>
     @include('frontend.partials.css')
-    
-  </head>
-  
-  <body>
-      
+
+</head>
+
+<body>
+
     <!----=========topbar=========----->
 
-    @include('frontend.partials.topbar')  
+    @include('frontend.partials.topbar')
 
     <!----=========End topbar=========----->
 
-      
-      
-      
-      
-<div class="mian_secrtion">
-   <div class="container">
-      <div class="row">
 
-        <!---========sidebar======----->
 
-        @include('frontend.partials.sidebar')  
 
-        <!---========end sidebar======----->
 
-         <div class="col-md-10 pd-0">
-            
-            <!---========Header======----->
+    <div class="mian_secrtion">
+        <div class="container">
+            <div class="row">
 
-            @include('frontend.partials.header')  
+                <!---========sidebar======----->
 
-            <!---========end Header======----->
+                @include('frontend.partials.sidebar')
 
-            <!---======== page content ====-------->
+                <!---========end sidebar======----->
 
-            @yield('page.content')
-            
-            <!---======== page content ===== -------->
+                <div class="col-xl-10 col-12 pd-0">
 
-<!--------------------------Footer Start---------------------------------------------------------->
+                    <!---========Header======----->
 
-            @include('frontend.partials.footer')
-  
-  <!--Footer Ends-->
-  
-           </div>
+                    @include('frontend.partials.header')
+
+                    <!---========end Header======----->
+
+                    <!---======== page content ====-------->
+
+                    @yield('page.content')
+
+                    <!---======== page content ===== -------->
+
+                    <!--------------------------Footer Start---------------------------------------------------------->
+
+                    @include('frontend.partials.footer')
+
+                    <!--Footer Ends-->
+
+                </div>
+            </div>
         </div>
-     </div>
-  </div>
-  
-  
-  <!--javascript-->
-  @include('frontend.partials.js')
-  @yield('page.scripts')   
+    </div>
 
-  </body>
-  </html>   
+
+    <!--javascript-->
+    @include('frontend.partials.js')
+    @yield('page.scripts')
+
+</body>
+
+</html>
