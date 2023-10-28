@@ -17,7 +17,7 @@
                     </p>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item home"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Team Members
                             </li>
@@ -35,132 +35,26 @@
 <section class="team_wrapper">
     <div class="container">
         <div class="row">
+
+            @foreach ($team as $row)
+    
             <div class="col-md-3">
                 <div class="team_box">
-                    <img src="/assets/frontend/images/team_4.png" alt="" data-aos="fade-up" data-aos-once="true" />
+                    <img src="{{ asset('storage/' . $detail->image) }}" alt="" data-aos="fade-up" data-aos-once="true" />
                     <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Mrs. Avnish Ahlawat
+                        {{ ucfirst($row->name) }}
                     </p>
-                    <p class="desc">Founding Partner</p>
+                    <p class="desc">{{ ucfirst($row->designation) }}</p>
                     <hr />
                     <p class="bio" data-aos="fade-up" data-aos-once="true">
                         Litigation & Dispute Resolution Employment & Labour Law
                     </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
+                    <a href="" data-aos="fade-up" data-aos-once="true">View Profile</a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_5.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Uday Singh Ahlawat
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Manager Partner
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Corporate Commercial Law Foreign Direct Investment
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_6.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Tania Ahlawat
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Co - Managing Partner
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Litigation & Dispute Resolution Employment & Labour Law
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_7.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Gaurav Bhalla
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Partner
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Intellectual Property Media & Entertainment
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_8.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Sheena Ogra
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Partner
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Corporate Commercial IPR & Employment
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_9.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Apoorva Mishra
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Partner
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Litigation & Dispute Resolution
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_10.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Abhishek Paliwal
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Principal Associate
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Practice Head – Corporate Secretarial & Compliance
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="team_box">
-                    <img src="/assets/frontend/images/team_11.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        Ajun Dewan
-                    </p>
-                    <p class="desc" data-aos="fade-up" data-aos-once="true">
-                        Counsel - Chandigarh...
-                    </p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        Real Estate Litigation & Dispute Resolution Arbitration
-                    </p>
-                    <a href="{{ url(route('team.detail')) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
     </div>
 </section>

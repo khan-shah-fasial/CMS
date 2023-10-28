@@ -260,14 +260,14 @@
 
                                     <li class="mb-5" data-aos-once="true" data-aos="fade-up">
                                         <p>
-                                            {{ $question }}
+                                            <strong>{{ $question }}</strong>
                                         </p>
                                         @php echo html_entity_decode($answer) @endphp
                                     </li>
 
                                     @php
-                                    }
-                                    }
+                                            }
+                                        }
                                     }
                                     @endphp
 

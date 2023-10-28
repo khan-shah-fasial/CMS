@@ -21,7 +21,7 @@ Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_d
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
 Route::get('/blog/{slug}', [IndexController::class, 'blog_detail'])->name('blog.detail');
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
-Route::get('/team-detail', [IndexController::class, 'team_detail'])->name('team.detail');
+Route::get('/team-members/{slug}', [IndexController::class, 'team_detail'])->name('team.detail');
 Route::get('/contact-us', [IndexController::class, 'contact_us'])->name('contact');
 Route::any('/about-us', [IndexController::class, 'about_us'])->name('about');
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');

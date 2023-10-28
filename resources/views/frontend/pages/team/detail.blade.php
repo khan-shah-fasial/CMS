@@ -14,10 +14,10 @@
             <div class="col-md-12">
                 <div class="text-center">
                     <h1 class="heading">About</h1>
-                    <p class="desc mb-1">Mrs. Avnish Ahlawat</p>
+                    <p class="desc mb-1">{{ ucfirst($detail->name) }}</p>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item home"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Team Members About
                             </li>
@@ -37,85 +37,51 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="/assets/frontend/images/team_4.png" alt="" class="team_img" data-aos="fade-up"
+                <img src="{{ asset('storage/' . $detail->image) }}" alt="" class="team_img" data-aos="fade-up"
                     data-aos-once="true" />
             </div>
             <div class="col-md-9">
                 <div class="content">
                     <h1 class="main_heading" data-aos="fade-up" data-aos-once="true">
-                        Mrs. Avnish Ahlawat
+                        {{ ucfirst($detail->name) }}
                     </h1>
+
+                    @if(!empty($detail->designation))
                     <h2 class="role" data-aos="fade-up" data-aos-once="true">
-                        Founding Partner
+                        {{ ucfirst($detail->designation) }}
                     </h2>
+                    @endif
+
                     <div class="d-flex align-items-center gap-3 mail">
-                        <img src="/assets/frontend/images/mail.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                        <img src="/assets/frontend/images/linked.png" alt="" data-aos="fade-up" data-aos-once="true" />
+
+                        @if(!empty($detail->email))
+                        <a href="mailto:{{ $detail->email }}">
+                            <img src="/assets/frontend/images/mail.png" alt="" data-aos="fade-up" data-aos-once="true" />
+                        </a>
+                        @endif
+
+                        @if(!empty($detail->linkedin_link))
+                        <a href="{{ $detail->linkedin_link }}">
+                            <img src="/assets/frontend/images/linked.png" alt="" data-aos="fade-up" data-aos-once="true" />
+                        </a>
+                        @endif
+
                     </div>
+
+                    @if(!empty($detail->description))
+
                     <h2 class="sub_heading" data-aos="fade-up" data-aos-once="true">
                         Practice Area
                     </h2>
-                    <ul class="list-unstyled ps-0">
-                        <li class="d-flex align-items-center gap-3 mb-3" data-aos="fade-up" data-aos-once="true">
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                            <span>Litigation & Dispute Resolution</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3 mb-3" data-aos="fade-up" data-aos-once="true">
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                            <span>Real Estate Taxation</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3 mb-3" data-aos="fade-up" data-aos-once="true">
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                            <span>Employment & Labour Law</span>
-                        </li>
-                    </ul>
+
+                    @php echo html_entity_decode($detail->description) @endphp
+
+                    @endif
+
                 </div>
             </div>
             <div class="col-md-12">
-                <h1 class="heading mt-5 mb-3" data-aos="fade-up" data-aos-once="true">
-                    Professional Experience
-                </h1>
-                <p class="desc mb-3" data-aos="fade-up" data-aos-once="true">
-                    Mrs. Ahlawat has been practicing law since 1976. She founded the
-                    Ahlawat & Associates (A&A) in New Delhi in 1981 as a litigation
-                    firm in Delhi. Over the years she grew the firm in manner that A&A
-                    become to be known as one of the go to litigation firms in Delhi
-                    for civil and commercial disputes. Now A&A is regarded as one of
-                    the leading firms in the country in both Litigation and Corporate
-                    Commercial services.
-                </p>
-                <p class="desc mb-3" data-aos="fade-up" data-aos-once="true">
-                    She has over 40 years of experience in service, criminal and civil
-                    matters in the Supreme Court of India, the Delhi High Court, the
-                    subordinate courts and service tribunals. She also has vast
-                    experience in arbitration dispute resolution work, including
-                    company / commercial. With her experience A&A has a unique ability
-                    of handling all dispute related matters within the firm and does
-                    not have to rely on outside counsels.
-                </p>
-                <p class="desc mb-3" data-aos="fade-up" data-aos-once="true">
-                    Mrs. Ahlawat knowledge and involvement in her area of expertise
-                    comes from the practical experience of the many roles she has
-                    adopted over the course of her career, a few of her assignments
-                    include arguing counsel for the State of Himachal Pradesh in the
-                    Supreme Court of India, Senior Standing Counsel DESU (DVB), amicus
-                    curiae in the Delhi High Court for numerous criminal appeals and
-                    murder references, special counsel representing the Punjab
-                    Government in their most controversial case involving State
-                    Property (Kapurthala House in Delhi), legal consultant for Delhi
-                    Agricultural Marketing Board & its 9 Committees, standing counsel
-                    for Netaji Subhash Chandra Institute for Technology (NSIT), legal
-                    consultant for Delhi State Civil Supplies Corporation, standing
-                    counsel for Delhi Transport Corporation (DTC), standing counsel
-                    for Government of NCT of Delhi for their service disputes for all
-                    the departments of the GNCTD including Delhi Police, counsel for
-                    the office of district and sessions judge to defend them in Delhi
-                    High Court, appointed special counsel to defend the Delhi
-                    Administration before various judicial commissions, member
-                    disciplinary committee of Delhi Medical Counsel which looks into
-                    the complaints of made against the doctors and hospitals by
-                    patients for medical negligence.
-                </p>
+                @php echo html_entity_decode($detail->about) @endphp
             </div>
         </div>
     </div>
