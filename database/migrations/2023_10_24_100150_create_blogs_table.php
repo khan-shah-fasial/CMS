@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('main_image');
             $table->longText('content');
             $table->string('meta_title')->nullable();
-            $table->string('meta_description')->nullable();
+            $table->longText('meta_description')->nullable();
             $table->tinyInteger('status')->default(1); 
             $table->unsignedBigInteger('user_id');
             $table->timestamps();

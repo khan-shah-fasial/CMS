@@ -42,3 +42,13 @@ Route::get('/key-generate', function () {
     Artisan::call('key:generate', ['--show' => true]);
     return 'Application key generated successfully!';
 });
+
+Route::get('/create-storage-link', function () {
+    $exitCode = Artisan::call('storage:link');
+    
+    if ($exitCode === 0) {
+        return 'Storage link created successfully.';
+    } else {
+        return 'Error creating storage link.';
+    }
+});

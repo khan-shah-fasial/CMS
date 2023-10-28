@@ -258,7 +258,7 @@
                                         <p>
                                             {{ $question }}
                                         </p>
-                                        {{ $answer }}
+                                        @php echo html_entity_decode($answer) @endphp
                                     </li>
 
                                     @php
