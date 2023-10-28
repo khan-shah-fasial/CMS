@@ -45,12 +45,6 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Meta Description</label>
-                <textarea class="form-control" name="meta_description" rows="3" required></textarea>
-            </div>
-        </div>
-        <div class="col-sm-12">
-            <div class="form-group mb-3">
                 <label>Why Choose Us</label>
                 <textarea class="form-control trumbowyg" name="why_choose_us" rows="5"></textarea>
             </div>
