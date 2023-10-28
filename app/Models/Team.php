@@ -20,6 +20,7 @@ class Team extends Model
         'phone',
         'email',
         'linkedin_link',
+        'series',
         'status',
     ];
         

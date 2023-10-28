@@ -26,9 +26,10 @@ class TeamController extends Controller
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean', // Example: To validate that 'status' is a boolean
         ]);
 
@@ -90,9 +91,10 @@ class TeamController extends Controller
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean',
         ]);
 

@@ -34,7 +34,7 @@
 <section class="career_page_content">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 padd00mb">
                 <p class="desc mb-4" data-aos-once="true" data-aos="fade-up">
                     <strong>Lawyer/ Assessment Trainees</strong> – To apply, please
                     send us an email with your name, PQE and field of law that you
