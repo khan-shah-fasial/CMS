@@ -24,6 +24,7 @@
                 <th>Name</th>
                 <th>Designation</th>
                 <th>Status</th>
+                <th>Series</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -41,6 +42,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
+                <td>{{$row->series}}</td>
                 <td>{{$row->created_at}}</td>
                 <td>
                     <a href="{{ url(route('team.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
