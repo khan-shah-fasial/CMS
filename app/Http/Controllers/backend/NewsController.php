@@ -21,10 +21,6 @@ class NewsController extends Controller
     }  
     
     public function create(Request $request) {
-        // Validate form data
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
 
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/news', 'public');
@@ -55,7 +51,7 @@ class NewsController extends Controller
     public function edit($id) {
         $news = News::find($id);
         $newscategory = NewsCategory::where('status', 1)->get();
-        return view('backend.pages.News.edit', compact('news', 'newscategory'));
+        return view('backend.pages.news.edit', compact('news', 'newscategory'));
     }
     
     public function view($id) {
