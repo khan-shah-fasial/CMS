@@ -5,7 +5,7 @@
 
     <!-- -------------------- faq banner start ---------------- -->
 
-    <section class="faq_page_banner mt105">
+    <section class="faq_page_banner mt105 breadcrumes_padd">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -36,7 +36,7 @@
     <section class="faq_page_accordion">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-8">
+          <div class="col-md-8 padd00mb">
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -47,8 +47,6 @@
                     data-bs-target="#collapseOne"
                     aria-expanded="true"
                     aria-controls="collapseOne"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     Do I need a lawyer to start a business? Can’t my chartered
                     accountant handle everything?
@@ -62,8 +60,6 @@
                 >
                   <div
                     class="accordion-body"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     More often than not, a person/company is made to believe
                     that the accountant can draft the incorporation documents
@@ -84,8 +80,6 @@
                     data-bs-target="#collapseTwo"
                     aria-expanded="false"
                     aria-controls="collapseTwo"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     Do I need to get my tradename registered?
                   </button>
@@ -116,8 +110,6 @@
                     data-bs-target="#collapseThree"
                     aria-expanded="false"
                     aria-controls="collapseThree"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     How important is it to protect my intellectual property?
                   </button>
@@ -148,8 +140,6 @@
                     data-bs-target="#collapseFour"
                     aria-expanded="false"
                     aria-controls="collapseFour"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     How important is it to protect my intellectual property?
                   </button>
@@ -180,8 +170,6 @@
                     data-bs-target="#collapseFive"
                     aria-expanded="false"
                     aria-controls="collapseFive"
-                    data-aos-once="true"
-                    data-aos="fade-up"
                   >
                     Should I invest in real estate? What are my other options?
                   </button>

@@ -6,7 +6,7 @@
 
 <!-- ---------------------- Contact banner start--------------- -->
 
-<section class="contact_p_banner mt105">
+<section class="contact_p_banner mt105 breadcrumes_padd">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -38,15 +38,14 @@
             <div class="col-md-12">
                 <div class="sub_container">
                     <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="heading" data-aos-once="true" data-aos="fade-up">
-                                Contact our support guys or make appointment <br />
+                       
+                        <div class="col-md-6">
+						<h1 class="heading" data-aos-once="true" data-aos="fade-up">
+                                Contact our support guys or make appointment 
                                 with
                                 <span class="main_heading_color"> Our Consultant </span>
                             </h1>
-                        </div>
-                        <div class="col-md-6 pe-5">
-                            <p class="desc pe-5" data-aos-once="true" data-aos="fade-up">
+                            <p class="desc" data-aos-once="true" data-aos="fade-up">
                                 Please contact us using the information below. For
                                 additional information on our management consulting
                                 services, please visit the appropriate page on our site.

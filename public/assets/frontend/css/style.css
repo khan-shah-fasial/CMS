@@ -1496,7 +1496,7 @@ hr {
     line-height: 26px;
 }
 .faq_page_accordion .accordion .accordion-item .accordion-button {
-    padding: 2rem 2.25rem;
+    padding: 1.5rem 2.25rem;
 }
 .faq_page_accordion .accordion .accordion-item .accordion-body {
     padding: 0 2.25rem 2rem 2.25rem;
@@ -1530,6 +1530,9 @@ hr {
 /* ----------------- mobile css ------------------ */
 
 /*--responsive css start--*/
+.faq_page_accordion .accordion-button {
+    font-weight: 700;
+}
 .heading2 {
     font-size: 24px;
     font-weight: 700;
@@ -1540,17 +1543,6 @@ hr {
     color: #000;
 }
 @media (max-width: 767px) {
-    header {
-        display: none;
-    }
-
-    .top_baar {
-        display: none;
-    }
-
-    .menu_left_fixed {
-        display: none;
-    }
     .footer_bottom.d-flex.align-items-center.justify-content-between {
         display: block !important;
     }
@@ -1597,5 +1589,32 @@ hr {
     }
     section.career_page_content ol {
         padding-left: 20px;
+    }
+    .about_counter_number {
+        font-size: 28px;
+        padding-top: 10px;
+    }
+    .main_heading {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+    .service_get_in_touch a span:nth-child(2) {
+        font-size: 26px;
+    }
+    .about_counter_para {
+        font-size: 13px;
+    }
+    .career_page_content ol {
+        padding-left: 20px;
+    }
+    .heading2 {
+        font-size: 20px;
+    }
+    .faq_page_accordion .accordion .accordion-item .accordion-button {
+        padding: 1.5rem 1rem;
+    }
+    .faq_page_accordion .accordion .accordion-item .accordion-body {
+        padding: 0 1rem 1rem 1rem;
     }
 }
