@@ -26,9 +26,10 @@ class TeamController extends Controller
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean', // Example: To validate that 'status' is a boolean
         ]);
 
@@ -90,9 +91,10 @@ class TeamController extends Controller
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean',
         ]);
 
@@ -103,7 +105,7 @@ class TeamController extends Controller
         if ($request->hasFile('image')) {
             // Delete the old image (if it exists)
             if ($team->image) {
-                Storage::disk('assets/image/teams')->delete($team->image);
+                Storage::disk('public')->delete($team->image);
             }
 
             $imagePath = $request->file('image')->store('assets/image/teams', 'public');

@@ -11,7 +11,7 @@
         <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Answer</label>
-                <textarea class="form-control" name="answer" rows="5" required>{{ $faq->answer }}</textarea>
+                <textarea class="trumbowyg form-control" name="answer" rows="5" required>{{ $faq->answer }}</textarea>
             </div>
         </div>
         <div class="col-sm-12">
@@ -25,6 +25,7 @@
 <script>
 $(document).ready(function() {
     initValidate('#edit_faq_form');
+    initTrumbowyg('.trumbowyg');
 });
 
 $("#edit_faq_form").submit(function(e) {

@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('designation')->nullable();
             $table->longText('description')->nullable();
             $table->string('phone', 20)->nullable();
-            $table->string('email', 30)->nullable();
+            $table->string('email', 55)->nullable();
             $table->string('linkedin_link')->nullable();
+            $table->unsignedBigInteger('series')->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

@@ -16,13 +16,13 @@
         <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="phone">Phone</label>
-                <input type="text" class="form-control" name="phone" id="phone" required>
+                <input type="text" class="form-control" name="phone" id="phone">
             </div>
         </div>
         <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
+                <input type="email" class="form-control" name="email" id="email">
             </div>
         </div>    
         <div class="col-sm-4">
@@ -34,7 +34,7 @@
         <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="linkedin_link">LinkedIn Link</label>
-                <input type="url" class="form-control" name="linkedin_link" id="linkedin_link" required>
+                <input type="url" class="form-control" name="linkedin_link" id="linkedin_link">
             </div>
         </div>            
         <div class="col-sm-6">
@@ -49,6 +49,12 @@
                 <textarea class="form-control trumbowyg" name="description" id="description" rows="5" required></textarea>
             </div>
         </div>
+        <div class="col-sm-12">
+            <div class="form-group mb-3">
+                <label for="series">Order</label>
+                <input type="text" class="form-control" name="series" id="series">
+            </div>
+        </div>        
         <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
                 <button type="submit" class="btn btn-block btn-primary">Create</button>

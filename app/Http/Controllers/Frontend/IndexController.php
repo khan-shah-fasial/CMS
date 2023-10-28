@@ -8,6 +8,7 @@ use App\Models\PracticeArea;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\User;
+use App\Models\Team;
 
 class IndexController extends Controller
 {
@@ -16,7 +17,9 @@ class IndexController extends Controller
     }
 
     public function practice_area(){
-        return view('frontend.pages.practicearea.index');
+        $practiceAreas = PracticeArea::where('parent_id', null)->get();
+        //return $practiceAreas;
+        return view('frontend.pages.practicearea.index', compact('practiceAreas'));
     }
 
     public function practice_area_detail($slug){
@@ -43,11 +46,17 @@ class IndexController extends Controller
     }
 
     public function team_members(){
-        return view('frontend.pages.team.index');
+        $team = Team::orderBy('series', 'asc')->get();
+
+        return view('frontend.pages.team.index', compact('team'));
     }
 
-    public function team_detail(){
-        return view('frontend.pages.team.detail');
+    public function team_detail($slug){
+        $slug = str_replace('-', ' ', $slug);
+
+        $detail = Team::where('name', $slug)->where('status', 1)->first();
+
+        return view('frontend.pages.team.detail', compact('detail'));
     }
 
     public function contact_us(){
