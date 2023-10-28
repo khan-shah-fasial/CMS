@@ -5,7 +5,7 @@
         </div>
         <div class="menu_listing">
             <ul>
-                <li><a href="{{ url(route('practicearea', 'q')) }}">Practice Area</a></li>
+                <li><a href="{{ url(route('practicearea')) }}">Practice Area</a></li>
                 <li><a href="{{ url(route('team')) }}">Team</a></li>
                 <li><a href="{{ url(route('blog')) }}">Blog</a></li>
                 <li><a href="{{ url(route('contact')) }}">Contact Us</a></li>

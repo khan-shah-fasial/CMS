@@ -16,17 +16,21 @@
                     <div class="quick_links_box">
                         <h6 class="q_links_heading" data-aos-once="true" data-aos="fade-up">Quick Links</h6>
                         <ul>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="about-us.php">About Us</a></li>
-                            <li data-aos-once="true" data-aos="fade-up">
-                                <a href="practice-area.php">Practice Area </a>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('about')) }}">About Us</a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="career.php">Career </a></li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="team.php">Teams </a></li>
                             <li data-aos-once="true" data-aos="fade-up">
-                                <a href="contact.php">Contact Us </a>
+                                <a href="{{ url(route('practicearea')) }}">Practice Area </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="blog.php">Blog </a></li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="faq.php">Faq </a></li>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('career')) }}">Career </a>
+                            </li>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('team')) }}">Teams </a>
+                            </li>
+                            <li data-aos-once="true" data-aos="fade-up">
+                                <a href="{{ url(route('contact')) }}">Contact Us </a>
+                            </li>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('blog')) }}">Blog </a>
+                            </li>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('faq')) }}">Faq </a></li>
                         </ul>
                     </div>
                 </div>

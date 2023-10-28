@@ -15,6 +15,10 @@ class IndexController extends Controller
         return view('frontend.pages.home.index');
     }
 
+    public function practice_area(){
+        return view('frontend.pages.practicearea.index');
+    }
+
     public function practice_area_detail($slug){
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
 
@@ -24,7 +28,7 @@ class IndexController extends Controller
             $child_detail = [];
         }
 
-        return view('frontend.pages.practicearea.index', compact('detail', 'child_detail'));
+        return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail'));
     }
 
     public function blog(){

@@ -16,8 +16,8 @@ use App\Http\Controllers\Frontend\IndexController;
 
 // Home START
 Route::get('/', [IndexController::class, 'index'])->name('index');
-//Route::get('/area-of-practice', [IndexController::class, 'practice_area'])->name('practicearea');
-Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea');
+Route::get('/area-of-practice', [IndexController::class, 'practice_area'])->name('practicearea');
+Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
 Route::get('/blog/{slug}', [IndexController::class, 'blog_detail'])->name('blog.detail');
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
