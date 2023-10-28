@@ -1,6 +1,9 @@
+@extends('frontend.layouts.app')
+
+@section('page.content')
     <!-- -------------------- blog banner start ---------------- -->
 
-    <section class="blog_page_banner">
+    <section class="blog_page_banner mt105">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -231,3 +234,5 @@
         </div>
     </section>
     <!------------------ awards_section End -------------------------->
+
+    @endsection

@@ -26,6 +26,7 @@ Route::get('/contact-us', [IndexController::class, 'contact_us'])->name('contact
 Route::any('/about-us', [IndexController::class, 'about_us'])->name('about');
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');
 Route::get('/career', [IndexController::class, 'career'])->name('career');
+Route::get('/privacy-policy', [IndexController::class, 'privacy_policy'])->name('privacy-policy');
 // Home END
 
 
