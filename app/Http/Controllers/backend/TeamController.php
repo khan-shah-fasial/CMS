@@ -105,7 +105,7 @@ class TeamController extends Controller
         if ($request->hasFile('image')) {
             // Delete the old image (if it exists)
             if ($team->image) {
-                Storage::disk('assets/image/teams')->delete($team->image);
+                Storage::disk('public')->delete($team->image);
             }
 
             $imagePath = $request->file('image')->store('assets/image/teams', 'public');
