@@ -34,7 +34,7 @@
               <p class="d-flex align-items-center gap-2 author" data-aos="fade-up"
               data-aos-once="true" >
                 <img src="/assets/frontend/images/calender.png" alt="" />
-                <span>{{ $detail->created_at }}</span>
+                <span>{{ $detail->created_at->format('F j, Y') }}</span>
               </p>
             </div>
         </div>

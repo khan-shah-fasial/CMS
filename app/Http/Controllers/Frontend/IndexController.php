@@ -35,11 +35,15 @@ class IndexController extends Controller
     }
 
     public function blog(){
-        return view('frontend.pages.blog.index');
+        $blog = Blog::where('status', 1)->get();
+
+        return view('frontend.pages.blog.index', compact('blog'));
     }
 
     public function blog_detail($slug){
+        
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
+
         $author = User::find($detail->user_id);
 
         return view('frontend.pages.blog.detail', compact('detail','author'));

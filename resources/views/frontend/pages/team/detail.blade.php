@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <h2 class="sub_heading" data-aos="fade-up" data-aos-once="true">
+                <h2 class="sub_heading mt-5" data-aos="fade-up" data-aos-once="true">
                     Professional Experience
                 </h2>
                 @php echo html_entity_decode($detail->about) @endphp
