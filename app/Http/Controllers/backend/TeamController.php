@@ -21,14 +21,15 @@ class TeamController extends Controller
     public function create(Request $request) {
         // Validate the incoming request data
         $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Customize validation rules
+            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Customize validation rules
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean', // Example: To validate that 'status' is a boolean
         ]);
 
@@ -85,14 +86,15 @@ class TeamController extends Controller
 
         // Validate the incoming request data
         $validatedData = $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',
             'description' => 'required',
-            'phone' => 'required',
-            'email' => 'required|email',
-            'linkedin_link' => 'required|url',
+            'phone' => 'nullable',
+            'email' => 'nullable',
+            'linkedin_link' => 'nullable',
+            'series' => 'nullable',
             'status' => 'boolean',
         ]);
 

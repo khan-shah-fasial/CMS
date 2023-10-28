@@ -48,7 +48,11 @@
 <!-- --------------------  service Title Desc  end ---------------------- -->
 <!-- -------------------- service image start ---------------------- -->
 
+@if(!empty($detail->section_image))
+
 <section class="service_img" data-aos-once="true" data-aos="fade-up" style="background-image: url({{ asset('storage/' . $detail->section_image) }});"></section>
+
+@endif
 
 <!-- -------------------- service image  end ---------------------- -->
 <!-- -------------------- service counter start ---------------------- -->
@@ -258,7 +262,7 @@
                                         <p>
                                             {{ $question }}
                                         </p>
-                                        {{ $answer }}
+                                        @php echo html_entity_decode($answer) @endphp
                                     </li>
 
                                     @php

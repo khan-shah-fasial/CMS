@@ -71,7 +71,7 @@
                                             <div class="row">
                                                 <input type="text" style="margin-bottom: 3px;" class="form-control" name="faq[]" placeholder="Enter Question here..." value="{{ $fkey1 }}">
                                                 <span class="glyphicon form-control-feedback"></span>
-                                                <textarea class="form-control" name="faq_description[]" rows="5" placeholder="Enter Answer here...">{{ $fvalue1 }}</textarea>
+                                                <textarea  class="form-control trumbowyg" name="faq_description[]" rows="5" placeholder="Enter Answer here...">{{ $fvalue1 }}</textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
@@ -85,6 +85,8 @@
                                 </div>
                                 </br>
                             </div>
+
+
 
                     @php
                                 $i++;
@@ -102,7 +104,7 @@
                                 <div class="row">
                                     <input type="text" style="margin-bottom: 3px;" class="form-control" name="faq[]" placeholder="Enter Question here...">
                                     <span class="glyphicon form-control-feedback"></span>
-                                    <textarea class="form-control" name="faq_description[]" rows="5" placeholder="Enter Answer here..."></textarea>
+                                    <textarea class="form-control trumbowyg" name="faq_description[]" rows="5" placeholder="Enter Answer here..."></textarea>
                                 </div>
                             </div>
                             <div class="col-md-1">
@@ -186,15 +188,19 @@ var responseHandler = function(response) {
     location.reload();
 }
 
+var textareaIdCounter = 0;
+
 $("#add_faq").on("click", function() {
+    textareaIdCounter++;
+
     var newFaq = `
         <div class="faq form-group">
-            <div class="row">
+            <div class="row" data-id="${textareaIdCounter}">
                 <div class="col-md-11">
                     <div class="row">
                         <input type="text" style="margin-bottom: 3px;" class="form-control" name="faq[]" placeholder="Enter Question here...">
                         <span class="glyphicon form-control-feedback"></span>
-                        <textarea class="form-control" name="faq_description[]" rows="5" placeholder="Enter Answer here..."></textarea>
+                        <textarea id="trumbowyg_${textareaIdCounter}" class="trumbowyg form-control" name="faq_description[]" rows="5" placeholder="Enter Answer here..."></textarea>
                     </div>
                 </div>
                 <div class="col-md-1"><i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_faq($(this));"></i></div>
@@ -202,7 +208,10 @@ $("#add_faq").on("click", function() {
             </br>
         </div>
     `;
+
     $("#faq_add_more").append(newFaq);
+    initTrumbowyg(`#trumbowyg_${textareaIdCounter}`);
 });
+
 
 </script>

@@ -21,16 +21,21 @@ class PracticeAreaController extends Controller
     
     public function create(Request $request) {
         // Validate form data
-        $request->validate([
+       /* $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'breadcrumb_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'section_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        ]); */
     
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
         $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
-        $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
+
+        if ($request->hasFile('section_image')) {
+            $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
+        } else {
+            $imagePath2 = null;
+        }
 
         // Extract and handle FAQ data
         $faq = $request->input('faq');

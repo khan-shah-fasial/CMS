@@ -4,12 +4,12 @@
 
 <!-- -------------------- About banner start ---------------- -->
 
-<section class="about_page_banner mt105">
+<section class="about_page_banner mt105 breadcrumes_padd">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">About Us</h1>
+                    <h4 class="heading">About Us</h4>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
@@ -33,10 +33,8 @@
 <section class="about_page_content pb-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <!-- <h1 class="heading mb-4" data-aos-once="true" data-aos="fade-up">
-                    About Us
-                </h1> -->
+            <div class="col-md-12 padd00mb">
+              
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
                     Ahlawat & Associates (“A&A”) is one of the leading full-service
                     law firms in India, catering to domestic and international
@@ -70,7 +68,7 @@
                     options to best suit their needs. A&A takes pride in being amongst
                     the most sought-after qualitative legal service provider globally.
                 </p>
-                <p class="desc mb-5" data-aos-once="true" data-aos="fade-up">
+                <p class="desc mb-lg-5 mb-3" data-aos-once="true" data-aos="fade-up">
                     With an aim to provide valued, practical and strategic legal
                     solutions to help clients achieve their goals, A&A combines the
                     highest global standards with local expertise.
@@ -91,7 +89,7 @@
         <div class="row">
             <div class="col-md-12" id="counter">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-6">
                         <div class="about_counter_container">
                             <div class="about_right_counter aos-init aos-animate d-flex">
                                 <div class="about_counter_icon">
@@ -109,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 second_counter">
+                    <div class="col-md-3 col-6 second_counter">
                         <div class="about_counter_container">
                             <div class="about_right_counter aos-init aos-animate" data-aos="fade-up"
                                 data-aos-once="true">
@@ -128,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 third_counter">
+                    <div class="col-md-3 col-6 third_counter">
                         <div class="about_counter_container">
                             <div class="about_right_counter aos-init aos-animate" data-aos="fade-up"
                                 data-aos-once="true">
@@ -147,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-6">
                         <div class="about_counter_container">
                             <div class="about_right_counter aos-init aos-animate" data-aos="fade-up"
                                 data-aos-once="true">
@@ -177,11 +175,11 @@
 <section class="about_page_content_2 pb-0 pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="heading mb-3" data-aos-once="true" data-aos="fade-up">
+            <div class="col-md-12 padd00mb">
+                <h4 class="heading mb-2" data-aos-once="true" data-aos="fade-up">
                     Team Of Experts
-                </h1>
-                <p class="desc mb-5" data-aos-once="true" data-aos="fade-up">
+                </h4>
+                <p class="desc mb-4 mb-lg-5" data-aos-once="true" data-aos="fade-up">
                     All our partners are recognized leaders in their respective
                     fields. They have specialized knowledge of both the legal
                     framework as well as the specific business requirements of various
@@ -196,10 +194,10 @@
                     ease and have made A&A a dependable source of seamless knowledge
                     and implementation
                 </p>
-                <h1 class="heading mb-3" data-aos-once="true" data-aos="fade-up">
+                <h4 class="heading mb-2 mt-3" data-aos-once="true" data-aos="fade-up">
                     Our Uniqueness
-                </h1>
-                <p class="desc mb-5" data-aos-once="true" data-aos="fade-up">
+                </h4>
+                <p class="desc mb-4 mb-lg-5" data-aos-once="true" data-aos="fade-up">
                     A&A adopted an approach that demands the highest levels of
                     understanding in each of their practice areas, technical skill and
                     service delivery allowing us to provide accurate, reliable, timely
@@ -218,10 +216,10 @@
                     and regulatory compliances to enable smooth functionality of their
                     business’.
                 </p>
-                <h1 class="heading mb-3" data-aos-once="true" data-aos="fade-up">
+                <h4 class="heading mb-2" data-aos-once="true" data-aos="fade-up">
                     Our Values
-                </h1>
-                <p class="desc mb-5" data-aos-once="true" data-aos="fade-up">
+                </h4>
+                <p class="desc mb-4 mb-lg-5" data-aos-once="true" data-aos="fade-up">
                     Our most valuable asset for progress is consistent cooperation and
                     coordinated effort within and between our teams, across each
                     practice area. Each partner-led team, having specific practice
@@ -246,9 +244,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="main_heading" data-aos-once="true" data-aos="fade-up">
+                    <h4 class="main_heading" data-aos-once="true" data-aos="fade-up">
                         GET IN TOUCH WITH US TODAY
-                    </h1>
+                    </h4>
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         We can be reached at
                     </p>
