@@ -55,7 +55,7 @@ class NewsController extends Controller
     public function edit($id) {
         $news = News::find($id);
         $newscategory = NewsCategory::where('status', 1)->get();
-        return view('backend.pages.News.edit', compact('news', 'newscategory'));
+        return view('backend.pages.news.edit', compact('news', 'newscategory'));
     }
     
     public function view($id) {
