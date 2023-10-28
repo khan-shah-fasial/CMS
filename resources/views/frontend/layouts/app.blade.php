@@ -33,7 +33,7 @@
 
                 <!---========end sidebar======----->
 
-                <div class="col-xl-10 col-12 pd-0">
+                <div class="col-lg-10 col-12 pd-0">
 
                     <!---========Header======----->
 

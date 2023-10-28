@@ -283,12 +283,16 @@ header ul.dropdown li a:hover {
     color: black;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 991px) {
     .menu_left_fixed {
         display: none;
     }
     body .nav_bar {
         display: none !important;
+    }
+
+    header {
+        width: 100%;
     }
 }
 
