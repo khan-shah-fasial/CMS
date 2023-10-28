@@ -48,7 +48,7 @@
 <!-- --------------------  service Title Desc  end ---------------------- -->
 <!-- -------------------- service image start ---------------------- -->
 
-<section class="service_img" data-aos-once="true" data-aos="fade-up"></section>
+<section class="service_img" data-aos-once="true" data-aos="fade-up" style="background-image: url({{ asset('storage/' . $detail->section_image) }});"></section>
 
 <!-- -------------------- service image  end ---------------------- -->
 <!-- -------------------- service counter start ---------------------- -->
@@ -159,6 +159,8 @@
 
                     @endif
 
+                    @if(!empty($detail->why_choose_us))
+
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
                         <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
@@ -166,6 +168,11 @@
                             Why Choose Us
                         </button>
                     </li>
+
+                    @endif
+
+                    @if(!empty(json_decode($detail->faq, true)))
+
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
                         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
@@ -173,6 +180,8 @@
                             FAQ
                         </button>
                     </li>
+
+                    @endif
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
 
@@ -215,6 +224,8 @@
 
                     @endif
 
+                    @if(!empty($detail->why_choose_us))
+
                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <div class="row">
                             <div class="col-md-12">
@@ -222,6 +233,11 @@
                             </div>
                         </div>
                     </div>
+                    
+                    @endif
+
+                    @if(!empty(json_decode($detail->faq, true)))
+
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div class="row">
                             <div class="col-md-12">
@@ -255,6 +271,9 @@
                             </div>
                         </div>
                     </div>
+
+                    @endif
+
                 </div>
             </div>
         </div>
