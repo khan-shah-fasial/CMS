@@ -214,33 +214,21 @@
                     Related Articles
                 </h1>
             </div>
+
+            @foreach ($blog as $row)
+                
             <div class="col-md-4">
                 <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_1.png" alt="" class="blog_img" />
+                    <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
+                        <p>{{ $row->short_description }}</p>
+                        <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_6.png" alt="" class="blog_img" />
-                    <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_7.png" alt="" class="blog_img" />
-                    <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
     </div>
 </section>
