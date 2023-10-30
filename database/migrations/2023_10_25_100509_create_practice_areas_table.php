@@ -28,7 +28,8 @@ return new class extends Migration
             $table->string('breadcrumb_title')->nullable();
             $table->string('breadcrumb_subtitle')->nullable();
             $table->string('breadcrumb_image')->nullable();
-            $table->boolean('status')->default(true);
+            $table->boolean('status')->default(1);
+            $table->boolean('is_home')->default(0);
             $table->timestamps();
         });
     }

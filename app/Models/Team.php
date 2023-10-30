@@ -22,6 +22,7 @@ class Team extends Model
         'linkedin_link',
         'series',
         'status',
+        'is_home',
     ];
         
 }

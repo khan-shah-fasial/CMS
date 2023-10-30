@@ -28,5 +28,6 @@ class PracticeArea extends Model
         'breadcrumb_subtitle',
         'breadcrumb_image',
         'status',
+        'is_home',
     ];    
 }
