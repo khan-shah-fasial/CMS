@@ -22,9 +22,7 @@
             </div>
             <div class="col-md-6">
                 <div class="search_right d-flex align-items-center gap-3">
-                    <a>
-                        <img src="/assets/frontend/images/lang.png" alt="email icon" />
-                    </a>
+					<div id="google_translate_element"></div>
                     <a>
                         <img src="/assets/frontend/images/search.png" alt="email icon" />
                     </a>

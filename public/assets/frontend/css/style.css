@@ -86,9 +86,9 @@ section {
 
 /* ------------------------headers--------------- */
 header {
-    position: fixed;
+    position: sticky;
     background: #fff;
-    top: 36px;
+    top: 0px;
     z-index: 99;
 }
 .bottom_nav_links .nav_links a img {
@@ -224,14 +224,16 @@ header ul.dropdown li a:hover {
 
 .menu_left_fixed {
     background-image: url(/assets/frontend/images/header_bg_image.png);
-    background-size: cover;
+       background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: fixed;
     width: 226px;
     height: 100%;
-    top: 34px;
+    top: 0;
     text-align: center;
+    padding-top: 34px;
+	z-index:999;
 }
 
 .container,
@@ -245,15 +247,15 @@ header ul.dropdown li a:hover {
     padding: 0px !important;
 }
 .top_baar {
-    position: fixed;
+    position: relative;
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
     padding-left: 45px;
     padding-right: 45px;
 }
 .menu_listing ul li {
     list-style: none;
-    padding-bottom: 28px;
+    padding-bottom: 22px;
 }
 
 .menu_listing ul {
@@ -313,6 +315,22 @@ header ul.dropdown li a:hover {
     }
 }
 
+.goog-te-gadget .goog-te-combo {
+    border: 0;
+    background: #fff;
+    height: 26px;
+    margin-top: -2px !important;
+    border-radius: 2px;
+    outline: -webkit-focus-ring-color auto 0px;
+    padding-left: 7px;
+    padding-right: 0;
+}
+
+.rotate {
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+}
+
 /*header close*/
 
 /* banner open*/
@@ -324,7 +342,7 @@ header ul.dropdown li a:hover {
     height: 515px;
 }
 .banner_content {
-    margin-top: 100px;
+    margin-top: 60px;
     width: 500px;
     text-align: center;
     margin-left: auto;
@@ -613,6 +631,8 @@ header ul.dropdown li a:hover {
     flex-direction: column;
     width: fit-content;
     width: 191px;
+	    position: relative;
+    z-index: 99;
 }
 
 .team .team_bio_box .name {
@@ -672,7 +692,9 @@ header ul.dropdown li a:hover {
     background-position: center;
     background-size: cover;
 }
-
+section.blog p.desc {
+    margin-bottom: 0;
+}
 .blog_big_box {
     background: rgba(236, 236, 236, 1);
 }
@@ -1542,6 +1564,9 @@ hr {
     font-weight: 800;
     color: #000;
 }
+
+
+
 @media (max-width: 767px) {
     .footer_bottom.d-flex.align-items-center.justify-content-between {
         display: block !important;
