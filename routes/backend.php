@@ -14,6 +14,7 @@ use App\Http\Controllers\backend\NewsCategoryController;
 use App\Http\Controllers\backend\NewsController;
 use App\Http\Controllers\backend\PracticeAreaController;
 use App\Http\Controllers\backend\TrumbowygController;
+use App\Http\Controllers\backend\MediaCoverageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -150,4 +151,15 @@ Route::group(['prefix' => 'practicearea'], function () {
 //News
 Route::group(['prefix' => 'trumbowyg'], function () {
     Route::post('/upload', [TrumbowygController::class, 'upload'])->name('trumbowyg.upload');
+});
+
+//mediacoverage
+Route::group(['prefix' => 'mediacoverage'], function () {
+    Route::get('/index', [MediaCoverageController::class, 'index'])->name('mediacoverage.index');
+    Route::get('/add', [MediaCoverageController::class, 'add'])->name('mediacoverage.add');
+    Route::get('/edit/{id}', [MediaCoverageController::class, 'edit'])->name('mediacoverage.edit');
+    Route::post('/create', [MediaCoverageController::class, 'create'])->name('mediacoverage.create');
+    Route::post('/update', [MediaCoverageController::class, 'update'])->name('mediacoverage.update');
+    Route::post('/delete/{id}', [MediaCoverageController::class, 'delete'])->name('mediacoverage.delete');
+    Route::get('/status/{id}/{status}', [MediaCoverageController::class, 'status'])->name('mediacoverage.status');
 });

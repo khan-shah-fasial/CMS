@@ -81,6 +81,14 @@
                                 <span> Practice Area </span>
                             </a>
                         </li>
+
+                        
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('mediacoverage.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-clapperboard-line"></i> 
+                                <span> Media Coverage </span>
+                            </a>
+                        </li>
                         
                         <li class="side-nav-item menuitem-active">
                             <a href="{{ route('faq.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
