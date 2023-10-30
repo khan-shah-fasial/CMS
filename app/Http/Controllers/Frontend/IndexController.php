@@ -25,6 +25,11 @@ class IndexController extends Controller
     public function practice_area_detail($slug){
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
 
+        $slug = str_replace('-', ' ', $slug);
+        $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
+
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', $blog_Catg->id)->get();
+
         if(empty($detail->parent_id)){  
             $child_detail = PracticeArea::where('parent_id', $detail->id)->where('status', 1)->get();
         } else  {
