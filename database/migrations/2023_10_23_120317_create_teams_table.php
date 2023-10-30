@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('linkedin_link')->nullable();
             $table->unsignedBigInteger('series')->nullable();
             $table->boolean('status')->default(1);
+            $table->boolean('is_home')->default(0);
             $table->timestamps();
         });
     }
