@@ -57,89 +57,7 @@
 <!-- -------------------- service image  end ---------------------- -->
 <!-- -------------------- service counter start ---------------------- -->
 
-<section class="counter_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="counter">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="about_counter_container" data-aos-once="true" data-aos="fade-up">
-                            <div class="about_right_counter d-flex">
-                                <div class="about_counter_icon">
-                                    <div class="about_counter_img">
-                                        <img src="/assets/frontend/images/trusted_icon.png" alt="counter 1"
-                                            class="mb-4" />
-                                    </div>
-                                </div>
-                                <div class="about_counter">
-                                    <p class="about_counter_number">
-                                        <span class="counter-value" data-count="23">0</span>k
-                                    </p>
-                                    <p class="about_counter_para">Trusted Clients</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 second_counter">
-                        <div class="about_counter_container" data-aos-once="true" data-aos="fade-up">
-                            <div class="about_right_counter" data-aos="fade-up" data-aos-once="true">
-                                <div class="about_counter_icon">
-                                    <div class="about_counter_img">
-                                        <img src="/assets/frontend/images/recovered_icons.png" alt="counter 1"
-                                            class="mb-4" />
-                                    </div>
-                                </div>
-                                <div class="about_counter">
-                                    <p class="about_counter_number">
-                                        <span class="counter-value" data-count="162">0</span>k
-                                    </p>
-                                    <p class="about_counter_para">Recovered Clients</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 third_counter">
-                        <div class="about_counter_container" data-aos-once="true" data-aos="fade-up">
-                            <div class="about_right_counter aos-init aos-animate" data-aos="fade-up"
-                                data-aos-once="true">
-                                <div class="about_counter_icon">
-                                    <div class="about_counter_img">
-                                        <img src="/assets/frontend/images/certified_icons.png" alt="counter 1"
-                                            class="mb-4" />
-                                    </div>
-                                </div>
-                                <div class="about_counter">
-                                    <p class="about_counter_number">
-                                        <span class="counter-value" data-count="90">0</span>%
-                                    </p>
-                                    <p class="about_counter_para">Special Cases</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="about_counter_container" data-aos-once="true" data-aos="fade-up">
-                            <div class="about_right_counter aos-init aos-animate" data-aos="fade-up"
-                                data-aos-once="true">
-                                <div class="about_counter_icon">
-                                    <div class="about_counter_img">
-                                        <img src="/assets/frontend/images/law_icons.png" alt="counter 1" class="mb-4" />
-                                    </div>
-                                </div>
-                                <div class="about_counter">
-                                    <p class="about_counter_number">
-                                        <span class="counter-value" data-count="115">0</span>k
-                                    </p>
-                                    <p class="about_counter_para">Personal Injury Cases</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('frontend.component.service_counter')
 
 <!-- -------------------- service counter  end ---------------------- -->
 
@@ -215,7 +133,7 @@
                                         <p>
                                             {{ $row->short_description }}
                                         </p>
-                                        <a href="#">Read More <img src="/assets/frontend/images/right.png" alt="" />
+                                        <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read More <img src="/assets/frontend/images/right.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -296,33 +214,21 @@
                     Related Articles
                 </h1>
             </div>
+
+            @foreach ($blog as $row)
+                
             <div class="col-md-4">
                 <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_1.png" alt="" class="blog_img" />
+                    <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
+                        <p>{{ $row->short_description }}</p>
+                        <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_6.png" alt="" class="blog_img" />
-                    <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
-                    <img src="/assets/frontend/images/blog_7.png" alt="" class="blog_img" />
-                    <div class="blog_content">
-                        <p>Dior call Jennifer campaign backlash ‘not all justified’.</p>
-                        <a href="#">View More</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforeach
+
         </div>
     </div>
 </section>
@@ -330,77 +236,12 @@
 <!-- -------------------- service related  end ---------------------- -->
 <!-- -------------------- service get in touch  start ---------------------- -->
 
-<section class="service_get_in_touch">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="text-center">
-                    <h1 class="heading" data-aos-once="true" data-aos="fade-up">
-                        GET IN TOUCH WITH US TODAY
-                    </h1>
-                    <p class="desc" data-aos-once="true" data-aos="fade-up">
-                        We can be reached at
-                    </p>
-                    <a href="#" class="d-flex align-items-center justify-content-center gap-2" data-aos-once="true"
-                        data-aos="fade-up">
-                        <span><img src="/assets/frontend/images/phone.png" alt="" /></span>
-                        <span>011-41023400</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('frontend.component.get_in_touch')
 
 <!-- -------------------- service get in touch  end ---------------------- -->
 
 <!------------------ awards_section Start -------------------------->
-<section class="awards_section about_bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="underline_heading d-flex align-items-center justify-content-center">
-                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">
-                        Awards
-                    </h6>
-                </div>
-                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
-                    Awards & Recognitions
-                </h2>
-
-                <div class="owl-carousel owl-theme" id="awards_slider">
-                    <div class="item">
-                        <div class="awards_box">
-                            <h4>Top FDI Law Firm By</h4>
-                            <img src="/assets/frontend/images/top_fdi.png" />
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="awards_box">
-                            <h4>India Firms to Watch by</h4>
-                            <img src="/assets/frontend/images/asian_legal.png" />
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="awards_box">
-                            <h4>Recommended Firm by</h4>
-                            <img src="/assets/frontend/images/benchmark.png" />
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="awards_box">
-                            <h4>M&A Law Firm by</h4>
-                            <img src="/assets/frontend/images/pac.png" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('frontend.component.awards')
 <!------------------ awards_section End -------------------------->
 
 <!-------===========practicearea end===================------------>

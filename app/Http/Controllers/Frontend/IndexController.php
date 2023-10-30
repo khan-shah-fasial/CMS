@@ -25,13 +25,23 @@ class IndexController extends Controller
     public function practice_area_detail($slug){
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
 
+        $slug = str_replace('-', ' ', $slug);
+        $blog_Catg = BlogCategory::where('name', $slug)->where('status', 1)->first();
+
+        if(!empty($blog_Catg)){
+            $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
+        } else {
+            $blog = [];
+        }
+
+
         if(empty($detail->parent_id)){  
             $child_detail = PracticeArea::where('parent_id', $detail->id)->where('status', 1)->get();
         } else  {
             $child_detail = [];
         }
 
-        return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail'));
+        return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
 
     public function blog(){
@@ -46,7 +56,9 @@ class IndexController extends Controller
 
         $author = User::find($detail->user_id);
 
-        return view('frontend.pages.blog.detail', compact('detail','author'));
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids))->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+
+        return view('frontend.pages.blog.detail', compact('detail','author','blog'));
     }
 
     public function team_members(){
