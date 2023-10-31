@@ -22,7 +22,11 @@ section {
 .mt105 {
     margin-top: 105px;
 }
-
+p
+{
+	font-size:14px !important;
+	line-height:26px !important;
+}
 .breadcrumb .breadcrumb-item.home a {
     color: #e7403b;
     text-decoration: none;
@@ -43,6 +47,11 @@ section {
     font-size: 28px;
     font-weight: 700;
     line-height: 35px;
+}
+
+.heading3 {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .desc {
@@ -465,9 +474,9 @@ header ul.dropdown li a:hover {
 }
 
 .about_counter_number {
-    font-size: 36px;
+    font-size: 36px !important;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 45px !important;
     margin-bottom: 0;
 }
 .about_counter_para {
@@ -501,7 +510,7 @@ header ul.dropdown li a:hover {
     background-size: cover;
     position: relative;
     color: white;
-    height: 150px;
+    height: 200px;
 }
 
 .practice_box .visible_box {
@@ -942,7 +951,18 @@ hr {
     background-position: center;
     background-size: cover;
 }
+.service_title_desc p span {
+    font-size: 14px !important;
+}
+.service_title_desc h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
 
+.service_title_desc ul li {
+    font-size: 14px;
+    line-height: 28px;
+}
 /* --------------------service title desc end----------------- */
 
 /* --------------------service image start----------------- */
@@ -955,7 +975,12 @@ hr {
     height: 460px;
     padding: 0;
 }
-
+.service_title_desc ol li {
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
 /* --------------------service image end----------------- */
 
 /* --------------------service why choose start----------------- */
@@ -991,21 +1016,25 @@ hr {
 .service_why_choose .nav {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 20px;
 }
 
 .service_why_choose .nav-pills .nav-link {
     padding: 17px 0;
-    background: rgba(231, 64, 59, 1);
+    background: rgba(226, 226, 226, 1);
     border-radius: 25px 25px 0 0;
     margin-bottom: 20px;
     min-width: 320px;
-    color: white;
+    color: #000;
 }
-
+.service_why_choose h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 15px;
+}
 .service_why_choose .nav-pills .nav-link.active {
-    background: rgba(226, 226, 226, 1);
-    color: black;
+    background: rgba(231, 64, 59, 1);
+    color: #fff;
 }
 
 /* --------------------service why choose end----------------- */
@@ -1020,7 +1049,7 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: #fff;
 }
 
 .service_get_in_touch .desc {
@@ -1495,7 +1524,10 @@ hr {
     background-size: cover;
     color: white;
 }
-
+section.career_page_content li span {
+    line-height: 26px;
+    font-size: 14px;
+}
 /* ----------------- career  Page Banner End ------------------ */
 /* ----------------- career  Page Banner Start ------------------ */
 
@@ -1529,6 +1561,18 @@ hr {
     font-size: 30px;
     font-weight: 700;
     line-height: 38px;
+}
+
+.faq_page_accordion li {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 6px;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
 }
 /* ----------------- faq  Page Banner End ------------------ */
 /* ----------------- faq  Page faqs Start ------------------ */
