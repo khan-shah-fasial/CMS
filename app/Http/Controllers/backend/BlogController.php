@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -33,7 +34,7 @@ class BlogController extends Controller
         $slug = Str::slug($request->input('slug'), '-');
 
         // Create the Blog record with 'blog_category_ids' included
-        Blog::create([
+        DB::table('blogs')->insert([
             'blog_category_ids' => json_encode($request->input('blog_category_ids')),
             'title' => $request->input('title'),
             'slug' => $slug,
@@ -43,11 +44,13 @@ class BlogController extends Controller
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'user_id' => $request->input('user_id'),
+            'created_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
+            'updated_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
         ]);
 
         $response = [
             'status' => true,
-            'notification' => 'Blog added successfully!',
+            'notification' => 'Blog created successfully!',
         ];
 
         return response()->json($response);
@@ -78,7 +81,7 @@ class BlogController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Blog Deleted successfully!',
+            'notification' => 'Blog deleted successfully!',
         ];
 
         return response()->json($response);
@@ -112,12 +115,12 @@ class BlogController extends Controller
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
         $blog->user_id = $request->input('user_id');
-    
+        $blog->updated_at = date('Y-m-d H:i:s', strtotime($request->input('updated_at')));
         $blog->save();
 
         $response = [
             'status' => true,
-            'notification' => 'Testimonial Update successfully!',
+            'notification' => 'Blog updated successfully!',
         ];
 
         return response()->json($response);
