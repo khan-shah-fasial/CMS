@@ -8,6 +8,11 @@ AOS.init();
 <script src="/assets/frontend/js/owl.carousel.js"></script>
 <script src="/assets/frontend/js/script.js"></script>
 <script src="/assets/frontend/js/google_translate.js"></script>
+
+<!--jQuery Validate-->
+<script src="/assets/frontend/js/jquery.validate.min.js"></script>
+<script src="/assets/frontend/js/Init.js"></script>
+
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');

@@ -76,6 +76,7 @@
         <!--javascript-->
         @include('backend.partials.js')
         @yield('page.scripts')   
+        @yield('component.scripts')
 
 </body>
 

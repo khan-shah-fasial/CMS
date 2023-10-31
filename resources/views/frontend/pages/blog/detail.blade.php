@@ -46,12 +46,13 @@
 <!-- -------------------- blog details Title start ---------------- -->
 
 <section class="blog_details_page_title_desc pt-0">
+    <h1>{{ $detail->title }}</h1>
     <div class="container">
         <div class="row">
           @php echo html_entity_decode($detail->content) @endphp
         </div>
       </div>
-    </section>
+</section>
 
 <!-- -------------------- blog details Title end   ---------------- -->
 

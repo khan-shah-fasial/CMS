@@ -16,6 +16,7 @@ use App\Http\Controllers\backend\PracticeAreaController;
 use App\Http\Controllers\backend\TrumbowygController;
 use App\Http\Controllers\backend\MediaCoverageController;
 use App\Http\Controllers\backend\PublicationController;
+use App\Http\Controllers\backend\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -174,4 +175,11 @@ Route::group(['prefix' => 'publication'], function () {
     Route::post('/update', [PublicationController::class, 'update'])->name('publication.update');
     Route::post('/delete/{id}', [PublicationController::class, 'delete'])->name('publication.delete');
     Route::get('/status/{id}/{status}', [PublicationController::class, 'status'])->name('publication.status');
+});
+
+//Contact
+Route::group(['prefix' => 'contact'], function () {
+    Route::get('/index', [ContactController::class, 'index'])->name('contact.index');
+    Route::get('/view/{id}', [ContactController::class, 'view'])->name('contact.view');
+    Route::post('/delete/{id}', [ContactController::class, 'delete'])->name('contact.delete');
 });

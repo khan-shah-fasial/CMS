@@ -1,4 +1,4 @@
-<form id="add_mediacoverage_form" action="{{url(route('mediacoverage.create'))}}" method="post" enctype="multipart/form-data">
+<form id="add_publication_form" action="{{url(route('publication.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="col-sm-12">
@@ -29,10 +29,10 @@
 
 <script>
 $(document).ready(function() {
-    initValidate('#add_mediacoverage_form');
+    initValidate('#add_publication_form');
 });
 
-$("#add_mediacoverage_form").submit(function(e) {
+$("#add_publication_form").submit(function(e) {
     var form = $(this);
     ajaxSubmit(e, form, responseHandler);
 });
