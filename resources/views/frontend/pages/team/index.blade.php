@@ -6,7 +6,7 @@
 
 <!-- ---------------------- Team Banner start -------------------- -->
 
-<section class="team_banner mt105">
+<section class="team_banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -40,8 +40,10 @@
     
             <div class="col-md-3">
                 <div class="team_box">
+				<div class="team_main_img">
                     <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
+                    </div>
+					<p class="name" data-aos="fade-up" data-aos-once="true">
                         {{ ucfirst($row->name) }}
                     </p>
                     <p class="desc">{{ ucfirst($row->designation) }}</p>

@@ -6,7 +6,7 @@
 
 <!-- -------------------- career banner start ---------------- -->
 
-<section class="career_page_banner mt105">
+<section class="career_page_banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

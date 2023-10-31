@@ -5,7 +5,7 @@
 <!----------------=============== blog start ================------------->
 <!-- -------------------- blog banner start ---------------- -->
 
-<section class="blog_page_banner mt105">
+<section class="blog_page_banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

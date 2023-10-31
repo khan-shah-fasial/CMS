@@ -5,7 +5,7 @@
 
 <!-------===========practicearea list start===================------------>
 
-    <section class="faq_page_banner mt105">
+    <section class="faq_page_banner">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -35,13 +35,13 @@
       <div class="container">
         <div class="row">
           @foreach($practiceAreas as $row)
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3">
             <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
             <div
-              class="practice_w_card d-flex align-items-center justify-content-center m-4"
+              class="practice_w_card d-flex align-items-center justify-content-center m-2"
             >
-              <img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}" class="mb-5 w-100" />
-              <h1 class="heading">{{$row->title}}</h1>
+              <img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}" class="mb-4 w-100" />
+              <h4 class="heading">{{$row->title}}</h4>
             </div>
             </a>
           </div>
