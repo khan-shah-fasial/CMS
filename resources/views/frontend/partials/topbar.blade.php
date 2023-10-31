@@ -1,8 +1,8 @@
 <div class="top_baar vasker_ville_font">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="top_nav_links d-flex align-items-left gap-5 mb-0 gap_seven">
+            <div class="col-md-6 px0">
+                <div class="top_nav_links d-flex align-items-left gap-5 mb-md-0 mb-2 gap_seven">
 
                     <div class="phone_email d-flex align-items-center gap-4">
                         <div>
@@ -20,9 +20,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 px0">
                 <div class="search_right d-flex align-items-center gap-3">
-					<div id="google_translate_element"></div>
+                    <div id="google_translate_element"></div>
                     <a>
                         <img src="/assets/frontend/images/search.png" alt="email icon" />
                     </a>

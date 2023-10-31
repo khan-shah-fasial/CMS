@@ -26,14 +26,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     var owl = $("#media_slider_carousel");
     owl.owlCarousel({
-        margin: 12,
+        margin: 20,
         nav: true,
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000,
         responsive: {
             0: {
-                items: 2.2,
+                items: 1.2,
             },
             600: {
                 items: 3.5,
@@ -56,7 +56,7 @@ $(document).ready(function () {
         autoplayTimeout: 5000,
         responsive: {
             0: {
-                items: 1,
+                items: 1.2,
             },
             600: {
                 items: 2,

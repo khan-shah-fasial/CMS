@@ -1,32 +1,36 @@
 @php
-    $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)->orderBy('series', 'asc')->get();
+$practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)->orderBy('series', 'asc')->get();
 @endphp
 
 <!--------------Header start----------------->
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 px0">
                 <div class="nav_bar d-flex align-items-center justify-content-between">
                     <div>
                         <div class="bottom_nav_links d-flex align-items-center gap-4">
                             <ul class="nav_links d-flex align-items-start gap-4 list-unstyled mb-0">
                                 @foreach($practice_Area as $row)
-                                @php $subcategory = DB::table('practice_areas')->where('parent_id', $row->id)->get(); @endphp
-                            
+                                @php $subcategory = DB::table('practice_areas')->where('parent_id', $row->id)->get();
+                                @endphp
+
                                 <li>
-                                    <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
+                                    <a
+                                        href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
                                         <span>{{ $row->title }}</span>
                                         @if(!$subcategory->isEmpty())
-                                            <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
+                                        <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
                                         @endif
                                     </a>
                                     @if(!$subcategory->isEmpty())
-                                        <ul class="dropdown">
-                                            @foreach($subcategory as $item)
-                                                <li><a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a></li>
-                                            @endforeach
-                                        </ul>
+                                    <ul class="dropdown">
+                                        @foreach($subcategory as $item)
+                                        <li><a
+                                                href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a>
+                                        </li>
+                                        @endforeach
+                                    </ul>
                                     @endif
                                 </li>
                                 @endforeach

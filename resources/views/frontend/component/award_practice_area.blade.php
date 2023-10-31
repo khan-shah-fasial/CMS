@@ -1,6 +1,6 @@
 @php
-    $ids = [14, 7, 12, 23, 31, 16];
-    $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
+$ids = [14, 7, 12, 23, 31, 16];
+$practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
 @endphp
 
 <!------=================== Awards Practice Area =====================------------------------->
@@ -12,7 +12,7 @@
                 <div class="underline_heading d-flex align-items-center justify-content-center">
                     <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">AWARDS</h6>
                 </div>
-                <h1 class="main_heading text-center mb-4" data-aos-once="true" data-aos="fade-up">
+                <h1 class="main_heading text-center mb-md-4 mb-3" data-aos-once="true" data-aos="fade-up">
                     Our <span class="main_heading_color"> Practice</span> Area
                 </h1>
             </div>
@@ -29,7 +29,9 @@
                         <p>
                             {{ $row->short_description }}
                         </p>
-                        <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read More <img src="/assets/frontend/images/right.png" alt="" />
+                        <a
+                            href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read
+                            More <img src="/assets/frontend/images/right.png" alt="" />
                         </a>
                     </div>
                 </div>
@@ -41,7 +43,7 @@
                 <div class="d-flex align-items-center justify-content-center mt-2" data-aos-once="true"
                     data-aos="fade-up">
                     <a href="{{ url(route('practicearea')) }}">
-                    <button class="practice_button">Know More</button>
+                        <button class="practice_button">Know More</button>
                     </a>
                 </div>
             </div>
