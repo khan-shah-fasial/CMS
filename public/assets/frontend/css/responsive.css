@@ -7,7 +7,6 @@
     display: flex;
     height: 70px;
     justify-content: space-between;
-    padding: 0 16px;
 }
 
 .wrapper nav .logo a img {
@@ -138,5 +137,225 @@
 @media (min-width: 992px) {
     .wrapper {
         display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .px0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .top_baar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .top_baar a span {
+        font-size: 10px;
+    }
+
+    .banner_content {
+        width: auto;
+        margin-top: 0;
+        color: #e75954;
+    }
+
+    .banner_section {
+        height: auto;
+        box-shadow: 1000px 1000px 1000px 1000px #000000c7 inset;
+    }
+
+    .banner_section .banner_content span {
+        font-size: 13px;
+        color: white;
+    }
+
+    .banner_section .banner_content p {
+        font-size: 13px;
+        margin-bottom: 0px;
+        color: white;
+    }
+
+    .banner_section .banner_content a {
+        color: white;
+    }
+
+    .owl-theme .owl-nav {
+        display: none;
+    }
+
+    .about .link_number .number {
+        font-size: 22px;
+    }
+
+    .practice_box {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
+
+    .practice_box h1 {
+        font-size: 18px;
+    }
+
+    .practice_button {
+        padding: 8px 20px;
+        font-size: 15px;
+    }
+
+    .contact .contact_form {
+        display: none;
+    }
+
+    .contact_info_box img {
+        width: 150px;
+    }
+
+    .right_push_mob {
+        display: flex;
+        justify-content: end;
+    }
+
+    .contact .quick_links_box ul li {
+        margin-bottom: 0px;
+    }
+
+    .contact .address_box {
+        margin-top: 0px;
+    }
+
+    .br {
+        display: none;
+    }
+    .footer_bottom.d-flex.align-items-center.justify-content-between {
+        display: block !important;
+    }
+    .heading {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    .breadcrumes_padd {
+        padding: 30px 0px;
+    }
+    .padd00mb {
+        padding: 0px !important;
+    }
+    section {
+        padding: 30px 0px;
+    }
+    body .about_right_counter {
+        display: block !important;
+        align-items: center;
+        gap: 12px;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .about_counter_img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about_counter_number {
+        font-size: 28px;
+        padding-top: 10px;
+    }
+    .main_heading {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+    .service_get_in_touch a span:nth-child(2) {
+        font-size: 26px;
+    }
+    .about_counter_para {
+        font-size: 12px;
+    }
+
+    .counter_section {
+        padding-top: 0;
+    }
+
+    section.career_page_content ol {
+        padding-left: 20px;
+    }
+    .about_counter_number {
+        font-size: 24px;
+        padding-top: 10px;
+    }
+    .main_heading {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+    .service_get_in_touch a span:nth-child(2) {
+        font-size: 26px;
+    }
+    .about_counter_para {
+        font-size: 13px;
+    }
+    .career_page_content ol {
+        padding-left: 20px;
+    }
+    .heading2 {
+        font-size: 20px;
+    }
+    .faq_page_accordion .accordion .accordion-item .accordion-button {
+        padding: 1.5rem 1rem;
+    }
+    .faq_page_accordion .accordion .accordion-item .accordion-body {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .underline_heading .main_heading {
+        font-size: 16px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+
+    .media .media_box {
+        margin-top: 10px;
+    }
+
+    .contact .quick_links_box ul li a {
+        font-size: 12px;
+    }
+
+    section.blog .col-md-6.col-6:nth-child(2) {
+        padding-left: 5px;
+    }
+    section.blog .col-md-6.col-6:nth-child(1) {
+        padding-right: 5px;
+    }
+
+    .blog_big_box .blog_img {
+        height: auto;
+    }
+
+    .blog_big_box .blog_content {
+        padding: 8px 10px;
+    }
+
+    .blog_big_box .blog_content p {
+        font-size: 13px;
+        line-height: 21px;
+        margin-bottom: 2px;
+    }
+
+    .team .team_box {
+        margin-top: 10px;
+    }
+
+    .search_right {
+        float: left;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .phone_email {
+        justify-content: space-between;
+        width: 100%;
     }
 }

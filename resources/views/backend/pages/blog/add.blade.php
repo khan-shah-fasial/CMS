@@ -54,13 +54,23 @@
                 <textarea class="form-control" name="meta_description" rows="3" required></textarea>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-6">
+            <div class="form-group mb-3">
+                <label>Author</label>
+                <select class="select2 form-select" name="user_id" required>
+                    <option value="" disabled>Select Author</option>
+                    @foreach($users as $row)
+                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                    @endforeach
+                </select> 
+            </div>
+        </div>        
+        <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Updated Date</label>
                 <input type="datetime-local" class="form-control" name="updated_at" value="" required>
             </div>
         </div>        
-        <input type="hidden" class="form-control" name="user_id" value="{{ auth()->user()->id }}" required>
         <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
                 <button type="submit" class="btn btn-block btn-primary">Create</button>

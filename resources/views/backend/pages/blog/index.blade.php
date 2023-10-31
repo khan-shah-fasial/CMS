@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('page.name', 'Blogs')
+@section('page.name', 'Posts')
 
 @section('page.content')
 <div class="card">
@@ -11,7 +11,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('blogs.add')) }}', 'Add Blog')"><i class="mdi mdi-plus-circle me-2"></i> Add Blog</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('blogs.add')) }}', 'Add Post')"><i class="mdi mdi-plus-circle me-2"></i> Add Post</a>
             </div>
          </div>
          <!-- end col-->
@@ -51,9 +51,9 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.view',['id' => $row->id])) }}', 'View Blog')"> <i class="mdi mdi-account-eye"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.view',['id' => $row->id])) }}', 'View Post')"> <i class="mdi mdi-account-eye"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.edit',['id' => $row->id])) }}', 'Edit Blog')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.edit',['id' => $row->id])) }}', 'Edit Post')"> <i class="mdi mdi-square-edit-outline"></i></a>
 
                     <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('blogs.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>

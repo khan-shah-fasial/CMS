@@ -38,11 +38,11 @@
 <section class="about">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 px0">
                 <div class="underline_heading">
                     <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">About Us</h6>
                 </div>
-                <h2 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
+                <h2 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
                     Ahlawat & Associates is one of India’s leading
                     full-service law firms, catering to domestic and
@@ -52,25 +52,26 @@
                     our clientele includes an array of domestic and
                     international individuals and companies.
                 </p>
-                <div class="d-flex align-items-center gap-4">
-                    <p data-aos-once="true" data-aos="fade-up">
+                <div class="d-flex align-items-start align-items-md-center flex-md-row flex-column gap-md-4 mb-md-0 ">
+                    <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
                         <span class="desc">Praesent feugiat sem mattis.</span>
                     </p>
-                    <p data-aos-once="true" data-aos="fade-up">
+                    <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
                         <span class="desc">Praesent feugiat sem mattis.</span>
                     </p>
                 </div>
-                <div class="d-flex align-items-center gap-5 link_number" data-aos-once="true" data-aos="fade-up">
-                    <p class="link">
-                        Call to ask <a href="#">any question</a>
+                <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
+                    data-aos="fade-up">
+                    <p class="desc text-dark">
+                        Call to ask <a href="#" class="text-dark">any question</a>
                     </p>
                     <p class="number">011-41023400</p>
                 </div>
             </div>
 
-            <div class="col-md-6" data-aos-once="true" data-aos="fade-up">
+            <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
                 <img src="/assets/frontend/images/about_us_img.png" class="about_img" />
             </div>
         </div>
@@ -93,9 +94,10 @@
 <section class="news">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="news_box me-5">
-                    <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">Best Law firm in India</h1>
+            <div class="col-md-6 px0">
+                <div class="news_box me-md-5">
+                    <h1 class="main_heading mb-mb-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
+                    </h1>
                     <img src="/assets/frontend/images/news_1.png" alt="" data-aos-once="true" data-aos="fade-up" />
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         A&A adopted an approach that demands the highest levels
@@ -114,9 +116,10 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="news_box ms-5">
-                    <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">Top Lawyer in Delhi</h1>
+            <div class="col-md-6 px0">
+                <div class="news_box ms-md-5">
+                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Top Lawyer in Delhi
+                    </h1>
                     <img src="/assets/frontend/images/news_2.png" alt="" data-aos-once="true" data-aos="fade-up" />
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         A&A adopted an approach that demands the highest levels

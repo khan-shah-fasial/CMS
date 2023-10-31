@@ -5,7 +5,7 @@
 
     <!-- -------------------- faq banner start ---------------- -->
 
-    <section class="faq_page_banner mt105 breadcrumes_padd">
+    <section class="faq_page_banner breadcrumes_padd">
       <div class="container">
         <div class="row">
           <div class="col-md-12">

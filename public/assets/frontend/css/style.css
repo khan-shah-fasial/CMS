@@ -22,7 +22,11 @@ section {
 .mt105 {
     margin-top: 105px;
 }
-
+p
+{
+	font-size:14px !important;
+	line-height:26px !important;
+}
 .breadcrumb .breadcrumb-item.home a {
     color: #e7403b;
     text-decoration: none;
@@ -43,6 +47,11 @@ section {
     font-size: 28px;
     font-weight: 700;
     line-height: 35px;
+}
+
+.heading3 {
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .desc {
@@ -427,13 +436,6 @@ header ul.dropdown li a:hover {
     background-position: center center;
 }
 
-.about .link_number .link a {
-    color: black;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 23px;
-}
-
 .about .about_img {
     width: 100%;
 }
@@ -465,9 +467,9 @@ header ul.dropdown li a:hover {
 }
 
 .about_counter_number {
-    font-size: 36px;
+    font-size: 36px !important;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 45px !important;
     margin-bottom: 0;
 }
 .about_counter_para {
@@ -501,7 +503,7 @@ header ul.dropdown li a:hover {
     background-size: cover;
     position: relative;
     color: white;
-    height: 150px;
+    height: 200px;
 }
 
 .practice_box .visible_box {
@@ -699,6 +701,10 @@ header ul.dropdown li a:hover {
     text-align: center;
     color: black;
     text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 #media_slider_carousel .owl-dots,
@@ -727,6 +733,7 @@ section.blog p.desc {
 
 .blog_big_box .blog_img {
     width: 100%;
+    height: 255px;
 }
 
 .blog_big_box .blog_content {
@@ -942,7 +949,18 @@ hr {
     background-position: center;
     background-size: cover;
 }
+.service_title_desc p span {
+    font-size: 14px !important;
+}
+.service_title_desc h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
 
+.service_title_desc ul li {
+    font-size: 14px;
+    line-height: 28px;
+}
 /* --------------------service title desc end----------------- */
 
 /* --------------------service image start----------------- */
@@ -955,7 +973,12 @@ hr {
     height: 460px;
     padding: 0;
 }
-
+.service_title_desc ol li {
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 12px;
+}
 /* --------------------service image end----------------- */
 
 /* --------------------service why choose start----------------- */
@@ -991,21 +1014,25 @@ hr {
 .service_why_choose .nav {
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 20px;
 }
 
 .service_why_choose .nav-pills .nav-link {
     padding: 17px 0;
-    background: rgba(231, 64, 59, 1);
+    background: rgba(226, 226, 226, 1);
     border-radius: 25px 25px 0 0;
     margin-bottom: 20px;
     min-width: 320px;
-    color: white;
+    color: #000;
 }
-
+.service_why_choose h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 15px;
+}
 .service_why_choose .nav-pills .nav-link.active {
-    background: rgba(226, 226, 226, 1);
-    color: black;
+    background: rgba(231, 64, 59, 1);
+    color: #fff;
 }
 
 /* --------------------service why choose end----------------- */
@@ -1020,7 +1047,7 @@ hr {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: #fff;
 }
 
 .service_get_in_touch .desc {
@@ -1495,7 +1522,10 @@ hr {
     background-size: cover;
     color: white;
 }
-
+section.career_page_content li span {
+    line-height: 26px;
+    font-size: 14px;
+}
 /* ----------------- career  Page Banner End ------------------ */
 /* ----------------- career  Page Banner Start ------------------ */
 
@@ -1529,6 +1559,18 @@ hr {
     font-size: 30px;
     font-weight: 700;
     line-height: 38px;
+}
+
+.faq_page_accordion li {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 6px;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
 }
 /* ----------------- faq  Page Banner End ------------------ */
 /* ----------------- faq  Page faqs Start ------------------ */
@@ -1599,81 +1641,4 @@ hr {
 .career_page_content a {
     font-weight: 800;
     color: #000;
-}
-
-@media (max-width: 767px) {
-    .footer_bottom.d-flex.align-items-center.justify-content-between {
-        display: block !important;
-    }
-    .heading {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 30px;
-    }
-    .breadcrumes_padd {
-        padding: 30px 0px;
-    }
-    .padd00mb {
-        padding: 0px !important;
-    }
-    section {
-        padding: 30px 0px;
-    }
-    body .about_right_counter {
-        display: block !important;
-        align-items: center;
-        gap: 12px;
-        text-align: center;
-        padding-bottom: 15px;
-    }
-
-    .about_counter_img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .about_counter_number {
-        font-size: 28px;
-        padding-top: 10px;
-    }
-    .main_heading {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 36px;
-    }
-    .service_get_in_touch a span:nth-child(2) {
-        font-size: 26px;
-    }
-    .about_counter_para {
-        font-size: 13px;
-    }
-    section.career_page_content ol {
-        padding-left: 20px;
-    }
-    .about_counter_number {
-        font-size: 28px;
-        padding-top: 10px;
-    }
-    .main_heading {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 36px;
-    }
-    .service_get_in_touch a span:nth-child(2) {
-        font-size: 26px;
-    }
-    .about_counter_para {
-        font-size: 13px;
-    }
-    .career_page_content ol {
-        padding-left: 20px;
-    }
-    .heading2 {
-        font-size: 20px;
-    }
-    .faq_page_accordion .accordion .accordion-item .accordion-button {
-        padding: 1.5rem 1rem;
-    }
-    .faq_page_accordion .accordion .accordion-item .accordion-body {
-        padding: 0 1rem 1rem 1rem;
-    }
 }

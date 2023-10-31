@@ -135,13 +135,13 @@
                         <li class="side-nav-item">
                             <a data-bs-toggle="collapse" href="{{ url('#sidebarEcommerce') }}" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
                                 <i class="ri-article-line"></i>
-                                <span> Blogs </span>
+                                <span> Posts </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarEcommerce">
                                 <ul class="side-nav-second-level">
                                     <li>
-                                        <a href="{{ route('blogs.index') }}">All Blogs</a>
+                                        <a href="{{ route('blogs.index') }}">All Posts</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('blogcategory.index') }}">Category</a>

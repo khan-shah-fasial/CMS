@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('page.name', 'Blogs Category')
+@section('page.name', 'Posts Category')
 
 @section('page.content')
 <div class="card">
@@ -11,7 +11,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="smallModal('{{ url(route('blogcategory.add')) }}', 'Add Blogs Category')"><i class="mdi mdi-plus-circle me-2"></i> Add Blogs Category</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="smallModal('{{ url(route('blogcategory.add')) }}', 'Add Post Category')"><i class="mdi mdi-plus-circle me-2"></i> Add Post Category</a>
             </div>
          </div>
          <!-- end col-->
@@ -49,7 +49,7 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('blogcategory.edit',['id' => $row->id])) }}', 'Edit Blog Category')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('blogcategory.edit',['id' => $row->id])) }}', 'Edit Post Category')"> <i class="mdi mdi-square-edit-outline"></i></a>
 
                     <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('blogcategory.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>

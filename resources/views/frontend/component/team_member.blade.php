@@ -1,5 +1,5 @@
 @php
-    $team = DB::table('teams')->where('is_home', 1)->get();
+$team = DB::table('teams')->where('is_home', 1)->get();
 @endphp
 
 <!----------------================= Team start =======================-------------->
@@ -7,7 +7,7 @@
 <section class="team">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 px0">
                 <div class="underline_heading">
                     <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Team member</h6>
                 </div>
@@ -17,8 +17,8 @@
                     <span class="main_heading_color"> Experts </span>
                 </h1>
             </div>
-            <div class="col-md-6">
-                <p class="desc mt-4" data-aos-once="true" data-aos="fade-up">
+            <div class="col-md-6 px0">
+                <p class="desc mt-md-4 mt-2" data-aos-once="true" data-aos="fade-up">
                     Aenean tincidunt id mauris idology auctor. Donec at ligula
                     lacus. Nulla dig nissimmi quis neque interdum. An Ohio man
                     allegedly punched his lawyer in the face in court Tuesday
@@ -31,7 +31,7 @@
                 <div class="owl-carousel owl-theme" id="banner_slider_carousel">
 
                     @foreach ($team as $row)
-                        
+
                     <div class="item" data-aos-once="true" data-aos="fade-up">
                         <div class="team_box">
                             <div class="hover_img">
