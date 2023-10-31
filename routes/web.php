@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\DB;
 
 // Home START
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/area-of-practice', [IndexController::class, 'practice_area'])->name('practicearea');
+Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->name('practicearea');
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
 Route::get('/blogs', [IndexController::class, 'blog'])->name('blog');
 
