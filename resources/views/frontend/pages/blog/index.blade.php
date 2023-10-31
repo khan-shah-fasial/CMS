@@ -68,7 +68,7 @@
                         <p data-aos="fade-up" data-aos-once="true">
                             {{ $row->short_description }}
                         </p>
-                        <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}" data-aos="fade-up" data-aos-once="true">View More</a>
+                        <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}" data-aos="fade-up" data-aos-once="true">View More</a>
                     </div>
                 </div>
             </div>

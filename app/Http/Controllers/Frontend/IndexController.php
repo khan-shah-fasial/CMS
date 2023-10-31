@@ -50,7 +50,7 @@ class IndexController extends Controller
         return view('frontend.pages.blog.index', compact('blog'));
     }
 
-    public function blog_detail($slug){
+    public function blog_detail($category, $slug){
         
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
 
