@@ -116,8 +116,8 @@ header {
 
 .bottom_nav_links .nav_links li {
     padding: 10px 0;
-    text-align: center;
     line-height: 17px;
+    text-align: center;
 }
 
 .bottom_nav_links .nav_links a {
@@ -131,7 +131,7 @@ header {
 .bottom_nav_links .nav_links li ul.dropdown li {
     display: block;
     border-bottom: 1px solid #5351511e;
-    padding: 7px 0;
+    padding: 7px 12px;
     text-align: start;
 }
 
@@ -154,6 +154,7 @@ header {
     margin-top: 10px;
     background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-left: 0;
 }
 .bottom_nav_links .nav_links li:hover ul.dropdown {
     display: block;
@@ -161,10 +162,6 @@ header {
 }
 header ul.dropdown li a:hover {
     color: #fff !important;
-}
-.bottom_nav_links .nav_links li ul.dropdown li a {
-    padding-left: 20px;
-    text-align: start;
 }
 
 .nav_button {
@@ -224,7 +221,7 @@ header ul.dropdown li a:hover {
 
 .menu_left_fixed {
     background-image: url(/assets/frontend/images/header_bg_image.png);
-       background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     position: fixed;
@@ -233,7 +230,7 @@ header ul.dropdown li a:hover {
     top: 0;
     text-align: center;
     padding-top: 34px;
-	z-index:999;
+    z-index: 999;
 }
 
 .container,
@@ -505,6 +502,7 @@ header ul.dropdown li a:hover {
     background-size: cover;
     position: relative;
     color: white;
+    height: 150px;
 }
 
 .practice_box .visible_box {
@@ -557,6 +555,11 @@ header ul.dropdown li a:hover {
     font-size: 20px;
     font-weight: 700;
     line-height: 25px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .practice_button {
@@ -602,7 +605,7 @@ header ul.dropdown li a:hover {
 }
 
 #banner_slider_carousel {
-    margin-bottom: -52px;
+    margin-bottom: -49px;
 }
 
 #banner_slider_carousel .team_box .team_img {
@@ -630,8 +633,8 @@ header ul.dropdown li a:hover {
     align-items: start;
     flex-direction: column;
     width: fit-content;
-    width: 191px;
-	    position: relative;
+    width: 214px;
+    position: relative;
     z-index: 99;
 }
 
@@ -659,6 +662,10 @@ header ul.dropdown li a:hover {
     background: rgba(186, 186, 186, 0.2);
 }
 
+.media_link {
+    text-decoration: none;
+}
+
 .media .media_box {
     margin-top: 32px;
 }
@@ -673,6 +680,8 @@ header ul.dropdown li a:hover {
     font-weight: 700;
     line-height: 19px;
     text-align: center;
+    color: black;
+    text-decoration: none;
 }
 
 #media_slider_carousel .owl-dots,
@@ -735,6 +744,10 @@ section.blog p.desc {
     align-items: center;
     gap: 23px;
     margin-bottom: 20px;
+}
+.blog .blog_right_box img {
+    width: 160px;
+    height: 101px;
 }
 
 .blog .blog_right_box a {
@@ -820,6 +833,11 @@ section.blog p.desc {
     font-size: 14px;
     font-weight: 700;
     line-height: 19px;
+    transition: all 0.5s;
+}
+.contact .contact_form .contact_form_button:hover {
+    background: lightgray;
+    color: black;
 }
 
 .contact .address_box {
@@ -1564,8 +1582,6 @@ hr {
     font-weight: 800;
     color: #000;
 }
-
-
 
 @media (max-width: 767px) {
     .footer_bottom.d-flex.align-items-center.justify-content-between {

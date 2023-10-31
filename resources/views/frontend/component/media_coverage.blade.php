@@ -5,19 +5,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="underline_heading d-flex align-items-center justify-content-center mt-4">
+                <div class="underline_heading d-flex align-items-center justify-content-center mt-5">
                     <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Media</h6>
                 </div>
-                <h1 class="main_heading mb-4 text-center" data-aos-once="true" data-aos="fade-up">Media Coverage</h1>
+                <h1 class="main_heading mb-2 text-center" data-aos-once="true" data-aos="fade-up">Media Coverage</h1>
             </div>
 
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme" id="media_slider_carousel">
-                    
+
                     @foreach ($media as $row)
 
                     <div class="item">
-                        <a href="{{ $row->url }}">
+                        <a href="{{ $row->url }}" class="media_link">
                             <div class="media_box" data-aos-once="true" data-aos="fade-up">
                                 <img src="{{ asset('storage/' . $row->image) }}" alt="" />
                                 <h4 class="title">{{ $row->title }}</h4>
