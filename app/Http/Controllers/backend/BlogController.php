@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\User;
 use App\Models\BlogCategory;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +19,8 @@ class BlogController extends Controller
 
     public function add() {
         $blogcategory = BlogCategory::where('status', 1)->get();
-        return view('backend.pages.blog.add', compact('blogcategory'));
+        $users = User::all();
+        return view('backend.pages.blog.add', compact('blogcategory', 'users'));
     }  
     
     public function create(Request $request) {
@@ -59,7 +61,8 @@ class BlogController extends Controller
     public function edit($id) {
         $blog = Blog::find($id);
         $blogcategory = BlogCategory::where('status', 1)->get();
-        return view('backend.pages.blog.edit', compact('blog', 'blogcategory'));
+        $users = User::all();        
+        return view('backend.pages.blog.edit', compact('blog', 'blogcategory','users'));
     }
     
     public function view($id) {

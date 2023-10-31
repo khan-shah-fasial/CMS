@@ -24,7 +24,7 @@
                                 <p>
                                     {{ $blog[0]->title }}
                                 </p>
-                                <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View More</a>
+                                <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View More</a>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                                 <p>
                                     {{ $blog[1]->title }}
                                 </p>
-                                <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$blog[1]->slug))] )) }}">View More</a>
+                                <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[1]->slug))] )) }}">View More</a>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                         <p class="desc">
                             {{ $row->title }}
                         </p>
-                        <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
+                        <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\IndexController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,15 @@ use App\Http\Controllers\Frontend\IndexController;
 
 // Home START
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/area-of-practice', [IndexController::class, 'practice_area'])->name('practicearea');
+Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->name('practicearea');
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
-Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
-Route::get('/blog/{slug}', [IndexController::class, 'blog_detail'])->name('blog.detail');
+Route::get('/blogs', [IndexController::class, 'blog'])->name('blog');
+
+$postCategories = DB::table('blog_categories')->pluck('slug')->toArray();
+Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
+    ->where('category', implode('|', $postCategories))
+    ->name('blog.detail');
+
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
 Route::get('/team-members/{slug}', [IndexController::class, 'team_detail'])->name('team.detail');
 Route::get('/contact-us', [IndexController::class, 'contact_us'])->name('contact');
