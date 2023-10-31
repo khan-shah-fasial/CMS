@@ -1,5 +1,5 @@
 @php
-    $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)->orderBy('id', 'asc')->get();
+    $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)->orderBy('series', 'asc')->get();
 @endphp
 
 <!--------------Header start----------------->
@@ -16,7 +16,7 @@
                             
                                 <li>
                                     <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
-                                        <span>{{ $row->title }}</span>
+                                        <span>{{ $row->title }} {{ $row->series }}</span>
                                         @if(!$subcategory->isEmpty())
                                             <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
                                         @endif
