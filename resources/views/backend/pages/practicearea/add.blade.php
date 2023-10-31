@@ -31,10 +31,10 @@
                 <textarea class="form-control trumbowyg" name="content" rows="5" required></textarea>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 d-none">
             <div class="form-group mb-3">
                 <label>Focus Area</label>
-                <input type="text" class="form-control" name="focus_area" value="" >
+                <input type="hidden" class="form-control" name="focus_area" value="" >
             </div>
         </div>
         <div class="col-sm-12">
@@ -91,9 +91,9 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Main Service</label>
-                <select class="form-select" name="parent_id">
-                    <option value="1">Select Main Service</option>
+                <label>Main Practice Area</label>
+                <select class="form-select select2" name="parent_id">
+                    <option value="1">--Select--</option>
                     @foreach($practicearea as $row)
                         <option value="{{ $row->id }}">{{ $row->title }}</option>
                     @endforeach

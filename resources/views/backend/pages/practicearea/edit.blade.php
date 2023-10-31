@@ -32,10 +32,10 @@
                 <textarea class="form-control trumbowyg" name="content" rows="5" required>{{ $practicearea->content }}</textarea>
             </div>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-12 d-none">
             <div class="form-group mb-3">
                 <label>Focus Area</label>
-                <input type="text" class="form-control" name="focus_area" value="{{ $practicearea->focus_area }}" >
+                <input type="hidden" class="form-control" name="focus_area" value="{{ $practicearea->focus_area }}" >
             </div>
         </div>
         <div class="col-sm-12">
@@ -140,9 +140,9 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Main Service</label>
-                <select class="form-select" name="parent_id">
-                    <option value="">Select Main Service</option>
+                <label>Main Practice Area</label>
+                <select class="form-select select2" name="parent_id">
+                    <option value="">--Select--</option>
                     @foreach($allpracticearea as $row)
                         <option value="{{ $row->id }}" @if( $row->id == $practicearea->parent_id ) selected @endif>{{ $row->title }}</option>
                     @endforeach
@@ -177,6 +177,7 @@ function remove_faq(_this) {
 $(document).ready(function() {
     initValidate('#edit_practicearea_form');
     initTrumbowyg('.trumbowyg');
+    initSelect2('.select2');
 });
 
 $("#edit_practicearea_form").submit(function(e) {
