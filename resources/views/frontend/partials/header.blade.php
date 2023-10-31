@@ -16,7 +16,7 @@
                             
                                 <li>
                                     <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
-                                        <span>{{ $row->title }} {{ $row->series }}</span>
+                                        <span>{{ $row->title }}</span>
                                         @if(!$subcategory->isEmpty())
                                             <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
                                         @endif
