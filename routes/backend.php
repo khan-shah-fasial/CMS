@@ -15,6 +15,7 @@ use App\Http\Controllers\backend\NewsController;
 use App\Http\Controllers\backend\PracticeAreaController;
 use App\Http\Controllers\backend\TrumbowygController;
 use App\Http\Controllers\backend\MediaCoverageController;
+use App\Http\Controllers\backend\PublicationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -162,4 +163,15 @@ Route::group(['prefix' => 'mediacoverage'], function () {
     Route::post('/update', [MediaCoverageController::class, 'update'])->name('mediacoverage.update');
     Route::post('/delete/{id}', [MediaCoverageController::class, 'delete'])->name('mediacoverage.delete');
     Route::get('/status/{id}/{status}', [MediaCoverageController::class, 'status'])->name('mediacoverage.status');
+});
+
+//Publication
+Route::group(['prefix' => 'publication'], function () {
+    Route::get('/index', [PublicationController::class, 'index'])->name('publication.index');
+    Route::get('/add', [PublicationController::class, 'add'])->name('publication.add');
+    Route::get('/edit/{id}', [PublicationController::class, 'edit'])->name('publication.edit');
+    Route::post('/create', [PublicationController::class, 'create'])->name('publication.create');
+    Route::post('/update', [PublicationController::class, 'update'])->name('publication.update');
+    Route::post('/delete/{id}', [PublicationController::class, 'delete'])->name('publication.delete');
+    Route::get('/status/{id}/{status}', [PublicationController::class, 'status'])->name('publication.status');
 });
