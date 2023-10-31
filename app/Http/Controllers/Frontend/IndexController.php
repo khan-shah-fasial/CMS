@@ -9,6 +9,7 @@ use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\User;
 use App\Models\Team;
+use App\Models\Faq;
 
 class IndexController extends Controller
 {
@@ -84,7 +85,8 @@ class IndexController extends Controller
     }
 
     public function faq(){
-        return view('frontend.pages.faq.index');
+        $faq = Faq::where('status', 1)->get();
+        return view('frontend.pages.faq.index', compact('faq'));
     }
 
     public function about_us(){
