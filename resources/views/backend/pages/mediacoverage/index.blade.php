@@ -1,6 +1,6 @@
 @extends('backend.layouts.app') 
 
-@section('page.name', 'News Category')
+@section('page.name', 'Media Coverage')
 
 @section('page.content')
 <div class="card">
