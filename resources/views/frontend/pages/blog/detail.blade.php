@@ -7,7 +7,7 @@
 
 <!-- -------------------- blog details banner start ---------------- -->
 
-<section class="blog_details_page_banner mt105" style="background-image: url({{ asset('storage/' . $detail->main_image) }});"></section>
+<section class="blog_details_page_banner" style="background-image: url({{ asset('storage/' . $detail->main_image) }});"></section>
 
 <!-- -------------------- blog details banner end   ---------------- -->
 
@@ -154,7 +154,7 @@
                     <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">
                         <p>{{ $row->short_description }}</p>
-                        <a href="{{ url(route('blog.detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
+                        <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
-@extends('backend.layouts.app')
+@extends('backend.layouts.app') 
 
-@section('page.name', 'Posts')
+@section('page.name', 'News Category')
 
 @section('page.content')
 <div class="card">
@@ -11,7 +11,7 @@
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
-                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="largeModal('{{ url(route('blogs.add')) }}', 'Add Post')"><i class="mdi mdi-plus-circle me-2"></i> Add Post</a>
+                <a href="javascript:void(0);" class="btn btn-danger mb-2" onclick="smallModal('{{ url(route('mediacoverage.add')) }}', 'Add Media Coverage')"><i class="mdi mdi-plus-circle me-2"></i> Add Media Coverage</a>
             </div>
          </div>
          <!-- end col-->
@@ -22,18 +22,18 @@
             <tr>
                 <th>#</th>
                 <th>Title</th>
-                <th>Short Description</th>
+                <th>Image</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($blog as $row)
+            @foreach($mediacoverage as $row)
             <tr>
                 <td>{{$row->id}}</td>
                 <td>{{$row->title}}</td>
-                <td>{{$row->short_description}}</td>
+                <td><img src="{{ asset('storage/' . $row->image) }}" class="img-thumbnail"></td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -43,7 +43,7 @@
                 </td>
                 <td>{{$row->created_at}}</td>
                 <td>
-                    <a href="{{ url(route('blogs.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
+                    <a href="{{ url(route('mediacoverage.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
                             <i class="ri-eye-off-fill"></i>
                         @else
@@ -51,11 +51,9 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.view',['id' => $row->id])) }}', 'View Post')"> <i class="mdi mdi-account-eye"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('mediacoverage.edit',['id' => $row->id])) }}', 'Edit Media Coverage')"> <i class="mdi mdi-square-edit-outline"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="largeModal('{{ url(route('blogs.edit',['id' => $row->id])) }}', 'Edit Post')"> <i class="mdi mdi-square-edit-outline"></i></a>
-
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('blogs.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('mediacoverage.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
                 </td>
             </tr>
             @endforeach

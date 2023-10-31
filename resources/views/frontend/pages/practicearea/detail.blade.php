@@ -6,7 +6,7 @@
 <!-------===========practicearea start===================------------>
 <!-- -------------------- service_banner start ---------------------- -->
 
-<section class="service_banner mt105"
+<section class="service_banner"
     style="background-image: url({{ asset('storage/' . $detail->breadcrumb_image) }});">
     <div class="container">
         <div class="row">
@@ -113,10 +113,10 @@
                         aria-labelledby="pills-home-tab">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">
                                     Our Focus Area
                                 </h2>
-                                <p class="desc mb-5" data-aos-once="true" data-aos="fade-up">
+                                <p class="desc mb-5 d-none" data-aos-once="true" data-aos="fade-up">
                                     {{ $detail->focus_area }}
                                 </p>
                             </div>
@@ -124,7 +124,7 @@
                             @foreach($child_detail as $row)
 
                             <div class="col-md-4" data-aos-once="true" data-aos="fade-up">
-                                <div class="practice_box m-0">
+                                <div class="practice_box m-0 mb-4">
                                     <div class="visible_box">
                                         <img src="{{ asset('storage/' . $detail->thumnail_image) }}" alt="" />
                                         <h1>{{ $row->title }}</h1>
@@ -163,7 +163,7 @@
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">
                                     Frequently Asked Questions
                                 </h2>
                                 <ol>
@@ -176,10 +176,10 @@
                                     foreach ($faqItem as $question => $answer) {
                                     @endphp
 
-                                    <li class="mb-5" data-aos-once="true" data-aos="fade-up">
-                                        <p>
+                                    <li class="mb-4 mt-4" data-aos-once="true" data-aos="fade-up">
+                                        <h6>
                                             <strong>{{ $question }}</strong>
-                                        </p>
+                                        </h6>
                                         @php echo html_entity_decode($answer) @endphp
                                     </li>
 

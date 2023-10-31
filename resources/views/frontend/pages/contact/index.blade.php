@@ -6,7 +6,7 @@
 
 <!-- ---------------------- Contact banner start--------------- -->
 
-<section class="contact_p_banner mt105 breadcrumes_padd">
+<section class="contact_p_banner breadcrumes_padd">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -16,7 +16,7 @@
                     </h1>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item home"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Contact Us
                             </li>
