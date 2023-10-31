@@ -7,7 +7,7 @@
 
 <!-- -------------------- blog details banner start ---------------- -->
 
-<section class="blog_details_page_banner mt105" style="background-image: url({{ asset('storage/' . $detail->main_image) }});"></section>
+<section class="blog_details_page_banner" style="background-image: url({{ asset('storage/' . $detail->main_image) }});"></section>
 
 <!-- -------------------- blog details banner end   ---------------- -->
 

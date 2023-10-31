@@ -6,7 +6,7 @@
 <!-------===========practicearea start===================------------>
 <!-- -------------------- service_banner start ---------------------- -->
 
-<section class="service_banner mt105"
+<section class="service_banner"
     style="background-image: url({{ asset('storage/' . $detail->breadcrumb_image) }});">
     <div class="container">
         <div class="row">

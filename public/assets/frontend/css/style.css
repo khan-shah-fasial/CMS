@@ -31,7 +31,6 @@ section {
 
 .breadcrumb .breadcrumb-item.active {
     color: white;
-    font-size: 14px;
 }
 
 .main_heading {
@@ -511,6 +510,12 @@ header ul.dropdown li a:hover {
     flex-direction: column;
     transition: all 0.6s ease 0s;
 }
+.practice_w_box a {
+    text-decoration: none;
+}
+.practice_w_card img {
+    width: 90px !important;
+}
 
 .practice_box:hover .visible_box {
     opacity: 0;
@@ -603,7 +608,19 @@ header ul.dropdown li a:hover {
 .team .team_box {
     margin-top: 50px;
 }
+.team_main_img {
+    overflow: hidden;
+	margin-bottom:12px;
+}
 
+.team_main_img img:hover {
+    transform: scale(1.2) !important;
+    transition: 0.5s all;
+}
+
+.team_main_img img {
+    transition: 0.5s all;
+}
 #banner_slider_carousel {
     margin-bottom: -49px;
 }
@@ -1259,7 +1276,6 @@ hr {
 
 .team_wrapper .team_box img {
     width: 100%;
-    margin-bottom: 10px;
 }
 .team_wrapper .team_box .name {
     font-size: 18px;
@@ -1309,7 +1325,7 @@ hr {
     width: 100%;
 }
 .team_d_content .content {
-    padding-left: 100px;
+    padding-left: 70px;
 }
 
 .team_d_content .content .role {
@@ -1330,7 +1346,9 @@ hr {
 .team_d_content .content .mail {
     margin-bottom: 50px;
 }
-
+.team_d_content .content ul li {
+    margin-bottom: 6px;
+}
 /* ------------------ Team Details content end ------------- */
 
 /* ------------------ Team Details page end ------------- */
@@ -1551,7 +1569,7 @@ hr {
 .practice_w_card {
     background: rgba(244, 244, 244, 1);
     flex-direction: column;
-    padding: 60px 0;
+    padding: 40px 0;
     transition: all 0.5s;
 }
 .practice_w_card:hover {
@@ -1561,7 +1579,7 @@ hr {
     font-size: 20px;
     font-weight: 700;
     line-height: 25px;
-    color: black;
+    color: #494949;
     text-decoration: none;
 }
 

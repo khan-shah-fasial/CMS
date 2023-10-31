@@ -8,7 +8,7 @@
 
 <!-- ------------- Team Details banner  start ---------------- -->
 
-<section class="team_d_banner mt105">
+<section class="team_d_banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -42,9 +42,9 @@
             </div>
             <div class="col-md-9">
                 <div class="content">
-                    <h1 class="main_heading" data-aos="fade-up" data-aos-once="true">
+                    <h4 class="main_heading" data-aos="fade-up" data-aos-once="true">
                         {{ ucfirst($detail->name) }}
-                    </h1>
+                    </h4>
 
                     @if(!empty($detail->designation))
                     <h2 class="role" data-aos="fade-up" data-aos-once="true">
@@ -70,9 +70,9 @@
 
                     @if(!empty($detail->description))
 
-                    <h2 class="sub_heading" data-aos="fade-up" data-aos-once="true">
+                    <h4 class="sub_heading" data-aos="fade-up" data-aos-once="true">
                         Practice Area
-                    </h2>
+                    </h4>
 
                     @php echo html_entity_decode($detail->description) @endphp
 
@@ -81,9 +81,9 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <h2 class="sub_heading mt-5" data-aos="fade-up" data-aos-once="true">
+                <h4 class="sub_heading mt-5" data-aos="fade-up" data-aos-once="true">
                     Professional Experience
-                </h2>
+                </h4>
                 @php echo html_entity_decode($detail->about) @endphp
             </div>
         </div>

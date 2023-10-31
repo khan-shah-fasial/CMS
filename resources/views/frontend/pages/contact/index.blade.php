@@ -6,7 +6,7 @@
 
 <!-- ---------------------- Contact banner start--------------- -->
 
-<section class="contact_p_banner mt105 breadcrumes_padd">
+<section class="contact_p_banner breadcrumes_padd">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
