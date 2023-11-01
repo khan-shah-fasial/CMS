@@ -37,13 +37,14 @@
         <div class="row">
 
             @foreach ($team as $row)
-    
-            <div class="col-md-3">
+
+            <div class="col-lg-3 col-md-4  px0">
                 <div class="team_box">
-				<div class="team_main_img">
-                    <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up" data-aos-once="true" />
+                    <div class="team_main_img">
+                        <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up"
+                            data-aos-once="true" />
                     </div>
-					<p class="name" data-aos="fade-up" data-aos-once="true">
+                    <p class="name" data-aos="fade-up" data-aos-once="true">
                         {{ ucfirst($row->name) }}
                     </p>
                     <p class="desc">{{ ucfirst($row->designation) }}</p>
@@ -51,7 +52,8 @@
                     <p class="bio" data-aos="fade-up" data-aos-once="true">
                         {{ str_replace('&amp;', ', ',strip_tags($row->description)) }}
                     </p>
-                    <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}" data-aos="fade-up" data-aos-once="true">View Profile</a>
+                    <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
+                        data-aos="fade-up" data-aos-once="true">View Profile</a>
                 </div>
             </div>
 

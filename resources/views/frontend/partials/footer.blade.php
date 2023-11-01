@@ -101,7 +101,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 <!------------------ Contact End -------------------------->
 <!------------------ footer Start -------------------------->
 
-<section class="footer">
+<footer class="footer">
     <div class="container">
         <div class="row">
 
@@ -153,6 +153,6 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 
         </div>
     </div>
-</section>
+</footer>
 
 <!------------------ footer End -------------------------->
