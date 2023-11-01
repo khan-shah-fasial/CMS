@@ -4,10 +4,10 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\models\PracticeArea;
-use App\models\Blog;
-use App\models\Team;
-use App\models\Contact;
+use App\Models\PracticeArea;
+use App\Models\Blog;
+use App\Models\Team;
+use App\Models\Contact;
 
 class DashboardController extends Controller
 {
