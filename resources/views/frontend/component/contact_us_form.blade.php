@@ -1,7 +1,6 @@
 <!----============ Form start =================-------------------->
 <form id="add_contact_form" action="{{url(route('contact.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
-
     <input type="hidden" name="section" value="Contact us Form" data-aos-once="true" data-aos="fade-up"/>
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up"/>
     <input type="text" placeholder="Name" name="name" data-aos-once="true" data-aos="fade-up" required/>
@@ -27,10 +26,11 @@
         });
         
         var responseHandler = function(response) {
+            $('input, textarea').val('');
+            $("select option:first").prop('selected', true);
             setTimeout(function(){
                 location.reload();
-            }, 2000);
-            
+            }, 2000);    
         }                 
     });
     
