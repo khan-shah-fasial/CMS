@@ -68,6 +68,17 @@ class IndexController extends Controller
         return view('frontend.pages.team.index', compact('team'));
     }
 
+    public function not_found(){
+
+        return view('frontend.pages.404.index');
+    }
+    public function thank_you(){
+
+        return view('frontend.pages.thankyou.index');
+    }
+
+
+
     public function team_detail($slug){
         $slug = str_replace('-', ' ', $slug);
 
@@ -96,4 +107,5 @@ class IndexController extends Controller
     public function privacy_policy(){
         return view('frontend.pages.privacypolice.index');
     }
+    
 }

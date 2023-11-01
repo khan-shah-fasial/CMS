@@ -13,3 +13,8 @@
 .trumbowyg-modal {
     z-index: 99999 !important; /* Set a value higher than the Bootstrap modal's z-index */
 }
+
+.logo-topbar .logo-light .logo-lg img {
+    width: 60px;
+    height: auto;
+}

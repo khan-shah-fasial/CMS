@@ -96,7 +96,7 @@
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="news_box me-md-5">
-                    <h1 class="main_heading mb-mb-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
+                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
                     </h1>
                     <img src="/assets/frontend/images/news_1.png" alt="" data-aos-once="true" data-aos="fade-up" />
                     <p class="desc" data-aos-once="true" data-aos="fade-up">

@@ -136,13 +136,16 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                             <a href="#"><img src="assets/frontend/images/instagram.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="assets/frontend/images/facebook.png" alt="" /></a>
+                            <a href="https://www.facebook.com/ahlawatassociates/" target="_blank"><img
+                                    src="assets/frontend/images/facebook.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="assets/frontend/images/linkedIn.png" alt="" /></a>
+                            <a href="https://www.linkedin.com/company/ahlawat-associates?originalSubdomain=in"
+                                target="_blank"><img src="assets/frontend/images/linkedIn.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="assets/frontend/images/twitter.png" alt="" /></a>
+                            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FAhlawatLaw%2F"
+                                target="_blank"><img src="assets/frontend/images/twitter.png" alt="" /></a>
                         </li>
                     </ul>
                 </div>

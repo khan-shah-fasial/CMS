@@ -56,7 +56,11 @@
                                 highlight your academic achievements, <br />
                                 relevant skills, and any previous legal experience.</span>
                             <span data-aos-once="true" data-aos="fade-up">
-                                <button class="career_button">Submit your CV</button>
+
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    class="career_button">Submit your CV</button>
+                                <!-- Modal -->
+
                             </span>
                         </span>
                     </li>
@@ -118,5 +122,43 @@
 <!------------------ awards_section Start -------------------------->
 @include('frontend.component.awards')
 <!------------------ awards_section End -------------------------->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body ">
+                <div class="career_popup_form">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <form class="contact_form">
+                        <h3 class="mb-3" data-aos-once="true" data-aos="fade-up">Want to know more</h3>
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="text" class="form-control mb-3" placeholder="Enter Your Name"
+                                data-aos-once="true" data-aos="fade-up" />
+                            <input type="text" class="form-control mb-3" placeholder="Enter Your Email"
+                                data-aos-once="true" data-aos="fade-up" />
+                        </div>
+                        <input type="text" class="form-control mb-3" placeholder=" Your Phone No" data-aos-once="true"
+                            data-aos="fade-up" />
+                        <div class="d-flex align-items-center gap-2">
+
+                            <div class="w-100 mb-3">
+                                <label for="formFile" class="form-label">Default file input example</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+
+
+                        <div class="text-center">
+                            <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

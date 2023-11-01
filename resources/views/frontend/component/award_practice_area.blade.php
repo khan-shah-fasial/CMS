@@ -23,7 +23,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                 <div class="practice_box" data-aos-once="true" data-aos="fade-up">
                     <div class="visible_box">
                         <img src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
-                        <h1>{{ $row->title }}</h1>
+                        <h4>{{ $row->title }}</h4>
                     </div>
                     <div class="hover_box">
                         <p>

@@ -274,15 +274,11 @@
         font-size: 12px;
     }
 
-    .counter_section {
-        padding-top: 0;
-    }
-
     section.career_page_content ol {
         padding-left: 20px;
     }
     .about_counter_number {
-        font-size: 24px;
+        font-size: 24px !important;
         padding-top: 10px;
     }
     .main_heading {
@@ -357,5 +353,31 @@
     .phone_email {
         justify-content: space-between;
         width: 100%;
+    }
+
+    .contact_p_form {
+        padding-top: 30px;
+    }
+
+    .contact_p_form .sub_container {
+        padding: 20px 20px;
+    }
+
+    .contact_p_form .heading {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .contact_p_form .address {
+        margin-bottom: 0px;
+    }
+
+    .contact_p_form form {
+        padding: 0 0;
+        margin-top: 20px;
+    }
+
+    .contact_p_address .sub_container {
+        padding: 0 0;
     }
 }
