@@ -130,15 +130,20 @@
                 <div class="career_popup_form">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <form class="contact_form">
-                        <h3 class="mb-3" data-aos-once="true" data-aos="fade-up">Want to know more</h3>
-                        <div class="d-flex align-items-center gap-2">
+                        <h3 class="mb-4" data-aos-once="true" data-aos="fade-up">Want to know more</h3>
+                        <div class="d-flex align-items-center gap-4">
                             <input type="text" class="form-control mb-3" placeholder="Enter Your Name"
                                 data-aos-once="true" data-aos="fade-up" />
                             <input type="text" class="form-control mb-3" placeholder="Enter Your Email"
                                 data-aos-once="true" data-aos="fade-up" />
                         </div>
-                        <input type="text" class="form-control mb-3" placeholder=" Your Phone No" data-aos-once="true"
-                            data-aos="fade-up" />
+                        <div class="d-flex align-items-center gap-4">
+                            <input type="text" class="form-control mb-3" placeholder=" Your Phone No"
+                                data-aos-once="true" data-aos="fade-up" />
+                            <input type="text" class="form-control mb-3" placeholder="Qualification"
+                                data-aos-once="true" data-aos="fade-up" />
+                        </div>
+
                         <div class="d-flex align-items-center gap-2">
 
                             <div class="w-100 mb-3">
@@ -149,7 +154,7 @@
 
 
                         <div class="text-center">
-                            <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
+                            <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SUBMIT</button>
                         </div>
 
                     </form>

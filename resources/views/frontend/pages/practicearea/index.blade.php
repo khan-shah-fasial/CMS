@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row">
             @foreach($practiceAreas as $row)
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-2 px0">
                 <a
                     href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
                     <div class="practice_w_card d-flex align-items-center justify-content-center m-2">

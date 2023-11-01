@@ -380,4 +380,15 @@
     .contact_p_address .sub_container {
         padding: 0 0;
     }
+
+    .service_why_choose .nav {
+        gap: 7px;
+    }
+
+    .service_why_choose .nav-pills .nav-link {
+        padding: 10px 14px;
+        border-radius: 15px 15px 0 0;
+        font-size: 12px;
+        min-width: auto;
+    }
 }

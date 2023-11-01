@@ -6,11 +6,10 @@
 <!-------===========practicearea start===================------------>
 <!-- -------------------- service_banner start ---------------------- -->
 
-<section class="service_banner"
-    style="background-image: url({{ asset('storage/' . $detail->breadcrumb_image) }});">
+<section class="service_banner" style="background-image: url({{ asset('storage/' . $detail->breadcrumb_image) }});">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 px0">
                 <div class="text-center">
                     <h1 class="heading">{{ $detail->breadcrumb_title }}</h1>
                     <p class="desc">{{ $detail->breadcrumb_subtitle }}</p>
@@ -38,7 +37,7 @@
 <section class="service_title_desc">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 px0">
                 @php echo html_entity_decode($detail->content) @endphp
             </div>
         </div>
@@ -50,7 +49,8 @@
 
 @if(!empty($detail->section_image))
 
-<section class="service_img" data-aos-once="true" data-aos="fade-up" style="background-image: url({{ asset('storage/' . $detail->section_image) }});"></section>
+<section class="service_img" data-aos-once="true" data-aos="fade-up"
+    style="background-image: url({{ asset('storage/' . $detail->section_image) }});"></section>
 
 @endif
 
@@ -66,7 +66,7 @@
 <section class="service_why_choose">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 px0">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
                     @if(!empty($child_detail))
@@ -127,13 +127,15 @@
                                 <div class="practice_box m-0 mb-4">
                                     <div class="visible_box">
                                         <img src="{{ asset('storage/' . $detail->thumnail_image) }}" alt="" />
-                                        <h1>{{ $row->title }}</h1>
+                                        <h4>{{ $row->title }}</h4>
                                     </div>
                                     <div class="hover_box">
                                         <p>
                                             {{ $row->short_description }}
                                         </p>
-                                        <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read More <img src="/assets/frontend/images/right.png" alt="" />
+                                        <a
+                                            href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read
+                                            More <img src="/assets/frontend/images/right.png" alt="" />
                                         </a>
                                     </div>
                                 </div>
@@ -155,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     @endif
 
                     @if(!empty(json_decode($detail->faq, true)))
@@ -184,8 +186,8 @@
                                     </li>
 
                                     @php
-                                            }
-                                        }
+                                    }
+                                    }
                                     }
                                     @endphp
 
@@ -216,13 +218,15 @@
             </div>
 
             @foreach ($blog as $row)
-                
+
             <div class="col-md-4">
                 <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">
                         <p>{{ $row->short_description }}</p>
-                        <a href="{{ url(route('blog.detail', ['category' => 'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
+                        <a
+                            href="{{ url(route('blog.detail', ['category' => 'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            More</a>
                     </div>
                 </div>
             </div>
