@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('publication', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title', 355);
             $table->longText('url');
-            $table->string('image');
+            $table->string('image', 355);
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

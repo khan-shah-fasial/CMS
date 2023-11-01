@@ -7,7 +7,7 @@
    <div class="card-body">
       <div class="row mb-2">
          <div class="col-sm-5">
-            <h3>List</h3>
+            {{--<h3>List</h3>--}}
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
@@ -22,18 +22,21 @@
             <tr>
                 <th>#</th>
                 <th>Title</th>
-                <th>Short Description</th>
+                <th>Slug</th>
                 <th>Status</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($practicearea as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->title}}</td>
-                <td>{{$row->short_description}}</td>
+                <td>
+                    <a target="_blank" href="{{url(route('practicearea-detail', $row->slug))}}">{{$row->slug}}</a>
+                </td>                
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -41,7 +44,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('practicearea.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')

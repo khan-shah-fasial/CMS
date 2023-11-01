@@ -7,7 +7,7 @@
    <div class="card-body">
       <div class="row mb-2">
          <div class="col-sm-5">
-            <h3>List</h3>
+            <!--<h3>List</h3>-->
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
@@ -29,11 +29,16 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($award as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->title}}</td>
-                <td><img src="{{ asset('storage/' . $row->image) }}" class="img-thumbnail"></td>
+                <td>
+                    <a target="_blank" href="{{ asset('storage/' . $row->image) }}">
+                        View
+                    </a>
+                </td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -41,7 +46,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('award.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')

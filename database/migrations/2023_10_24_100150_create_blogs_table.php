@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->longText('blog_category_ids');
-            $table->string('title');
-            $table->string('slug')->unique();
-            $table->string('short_description')->nullable();
-            $table->string('main_image');
+            $table->string('title', 255);
+            $table->string('slug', 191)->unique();
+            $table->longText('short_description')->nullable();
+            $table->string('main_image', 255)->nullable();
             $table->longText('content');
-            $table->string('meta_title')->nullable();
+            $table->string('meta_title', 255)->nullable();
             $table->longText('meta_description')->nullable();
             $table->tinyInteger('status')->default(1); 
             $table->unsignedBigInteger('user_id');

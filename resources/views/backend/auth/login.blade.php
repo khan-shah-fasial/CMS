@@ -56,7 +56,7 @@
                             <input class="form-control" type="email" id="emailaddress" name="email" required="" placeholder="Enter your email">
                         </div>
                         <div class="mb-3">
-                            <a href="pages-recoverpw-2.html" class="text-muted float-end"><small>Forgot your password?</small></a>
+                            <!--<a href="pages-recoverpw-2.html" class="text-muted float-end"><small>Forgot your password?</small></a>-->
                             <label for="password" class="form-label">Password</label>
                             <input class="form-control" type="password" required="" id="password" name="password" placeholder="Enter your password">
                         </div>
@@ -104,14 +104,14 @@
 
         <!-- Auth fluid right content -->
         <div class="auth-fluid-right text-center">
-            <div class="auth-user-testimonial">
+            <!--<div class="auth-user-testimonial">
                 <h2 class="mb-3">I love the color!</h2>
                 <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
                 </p>
                 <p>
                     - Nexgeno
                 </p>
-            </div> <!-- end auth-user-testimonial-->
+            </div>--> <!-- end auth-user-testimonial-->
         </div>
         <!-- end Auth fluid right content -->
     </div>

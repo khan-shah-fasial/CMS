@@ -7,7 +7,7 @@
    <div class="card-body">
       <div class="row mb-2">
          <div class="col-sm-5">
-            <h3>List</h3>
+            {{--<h3>List</h3>--}}
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
@@ -22,7 +22,7 @@
             <tr>
                 <th>#</th>
                 <th>Name</th>
-                <th>Image</th>
+                <th>Profile Image</th>
                 <th>Designation</th>
                 <th>Comment</th>
                 <th>Rating</th>
@@ -32,14 +32,18 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($testimonial as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
-                <td><img src="{{ asset('storage/' . $row->image) }}" class="img-thumbnail"></td>
+                <td>
+                <a target="_blank" href="{{ asset('storage/' . $row->image) }}">
+                    View
+                </a>                
                 <td>{{$row->designation}}</td>
                 <td>{{$row->comment}}</td>
-                <td>{{$row->rating}}</td>
+                <td>{{(int) $row->rating}}</td>
                 <td>
                     @if($row->status)
                     <span class="badge bg-success">Active</span>
@@ -47,7 +51,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('testimonial.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
