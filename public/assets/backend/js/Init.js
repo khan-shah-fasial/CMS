@@ -174,6 +174,8 @@ function initTrumbowyg(target) {
             resizimg: true                
         }
     });
+    //$(target).css('height', 200);
+    //$('.trumbowyg-editor').css('min-height', 200);
 }
 function destroyTrumbowyg(target) {
     $(target).trumbowyg('destroy');
