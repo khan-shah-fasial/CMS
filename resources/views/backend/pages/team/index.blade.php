@@ -7,7 +7,7 @@
    <div class="card-body">
       <div class="row mb-2">
          <div class="col-sm-5">
-            <h3>List</h3>
+            <!--<h3>List</h3>-->
          </div>
          <div class="col-sm-7">
             <div class="text-sm-end">
@@ -30,9 +30,10 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($team as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
                 <td>{{$row->designation}}</td>
                 <td>
@@ -43,7 +44,7 @@
                     @endif
                 </td>
                 <td>{{$row->series}}</td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('team.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')

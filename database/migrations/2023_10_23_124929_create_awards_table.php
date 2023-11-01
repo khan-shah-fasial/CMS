@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('awards', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('image')->nullable(); // Use "nullable" if the image is optional
+            $table->string('title', 255);
+            $table->string('image', 255)->nullable(); // Use "nullable" if the image is optional
             $table->tinyInteger('status')->default(1); 
             $table->timestamps();
         });

@@ -10,7 +10,7 @@
         </div>        
         <div class="col-sm-4">
             <div class="form-group mb-3">
-                <label for="image">Image</label>
+                <label for="image">Profile Image</label>
                 <input type="file" class="form-control" name="image" id="image">
             </div>
         </div>

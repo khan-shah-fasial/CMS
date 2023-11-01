@@ -15,7 +15,7 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Image</label>
+                <label>Profile Image</label>
                 <input class="form-control" type="file" id="image" name="image" required>
             </div>
         </div> 

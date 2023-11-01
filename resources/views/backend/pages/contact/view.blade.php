@@ -5,6 +5,6 @@
     <p><strong>Services:</strong> {{$contact->services}}</p>
     <p><strong>Description:</strong> {{$contact->description}}</p>
     <p><strong>Other Info:</strong> {{$contact->other_info}}</p>
-    <p><strong>Page:</strong> {{$contact->url}}</p>
+    <p><strong>Page:</strong> <a target="_blank" href="{{$contact->url}}">{{$contact->url}}</a></p>
     <p><strong>Section:</strong> {{$contact->section}}</p>
 </div>
