@@ -36,22 +36,26 @@
         <div class="row">
 
             @foreach ($blog as $row)
-                
 
-            <div class="col-md-4">
-                <div class="blog_big_box me-3 mb-5 ">
+
+            <div class="col-md-4 px0">
+                <div class="blog_big_box me-md-3 mb-md-5 mb-3 ">
                     <div class="hover_effect_img">
                         <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" data-aos="fade-up"
                             data-aos-once="true" />
                         <div class="overlay">
-                            <div class="plus">
-                                +
-                            </div>
+                            <a
+                                href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
+                                <div class="plus">
+                                    +
+                                </div>
+                            </a>
+
                         </div>
                     </div>
 
-                    @php 
-                        $author = DB::table('users')->where('id', $row->user_id)->first();
+                    @php
+                    $author = DB::table('users')->where('id', $row->user_id)->first();
                     @endphp
 
                     <div class="blog_content">
@@ -68,7 +72,8 @@
                         <p data-aos="fade-up" data-aos-once="true">
                             {{ $row->short_description }}
                         </p>
-                        <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}" data-aos="fade-up" data-aos-once="true">View More</a>
+                        <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}"
+                            data-aos="fade-up" data-aos-once="true">View More</a>
                     </div>
                 </div>
             </div>

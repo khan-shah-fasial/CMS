@@ -391,4 +391,36 @@
         font-size: 12px;
         min-width: auto;
     }
+
+    .blog_details_page_banner {
+        height: 200px;
+    }
+
+    .blog_details_page_breadcrumb {
+        padding: 15px 0;
+    }
+
+    .blog_details_page_comments .comment {
+        font-size: 16px !important;
+        margin-bottom: 20px;
+    }
+
+    .blog_details_page_comments .post_comment {
+        margin-bottom: 20px;
+    }
+
+    .team_wrapper .team_box img {
+        width: 100%;
+        height: auto;
+    }
+    .team_d_content .content {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .service_why_choose .nav-pills .nav-link {
+        min-width: 221px;
+    }
 }

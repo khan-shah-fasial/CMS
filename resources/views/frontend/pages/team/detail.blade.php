@@ -17,7 +17,7 @@
                     <p class="desc mb-1">{{ ucfirst($detail->name) }}</p>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
+                            <li class="breadcrumb-item "><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Team Members About
                             </li>
@@ -56,13 +56,15 @@
 
                         @if(!empty($detail->email))
                         <a href="mailto:{{ $detail->email }}">
-                            <img src="/assets/frontend/images/mail.png" alt="" data-aos="fade-up" data-aos-once="true" />
+                            <img src="/assets/frontend/images/mail.png" alt="" data-aos="fade-up"
+                                data-aos-once="true" />
                         </a>
                         @endif
 
                         @if(!empty($detail->linkedin_link))
                         <a href="{{ $detail->linkedin_link }}">
-                            <img src="/assets/frontend/images/linked.png" alt="" data-aos="fade-up" data-aos-once="true" />
+                            <img src="/assets/frontend/images/linked.png" alt="" data-aos="fade-up"
+                                data-aos-once="true" />
                         </a>
                         @endif
 
