@@ -2,6 +2,7 @@
 $blog = DB::table('blogs')->where('status', 1)->limit(6)->orderBy('id', 'desc')->get()->toArray();
 $right_blog = array_slice($blog, 2);
 @endphp
+@if(count($blog) > 5)
 <!-------============= blog ================---------------------->
 <section class="blog">
     <div class="container">
@@ -67,5 +68,6 @@ $right_blog = array_slice($blog, 2);
         </div>
     </div>
 </section>
+@endif
 
 <!----------============== blog =============------------->

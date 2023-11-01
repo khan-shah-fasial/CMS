@@ -76,6 +76,13 @@
                         </li>
 
                         <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('contact.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-bar-chart-2-line"></i> 
+                                <span> Leads </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item menuitem-active">
                             <a href="{{ route('practicearea.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="ri-suitcase-line"></i> 
                                 <span> Practice Area </span>
@@ -87,6 +94,13 @@
                             <a href="{{ route('mediacoverage.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="ri-clapperboard-line"></i> 
                                 <span> Media Coverage </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item menuitem-active">
+                            <a href="{{ route('publication.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-quill-pen-line"></i> 
+                                <span> Publication </span>
                             </a>
                         </li>
                         

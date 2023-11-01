@@ -73,19 +73,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <form>
-                                <input type="text" placeholder="Name" data-aos-once="true" data-aos="fade-up" />
-                                <input type="email" placeholder="Email" data-aos-once="true" data-aos="fade-up" />
-                                <input type="number" placeholder="Phone" data-aos-once="true" data-aos="fade-up" />
-                                <input type="text" placeholder="Other" data-aos-once="true" data-aos="fade-up" />
-                                <textarea placeholder="Brief Description of your legal issue" rows="3"
-                                    data-aos-once="true" data-aos="fade-up"></textarea>
-                                <div class="">
-                                    <button data-aos-once="true" data-aos="fade-up">
-                                        SUBMIT
-                                    </button>
-                                </div>
-                            </form>
+                            @include('frontend.component.contact_us_form')
                         </div>
                     </div>
                 </div>

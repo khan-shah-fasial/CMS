@@ -10,6 +10,7 @@ use App\Models\BlogCategory;
 use App\Models\User;
 use App\Models\Team;
 use App\Models\Faq;
+use App\Models\Contact;
 
 class IndexController extends Controller
 {
@@ -107,5 +108,17 @@ class IndexController extends Controller
     public function privacy_policy(){
         return view('frontend.pages.privacypolice.index');
     }
+
+    public function contact_save(Request $request)
+    {
+        // Create the contact record
+        Contact::create($request->all());
     
+        $response = [
+            'status' => true,
+            'notification' => 'Contact added successfully!',
+        ];
+    
+        return response()->json($response);
+    }
 }
