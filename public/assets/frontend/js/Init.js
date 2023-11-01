@@ -56,7 +56,7 @@ function closeConfirmModel() {
 function initValidate(selector)
 {
     $(selector).validate({
-        errorElement: 'div',
+        /*errorElement: 'div',
         errorPlacement: function (error, element) {
         error.addClass('invalid-feedback');
         element.closest('.form-group').append(error);
@@ -66,7 +66,7 @@ function initValidate(selector)
         },
         unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
-        }        
+        }*/       
     });
 }
 
