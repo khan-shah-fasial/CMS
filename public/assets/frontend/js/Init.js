@@ -56,7 +56,7 @@ function closeConfirmModel() {
 function initValidate(selector)
 {
     $(selector).validate({
-        errorElement: 'div',
+        /*errorElement: 'div',
         errorPlacement: function (error, element) {
         error.addClass('invalid-feedback');
         element.closest('.form-group').append(error);
@@ -66,7 +66,7 @@ function initValidate(selector)
         },
         unhighlight: function (element, errorClass, validClass) {
         $(element).removeClass('is-invalid');
-        }        
+        }*/       
     });
 }
 
@@ -83,7 +83,7 @@ function ajaxSubmit(e, form, callBackFunction) {
         
         var btn = $(form).find('button[type="submit"]');
         var btn_text = $(btn).html();
-        $(btn).html('<i class="ri-refresh-line"></i>');
+        $(btn).html('<i class="fa fa-refresh fa-spin" aria-hidden="true"></i>');
         $(btn).css('opacity', '0.7');
         $(btn).css('pointer-events', 'none');
 

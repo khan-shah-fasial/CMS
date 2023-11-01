@@ -62,6 +62,7 @@
     <!--javascript-->
     @include('frontend.partials.js')
     @yield('page.scripts')
+    @yield('component.scripts')
 
 </body>
 

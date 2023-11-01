@@ -1,3 +1,5 @@
+//AOS.init();
+
 AOS.init({
     duration: 1200,
 });
@@ -75,31 +77,33 @@ $(document).ready(function () {
 // Counter | About
 var a = 0;
 $(window).scroll(function () {
-    var oTop = $("#counter").offset().top - window.innerHeight;
-    if (a == 0 && $(window).scrollTop() > oTop) {
-        $(".counter-value").each(function () {
-            var $this = $(this),
-                countTo = $this.attr("data-count");
-            $({
-                countNum: $this.text(),
-            }).animate(
-                {
-                    countNum: countTo,
-                },
+    if($("#counter").length){    
+        var oTop = $("#counter").offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $(".counter-value").each(function () {
+                var $this = $(this),
+                    countTo = $this.attr("data-count");
+                $({
+                    countNum: $this.text(),
+                }).animate(
+                    {
+                        countNum: countTo,
+                    },
 
-                {
-                    duration: 2000,
-                    easing: "swing",
-                    step: function () {
-                        $this.text(Math.floor(this.countNum));
-                    },
-                    complete: function () {
-                        $this.text(this.countNum);
-                    },
-                }
-            );
-        });
-        a = 1;
+                    {
+                        duration: 2000,
+                        easing: "swing",
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                        },
+                    }
+                );
+            });
+            a = 1;
+        }
     }
 });
 
@@ -111,3 +115,19 @@ function toggle() {
     var popup = document.getElementById("popup");
     popup.classList.toggle("active");
 }
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  
+    var $googleDiv = $("#google_translate_element .skiptranslate");
+    var $googleDivChild = $("#google_translate_element .skiptranslate div");
+    $googleDivChild.next().remove();
+  
+    $googleDiv.contents().filter(function(){
+        return this.nodeType === 3 && $.trim(this.nodeValue) !== '';
+    }).remove();
+}
+
+jQuery(document).ready(function($){
+    $('#example_1').whatsappChatSupport();
+});
