@@ -18,9 +18,11 @@ return new class extends Migration
             $table->string('phone', 255)->nullable();
             $table->string('services', 255)->nullable();
             $table->string('other_info', 255)->nullable();
+            $table->string('qualification', 255)->nullable();
             $table->longText('description')->nullable();
             $table->longText('url')->nullable();
             $table->string('section', 255)->nullable();
+            $table->string('cv', 355)->nullable();
             $table->timestamps();
         });
     }

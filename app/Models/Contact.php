@@ -17,8 +17,10 @@ class Contact extends Model
         'phone',
         'services',
         'other_info',
+        'qualification',
         'description',
         'url',
         'section',
+        'cv',
     ];
 }
