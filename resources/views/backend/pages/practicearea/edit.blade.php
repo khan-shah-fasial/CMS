@@ -168,7 +168,7 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="form-group mb-2 text-end">
+							<div class="form-group d-grid mb-2 text-end">
 								<button type="submit" class="btn btn-block btn-primary">Update</button>
 							</div>
 						</div>
