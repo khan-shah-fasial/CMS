@@ -46,9 +46,9 @@
                 <td>{{(int) $row->rating}}</td>
                 <td>
                     @if($row->status)
-                    <span class="badge bg-success">Active</span>
+                    <span class="badge bg-success" title="Inactive">Active</span>
                     @else
-                    <span class="badge bg-danger">Inctive</span>
+                    <span class="badge bg-danger" title="Active">Inctive</span>
                     @endif
                 </td>
                 <td>{{datetimeFormatter($row->created_at)}}</td>
@@ -61,9 +61,9 @@
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('testimonial.edit',['id' => $row->id])) }}', 'Edit Testimonial')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('testimonial.edit',['id' => $row->id])) }}', 'Edit Testimonial')"> <i class="mdi mdi-square-edit-outline" title="Edit"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('testimonial.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('testimonial.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete" title="Delete"></i></a>
                 </td>
             </tr>
             @endforeach

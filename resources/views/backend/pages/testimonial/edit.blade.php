@@ -5,25 +5,25 @@
         <input type="hidden" name="id" value="{{ $testimonial->id }}">
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Name</label>
+                <label>Name <span class="red">*</span></label>
                 <input type="text" class="form-control" name="name" value="{{ $testimonial->name }}" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Designation</label>
+                <label>Designation <span class="red">*</span></label>
                 <input type="text" class="form-control" name="designation" value="{{ $testimonial->designation }}" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Profile Image</label>
+                <label>Profile Image <span class="red">*</span></label>
                 <input class="form-control" type="file" id="image" name="image">
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Rating</label>
+                <label>Rating <span class="red">*</span></label>
                 <select class="form-select" name="rating" required>
                     <option value="1" {{ $testimonial->rating == 1 ? 'selected' : '' }}>1</option>
                     <option value="2" {{ $testimonial->rating == 2 ? 'selected' : '' }}>2</option>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Comment</label>
+                <label>Comment <span class="red">*</span></label>
                 <textarea class="form-control" name="comment" rows="3" required>{{ $testimonial->comment }}</textarea>
             </div>
         </div>

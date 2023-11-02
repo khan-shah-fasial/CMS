@@ -3,25 +3,25 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Name</label>
+                <label>Name <span class="red">*</span></label>
                 <input type="text" class="form-control" name="name" value="" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Designation</label>
+                <label>Designation <span class="red">*</span></label>
                 <input type="text" class="form-control" name="designation" value="" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Profile Image</label>
+                <label>Profile Image <span class="red">*</span></label>
                 <input class="form-control" type="file" id="image" name="image" required>
             </div>
         </div> 
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Rating</label>
+                <label>Rating <span class="red">*</span></label>
                 <select class="form-select" name="rating" required>
                     <option value="">Please Select the Rating</option>
                     <option value="1">1</option>
@@ -34,7 +34,7 @@
         </div> 
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Comment</label>
+                <label>Comment <span class="red">*</span></label>
                 <textarea class="form-control" name="comment" rows="3" required></textarea>
             </div>
         </div>
