@@ -3,19 +3,19 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Title</label>
+                <label>Title <span class="red">*</span></label>
                 <input type="text" class="form-control" name="title" value="" required>
             </div>
         </div> 
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Link</label>
+                <label>Link <span class="red">*</span></label>
                 <input type="url" class="form-control" name="url" id="linkedin_link" required>
             </div>
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Image</label>
+                <label>Image <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
                 <input class="form-control" type="file" id="image" name="image" required>
             </div>
         </div> 

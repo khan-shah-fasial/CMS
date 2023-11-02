@@ -4,13 +4,13 @@
     <div class="col-sm-12">
         <input type="hidden" name="id" value="{{ $blogcategory->id }}">
             <div class="form-group mb-3">
-                <label>Name</label>
+                <label>Name <span class="red">*</span></label>
                 <input type="text" class="form-control" name="name" value="{{ $blogcategory->name }}" required>
             </div>
         </div>        
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Slug</label>
+                <label>Slug <span class="red">*</span></label>
                 <input type="text" class="form-control" name="slug" value="{{ $blogcategory->slug }}" @if(in_array($blogcategory->slug, ['blog', 'news', 'deal-update'])) readonly @endif required>
             </div>
         </div>

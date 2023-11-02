@@ -11,7 +11,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Image</label>
+                <label>Image <span class="red">*</span> <span class="font-size11">(Max file size 10kb - 190*64)</span></label>
                 <input class="form-control" type="file" id="image" name="image">
             </div>
         </div>
