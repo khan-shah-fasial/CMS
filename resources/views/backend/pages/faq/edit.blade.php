@@ -4,13 +4,13 @@
     <div class="col-sm-12">
         <input type="hidden" name="id" value="{{ $faq->id }}">
             <div class="form-group mb-3">
-                <label>Question</label>
+                <label>Question <span class="red">*</span></label>
                 <input type="text" class="form-control" name="question" value="{{ $faq->question }}" required>
             </div>
         </div>        
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Answer</label>
+                <label>Answer <span class="red">*</span></label>
                 <textarea class="trumbowyg form-control" name="answer" rows="5" required>{{ $faq->answer }}</textarea>
             </div>
         </div>

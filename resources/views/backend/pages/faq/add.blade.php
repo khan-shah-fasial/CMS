@@ -3,13 +3,13 @@
     <div class="row">
     <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Question</label>
+                <label>Question <span class="red">*</span></label>
                 <input type="text" class="form-control" name="question" value="" required>
             </div>
         </div>        
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Answer</label>
+                <label>Answer <span class="red">*</span></label>
                 <textarea class="trumbowyg form-control" name="answer" rows="5" required></textarea>
             </div>
         </div>

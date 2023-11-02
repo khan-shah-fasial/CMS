@@ -122,19 +122,19 @@
                         </div> 
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Breadcrumb Image <span class="red">*</span></label>
+                                <label>Breadcrumb Image <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label>
                                 <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image" required>
                             </div>
                         </div>                    
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Thumnail Image</label>
+                                <label>Thumnail Icon <span class="font-size11">(Max file size 5kb - 70*70)</span></label></label>
                                 <input class="form-control" type="file" id="image" name="image" required>
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Section Image</label>
+                                <label>Section Image <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
                                 <input class="form-control" type="file" id="section_image" name="section_image">
                             </div>
                         </div>                                        

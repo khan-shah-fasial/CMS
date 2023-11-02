@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-sm-4">
             <div class="form-group mb-3">
-                <label for="name">Name</label>
+                <label for="name">Name <span class="red">*</span></label>
                 <input type="text" class="form-control" name="name" id="name" required>
             </div>
         </div>        
         <div class="col-sm-4">
             <div class="form-group mb-3">
-                <label for="image">Profile Image</label>
+                <label for="image">Profile Image <span class="red">*</span></label>
                 <input type="file" class="form-control" name="image" id="image" required>
             </div>
         </div>
@@ -27,7 +27,7 @@
         </div>    
         <div class="col-sm-4">
             <div class="form-group mb-3">
-                <label for="designation">Designation</label>
+                <label for="designation">Designation <span class="red">*</span></label>
                 <input type="text" class="form-control" name="designation" id="designation" required>
             </div>
         </div>        
@@ -39,13 +39,13 @@
         </div>            
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label for="about">About</label>
+                <label for="about">About <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="about" id="about" rows="5" required></textarea>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label for="description">Practice Area</label>
+                <label for="description">Practice Area <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="description" id="description" rows="5" required></textarea>
             </div>
         </div>
