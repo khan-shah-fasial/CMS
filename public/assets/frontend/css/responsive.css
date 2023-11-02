@@ -268,8 +268,6 @@
     }
     .main_heading {
         font-size: 24px;
-        font-weight: 700;
-        line-height: 36px;
     }
     .service_get_in_touch a span:nth-child(2) {
         font-size: 26px;
@@ -287,8 +285,6 @@
     }
     .main_heading {
         font-size: 20px;
-        font-weight: 700;
-        line-height: 36px;
     }
     .service_get_in_touch a span:nth-child(2) {
         font-size: 26px;
@@ -423,9 +419,21 @@
     }
 
     .search-box {
-        top: 74px;
-        right: 4px;
+        top: 37px;
+        right: 0;
         width: 320px;
+    }
+
+    .service_img {
+        height: 200px;
+    }
+
+    .team_d_content .content .role {
+        line-height: 25px;
+    }
+
+    .team_d_content .content .mail {
+        margin-bottom: 15px;
     }
 }
 
@@ -442,12 +450,9 @@
         font-size: 12px;
     }
 
-    .search-box {
-        right: 10px;
-    }
-
     .main_heading {
         font-size: 30px;
+        line-height: 25px;
     }
     .about .link_number .number {
         font-size: 19px !important;
@@ -455,6 +460,18 @@
 
     .about_counter_number {
         font-size: 30px !important;
+    }
+
+    .blog_big_box .blog_img {
+        height: 180px;
+    }
+
+    .blog_big_box .blog_content {
+        padding: 10px 10px;
+    }
+
+    .contact_p_form form {
+        padding: 0 0px;
     }
 }
 
@@ -471,5 +488,21 @@
 
     .main_heading {
         font-size: 32px;
+    }
+
+    .service_why_choose .nav-pills .nav-link {
+        min-width: 240px;
+    }
+
+    .blog_big_box .blog_img {
+        height: 200px;
+    }
+
+    .blog_big_box .blog_content {
+        padding: 8px 10px;
+    }
+
+    .contact_p_form form {
+        padding: 0 0px;
     }
 }

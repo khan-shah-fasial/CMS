@@ -36,11 +36,11 @@
 <section class="team_d_content">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-5 px0">
                 <img src="{{ asset('storage/' . $detail->image) }}" alt="" class="team_img" data-aos="fade-up"
                     data-aos-once="true" />
             </div>
-            <div class="col-md-9">
+            <div class="col-md-7 px0">
                 <div class="content">
                     <h4 class="main_heading" data-aos="fade-up" data-aos-once="true">
                         {{ ucfirst($detail->name) }}
@@ -82,8 +82,8 @@
 
                 </div>
             </div>
-            <div class="col-md-12">
-                <h4 class="sub_heading mt-5" data-aos="fade-up" data-aos-once="true">
+            <div class="col-md-12 px0">
+                <h4 class="sub_heading mt-md-5" data-aos="fade-up" data-aos-once="true">
                     Professional Experience
                 </h4>
                 @php echo html_entity_decode($detail->about) @endphp

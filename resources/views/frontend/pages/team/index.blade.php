@@ -38,7 +38,7 @@
 
             @foreach ($team as $row)
 
-            <div class="col-lg-3 col-md-4  px0">
+            <div class="col-xl-3 col-md-4  px0">
                 <div class="team_box">
                     <div class="team_main_img">
                         <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up"

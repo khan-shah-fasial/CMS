@@ -795,6 +795,7 @@ section.blog p.desc {
 .blog_big_box .blog_img {
     width: 100%;
     height: 255px;
+    object-fit: cover;
 }
 
 .blog_big_box .blog_content {
@@ -951,7 +952,7 @@ section.blog p.desc {
     background-position: center;
     background-size: cover;
     color: white;
-    padding: 45px 0;
+    padding: 45px 0 20px 0;
 }
 
 .footer h6 {
@@ -1416,6 +1417,7 @@ hr {
 .team_wrapper .team_box img {
     width: 100%;
     height: 360px;
+    object-fit: cover;
 }
 .team_wrapper .team_box .name {
     font-size: 18px;

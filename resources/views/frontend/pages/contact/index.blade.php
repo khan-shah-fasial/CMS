@@ -35,13 +35,13 @@
 <section class="contact_p_form">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 px0">
                 <div class="sub_container">
                     <div class="row">
-                       
-                        <div class="col-md-6">
-						<h1 class="heading" data-aos-once="true" data-aos="fade-up">
-                                Contact our support guys or make appointment 
+
+                        <div class="col-md-6 px0">
+                            <h1 class="heading" data-aos-once="true" data-aos="fade-up">
+                                Contact our support guys or make appointment
                                 with
                                 <span class="main_heading_color"> Our Consultant </span>
                             </h1>
@@ -72,7 +72,7 @@
                                 <span> contact@ahlawatassociates.in </span>
                             </p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 px0">
                             @include('frontend.component.contact_us_form')
                         </div>
                     </div>
