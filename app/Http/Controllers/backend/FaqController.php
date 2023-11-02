@@ -50,7 +50,7 @@ class FaqController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Faq Deleted successfully!',
+            'notification' => 'Faq deleted successfully!',
         ];
 
         return response()->json($response);
@@ -61,7 +61,7 @@ class FaqController extends Controller
         $faq->status = $status;
         $faq->save();
     
-        return redirect(route('faq.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('faq.index'))->with('success', 'Status changed successfully!');
     }  
     
     public function update(Request $request) {
@@ -71,7 +71,7 @@ class FaqController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Faq Update successfully!',
+            'notification' => 'Faq updated successfully!',
         ];
 
         return response()->json($response);
