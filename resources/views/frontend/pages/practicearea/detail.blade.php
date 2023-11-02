@@ -68,8 +68,10 @@
         <div class="row">
             <div class="col-md-12 px0">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    @php $a = 0; @endphp
 
                     @if(!empty($child_detail))
+                    @php $a = 1; @endphp
 
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
@@ -84,21 +86,21 @@
                     @if(!empty($detail->why_choose_us))
 
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        <button class="nav-link @if($a != 1) active @endif" id="pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                            aria-selected="false">
+                            aria-selected="@if($a != 1) true @else false @endif">
                             Why Choose Us
                         </button>
                     </li>
-
+                    @php $a = 1; @endphp
                     @endif
 
                     @if(!empty(json_decode($detail->faq, true)))
 
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        <button class="nav-link  @if($a != 1) active @endif" id="pills-contact-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                            aria-selected="false">
+                            aria-selected="@if($a != 1) true @else false @endif">
                             FAQ
                         </button>
                     </li>
@@ -106,8 +108,10 @@
                     @endif
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
+                    @php $b = 0; @endphp
 
                     @if(!empty($child_detail))
+                    @php $b = 1; @endphp
 
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                         aria-labelledby="pills-home-tab">
@@ -150,7 +154,7 @@
 
                     @if(!empty($detail->why_choose_us))
 
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                         <div class="row">
                             <div class="col-md-12">
                                 @php echo html_entity_decode($detail->why_choose_us) @endphp
@@ -158,11 +162,12 @@
                         </div>
                     </div>
 
+                    @php $b = 1; @endphp
                     @endif
 
                     @if(!empty(json_decode($detail->faq, true)))
 
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                         <div class="row">
                             <div class="col-md-12">
                                 <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">
