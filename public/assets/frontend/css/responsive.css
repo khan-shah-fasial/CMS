@@ -185,8 +185,12 @@
         display: none;
     }
 
+    .about {
+        padding-bottom: 0;
+    }
+
     .about .link_number .number {
-        font-size: 22px;
+        font-size: 22px !important;
     }
 
     .practice_box {
@@ -417,10 +421,55 @@
         padding-left: 0;
         margin-top: 20px;
     }
+
+    .search-box {
+        top: 74px;
+        right: 4px;
+        width: 320px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .service_why_choose .nav-pills .nav-link {
         min-width: 221px;
+    }
+
+    .top_baar {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+    .top_baar a span {
+        font-size: 12px;
+    }
+
+    .search-box {
+        right: 10px;
+    }
+
+    .main_heading {
+        font-size: 30px;
+    }
+    .about .link_number .number {
+        font-size: 19px !important;
+    }
+
+    .about_counter_number {
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .blog .blog_right_box {
+        align-items: start;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .about .link_number .number {
+        font-size: 25px !important;
+    }
+
+    .main_heading {
+        font-size: 32px;
     }
 }

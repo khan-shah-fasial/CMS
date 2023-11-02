@@ -40,7 +40,7 @@ $(document).ready(function () {
             600: {
                 items: 3.5,
             },
-            1000: {
+            1100: {
                 items: 4.5,
             },
         },
@@ -136,4 +136,11 @@ function googleTranslateElementInit() {
 
 jQuery(document).ready(function ($) {
     $("#example_1").whatsappChatSupport();
+});
+
+$(document).ready(function () {
+    $(".search_icon").click(function () {
+        $(".search-box").toggle();
+        $(".search_bar_field input[type='text']").focus();
+    });
 });

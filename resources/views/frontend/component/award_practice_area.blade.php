@@ -19,7 +19,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
 
             @foreach ($practice_Area as $row)
 
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="practice_box" data-aos-once="true" data-aos="fade-up">
                     <div class="visible_box">
                         <img src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />

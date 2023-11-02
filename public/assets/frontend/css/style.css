@@ -13,14 +13,6 @@ body {
     overflow-x: hidden;
 }
 
-body::selection {
-    background: #e36d6a !important;
-}
-
-body::-moz-selection {
-    background: #e36d6a;
-}
-
 a:hover {
     color: #e36d6a !important;
 }
@@ -134,6 +126,59 @@ header {
     text-decoration: none;
 }
 
+.search_right img {
+    cursor: pointer;
+}
+
+.search-box {
+    background: white;
+    position: absolute;
+    top: 49px;
+    right: 0;
+    width: 450px;
+    line-height: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search_bar_field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box:before {
+    content: "";
+    position: absolute;
+    top: -27px;
+    right: 15px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid #e36d6a;
+}
+
+.search-box .search_bar_field input {
+    font-size: 14px;
+    padding: 8px 10px;
+    width: 100%;
+    line-height: 20px;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    border: 1px solid lightgray;
+}
+.search-box .search_bar_field button {
+    line-height: 20px;
+    padding: 8px 10px;
+    border: none;
+    background: #e36d6a;
+    border-radius: 5px;
+    color: white;
+}
+
 .bottom_nav_links .nav_links li {
     padding: 10px 0;
     line-height: 17px;
@@ -237,6 +282,7 @@ header ul.dropdown li a:hover {
 
 .search_right {
     float: right;
+    position: relative;
 }
 
 .menu_left_fixed {
@@ -453,9 +499,9 @@ header ul.dropdown li a:hover {
 }
 
 .about .link_number .number {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 45px;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 45px !important;
 }
 
 .about_counter_img {
@@ -508,7 +554,6 @@ header ul.dropdown li a:hover {
     justify-content: center;
     flex-direction: column;
     padding: 35px;
-    margin: 22px;
     background-image: url("/assets/frontend/images/practice_box_bg.png");
     background-repeat: no-repeat;
     background-position: center;
