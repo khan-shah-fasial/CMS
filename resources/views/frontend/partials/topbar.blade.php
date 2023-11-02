@@ -23,9 +23,16 @@
             <div class="col-md-6 px0">
                 <div class="search_right d-flex align-items-center gap-3">
                     <div id="google_translate_element"></div>
-                    <a>
-                        <img src="/assets/frontend/images/search.png" alt="email icon" />
-                    </a>
+                    <div>
+                        <img class="search_icon" src="/assets/frontend/images/search.png" alt="email icon" />
+                        <div class="search-box ">
+                            <div class="search_bar_field">
+                                <input class="form-control" type="text" placeholder="Enter Here..." />
+                                <button>Search</button>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

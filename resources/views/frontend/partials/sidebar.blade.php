@@ -67,15 +67,15 @@
                     <form class="contact_form">
                         <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
                         <div class="d-flex align-items-center gap-3 mb-3">
-                            <input type="text" placeholder="Write Your Name..." data-aos-once="true"
-                                data-aos="fade-up" />
-                            <input type="text" placeholder="Write Your Email..." data-aos-once="true"
-                                data-aos="fade-up" />
+                            <input class="form-control" type="text" placeholder="Write Your Name..."
+                                data-aos-once="true" data-aos="fade-up" />
+                            <input class="form-control" type="text" placeholder="Write Your Email..."
+                                data-aos-once="true" data-aos="fade-up" />
                         </div>
                         <div class="d-flex align-items-center gap-3 mb-3">
-                            <input type="text" placeholder="Write Your Phone No" data-aos-once="true"
-                                data-aos="fade-up" />
-                            <select data-aos-once="true" data-aos="fade-up">
+                            <input class="form-control" type="text" placeholder="Write Your Phone No"
+                                data-aos-once="true" data-aos="fade-up" />
+                            <select class="form-select" data-aos-once="true" data-aos="fade-up">
                                 <option>Secretarial Audit</option>
                                 <option>Options</option>
                                 <option>Options</option>
@@ -83,8 +83,8 @@
                                 <option>Options</option>
                             </select>
                         </div>
-                        <input type="text" placeholder="Brief description of your legal issue" data-aos-once="true"
-                            data-aos="fade-up" />
+                        <input class="form-control" type="text" placeholder="Brief description of your legal issue"
+                            data-aos-once="true" data-aos="fade-up" />
                         <div class="text-center mt-4">
                             <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
                         </div>

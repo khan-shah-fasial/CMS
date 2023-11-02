@@ -137,3 +137,10 @@ function googleTranslateElementInit() {
 jQuery(document).ready(function ($) {
     $("#example_1").whatsappChatSupport();
 });
+
+$(document).ready(function () {
+    $(".search_icon").click(function () {
+        $(".search-box").toggle();
+        $(".search_bar_field input[type='text']").focus();
+    });
+});
