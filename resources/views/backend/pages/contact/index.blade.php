@@ -54,7 +54,11 @@
                     </a>
                     @endif
                 </td>--}}
-                <td>{{$row->url}}</td>
+                <td>
+                    <a target="_blank" href="{{$row->url}}">
+                    {{$row->url}}
+                    </a>
+                </td>
                 <td>{{$row->section}}</td>
                 {{--
                 <td>
