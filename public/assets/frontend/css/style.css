@@ -131,10 +131,10 @@ header {
 }
 
 .search-box {
-    background: #e4e4e4;
+    background: white;
     position: absolute;
     top: 49px;
-    right: 57px;
+    right: 0;
     width: 450px;
     line-height: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -282,6 +282,7 @@ header ul.dropdown li a:hover {
 
 .search_right {
     float: right;
+    position: relative;
 }
 
 .menu_left_fixed {
@@ -498,9 +499,9 @@ header ul.dropdown li a:hover {
 }
 
 .about .link_number .number {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 45px;
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    line-height: 45px !important;
 }
 
 .about_counter_img {
@@ -553,7 +554,6 @@ header ul.dropdown li a:hover {
     justify-content: center;
     flex-direction: column;
     padding: 35px;
-    margin: 22px;
     background-image: url("/assets/frontend/images/practice_box_bg.png");
     background-repeat: no-repeat;
     background-position: center;

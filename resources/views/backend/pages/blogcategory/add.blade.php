@@ -3,13 +3,13 @@
     <div class="row">
     <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Name</label>
+                <label>Name <span class="red">*</span></label>
                 <input type="text" class="form-control" name="name" value="" required>
             </div>
         </div>      
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Slug</label>
+                <label>Slug <span class="red">*</span></label>
                 <input type="text" class="form-control" name="slug" value="" required>
             </div>
         </div>

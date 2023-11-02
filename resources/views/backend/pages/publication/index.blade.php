@@ -52,15 +52,15 @@
                 <td>
                     <a href="{{ url(route('publication.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
-                            <i class="ri-eye-off-fill"></i>
+                            <i class="ri-eye-off-fill" title="Inactive"></i>
                         @else
-                            <i class="ri-eye-fill"></i>
+                            <i class="ri-eye-fill" title="Active"></i>
                         @endif
                     </a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('publication.edit',['id' => $row->id])) }}', 'Edit Publication')"> <i class="mdi mdi-square-edit-outline"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('publication.edit',['id' => $row->id])) }}', 'Edit Publication')"> <i class="mdi mdi-square-edit-outline" title="Edit"></i></a>
 
-                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('publication.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete"></i></a>
+                    <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('publication.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete" title="Delete"></i></a>
                 </td>
             </tr>
             @endforeach
