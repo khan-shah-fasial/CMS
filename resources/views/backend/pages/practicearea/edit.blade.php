@@ -4,19 +4,19 @@
         <input type="hidden" name="id" value="{{ $practicearea->id }}">
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Service Title</label>
+                <label>Service Title <span class="red">*</span></label>
                 <input type="text" class="form-control" name="title" value="{{ $practicearea->title }}" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Short Description</label>
+                <label>Short Description <span class="red">*</span></label>
                 <input type="text" class="form-control" name="short_description" value="{{ $practicearea->short_description }}" required>
             </div>
         </div> 
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Slug</label>
+                <label>Slug <span class="red">*</span></label>
                 <input type="text" class="form-control" name="slug" value="{{ $practicearea->slug }}" required>
             </div>
         </div>
@@ -28,7 +28,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Content</label>
+                <label>Content <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="content" rows="5" required>{{ $practicearea->content }}</textarea>
             </div>
         </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Why Choose Us</label>
+                <label>Why Choose Us </label>
                 <textarea class="form-control trumbowyg" name="why_choose_us" rows="5">{{ $practicearea->why_choose_us }}</textarea>
             </div>
         </div>
@@ -122,19 +122,19 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Breadcrumb Title</label>
+                <label>Breadcrumb Title <span class="red">*</span></label>
                 <input type="text" class="form-control" name="breadcrumb_title" value="{{ $practicearea->breadcrumb_title }}" required>
             </div>
         </div> 
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Breadcrumb Subtitle</label>
+                <label>Breadcrumb Subtitle <span class="red">*</span></label>
                 <input type="text" class="form-control" name="breadcrumb_subtitle" value="{{ $practicearea->breadcrumb_subtitle }}" required>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Breadcrumb Image</label>
+                <label>Breadcrumb Image <span class="red">*</span></label>
                 <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image">
             </div>
         </div>
@@ -151,13 +151,13 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Meta Title</label>
+                <label>Meta Title <span class="red">*</span></label>
                 <input type="text" class="form-control" name="meta_title" value="{{ $practicearea->meta_title }}" required>
             </div>
         </div> 
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Meta Description</label>
+                <label>Meta Description <span class="red">*</span></label>
                 <textarea class="form-control" name="meta_description" rows="3" required>{{ $practicearea->meta_description }}</textarea>
             </div>
         </div>

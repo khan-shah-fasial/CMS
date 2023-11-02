@@ -12,19 +12,19 @@
                             </div>                        
                             <div class="col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label>Title</label>
+                                    <label>Title <span class="red">*</span></label>
                                     <input type="text" class="form-control" name="title" value="" required>
                                 </div>
                             </div> 
                             <div class="col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label>Short Description</label>
+                                    <label>Short Description <span class="red">*</span></label>
                                     <input type="text" class="form-control" name="short_description" value="" required>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label>Slug</label>
+                                    <label>Slug <span class="red">*</span></label>
                                     <input type="text" class="form-control" name="slug" value="" required>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                             </div>                         
                             <div class="col-sm-12">
                                 <div class="form-group mb-3">
-                                    <label>Content</label>
+                                    <label>Content <span class="red">*</span></label>
                                     <textarea class="form-control trumbowyg" name="content" rows="2" required></textarea>
                                 </div>
                             </div>
@@ -79,13 +79,13 @@
                             </div> 
                             <div class="col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label>Breadcrumb Title</label>
+                                    <label>Breadcrumb Title <span class="red">*</span></label>
                                     <input type="text" class="form-control" name="breadcrumb_title" value="" required>
                                 </div>
                             </div>        
                             <div class="col-sm-6">
                                 <div class="form-group mb-3">
-                                    <label>Breadcrumb Subtitle</label>
+                                    <label>Breadcrumb Subtitle <span class="red">*</span></label>
                                     <input type="text" class="form-control" name="breadcrumb_subtitle" value="" required>
                                 </div>
                             </div>                                                                                                                                                                   
@@ -100,13 +100,13 @@
                         </div> 
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Meta Title</label>
+                                <label>Meta Title <span class="red">*</span></label>
                                 <input type="text" class="form-control" name="meta_title" value="" required>
                             </div>
                         </div> 
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Meta Description</label>
+                                <label>Meta Description <span class="red">*</span></label>
                                 <textarea class="form-control" name="meta_description" rows="3" required></textarea>
                             </div>
                         </div>                    
@@ -122,7 +122,7 @@
                         </div> 
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
-                                <label>Breadcrumb Image</label>
+                                <label>Breadcrumb Image <span class="red">*</span></label>
                                 <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image" required>
                             </div>
                         </div>                    
