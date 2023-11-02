@@ -8,7 +8,7 @@ $right_blog = array_slice($blog, 2);
     <div class="container">
         <div class="row">
 
-            <div class="col-md-8 px0">
+            <div class="col-lg-8 px0">
                 <div class="underline_heading" data-aos-once="true" data-aos="fade-up">
                     <h6 class="main_heading">Latest Blog</h6>
                 </div>
@@ -25,7 +25,9 @@ $right_blog = array_slice($blog, 2);
                                 <p>
                                     {{ $blog[0]->title }}
                                 </p>
-                                <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View More</a>
+                                <a
+                                    href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View
+                                    More</a>
                             </div>
                         </div>
                     </div>
@@ -37,14 +39,16 @@ $right_blog = array_slice($blog, 2);
                                 <p>
                                     {{ $blog[1]->title }}
                                 </p>
-                                <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[1]->slug))] )) }}">View More</a>
+                                <a
+                                    href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[1]->slug))] )) }}">View
+                                    More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 px0 ">
+            <div class="col-lg-4 px0 ">
                 <h2 class="heading mb-4 mt-4">
                     Learn something more from our latest
                     <span class="main_heading_color">News</span>
@@ -58,7 +62,9 @@ $right_blog = array_slice($blog, 2);
                         <p class="desc">
                             {{ $row->title }}
                         </p>
-                        <a href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View More</a>
+                        <a
+                            href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            More</a>
                     </div>
                 </div>
 

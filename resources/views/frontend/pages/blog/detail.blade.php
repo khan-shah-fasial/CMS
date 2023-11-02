@@ -132,7 +132,8 @@
                 <p class="post_comment" data-aos="fade-up" data-aos-once="true">
                     Your email address will not be published *
                 </p>
-                <button data-aos="fade-up" data-aos-once="true">Post Comment</button>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#comment" data-aos="fade-up"
+                    data-aos-once="true">Post Comment</button>
             </div>
         </div>
     </div>
@@ -180,6 +181,35 @@
 <!------------------ awards_section Start -------------------------->
 @include('frontend.component.awards')
 <!------------------ awards_section End -------------------------->
+
+
+<div class="modal fade" id="comment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body ">
+                <div class="career_popup_form">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <form class="contact_form">
+                        <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <textarea placeholder="Write your thoughts..." rows="10"></textarea>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <input type="text" placeholder="Name" data-aos-once="true" data-aos="fade-up" />
+                            <input type="text" placeholder="Email" data-aos-once="true" data-aos="fade-up" />
+                            <input type="text" placeholder="Phone No" data-aos-once="true" data-aos="fade-up" />
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!----------========= blog detail end ========== ------------------->

@@ -111,8 +111,31 @@ class IndexController extends Controller
 
     public function contact_save(Request $request)
     {
+        $rules = [
+            'cv' => 'nullable|mimetypes:application/pdf,application/msword',
+        ];
+    
+        $validator = \Validator::make($request->all(), $rules); // Pass $request->all() as the first argument
+    
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors(),
+            ]);
+        }
+    
+        if ($request->hasFile('cv')) {
+            $cvPath = $request->file('cv')->store('assets/image/pdf', 'public');
+        } else {
+            $cvPath = null; // Set to null if 'cv' is not provided
+        }
+    
+        // Create the contact record, including 'cv' if provided
+        $contactData = $request->all();
+        $contactData['cv'] = $cvPath;
+    
         // Create the contact record
-        Contact::create($request->all());
+        Contact::create($contactData);
     
         $response = [
             'status' => true,
