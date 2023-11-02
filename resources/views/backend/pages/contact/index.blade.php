@@ -27,6 +27,8 @@
                 <th>Services</th>
                 <th>Description</th>
                 <th>Other Info</th>
+                <th>Qualification</th>
+                <th>CV</th>
                 <th>Page</th>
                 <th>Section</th>
                 <th>Date</th>
@@ -44,6 +46,12 @@
                 <td>{{$row->services}}</td>
                 <td>{{$row->description}}</td>
                 <td>{{$row->other_info}}</td>
+                <td>{{$row->qualification}}</td>
+                <td>
+                    <a target="_blank" href="{{ asset('storage/' . $row->cv) }}">
+                        View
+                    </a>
+                </td>
                 <td>{{$row->url}}</td>
                 <td>{{$row->section}}</td>
                 {{--

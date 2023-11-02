@@ -47,7 +47,7 @@ class IndexController extends Controller
     }
 
     public function blog(){
-        $blog = Blog::where('status', 1)->get();
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->get();
 
         return view('frontend.pages.blog.index', compact('blog'));
     }
