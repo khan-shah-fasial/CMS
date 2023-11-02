@@ -42,7 +42,7 @@
                 <div class="underline_heading">
                     <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">About Us</h6>
                 </div>
-                <h2 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
+                <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
                     Ahlawat & Associates is one of India’s leading
                     full-service law firms, catering to domestic and
@@ -52,7 +52,7 @@
                     our clientele includes an array of domestic and
                     international individuals and companies.
                 </p>
-                <div class="d-flex align-items-start align-items-md-center flex-md-row flex-column gap-md-4 mb-md-0 ">
+                <div class="d-flex align-items-start align-items-xl-center flex-xl-row flex-column gap-xl-4 mb-md-0 ">
                     <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
                         <span class="desc">Praesent feugiat sem mattis.</span>
@@ -95,7 +95,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 px0">
-                <div class="news_box me-md-5">
+                <div class="news_box me-xl-5">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
                     </h1>
                     <img src="/assets/frontend/images/news_1.png" alt="" data-aos-once="true" data-aos="fade-up" />
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="col-md-6 px0">
-                <div class="news_box ms-md-5">
+                <div class="news_box ms-xl-5">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Top Lawyer in Delhi
                     </h1>
                     <img src="/assets/frontend/images/news_2.png" alt="" data-aos-once="true" data-aos="fade-up" />

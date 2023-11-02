@@ -40,7 +40,7 @@ $(document).ready(function () {
             600: {
                 items: 3.5,
             },
-            1000: {
+            1100: {
                 items: 4.5,
             },
         },
