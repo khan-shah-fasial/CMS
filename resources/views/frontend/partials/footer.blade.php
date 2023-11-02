@@ -42,11 +42,11 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
             <div class="col-md-6">
                 <form class="contact_form">
                     <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
-                    <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-3 mb-3">
                         <input type="text" placeholder="Write Your Name..." data-aos-once="true" data-aos="fade-up" />
                         <input type="text" placeholder="Write Your Email..." data-aos-once="true" data-aos="fade-up" />
                     </div>
-                    <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-3 mb-3">
                         <input type="text" placeholder="Write Your Phone No" data-aos-once="true" data-aos="fade-up" />
                         <select data-aos-once="true" data-aos="fade-up">
                             <option>Secretarial Audit</option>
@@ -58,7 +58,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </div>
                     <input type="text" placeholder="Brief description of your legal issue" data-aos-once="true"
                         data-aos="fade-up" />
-                    <div class="text-center">
+                    <div class="text-center mt-4">
                         <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
                     </div>
                 </form>

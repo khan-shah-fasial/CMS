@@ -4,7 +4,7 @@
             <div class="col-md-6 px0">
                 <div class="top_nav_links d-flex align-items-left gap-5 mb-md-0 mb-2 gap_seven">
 
-                    <div class="phone_email d-flex align-items-center gap-4">
+                    <div class="phone_email d-flex align-items-center gap-lg-4 ">
                         <div>
                             <a href="tel:+011-41023400">
                                 <img src="/assets/frontend/images/call.png" alt="call icon" />
