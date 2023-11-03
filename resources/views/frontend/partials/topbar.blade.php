@@ -26,8 +26,8 @@
                     <div>
                         <img class="search_icon" src="/assets/frontend/images/search.png" alt="email icon" />
                         <div class="search-box ">
-                            <form class="search_bar_field">
-                                <input class="form-control" type="text" placeholder="Enter Here..." />
+                            <form method="get" action="{{url(route('search'))}}" class="search_bar_field">
+                                <input name="query" class="form-control" type="text" placeholder="Enter Here..." />
                                 <button>Search</button>
                             </form>
 
