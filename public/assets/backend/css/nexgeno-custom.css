@@ -2,7 +2,7 @@
     z-index: 9990 !important;
 }
 
-.trumbowyg-box {
+/*.trumbowyg-box {
     z-index: 9990 !important;
 }
 
@@ -11,8 +11,8 @@
 }
 
 .trumbowyg-modal {
-    z-index: 99999 !important; /* Set a value higher than the Bootstrap modal's z-index */
-}
+    z-index: 99999 !important;
+}*/
 
 .logo-topbar .logo-light .logo-lg img {
     width: 60px;
