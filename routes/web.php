@@ -28,6 +28,8 @@ Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
 
 Route::get('/news', [IndexController::class, 'news'])->name('news');
 
+Route::get('/deal-update', [IndexController::class, 'deal_update'])->name('deal-update');
+
 
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
 Route::get('/team-members/{slug}', [IndexController::class, 'team_detail'])->name('team.detail');
