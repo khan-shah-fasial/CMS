@@ -24,13 +24,15 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 
             @foreach ($practice_Area as $row)
             <option value="{{ $row->title }}">{{ $row->title }}</option>
-            @endforeach
+            @endforeachs
 
         </select>
     </div>
-
-    <input type="text" class="form-control" name="description" placeholder="Brief description of your legal issue"
-        data-aos-once="true" data-aos="fade-up" />
+	
+		<textarea class="form-select footer_textarea" name="description" placeholder="Brief description of your legal issue"
+        data-aos-once="true" data-aos="fade-up" rows="2" required></textarea>
+		
+		
     <div class="text-center mt-4">
         <button type="submit" class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
     </div>

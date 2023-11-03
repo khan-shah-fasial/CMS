@@ -38,7 +38,6 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                         </ul>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-6">
                 @include('frontend.component.footer_form')
