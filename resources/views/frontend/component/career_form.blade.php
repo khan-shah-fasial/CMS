@@ -37,6 +37,15 @@
             <label for="formFile" class="form-label">Upload Your CV</label>
             <input class="form-control" type="file" name="cv" id="formFile" required accept=".pdf,.docx">
         </div>
+		
+    </div>
+
+
+<div class="d-flex align-items-center gap-2">
+
+		<div class="w-100 mb-3">
+           <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+		   </div>
     </div>
 
 

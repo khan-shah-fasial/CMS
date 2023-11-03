@@ -43,6 +43,11 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
     </div>
 		<textarea class="form-select" name="description" placeholder="Brief description of your legal issue"
         data-aos-once="true" data-aos="fade-up" rows="2" required></textarea>
+		
+		<div class="w-100 mt-3">
+		  <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+		</div>
+		
     <div class="text-center mt-4">
         <button type="submit" class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
     </div>

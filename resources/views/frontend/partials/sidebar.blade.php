@@ -10,8 +10,6 @@
                 <li><a href="{{ url(route('blog')) }}">Blog</a></li>
                 <li><a href="{{ url(route('news')) }}">News</a></li>
                 <li><a href="{{ url(route('deal-update')) }}">Deal Update</a></li>
-                <li><a href="{{ url(route('contact')) }}">Contact Us</a></li>
-                <li><a href="{{ url(route('career')) }}">Careers</a></li>
             </ul>
             <div class="text-center">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us

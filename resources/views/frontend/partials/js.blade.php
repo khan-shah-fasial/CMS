@@ -23,6 +23,9 @@
 <!--whatsapp js-->
 <script src="/assets/frontend/js/whatsapp-chat-support.js"></script>
 
+<!--Google capcha js-->
+<script src="/assets/frontend/js/api.js"></script>
+
 <!--Custom Js-->
 <script src="/assets/frontend/js/Init.js"></script>
 <script src="/assets/frontend/js/script.js"></script>

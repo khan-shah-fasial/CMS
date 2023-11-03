@@ -30,6 +30,11 @@
         <textarea placeholder="Brief Description of your legal issue" rows="3" name="description" data-aos-once="true"
             data-aos="fade-up"></textarea>
     </div>
+	
+	<div class="mb-3">
+     <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+    </div>
+	
     <div class="">
         <button type="submit" data-aos-once="true" data-aos="fade-up">
             SUBMIT
