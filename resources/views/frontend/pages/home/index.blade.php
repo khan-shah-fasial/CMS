@@ -16,7 +16,7 @@
                         full-service law firms, catering to domestic and
                         international clients.
                     </p>
-                    <a href="">Read More
+                    <a href="about-us">Read More
                         <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                     </a>
                 </div>
