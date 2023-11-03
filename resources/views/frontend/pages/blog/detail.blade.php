@@ -166,7 +166,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="heading mb-4" data-aos="fade-up" data-aos-once="true">Related Blogs</h1>
+                <h1 class="heading mb-4" data-aos="fade-up" data-aos-once="true">Related {{ ucfirst($page->name) }}</h1>
             </div>
 
             @foreach ($blog as $row)
@@ -177,7 +177,7 @@
                     <div class="blog_content">
                         <p>{{ $row->short_description }}</p>
                         <a
-                            href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            href="{{ url(route('blog.detail', ['category' => $url, 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
                             More</a>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
 @include('frontend.component.awards')
 <!------------------ awards_section End -------------------------->
 
-
+@if($url == 'blog')
 <div class="modal fade" id="comment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -229,6 +229,7 @@
         </div>
     </div>
 </div>
+@endif
 
 
 <!----------========= blog detail end ========== ------------------->
