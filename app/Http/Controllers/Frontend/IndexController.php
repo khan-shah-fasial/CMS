@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Contact;
+use App\Models\BlogComment;
 
 class IndexController extends Controller
 {
@@ -172,5 +173,19 @@ class IndexController extends Controller
         return view('frontend.pages.search.index');
     }
 
+    public function comment_save(Request $request)
+    {
+        $commentData = $request->all();
+    
+        // Create the contact record
+        BlogComment::create($commentData);
+    
+        $response = [
+            'status' => true,
+            'notification' => 'Comment added successfully!',
+        ];
+    
+        return response()->json($response);
+    }
 
 }
