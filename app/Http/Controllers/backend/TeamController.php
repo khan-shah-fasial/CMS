@@ -21,7 +21,6 @@ class TeamController extends Controller
     public function create(Request $request) {
         // Validate the incoming request data
         $validatedData = $request->validate([
-            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Customize validation rules
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',
@@ -30,7 +29,7 @@ class TeamController extends Controller
             'email' => 'nullable',
             'linkedin_link' => 'nullable',
             'series' => 'nullable',
-            'status' => 'boolean', // Example: To validate that 'status' is a boolean
+            'status' => 'boolean',
         ]);
 
         // Handle image upload if provided
@@ -67,7 +66,7 @@ class TeamController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Team Deleted successfully!',
+            'notification' => 'Team deleted successfully!',
         ];
 
         return response()->json($response);
@@ -78,7 +77,7 @@ class TeamController extends Controller
         $team->status = $status;
         $team->save();
     
-        return redirect(route('team.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('team.index'))->with('success', 'Status changed successfully!');
     }  
     
     public function update(Request $request) {
@@ -86,7 +85,6 @@ class TeamController extends Controller
 
         // Validate the incoming request data
         $validatedData = $request->validate([
-            //'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required',
             'about' => 'required',
             'designation' => 'required',
@@ -117,7 +115,7 @@ class TeamController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Team Updated successfully!',
+            'notification' => 'Team updated successfully!',
         ];
 
         return response()->json($response);
