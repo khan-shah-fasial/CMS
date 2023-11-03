@@ -8,10 +8,11 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-6">
-                <div class="contact_info_box">
+                <div class="contact_info_box d-flex  flex-column">
                     <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
-                    <p class="mobile" data-aos-once="true" data-aos="fade-up">011-41023400</p>
-                    <p class="email" data-aos-once="true" data-aos="fade-up">info@ahlawatassociates.in</p>
+                    <a href="tel:011-41023400" class="mobile" data-aos-once="true" data-aos="fade-up">011-41023400</a>
+                    <a href="mailto:info@ahlawatassociates.in" class="email" data-aos-once="true"
+                        data-aos="fade-up">info@ahlawatassociates.in</a>
                 </div>
             </div>
             <div class="col-md-3 col-6">
@@ -107,7 +108,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
                         <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="#"> Terms & Condition </a></li>
+                        <li><a href="{{ url(route('privacy-policy')) }}"> Terms & Condition </a></li>
                         <li><a href="#">Cookie Policy</a></li>
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-0">

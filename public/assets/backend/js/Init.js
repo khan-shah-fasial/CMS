@@ -124,7 +124,15 @@ function ajaxSubmit(e, form, callBackFunction) {
                     Command: toastr["success"](response.notification, "Success");
                     callBackFunction(response);
                 }else{
-                    Command: toastr["error"](response.notification, "Alert");
+                    if(typeof response.notification === 'object') {
+                        var errors = '';
+                        $.each( response.notification, function( key, msg ) {
+                            errors += '<div>' + (key + 1) + '. ' + msg + '</div>';
+                        });
+                        Command: toastr["error"](errors, "Alert");
+                    }else {
+                        Command: toastr["error"](response.notification, "Alert");
+                    }
                 }
             }
         });

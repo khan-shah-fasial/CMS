@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PracticeArea;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class PracticeAreaController extends Controller
 {
@@ -21,11 +23,26 @@ class PracticeAreaController extends Controller
     
     public function create(Request $request) {
         // Validate form data
-       /* $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'breadcrumb_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'section_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]); */
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|max:191',
+            'slug' => 'required|unique:practice_areas',
+            'short_description' => 'required',
+            'content' => 'required',
+            'thumnail_image' => 'image',
+            'section_image' => 'image',
+            'meta_title' => 'required|max:255',
+            'meta_description' => 'required',
+            'breadcrumb_title' => 'required|max:191',
+            'breadcrumb_subtitle' => 'required|max:191',
+            'breadcrumb_image' => 'required|image', 
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        }        
     
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
@@ -79,7 +96,7 @@ class PracticeAreaController extends Controller
     
         $response = [
             'status' => true,
-            'notification' => 'PracticeArea added successfully!',
+            'notification' => 'Practice area added successfully!',
         ];
     
         return response()->json($response);
@@ -99,18 +116,11 @@ class PracticeAreaController extends Controller
     public function delete($id) {
         
         $practicearea = PracticeArea::find($id);
-        if (!$practicearea) {
-            $response = [
-                'status' => false,
-                'notification' => 'Record not found.!',
-            ];
-            return response()->json($response);
-        }
         $practicearea->delete();
 
         $response = [
             'status' => true,
-            'notification' => 'PracticeArea Deleted successfully!',
+            'notification' => 'Practice area deleted successfully!',
         ];
 
         return response()->json($response);
@@ -121,10 +131,32 @@ class PracticeAreaController extends Controller
         $practicearea->status = $status;
         $practicearea->save();
     
-        return redirect(route('practicearea.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('practicearea.index'))->with('success', 'Status changed successfully!');
     }  
     
     public function update(Request $request) {
+
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|max:191',
+            'slug' => 'required|unique:practice_areas,slug,'. $request->input('id'),
+            'short_description' => 'required',
+            'content' => 'required',
+            'thumnail_image' => 'image',
+            'section_image' => 'image',
+            'meta_title' => 'required|max:255',
+            'meta_description' => 'required',
+            'breadcrumb_title' => 'required|max:191',
+            'breadcrumb_subtitle' => 'required|max:191',
+            'breadcrumb_image' => 'image', 
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        }
+
         $id = $request->input('id');
         $practicearea = PracticeArea::find($id);
     
@@ -132,18 +164,33 @@ class PracticeAreaController extends Controller
             // Update the image if a new one is uploaded
             $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
             $practicearea->thumnail_image = $imagePath;
+        }else{
+            if($request->has('image_check') && $practicearea->thumnail_image){
+                Storage::disk('public')->delete($practicearea->thumnail_image);
+                $practicearea->thumnail_image = null;
+            }
         }
 
         if ($request->hasFile('breadcrumb_image')) {
             // Update the image if a new one is uploaded
             $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
             $practicearea->breadcrumb_image = $imagePath1;
+        }else{
+            if($request->has('breadcrumb_image_check') && $practicearea->breadcrumb_image){
+                Storage::disk('public')->delete($practicearea->breadcrumb_image);
+                $practicearea->breadcrumb_image = null;
+            }
         }
 
         if ($request->hasFile('section_image')) {
             // Update the image if a new one is uploaded
             $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
             $practicearea->section_image = $imagePath2;
+        }else{
+            if($request->has('section_image_check') && $practicearea->section_image){
+                Storage::disk('public')->delete($practicearea->section_image);
+                $practicearea->section_image = null;
+            }
         }
 
         // Extract and handle FAQ data
@@ -184,7 +231,7 @@ class PracticeAreaController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Testimonial Update successfully!',
+            'notification' => 'Practice area updated successfully!',
         ];
 
         return response()->json($response);

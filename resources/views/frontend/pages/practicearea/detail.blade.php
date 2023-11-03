@@ -49,8 +49,9 @@
 
 @if(!empty($detail->section_image))
 
-<section class="service_img" data-aos-once="true" data-aos="fade-up"
-    style="background-image: url({{ asset('storage/' . $detail->section_image) }});"></section>
+<section class="service_img" data-aos-once="true" data-aos="fade-up">
+    <img src="{{ asset('storage/' . $detail->section_image) }}" alt="">
+</section>
 
 @endif
 
@@ -98,9 +99,9 @@
                     @if(!empty(json_decode($detail->faq, true)))
 
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
-                        <button class="nav-link  @if($a != 1) active @endif" id="pills-contact-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
-                            aria-selected="@if($a != 1) true @else false @endif">
+                        <button class="nav-link  @if($a != 1) active @endif" id="pills-contact-tab"
+                            data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab"
+                            aria-controls="pills-contact" aria-selected="@if($a != 1) true @else false @endif">
                             FAQ
                         </button>
                     </li>
@@ -154,7 +155,8 @@
 
                     @if(!empty($detail->why_choose_us))
 
-                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-profile" role="tabpanel"
+                        aria-labelledby="pills-profile-tab">
                         <div class="row">
                             <div class="col-md-12">
                                 @php echo html_entity_decode($detail->why_choose_us) @endphp
@@ -167,7 +169,8 @@
 
                     @if(!empty(json_decode($detail->faq, true)))
 
-                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-contact" role="tabpanel"
+                        aria-labelledby="pills-contact-tab">
                         <div class="row">
                             <div class="col-md-12">
                                 <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">

@@ -5,7 +5,7 @@
         <input type="hidden" name="id" value="{{ $faq->id }}">
             <div class="form-group mb-3">
                 <label>Question <span class="red">*</span></label>
-                <input type="text" class="form-control" name="question" value="{{ $faq->question }}" required>
+                <input maxlength="255" type="text" class="form-control" name="question" value="{{ $faq->question }}" required>
             </div>
         </div>        
         <div class="col-sm-12">

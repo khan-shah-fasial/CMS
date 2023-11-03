@@ -129,7 +129,7 @@
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
                                 <label>Thumnail Icon <span class="font-size11">(Max file size 5kb - 70*70)</span></label></label>
-                                <input class="form-control" type="file" id="image" name="image" required>
+                                <input class="form-control" type="file" id="image" name="image">
                             </div>
                         </div>
                         <div class="col-sm-12">

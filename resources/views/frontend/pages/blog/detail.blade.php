@@ -125,12 +125,12 @@
             <div class="col-md-12">
                 <h1 class="heading" data-aos="fade-up" data-aos-once="true">Comments</h1>
             </div>
-            <div class="col-xl-1 col-lg-2 ">
-                <div class="avatar mb-lg-0 mb-2" data-aos="fade-up" data-aos-once="true">
+            <div class="col-xl-1 col-2">
+                <div class="avatar" data-aos="fade-up" data-aos-once="true">
                     <img src="/assets/frontend/images/profile.png" alt="" />
                 </div>
             </div>
-            <div class="col-xl-9  col-lg-10">
+            <div class="col-xl-9 col-8">
                 <p class="name" data-aos="fade-up" data-aos-once="true">Riva Collins</p>
                 <p class="date" data-aos="fade-up" data-aos-once="true">November 19, 2019 at 11:00 am</p>
                 <p class="comment" data-aos="fade-up" data-aos-once="true">
@@ -139,7 +139,7 @@
                     out.
                 </p>
             </div>
-            <div class="col-xl-2 mb-xl-0 mb-4">
+            <div class="col-md-2">
                 <button data-aos="fade-up" data-aos-once="true">Reply</button>
             </div>
             <div class="col-md-12 mt-md-0 mt-4">
@@ -167,7 +167,7 @@
 
             @foreach ($blog as $row)
 
-            <div class="col-lg-4 col-md-6 px0 mb-3">
+            <div class="col-md-4 px0 mb-3">
                 <div class="blog_big_box" data-aos="fade-up" data-aos-once="true">
                     <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">

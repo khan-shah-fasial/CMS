@@ -24,11 +24,11 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone No</th>
-                <th>Services</th>
+                {{--<th>Services</th>
                 <th>Description</th>
                 <th>Other Info</th>
                 <th>Qualification</th>
-                <th>CV</th>
+                <th>CV</th>--}}
                 <th>Page</th>
                 <th>Section</th>
                 <th>Date</th>
@@ -43,16 +43,22 @@
                 <td>{{$row->name}}</td>
                 <td>{{$row->email}}</td>
                 <td>{{$row->phone}}</td>
-                <td>{{$row->services}}</td>
+                {{--<td>{{$row->services}}</td>
                 <td>{{$row->description}}</td>
                 <td>{{$row->other_info}}</td>
                 <td>{{$row->qualification}}</td>
                 <td>
+                    @if($row->cv)
                     <a target="_blank" href="{{ asset('storage/' . $row->cv) }}">
                         View
                     </a>
+                    @endif
+                </td>--}}
+                <td>
+                    <a target="_blank" href="{{$row->url}}">
+                    {{$row->url}}
+                    </a>
                 </td>
-                <td>{{$row->url}}</td>
                 <td>{{$row->section}}</td>
                 {{--
                 <td>

@@ -34,11 +34,11 @@
 
 <section class="team_wrapper">
     <div class="container">
-        <div class="row">
+        <div class="row px0">
 
             @foreach ($team as $row)
 
-            <div class="col-xl-3 col-md-4  px0">
+            <div class="col-xl-3 col-md-4 col-6 ">
                 <div class="team_box">
                     <div class="team_main_img">
                         <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up"

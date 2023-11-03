@@ -4,55 +4,55 @@
         <div class="col-sm-3">
             <div class="form-group mb-3">
                 <label for="name">Name <span class="red">*</span></label>
-                <input type="text" class="form-control" name="name" id="name" required>
+                <input maxlength="70" type="text" class="form-control" name="name" id="name" required>
             </div>
         </div>        
         <div class="col-sm-3">
             <div class="form-group mb-3">
                 <label for="image">Profile Image <span class="red">*</span></label>
-                <input type="file" class="form-control" name="image" id="image" required>
+                <input accept="image/*" type="file" class="form-control" name="image" id="image" required>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group mb-3">
                 <label for="phone">Phone</label>
-                <input type="text" class="form-control" name="phone" id="phone">
+                <input maxlength="20" type="text" class="form-control" name="phone" id="phone">
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group mb-3">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" id="email">
+                <input maxlength="70" type="email" class="form-control" name="email" id="email">
             </div>
         </div>    
         <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="designation">Designation <span class="red">*</span></label>
-                <input type="text" class="form-control" name="designation" id="designation" required>
+                <input maxlength="70" type="text" class="form-control" name="designation" id="designation" required>
             </div>
         </div>
         
         <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="linkedin_link">LinkedIn Link</label>
-                <input type="url" class="form-control" name="linkedin_link" id="linkedin_link">
+                <input maxlength="191" type="url" class="form-control" name="linkedin_link" id="linkedin_link">
             </div>
         </div>  
 
        <div class="col-sm-4">
             <div class="form-group mb-3">
                 <label for="series">Order</label>
-                <input type="text" class="form-control" name="series" id="series">
+                <input max="10000" type="number" class="form-control" name="series" id="series">
             </div>
         </div> 
 		
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label for="about">About <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="about" id="about" rows="5" required></textarea>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label for="description">Practice Area <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="description" id="description" rows="5" required></textarea>

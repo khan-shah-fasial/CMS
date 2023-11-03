@@ -197,7 +197,6 @@
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 0;
-        margin-bottom: 22px;
     }
 
     .practice_box h1 {
@@ -411,8 +410,10 @@
 
     .team_wrapper .team_box img {
         width: 100%;
-        height: auto;
+        height: 172px;
+        object-fit: cover;
     }
+
     .team_d_content .content {
         padding-left: 0;
         margin-top: 20px;
@@ -431,9 +432,23 @@
     .team_d_content .content .role {
         line-height: 25px;
     }
+    .team_d_content .content ul {
+        margin-bottom: 30px;
+    }
 
     .team_d_content .content .mail {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
+    }
+
+    .team_wrapper .team_box .bio {
+        margin-top: 10px;
+    }
+    .blog_details_page_title_desc h1 {
+        font-size: 24px !important;
+    }
+
+    .blog_details_page_title_desc h2 {
+        font-size: 22px !important;
     }
 }
 

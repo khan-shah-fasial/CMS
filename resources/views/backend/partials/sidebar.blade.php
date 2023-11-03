@@ -90,12 +90,12 @@
                             </a>
                         </li>
 
-                        <li class="side-nav-item">
+                        {{--<li class="side-nav-item">
                             <a href="{{ route('testimonial.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="ri-discuss-line"></i>                                
                                 <span> Testimonials </span>
                             </a>
-                        </li>
+                        </li>--}}
 
                         <li class="side-nav-item">
                             <a href="{{ route('team.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
