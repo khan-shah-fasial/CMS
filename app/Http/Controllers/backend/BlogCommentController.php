@@ -28,7 +28,7 @@ class BlogCommentController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'blogcomment Deleted successfully!',
+            'notification' => 'Comment deleted successfully!',
         ];
 
         return response()->json($response);
@@ -39,7 +39,7 @@ class BlogCommentController extends Controller
         $blogcomment->status = $status;
         $blogcomment->save();
     
-        return redirect(route('blogcomment.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('blogcomment.index'))->with('success', 'Status changed successfully!');
     }  
      
 }

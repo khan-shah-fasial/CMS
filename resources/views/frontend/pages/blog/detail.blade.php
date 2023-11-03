@@ -128,12 +128,12 @@
             <div class="col-md-12">
                 <h1 class="heading" data-aos="fade-up" data-aos-once="true">Comments</h1>
             </div>
-            <div class="col-xl-1 col-2">
+            <div class="col-xl-1 col-md-2">
                 <div class="avatar" data-aos="fade-up" data-aos-once="true">
                     <img src="/assets/frontend/images/profile.png" alt="" />
                 </div>
             </div>
-            <div class="col-xl-9 col-8">
+            <div class="col-xl-9 col-md-8">
                 <p class="name" data-aos="fade-up" data-aos-once="true">Riva Collins</p>
                 <p class="date" data-aos="fade-up" data-aos-once="true">November 19, 2019 at 11:00 am</p>
                 <p class="comment" data-aos="fade-up" data-aos-once="true">

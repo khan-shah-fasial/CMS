@@ -31,9 +31,10 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($blogcomment as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
                 <td>{{$row->email}}</td>
                 <td>{{$row->comment}}</td>
@@ -44,7 +45,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('blogcomment.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')

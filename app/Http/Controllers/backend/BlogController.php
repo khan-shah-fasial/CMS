@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\BlogCategory;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class BlogController extends Controller
 {
@@ -25,10 +26,17 @@ class BlogController extends Controller
     
     public function create(Request $request) {
         // Validate form data
-        $request->validate([
-            //'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'blog_category_ids' => 'required', // Add validation for category IDs
+        $validator = Validator::make($request->all(), [
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
+            'slug' => 'required|unique:blogs',
         ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        }        
 
         // Upload image
         $imagePath = $request->file('image')->store('assets/image/blog', 'public');
@@ -99,6 +107,19 @@ class BlogController extends Controller
     }  
     
     public function update(Request $request) {
+
+        $validator = Validator::make($request->all(), [
+            'image' => 'image|mimes:jpeg,png,jpg,gif',
+            'slug' => 'required|unique:blogs,slug,'. $request->input('id'),
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        } 
+
         $id = $request->input('id');
         $blog = Blog::find($id);
     

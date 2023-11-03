@@ -574,6 +574,106 @@ header ul.dropdown li a:hover {
 .practice_w_box a {
     text-decoration: none;
 }
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+/* ::before,
+::after {
+    position: absolute;
+    content: "";
+} */
+
+.btn_hover {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0px 25px 15px;
+}
+.btn_hover span {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+/*--- btn-3 ---*/
+.btn-3 {
+    padding: 5px;
+}
+.btn-3 span {
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 56, 55);
+    padding: 80px 20px;
+}
+.btn-3::before,
+.btn-3::after {
+    background: transparent;
+    z-index: 2;
+}
+
+/* 15. hover-border-5 */
+.btn_hover.hover-border-5::before,
+.btn_hover.hover-border-5::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+}
+.btn_hover.hover-border-5::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    border-top: 1px solid rgb(28, 31, 30);
+    border-left: 1px solid rgb(28, 31, 30);
+    transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear,
+        opacity 0s 0.7s;
+}
+.btn_hover.hover-border-5::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0px;
+    border-bottom: 1px solid rgb(28, 31, 30);
+    border-right: 1px solid rgb(28, 31, 30);
+    transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
+}
+.btn_hover.hover-border-5:hover::before,
+.btn_hover.hover-border-5:hover::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 96%;
+    opacity: 1;
+}
+.btn_hover.hover-border-5:hover::before {
+    position: absolute;
+    content: "";
+    transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s; /* 1,2 */
+}
+.btn_hover.hover-border-5:hover::after {
+    position: absolute;
+    content: "";
+    transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
+        opacity 0s 0.3s;
+}
+
 .practice_w_card img {
     width: 90px !important;
 }
