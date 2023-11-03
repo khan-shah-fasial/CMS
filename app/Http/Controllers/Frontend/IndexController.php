@@ -54,7 +54,9 @@ class IndexController extends Controller
     }
 
     public function blog_detail($category, $slug){
-        
+
+        $category_id = BlogCategory::where('slug',$category)->first();
+
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
 
         $author = User::find($detail->user_id);
@@ -63,8 +65,8 @@ class IndexController extends Controller
 
         $current_id = $detail->id;
 
-        $previous = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ["3"])->where('id', '<', $current_id)->orderBy('id', 'desc')->first();
-        $next = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ["3"])->where('id', '>', $current_id)->orderBy('id', 'asc')->first();
+        $previous = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '<', $current_id)->orderBy('id', 'desc')->first();
+        $next = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '>', $current_id)->orderBy('id', 'asc')->first();
 
         $previous_slug = $previous ? $previous->slug : null;
         $next_slug = $next ? $next->slug : null;
@@ -153,4 +155,12 @@ class IndexController extends Controller
     
         return response()->json($response);
     }
+    
+    public function news(){
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->get();
+
+        return view('frontend.pages.news.index', compact('news'));
+    }
+
+
 }

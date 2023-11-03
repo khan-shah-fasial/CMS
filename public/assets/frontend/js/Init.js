@@ -160,4 +160,38 @@ function initTrumbowyg(target) {
 }
 function destroyTrumbowyg(target) {
     $(target).trumbowyg('destroy');
-}   
+}
+
+//footer script
+$(document).ready(function() {
+    initValidate('#add_footer_form');
+    $("#add_footer_form").submit(function(e) {
+        var form = $(this);
+        ajaxSubmit(e, form, responseHandler);
+    });
+
+    var responseHandler = function(response) {
+        $('input, textarea').val('');
+        $("select option:first").prop('selected', true);
+        setTimeout(function() {
+            location.reload();
+        }, 2000);
+    }
+});
+
+//popup script
+$(document).ready(function() {
+    initValidate('#add_popup_form');
+    $("#add_popup_form").submit(function(e) {
+        var form = $(this);
+        ajaxSubmit(e, form, responseHandler);
+    });
+
+    var responseHandler = function(response) {
+        $('input, textarea').val('');
+        $("select option:first").prop('selected', true);
+        setTimeout(function() {
+            location.reload();
+        }, 2000);
+    }
+});

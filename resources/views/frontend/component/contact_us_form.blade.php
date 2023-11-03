@@ -1,5 +1,5 @@
 <!----============ Form start =================-------------------->
-<form id="add_contact_form" action="{{url(route('contact.create'))}}" method="post" enctype="multipart/form-data">
+<form id="add_contact_us_form" action="{{url(route('contact.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
 
@@ -41,8 +41,8 @@
 @section('component.scripts')
 <script>
 $(document).ready(function() {
-    initValidate('#add_contact_form');
-    $("#add_contact_form").submit(function(e) {
+    initValidate('#add_contact_us_form');
+    $("#add_contact_us_form").submit(function(e) {
         var form = $(this);
         ajaxSubmit(e, form, responseHandler);
     });
