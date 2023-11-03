@@ -162,5 +162,11 @@ class IndexController extends Controller
         return view('frontend.pages.news.index', compact('news'));
     }
 
+    public function deal_update(){
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->get();
+
+        return view('frontend.pages.deal_update.index', compact('deal_update'));
+    }
+
 
 }

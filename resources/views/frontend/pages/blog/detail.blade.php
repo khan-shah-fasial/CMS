@@ -162,6 +162,7 @@
 
 <!-- -------------------- service related start ---------------------- -->
 
+@if(count($blog) > 0)
 <section class="service_related">
     <div class="container">
         <div class="row">
@@ -188,6 +189,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <!-- -------------------- service related  end ---------------------- -->
 
