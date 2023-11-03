@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Contact;
+use App\Models\BlogComment;
 
 class IndexController extends Controller
 {
@@ -168,5 +169,38 @@ class IndexController extends Controller
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }
 
+    public function search(Request $request){
+
+        $query = $request->input('query');
+
+        $blogs = Blog::where(function ($queryBuilder) use ($query) {
+            $queryBuilder->where('title', 'like', "%$query%")
+                ->orWhere('short_description', 'like', "%$query%")
+                ->orWhere('content', 'like', "%$query%");
+        })->where('status', 1)->get();
+        
+        $practiceAreas = PracticeArea::where(function ($queryBuilder) use ($query) {
+            $queryBuilder->where('title', 'like', "%$query%")
+                ->orWhere('short_description', 'like', "%$query%")
+                ->orWhere('content', 'like', "%$query%");
+        })->where('status', 1)->get();
+
+        return view('frontend.pages.search.index', compact('blogs','practiceAreas'));
+    }
+
+    public function comment_save(Request $request)
+    {
+        $commentData = $request->all();
+    
+        // Create the contact record
+        BlogComment::create($commentData);
+    
+        $response = [
+            'status' => true,
+            'notification' => 'Comment added successfully!',
+        ];
+    
+        return response()->json($response);
+    }
 
 }

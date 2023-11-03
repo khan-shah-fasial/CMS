@@ -195,3 +195,20 @@ $(document).ready(function() {
         }, 2000);
     }
 });
+
+//comment script
+$(document).ready(function() {
+    initValidate('#add_comment_form');
+    $("#add_comment_form").submit(function(e) {
+        var form = $(this);
+        ajaxSubmit(e, form, responseHandler);
+    });
+
+    var responseHandler = function(response) {
+        $('input, textarea').val('');
+        $("select option:first").prop('selected', true);
+        setTimeout(function() {
+            location.reload();
+        }, 2000);
+    }
+});
