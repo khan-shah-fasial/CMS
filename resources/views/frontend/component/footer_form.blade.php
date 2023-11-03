@@ -24,7 +24,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 
             @foreach ($practice_Area as $row)
             <option value="{{ $row->title }}">{{ $row->title }}</option>
-            @endforeachs
+            @endforeach
 
         </select>
     </div>
