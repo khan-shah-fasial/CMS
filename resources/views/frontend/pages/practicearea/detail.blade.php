@@ -63,7 +63,7 @@
 <!-- -------------------- service counter  end ---------------------- -->
 
 <!-- -------------------- service why choose start ---------------------- -->
-
+@if(!empty($child_detail) || !empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true)))
 <section class="service_why_choose">
     <div class="container">
         <div class="row">
@@ -211,11 +211,12 @@
         </div>
     </div>
 </section>
+@endif
 
 <!-- -------------------- service why choose  end ---------------------- -->
 
 <!-- -------------------- service related start ---------------------- -->
-@if(!empty($blog))
+@if(count($blog) > 0)
 <section class="service_related">
     <div class="container">
         <div class="row">

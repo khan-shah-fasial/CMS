@@ -64,10 +64,15 @@
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="category d-flex align-items-center gap-md-5 gap-2">
+                    @php 
+                        $category = json_decode($detail->blog_category_ids);
+                    @endphp 
+                    
+                    @foreach ($category as $row)
+                        @php  $category_name = DB::table('blog_categories')->where('id', $row)->first()->name; @endphp
 
-                    <span data-aos="fade-up" data-aos-once="true">agency</span>
-                    <span data-aos="fade-up" data-aos-once="true">corporate</span>
-                    <span data-aos="fade-up" data-aos-once="true">digital</span>
+                        <span data-aos="fade-up" data-aos-once="true">{{ $category_name }}</span>
+                    @endforeach
 
                 </div>
             </div>
@@ -92,9 +97,19 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="buttons d-flex align-items-center justify-content-between">
+                    @if($previous_slug != null)
+                    <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$previous_slug))] )) }}">
                     <button data-aos="fade-up" data-aos-once="true">
                         << Previous Post</button>
-                            <button data-aos="fade-up" data-aos-once="true">Next Post >></button>
+                    </a>
+                    @endif
+
+                    @if($next_slug != null)
+                    <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$next_slug))] )) }}">
+                    <button data-aos="fade-up" data-aos-once="true">Next Post >></button>
+                    </a>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -110,12 +125,12 @@
             <div class="col-md-12">
                 <h1 class="heading" data-aos="fade-up" data-aos-once="true">Comments</h1>
             </div>
-            <div class="col-xl-1 col-2">
+            <div class="col-xl-1 col-md-2">
                 <div class="avatar" data-aos="fade-up" data-aos-once="true">
                     <img src="/assets/frontend/images/profile.png" alt="" />
                 </div>
             </div>
-            <div class="col-xl-9 col-8">
+            <div class="col-xl-9 col-md-8">
                 <p class="name" data-aos="fade-up" data-aos-once="true">Riva Collins</p>
                 <p class="date" data-aos="fade-up" data-aos-once="true">November 19, 2019 at 11:00 am</p>
                 <p class="comment" data-aos="fade-up" data-aos-once="true">
