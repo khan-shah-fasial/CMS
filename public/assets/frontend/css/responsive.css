@@ -236,7 +236,7 @@
         display: block !important;
     }
     .heading {
-        font-size: 22px;
+        font-size: 22px !important;
         font-weight: 700;
         line-height: 30px;
     }
@@ -450,6 +450,20 @@
     .blog_details_page_title_desc h2 {
         font-size: 22px !important;
     }
+	
+	.practice_w_box .btn_hover {
+    margin: 0px 0px 0px;
+}
+
+.practice_w_box .btn-3 span {
+    padding: 30px 10px;
+}
+.practice_w_box .btn_hover span {
+    font-size: 20px;
+}
+.footer {
+    padding: 30px 0 20px 0;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

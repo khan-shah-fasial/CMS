@@ -580,87 +580,82 @@ header ul.dropdown li a:hover {
     content: "";
 } */
 
-.btn_hover {
-    position: relative;
+.practice_w_box .btn_hover {
+        position: relative;
     display: inline-block;
     width: 100%;
     height: auto;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin: 0px 25px 15px;
+    margin: 0px 0px 15px;
 }
-.btn_hover span {
-    position: relative;
+.practice_w_box .btn_hover span {
+        position: relative;
     display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: capitalize;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 20px;
     transition: 0.3s;
 }
 
 /*--- btn-3 ---*/
-.btn-3 {
-    padding: 5px;
+
+.practice_w_box .btn-3 span {
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 37px 10px;
 }
-.btn-3 span {
-    color: rgb(255, 255, 255);
-    background-color: rgb(54, 56, 55);
-    padding: 80px 20px;
-}
-.btn-3::before,
-.btn-3::after {
+.practice_w_box .btn-3::before,
+.practice_w_box .btn-3::after {
     background: transparent;
     z-index: 2;
 }
 
 /* 15. hover-border-5 */
-.btn_hover.hover-border-5::before,
-.btn_hover.hover-border-5::after {
+.practice_w_box .btn_hover.hover-border-5::before,
+.practice_w_box .btn_hover.hover-border-5::after {
     position: absolute;
     content: "";
     width: 0%;
     height: 0%;
     opacity: 0;
 }
-.btn_hover.hover-border-5::before {
-    position: absolute;
+.practice_w_box .btn_hover.hover-border-5::before {
+       position: absolute;
     content: "";
     top: 0;
     right: 0;
-    border-top: 1px solid rgb(28, 31, 30);
-    border-left: 1px solid rgb(28, 31, 30);
-    transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear,
-        opacity 0s 0.7s;
+    border-top: 2px solid #e7403b;
+    border-left: 2px solid #e7403b;
+    transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear, opacity 0s 0.7s;
 }
-.btn_hover.hover-border-5::after {
-    position: absolute;
+.practice_w_box .btn_hover.hover-border-5::after {
+       position: absolute;
     content: "";
     bottom: 0;
     left: 0px;
-    border-bottom: 1px solid rgb(28, 31, 30);
-    border-right: 1px solid rgb(28, 31, 30);
+    border-bottom: 2px solid #e7403b;
+    border-right: 2px solid #e7403b;
     transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
 }
-.btn_hover.hover-border-5:hover::before,
-.btn_hover.hover-border-5:hover::after {
+.practice_w_box .btn_hover.hover-border-5:hover::before,
+.practice_w_box .btn_hover.hover-border-5:hover::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 96%;
     opacity: 1;
 }
-.btn_hover.hover-border-5:hover::before {
+.practice_w_box .btn_hover.hover-border-5:hover::before {
     position: absolute;
     content: "";
     transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s; /* 1,2 */
 }
-.btn_hover.hover-border-5:hover::after {
+.practice_w_box .btn_hover.hover-border-5:hover::after {
     position: absolute;
     content: "";
     transition: width 0.2s 0.35s linear, height 0.15s 0.5s ease-out,
@@ -892,7 +887,10 @@ section.blog p.desc {
     height: 189px;
     object-fit: cover;
 }
-
+.blog_details_page_title_desc li {
+    font-size: 14px !important;
+    line-height: 26px !important;
+}
 .blog_big_box .blog_content {
     padding: 23px 25px;
 }
@@ -1447,6 +1445,7 @@ hr {
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
+	padding-left:20px;
 }
 .blog_details_page_comments .date {
     font-size: 16px;
@@ -1454,12 +1453,14 @@ hr {
     line-height: 21px;
     color: rgba(122, 122, 122, 1);
     margin-bottom: 20px;
+	padding-left:20px;
 }
 .blog_details_page_comments .comment {
     font-size: 20px !important;
     font-weight: 400 !important;
     line-height: 26px !important;
     margin-bottom: 58px;
+	padding-left:20px;
 }
 
 .blog_details_page_comments button {
@@ -1521,6 +1522,7 @@ hr {
     font-weight: 700;
     line-height: 29px;
     margin-bottom: 5px;
+	
 }
 
 .team_wrapper .team_box .bio {
@@ -1528,6 +1530,7 @@ hr {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+	padding-top: 10px;
 }
 
 .team_wrapper .team_box a {
@@ -1537,7 +1540,13 @@ hr {
     text-decoration: none;
     color: #e7403b;
 }
-
+.team_box p.desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
 /* ------------------ Team Card end ------------- */
 /* ------------------ Team page end ------------- */
 

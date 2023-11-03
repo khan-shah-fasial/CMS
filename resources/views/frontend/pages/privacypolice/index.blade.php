@@ -42,7 +42,7 @@
                         are published on the website, unless stated otherwise.
                     </p>
 
-                    <h1 class="heading2 mt-5">I. Applicability of the policy</h1>
+                    <h1 class="heading3 mt-lg-5 mt-4">I. Applicability of the policy</h1>
                     <p class="desc mb-3">
                         A&A’s Privacy Policy is relevant to anyone who uses the website or
                         provides personal data relating to a natural person who can be
@@ -56,7 +56,7 @@
                         encourage users to read the Privacy Policy in conjunction with the
                         terms and conditions of the website.
                     </p>
-                    <h1 class="heading2 mt-5">II. Types of information collected</h1>
+                    <h1 class="heading3 mt-lg-5 mt-4">II. Types of information collected</h1>
                     <p class="desc">
                         We collect the following types of information from you: User Data:
                     </p>
@@ -67,7 +67,7 @@
                             number, organization’s name, and job title. This information is
                             collectively referred to as ‘user information’. .
                         </li>
-                        <li class="desc mb-5">
+                        <li class="desc mb-lg-5 mb-4">
                             Technical Data: During your visit to our website, we may gather
                             information about your browsing behaviour, the type of device
                             you are using (such as a laptop, tablet, or mobile phone), the
@@ -85,7 +85,7 @@
                             identify any user
                         </li>
                     </ul>
-                    <h1 class="heading2">III. Purpose of collection of information</h1>
+                    <h1 class="heading3">III. Purpose of collection of information</h1>
                     <p class="desc">We collect your data for the following purposes:</p>
                     <ul>
                         <li class="desc">
@@ -102,14 +102,14 @@
                             To monitor resource usage and troubleshoot issues related to the
                             website.
                         </li>
-                        <li class="desc mb-5">
+                        <li class="desc mb-lg-5 mb-4">
                             Additionally, we may use your personal information for record
                             keeping, sharing knowledge updates and recent developments at
                             A&A, inviting you to relevant seminars and webinars, and seeking
                             your feedback on your engagement with us.
                         </li>
                     </ul>
-                    <h1 class="heading2">IV. Sharing of information</h1>
+                    <h1 class="heading3">IV. Sharing of information</h1>
                     <p class="desc mb-5">
                         We may share your information with third-party service providers,
                         agents, or contractors who handle or will handle your information
@@ -121,7 +121,7 @@
                         rights or properties, prevent a crime, protect national security,
                         or ensure the personal safety of our users or the public.
                     </p>
-                    <h1 class="heading2">V. Safeguards for securing your information</h1>
+                    <h1 class="heading3">V. Safeguards for securing your information</h1>
                     <p class="desc mb-5">
                         At A&A, protecting your privacy is of utmost importance to us. We
                         maintain the security of your personal information by monitoring
@@ -136,8 +136,8 @@
                         beyond our control. This includes events such as government
                         actions, computer hacking, and security breaches.
                     </p>
-                    <h1 class="heading2">VI. Changes to information</h1>
-                    <p class="desc mb-5">
+                    <h1 class="heading3">VI. Changes to information</h1>
+                    <p class="desc mb-lg-5 mb-4">
                         If you need to correct, update, or review your personal
                         information, please send an email to contact@ahlawatassociates.in.
                         You may also request that we delete your personal information,
@@ -146,7 +146,7 @@
                         it infringes on someone else’s rights or is against applicable
                         laws.
                     </p>
-                    <h1 class="heading2">VII. Contact details</h1>
+                    <h1 class="heading3">VII. Contact details</h1>
                     <p class="desc">
                         In case of any doubts, queries or grievances pertaining to the
                         contents of the Privacy Policy, please write to us at –

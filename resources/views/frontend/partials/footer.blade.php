@@ -43,7 +43,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
             <div class="col-md-6">
                 @include('frontend.component.footer_form')
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-12">
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Delhi (Head Office)</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -53,7 +53,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </p>
                 </div>
             </div>
-            <div class="col-md-3 col-6">
+            <div class="col-md-3 col-12">
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Mumbai</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -107,8 +107,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column">
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
-                        <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="{{ url(route('privacy-policy')) }}"> Terms & Condition </a></li>
+                        <li><a href="{{ url(route('privacy-policy')) }}">Privacy Policy </a></li>
                         <li><a href="#">Cookie Policy</a></li>
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-0">
