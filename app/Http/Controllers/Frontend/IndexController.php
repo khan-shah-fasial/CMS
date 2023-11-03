@@ -27,8 +27,8 @@ class IndexController extends Controller
     public function practice_area_detail($slug){
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
 
-        $slug = str_replace('-', ' ', $slug);
-        $blog_Catg = BlogCategory::where('name', $slug)->where('status', 1)->first();
+        //$slug = str_replace('-', ' ', $slug);
+        $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
 
         if(!empty($blog_Catg)){
             $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
@@ -36,6 +36,7 @@ class IndexController extends Controller
             $blog = [];
         }
 
+        
 
         if(empty($detail->parent_id)){  
             $child_detail = PracticeArea::where('parent_id', $detail->id)->where('status', 1)->get();
@@ -60,7 +61,15 @@ class IndexController extends Controller
 
         $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids))->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
 
-        return view('frontend.pages.blog.detail', compact('detail','author','blog'));
+        $current_id = $detail->id;
+
+        $previous = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ["3"])->where('id', '<', $current_id)->orderBy('id', 'desc')->first();
+        $next = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ["3"])->where('id', '>', $current_id)->orderBy('id', 'asc')->first();
+
+        $previous_slug = $previous ? $previous->slug : null;
+        $next_slug = $next ? $next->slug : null;
+
+        return view('frontend.pages.blog.detail', compact('detail','author','blog','previous_slug','next_slug'));
     }
 
     public function team_members(){
