@@ -26,18 +26,16 @@
 				    </div>
 				</div>
 				
-				
 				<div class="card">
 					<div class="card-body">
 						<div class="row">
 						<div class="col-md-12"><h4 class="header-title"><b>IMAGE</b></h4><hr></div>
-						<div class="col-md-12"><p><strong>Thumnail Icon:</strong></p> <img src="{{ asset('storage/' . $practicearea->thumnail_image) }}" class="img-thumbnail"></div>
-						<div class="col-md-12"><p><strong>Section Image:</strong></p> <img src="{{ asset('storage/' . $practicearea->section_image) }}" class="img-thumbnail"></div>
-						<div class="col-md-12"><p><strong>Breadcrumb Image:</strong></p> <img src="{{ asset('storage/' . $practicearea->breadcrumb_image) }}" class="img-thumbnail"></div>
+						<div class="col-md-12"><p><strong>Thumnail Icon:</strong></p> @if($practicearea->thumnail_image) <img src="{{ asset('storage/' . $practicearea->thumnail_image) }}" class="img-thumbnail"> @endif</div>
+						<div class="col-md-12"><p><strong>Section Image:</strong></p> @if($practicearea->section_image) <img src="{{ asset('storage/' . $practicearea->section_image) }}" class="img-thumbnail"> @endif</div>
+						<div class="col-md-12"><p><strong>Breadcrumb Image:</strong></p> @if($practicearea->breadcrumb_image) <img src="{{ asset('storage/' . $practicearea->breadcrumb_image) }}" class="img-thumbnail"> @endif</div>
 						</div>
 					</div>
 				</div>
-				
 				
 				<div class="card">
 					<div class="card-body">

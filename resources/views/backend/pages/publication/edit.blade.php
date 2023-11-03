@@ -5,7 +5,7 @@
         <input type="hidden" name="id" value="{{ $publication->id }}">
             <div class="form-group mb-3">
                 <label>Title <span class="red">*</span></label>
-                <input type="text" class="form-control" name="title" value="{{ $publication->title }}" required>
+                <input maxlength="255" type="text" class="form-control" name="title" value="{{ $publication->title }}" required>
             </div>
         </div>
         <div class="col-sm-12">
@@ -16,8 +16,8 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group mb-3">
-                <label>Image <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
-                <input class="form-control" type="file" id="image" name="image">
+                <label>Image <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
+                <input class="form-control" type="file" id="image" name="image" accept="image/*">
             </div>
         </div> 
         <div class="col-sm-12">

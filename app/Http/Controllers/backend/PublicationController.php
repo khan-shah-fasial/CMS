@@ -30,7 +30,7 @@ class PublicationController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Publication Coverage added successfully!',
+            'notification' => 'Publication coverage added successfully!',
         ];
         
         return response()->json($response);
@@ -55,7 +55,7 @@ class PublicationController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Publication Coverage Deleted successfully!',
+            'notification' => 'Publication coverage deleted successfully!',
         ];
 
         return response()->json($response);
@@ -66,7 +66,7 @@ class PublicationController extends Controller
         $publication->status = $status;
         $publication->save();
     
-        return redirect(route('publication.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('publication.index'))->with('success', 'Status changed successfully!');
     }  
     
     public function update(Request $request) {
@@ -86,7 +86,7 @@ class PublicationController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Publication Coverage Update successfully!',
+            'notification' => 'Publication coverage updated successfully!',
         ];
 
         return response()->json($response);

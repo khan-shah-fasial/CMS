@@ -119,21 +119,48 @@
 						<div class="col-md-12">
 							<h4 class="header-title"><b>Image</b></h4>
 							<hr> </div>
-						<div class="col-sm-12">
+						<div class="col-sm-9">
 							<div class="form-group mb-3">
-								<label>Breadcrumb Image </span><span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</label>
-								<input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image"> </div>
+								<label>Breadcrumb Image </span><span class="font-size11">(Max file size 80kb - 1125*196)</label>
+								<input class="form-control mb-1" type="file" id="breadcrumb_image" name="breadcrumb_image">
+							    @if($practicearea->breadcrumb_image) 
+							    	<input id="breadcrumb_image_check" type="checkbox" name="breadcrumb_image_check" value="1"> <label for="breadcrumb_image_check">Remove breadcrumb image</label>
+								@endif
+							</div>
 						</div>
-						<div class="col-sm-12">
+						<div class="col-md-3">
+					    	@if($practicearea->breadcrumb_image) 
+					    		<img src="{{ asset('storage/' . $practicearea->breadcrumb_image) }}" class="img-thumbnail"> 
+							@endif
+						</div>
+						<div class="col-sm-9">
 							<div class="form-group mb-3">
 								<label>Thumnail Icon <span class="font-size11">(Max file size 5kb - 70*70)</span></label>
-								<input class="form-control" type="file" id="image" name="image"> </div>
+								<input class="form-control mb-1" type="file" id="image" name="image">
+								@if($practicearea->thumnail_image)
+							    	<input id="image_check" type="checkbox" name="image_check" value="1"> <label for="image_check">Remove thumnail icon</label>
+							    @endif
+							</div>
 						</div>
-						<div class="col-sm-12">
+						<div class="col-md-3">
+					    	@if($practicearea->thumnail_image) 
+					    		<img src="{{ asset('storage/' . $practicearea->thumnail_image) }}" class="img-thumbnail"> 
+							@endif
+						</div>						
+						<div class="col-sm-9">
 							<div class="form-group mb-3">
 								<label>Section Image <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
-								<input class="form-control" type="file" id="section_image" name="section_image"> </div>
+								<input class="form-control mb-1" type="file" id="section_image" name="section_image">
+								@if($practicearea->section_image)
+							    	<input id="section_image_check" type="checkbox" name="section_image_check" value="1"> <label for="section_image_check">Remove section image</label>
+								@endif
+							</div>
 						</div>
+						<div class="col-md-3">
+					    	@if($practicearea->section_image) 
+					    		<img src="{{ asset('storage/' . $practicearea->section_image) }}" class="img-thumbnail"> 
+							@endif
+						</div>					
 					</div>
 				</div>
 			</div>
@@ -141,7 +168,7 @@
 				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-12">
-							<div class="form-group mb-2 text-end">
+							<div class="form-group d-grid mb-2 text-end">
 								<button type="submit" class="btn btn-block btn-primary">Update</button>
 							</div>
 						</div>

@@ -30,7 +30,7 @@ class MediaCoverageController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Media Coverage added successfully!',
+            'notification' => 'Media coverage added successfully!',
         ];
         
         return response()->json($response);
@@ -55,7 +55,7 @@ class MediaCoverageController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Media Coverage Deleted successfully!',
+            'notification' => 'Media coverage deleted successfully!',
         ];
 
         return response()->json($response);
@@ -66,7 +66,7 @@ class MediaCoverageController extends Controller
         $mediacoverage->status = $status;
         $mediacoverage->save();
     
-        return redirect(route('mediacoverage.index'))->with('success', 'Status Change successfully!');
+        return redirect(route('mediacoverage.index'))->with('success', 'Status changed successfully!');
     }  
     
     public function update(Request $request) {
@@ -86,7 +86,7 @@ class MediaCoverageController extends Controller
 
         $response = [
             'status' => true,
-            'notification' => 'Media Coverage Update successfully!',
+            'notification' => 'Media coverage updated successfully!',
         ];
 
         return response()->json($response);
