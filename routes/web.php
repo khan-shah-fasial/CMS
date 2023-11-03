@@ -26,6 +26,9 @@ Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
     ->where('category', implode('|', $postCategories))
     ->name('blog.detail');
 
+Route::get('/news', [IndexController::class, 'news'])->name('news');
+
+
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
 Route::get('/team-members/{slug}', [IndexController::class, 'team_detail'])->name('team.detail');
 Route::get('/contact-us', [IndexController::class, 'contact_us'])->name('contact');

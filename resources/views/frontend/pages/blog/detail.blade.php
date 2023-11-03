@@ -11,7 +11,10 @@
 </section>
 
 <!-- -------------------- blog details banner end   ---------------- -->
-
+@php
+    $url = request()->segment('1');
+    $page = DB::table('blog_categories')->where('slug', $url)->first();
+@endphp
 <!-- -------------------- blog details breadcrumb start ---------------- -->
 
 <section class="blog_details_page_breadcrumb">
@@ -19,7 +22,7 @@
         <div class="row">
             <div class="col-md-6 px0">
                 <ul class="d-flex align-items-center gap-3 list-unstyled" data-aos="fade-up" data-aos-once="true">
-                    <li>Home</li>
+                    <li>{{ ucfirst($page->name) }}</li>
                     <li>></li>
                     <li>{{ $detail->title }}</li>
                 </ul>
@@ -98,14 +101,14 @@
             <div class="col-md-12">
                 <div class="buttons d-flex align-items-center justify-content-between">
                     @if($previous_slug != null)
-                    <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$previous_slug))] )) }}">
+                    <a href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$previous_slug))] )) }}">
                     <button data-aos="fade-up" data-aos-once="true">
                         << Previous Post</button>
                     </a>
                     @endif
 
                     @if($next_slug != null)
-                    <a href="{{ url(route('blog.detail', ['category' =>'blog','slug' => strtolower(str_replace(' ', '-',$next_slug))] )) }}">
+                    <a href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$next_slug))] )) }}">
                     <button data-aos="fade-up" data-aos-once="true">Next Post >></button>
                     </a>
                     @endif
@@ -118,7 +121,7 @@
 
 <!-- -------------------- blog details buttons end   ---------------- -->
 <!-- -------------------- blog details comments start ---------------- -->
-
+@if($url == 'blog')
 <section class="blog_details_page_comments">
     <div class="container">
         <div class="row">
@@ -153,6 +156,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <!-- -------------------- blog details comments end   ---------------- -->
 
