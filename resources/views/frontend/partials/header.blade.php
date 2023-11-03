@@ -79,7 +79,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                 <li><a href="{{ url(route('contact')) }}">Contact Us</a></li>
                                 <li><a href="{{ url(route('career')) }}">Careers</a></li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-1">CORPORATE COMMERCIAL</label>
+                                    <label class="a-label__chevron" for="item-1">Corporate Commercial</label>
                                     <input type="checkbox" id="item-1" name="item-1" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -90,7 +90,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>CORPORATE COMMERCIAL</span>
+                                            <span>Corporate Commercial</span>
                                         </div>
                                         <ul>
                                             <!-- <li>
@@ -131,7 +131,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-2">CORPORATE SECRETERIAL</label>
+                                    <label class="a-label__chevron" for="item-2"> Corporate Secretarial</label>
                                     <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -142,7 +142,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>CORPORATE SECRETERIAL</span>
+                                            <span>Corporate Secretarial</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">FEMA</a></li>
@@ -162,7 +162,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-3">DATA PROTECTION</label>
+                                    <label class="a-label__chevron" for="item-3">Data Protection</label>
                                     <input type="checkbox" id="item-3" name="item-3" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -173,7 +173,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>DATA PROTECTION</span>
+                                            <span>Data Protection</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">Data Breach</a></li>
@@ -185,7 +185,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-4">DISPUTE RESOLUTION</label>
+                                    <label class="a-label__chevron" for="item-4">Dispute Resolution</label>
                                     <input type="checkbox" id="item-4" name="item-4" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -196,7 +196,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>DISPUTE RESOLUTION</span>
+                                            <span>Dispute Resolution</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">Arbitration</a></li>
@@ -208,7 +208,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-5">GAMING & SPORTS</label>
+                                    <label class="a-label__chevron" for="item-5">Gaming & Sports</label>
                                     <input type="checkbox" id="item-5" name="item-5" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -219,7 +219,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>GAMING & SPORTS</span>
+                                            <span>Gaming & Sports</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">Online Gaming</a></li>
@@ -229,7 +229,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-6">INTELLECTUAL PROPERTY</label>
+                                    <label class="a-label__chevron" for="item-6">Intellectual Property</label>
                                     <input type="checkbox" id="item-6" name="item-6" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -240,7 +240,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>INTELLECTUAL PROPERTY</span>
+                                            <span>Intellectual Property</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">Trademarks</a></li>
@@ -255,7 +255,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     </div>
                                 </li>
                                 <li>
-                                    <label class="a-label__chevron" for="item-7">SETTING UP IN INDIA</label>
+                                    <label class="a-label__chevron" for="item-7">Setting Up In India</label>
                                     <input type="checkbox" id="item-7" name="item-7" class="m-menu__checkbox" />
                                     <div class="m-menu">
                                         <div class="m-menu__header">
@@ -266,7 +266,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                                     <path d="M19 12H6M12 5l-7 7 7 7" />
                                                 </svg>
                                             </label>
-                                            <span>SETTING UP IN INDIA</span>
+                                            <span>Setting Up In India</span>
                                         </div>
                                         <ul>
                                             <li><a href="#">FDI</a></li>
@@ -281,7 +281,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <span>GENERAL COUNSEL SERVICES</span>
+                                        <span> General Counsel Services </span>
                                     </a>
 
                                 </li>

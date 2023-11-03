@@ -8,16 +8,23 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
     <input type="hidden" name="section" value="Contact Us Now Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
     <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
-    <div class="d-flex align-items-center gap-3 mb-3">
-        <input type="text" class="form-control" placeholder="Write Your Name..." name="name" data-aos-once="true"
-            data-aos="fade-up" />
-        <input type="email" class="form-control" placeholder="Write Your Email..." name="email" data-aos-once="true"
-            data-aos="fade-up" />
+    <div class="d-flex align-items-center flex-md-row flex-column gap-3 mb-3">
+        <div class="w-100">
+            <input type="text" class="form-control" placeholder="Write Your Name..." name="name" data-aos-once="true"
+                data-aos="fade-up" />
+        </div>
+
+        <div class="w-100">
+            <input type="email" class="form-control" placeholder="Write Your Email..." name="email" data-aos-once="true"
+                data-aos="fade-up" />
+        </div>
+
     </div>
-    <div class="d-flex align-items-center gap-3 mb-3">
+    <div class="d-flex align-items-center flex-md-row flex-column gap-3 mb-3">
         <input type="number" class="form-control" placeholder="Write Your Phone No" name="phone" data-aos-once="true"
             data-aos="fade-up" />
-        <select class="form-select" data-aos-once="true" name="services" data-aos="fade-up">
+
+        <select class="" data-aos-once="true" name="services" data-aos="fade-up">
             <option value="">Select the Service</option>
 
             @foreach ($practice_Area as $row)

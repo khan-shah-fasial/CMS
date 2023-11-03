@@ -64,10 +64,14 @@
                 </div>
                 <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
                     data-aos="fade-up">
-                    <p class="desc text-dark">
-                        Call to ask <a href="#" class="text-dark">any question</a>
+                    <p class="desc text-dark mb-0">
+                        Call to ask <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text-dark">any
+                            question</a>
                     </p>
-                    <p class="number">011-41023400</p>
+                    <span>
+                        <a class="number" href="tel:011-41023400">011-41023400</a>
+
+                    </span>
                 </div>
             </div>
 

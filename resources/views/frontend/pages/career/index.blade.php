@@ -40,7 +40,7 @@
                     send us an email with your name, PQE and field of law that you
                     wish to apply for, in <br />
                     the subject line along with your CV at
-                    <a href="#"><em>careers@ahlawatassociates.in</em></a>
+                    <a href="mailto:careers@ahlawatassociates.in"><em>careers@ahlawatassociates.in</em></a>
                 </p>
                 <p class="desc mb-4" data-aos-once="true" data-aos="fade-up">
                     <strong>
@@ -52,7 +52,8 @@
                     <li>
                         <span class="d-flex flex-column" data-aos-once="true" data-aos="fade-up">
                             <span class="mb-2">Submit Your CV: Send your updated CV to
-                                <a href="#">careers@ahlawatassociates.in.</a> Make sure to
+                                <a href="mailto:careers@ahlawatassociates.in">careers@ahlawatassociates.in.</a> Make
+                                sure to
                                 highlight your academic achievements, <br />
                                 relevant skills, and any previous legal experience.</span>
                             <span data-aos-once="true" data-aos="fade-up">
@@ -101,7 +102,8 @@
                                 consider them an integral part of A&A. If you are interested
                                 in joining the A&A team, in whichever capacity, please email
                                 on
-                                <strong><a href="#"><em>admin@ahlawatassociates.in</em></a></strong>
+                                <strong><a
+                                        href="mailto:admin@ahlawatassociates.in"><em>admin@ahlawatassociates.in</em></a></strong>
                                 with your details.
                             </span>
                         </span>

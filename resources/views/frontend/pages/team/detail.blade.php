@@ -52,7 +52,7 @@
                     </h2>
                     @endif
 
-                    <div class="d-flex align-items-center gap-3 mail">
+                    <div class="d-flex align-items-center gap-3 mail ">
 
                         @if(!empty($detail->email))
                         <a href="mailto:{{ $detail->email }}">
