@@ -168,5 +168,9 @@ class IndexController extends Controller
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }
 
+    public function search(){
+        return view('frontend.pages.search.index');
+    }
+
 
 }
