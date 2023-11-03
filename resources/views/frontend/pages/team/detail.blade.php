@@ -13,8 +13,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">About</h1>
-                    <p class="desc mb-1">{{ ucfirst($detail->name) }}</p>
+                    <h1 class="heading">{{ ucfirst($detail->name) }}</h1>
+                    {{--<p class="desc mb-1">{{ ucfirst($detail->name) }}</p>--}}
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item "><a href="{{ url(route('index')) }}">Home</a></li>

@@ -8,13 +8,13 @@
 			<div class="col-sm-6">
 				<div class="form-group mb-3">
 					<label>Blog Title <span class="red">*</span></label>
-					<input type="text" class="form-control" name="title" value="{{ $blog->title }}" required>
+					<input maxlength="191" type="text" class="form-control" name="title" value="{{ $blog->title }}" required>
 				</div>
 			</div>
 			 <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Image</label>
-                <input class="form-control" type="file" id="image" name="image">
+                <input accept="image/*" class="form-control" type="file" id="image" name="image">
             </div>
         </div>
 			 
@@ -22,7 +22,7 @@
 		<div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Slug <span class="red">*</span></label>
-                <input type="text" class="form-control" name="slug" value="{{ $blog->slug }}" required>
+                <input maxlength="191" type="text" class="form-control" name="slug" value="{{ $blog->slug }}" required>
             </div>
         </div>
        

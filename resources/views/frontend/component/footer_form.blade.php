@@ -3,7 +3,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 @endphp
 
 <!-----------================= Footer form start =============--------------->
-<form class="contact_form" id="add_contact_form" action="{{url(route('contact.create'))}}" method="post"
+<form class="contact_form" id="add_footer_form" action="{{url(route('contact.create'))}}" method="post"
     enctype="multipart/form-data">
     @csrf
     <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
@@ -18,8 +18,8 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 
     <div class="d-flex align-items-center gap-3 mb-3">
         <input type="number" class="form-control" placeholder="Write Your Phone No" name="phone" data-aos-once="true"
-            data-aos="fade-up" />
-        <select class="form-select" data-aos-once="true" name="services" data-aos="fade-up">
+            data-aos="fade-up" required/>
+        <select class="form-select" data-aos-once="true" name="services" data-aos="fade-up" required>
             <option value="">Select the Service</option>
 
             @foreach ($practice_Area as $row)
@@ -38,22 +38,3 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 
 <!-------------------============= Footer Form end ===============-------------->
 
-@section('component.scripts')
-<script>
-$(document).ready(function() {
-    initValidate('#add_contact_form');
-    $("#add_contact_form").submit(function(e) {
-        var form = $(this);
-        ajaxSubmit(e, form, responseHandler);
-    });
-
-    var responseHandler = function(response) {
-        $('input, textarea').val('');
-        $("select option:first").prop('selected', true);
-        setTimeout(function() {
-            location.reload();
-        }, 2000);
-    }
-});
-</script>
-@endsection

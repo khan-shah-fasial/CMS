@@ -5,6 +5,7 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\BlogCategory;
+use Illuminate\Support\Facades\Validator;
 
 class BlogCategoryController extends Controller
 {
@@ -18,9 +19,23 @@ class BlogCategoryController extends Controller
     }  
     
     public function create(Request $request) {
+
+        // Validate form data
+        $validator = Validator::make($request->all(), [
+            'slug' => 'required|unique:blog_categories',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        } 
+
         $blogcategory = BlogCategory::create([
             'parent_id' => $request->input('parent_id'),
             'name' => $request->input('name'),
+            'slug' => str_replace(' ', '-', $request->input('slug')),
         ]);
 
         $response = [
@@ -65,6 +80,19 @@ class BlogCategoryController extends Controller
     }  
     
     public function update(Request $request) {
+
+        // Validate form data
+        $validator = Validator::make($request->all(), [
+            'slug' => 'required|unique:blog_categories,slug,'. $request->input('id'),
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'notification' => $validator->errors()->all()
+            ], 200);
+        } 
+
         $id = $request->input('id');
         $blogcategory = BlogCategory::find($id);
         $blogcategory->update($request->all());

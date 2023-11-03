@@ -28,9 +28,10 @@
             </tr>
         </thead>
         <tbody>
+            @php $i = 1; @endphp
             @foreach($blogcategory as $row)
             <tr>
-                <td>{{$row->id}}</td>
+                <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
                 <td>
                     @if($row->status)
@@ -39,7 +40,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{$row->created_at}}</td>
+                <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('blogcategory.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
@@ -50,8 +51,9 @@
                     </a>
 
                     <a href="javascript:void(0);" class="action-icon" onclick="smallModal('{{ url(route('blogcategory.edit',['id' => $row->id])) }}', 'Edit Post Category')"> <i class="mdi mdi-square-edit-outline" title="Edit"></i></a>
-
+                    @if(!in_array($row->slug, ['blog', 'news', 'deal-update']))
                     <a href="javascript:void(0);" class="action-icon" onclick="confirmModal('{{ url(route('blogcategory.delete', $row->id)) }}', responseHandler)"><i class="mdi mdi-delete" title="Delete"></i></a>
+                    @endif
                 </td>
             </tr>
             @endforeach
