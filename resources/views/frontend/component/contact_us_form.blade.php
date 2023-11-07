@@ -49,7 +49,8 @@ $(document).ready(function() {
     initValidate('#add_contact_us_form');
     $("#add_contact_us_form").submit(function(e) {
         var form = $(this);
-        if (grecaptcha.getResponse($(this).find('.g-recaptcha').get(0)) === "") {
+        if (grecaptcha.getResponse() === "") {
+            e.preventDefault();
             Command: toastr["error"]('Please complete the reCAPTCHA!', "Alert");
         }else{
             ajaxSubmit(e, form, responseHandler);
