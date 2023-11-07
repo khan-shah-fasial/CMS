@@ -12,9 +12,6 @@ assistance for startups, FDI, Property law, IP, and more')
 <!-----===== home content start============---->
 
 <section class="banner_section">
-    <div class="container-fluid px0">
-        <div class="row">
-            <div class="col-md-12">
                 <!-- <div class="banner_content">
                     <span>Welcome To</span>
                     <h3 class="main_heading">Ahlawat & Associates</h3>
@@ -104,9 +101,6 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-            </div>
-        </div>
-    </div>
 </section>
 
 <!------------------ Banner End -------------------------->
