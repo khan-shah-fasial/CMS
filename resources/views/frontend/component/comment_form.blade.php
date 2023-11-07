@@ -9,15 +9,30 @@
                         @csrf
                         <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
                         <div class="d-flex align-items-center gap-3 mb-3">
-                            <textarea name="comment" class="form-control" placeholder="Write your thoughts..." rows="10" required></textarea>
+                            <div class="w-100">
+							<textarea name="comment" class="form-control" placeholder="Write your thoughts..." rows="10" required></textarea>
+                        </div>
                         </div>
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <input type="hidden" name="blog_id" value="{{ $detail->id }}"/>
                             <input type="hidden" name="status" value="0"/>
-                            <input type="text" name="name" class="form-control" placeholder="Name" data-aos-once="true" data-aos="fade-up" required/>
-                            <input type="email" name="email" class="form-control" placeholder="Email" data-aos-once="true" data-aos="fade-up" required/>
-                            <input type="number" name="number" class="form-control" placeholder="Phone No" data-aos-once="true" data-aos="fade-up" required/>
-                        </div>
+							
+							<div class="w-100">
+							<input type="text" name="name" class="form-control" placeholder="Name" data-aos-once="true" data-aos="fade-up" required/>
+                            
+							</div>
+							
+							<div class="w-100">
+							<input type="email" name="email" class="form-control" placeholder="Email" data-aos-once="true" data-aos="fade-up" required/>
+                            
+							</div>
+							
+							<div class="w-100">
+							<input type="number" name="number" class="form-control" placeholder="Phone No" data-aos-once="true" data-aos="fade-up" required/>
+                       
+							</div>
+							
+                             </div>
 
                         <div class="text-center mt-4">
                             <button type="submit" class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>

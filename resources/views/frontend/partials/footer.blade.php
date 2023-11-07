@@ -134,3 +134,23 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 </footer>
 
 <!------------------ footer End -------------------------->
+
+
+<!--start cookies code-->
+   <div class="cookies_section">
+      <div class="title-box">
+        <i class="bx bx-cookie"></i>
+        <h3> <img src="/assets/frontend/images/cookie_image.png" alt=""/>  Cookies Consent</h3>
+      </div>
+      <div class="info">
+        <p>
+          This website use cookies to help you have a superior and more relevant
+          browsing experience on the website. <a href="#"> Read more...</a>
+        </p>
+      </div>
+      <div class="buttons">
+        <button class="button" id="acceptBtn">Accept</button>
+        <button class="button">Decline</button>
+      </div>
+    </div>
+<!--end cookies code-->

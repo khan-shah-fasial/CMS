@@ -4,12 +4,12 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
                 @if ($blogs->isEmpty() && $practiceAreas->isEmpty())
                     <h3>No data found</h3>
                 @else
                 @foreach($blogs as $blog)
-                    <div>
+                    <div class="col-md-6">
+					<div class="searc_boxex">
                         <h3>{{ $blog->title }}</h3>
                         <p>{{ $blog->short_description }}</p>
                         @php
@@ -19,17 +19,19 @@
                         @endphp
                         <a href="{{ route('blog.detail', ['category' => $category->slug, 'slug' => $blog->slug]) }}">Read More</a>
                     </div>
+					</div>
                 @endforeach
 
                 @foreach($practiceAreas as $practiceArea)
-                    <div>
+				<div class="col-md-6">
+                    <div class="searc_boxex">
                         <h3>{{ $practiceArea->title }}</h3>
                         <p>{{ $practiceArea->short_description }}</p>
                         <a href="{{ route('practicearea-detail', $practiceArea->slug) }}">Read More</a>
                     </div>
+                    </div>
                 @endforeach
                 @endif
-            </div>
         </div>
     </div>
 </section>

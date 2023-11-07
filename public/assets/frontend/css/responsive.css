@@ -422,7 +422,7 @@
     .search-box {
         top: 37px;
         right: 0;
-        width: 320px;
+        width: 100%;
     }
 
     .service_img {
