@@ -141,6 +141,12 @@
 }
 
 @media (max-width: 767px) {
+	
+	.footer_count {
+    column-count: 2;
+}
+
+
     .px0 {
         padding-left: 0 !important;
         padding-right: 0 !important;

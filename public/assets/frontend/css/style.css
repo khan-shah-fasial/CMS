@@ -1063,6 +1063,19 @@ section.blog p.desc {
 
 /* ----------------- footer ---------------------- */
 
+.footer_count
+{
+	    column-count: 5;
+}
+
+.footer_colums
+{
+	    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    counter-increment: brick-counter;
+}
 .footer {
     background-image: url("/assets/frontend/images/practice.png");
     background-repeat: no-repeat;
@@ -1827,6 +1840,7 @@ section.career_page_content li span {
     text-align: center;
     border-radius: 10px;
 }
+
 
 /* ----------------- career  Page popup form End ------------------ */
 

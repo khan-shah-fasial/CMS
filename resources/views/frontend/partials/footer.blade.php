@@ -82,13 +82,13 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 
 <footer class="footer">
     <div class="container">
-        <div class="row">
+        <div class="footer_count">
 
             @foreach($practice_Area as $row)
             @php $subcategory = DB::table('practice_areas')->where('parent_id', $row->id)->get(); @endphp
 
             @if(!$subcategory->isEmpty())
-            <div class="col-md-3">
+            <div class="footer_colums">
                 <h6 data-aos-once="true" data-aos="fade-up">{{ $row->title }}</h6>
                 <ul>
                     @foreach($subcategory as $item)
@@ -100,8 +100,10 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
             </div>
             @endif
             @endforeach
-
-            <div class="col-md-12 mt-md-5 mt-2">
+        </div>
+		
+		<div class="row">
+		   <div class="col-md-12 mt-md-5 mt-2">
                 <div
                     class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column">
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
@@ -128,8 +130,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </ul>
                 </div>
             </div>
-
-        </div>
+		</div>
     </div>
 </footer>
 
@@ -144,8 +145,8 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
       </div>
       <div class="info">
         <p>
-          This website use cookies to help you have a superior and more relevant
-          browsing experience on the website. <a href="{{url(route('cookie-policy'))}}"> Read more...</a>
+          We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.
+<a href="{{url(route('cookie-policy'))}}"> Read more...</a>
         </p>
       </div>
       <div class="buttons">
