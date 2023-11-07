@@ -32,7 +32,7 @@
     </div>
 	
 	<div class="mb-3">
-     <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+     <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
     </div>
 	
     <div class="">
@@ -49,7 +49,11 @@ $(document).ready(function() {
     initValidate('#add_contact_us_form');
     $("#add_contact_us_form").submit(function(e) {
         var form = $(this);
-        ajaxSubmit(e, form, responseHandler);
+        if (grecaptcha.getResponse($(this).find('.g-recaptcha').get(0)) === "") {
+            Command: toastr["error"]('Please complete the reCAPTCHA!', "Alert");
+        }else{
+            ajaxSubmit(e, form, responseHandler);
+        } 
     });
 
     var responseHandler = function(response) {

@@ -1,3 +1,5 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <link rel="stylesheet" href="/assets/frontend/css/style.css" />
 <link rel="stylesheet" href="/assets/frontend/css/responsive.css" />
 <link rel="stylesheet" href="/assets/frontend/css/aos.css" />
