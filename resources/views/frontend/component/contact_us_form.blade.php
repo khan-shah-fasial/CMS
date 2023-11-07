@@ -49,12 +49,7 @@ $(document).ready(function() {
     initValidate('#add_contact_us_form');
     $("#add_contact_us_form").submit(function(e) {
         var form = $(this);
-        if (grecaptcha.getResponse() === "") {
-            e.preventDefault();
-            Command: toastr["error"]('Please complete the reCAPTCHA!', "Alert");
-        }else{
-            ajaxSubmit(e, form, responseHandler);
-        } 
+        ajaxSubmit(e, form, responseHandler);
     });
 
     var responseHandler = function(response) {

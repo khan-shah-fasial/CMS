@@ -45,7 +45,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
         data-aos-once="true" data-aos="fade-up" rows="2"></textarea>
 		
 		<div class="mt-3">
-		  <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+		  <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
 		</div>
 		
     <div class="text-center mt-4">
