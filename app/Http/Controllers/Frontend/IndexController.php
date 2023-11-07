@@ -12,7 +12,6 @@ use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Contact;
 use App\Models\BlogComment;
-use Illuminate\Support\Facades\Validator;
 
 class IndexController extends Controller
 {
@@ -126,6 +125,7 @@ class IndexController extends Controller
     {
         $rules = [
             'cv' => 'nullable|mimetypes:application/pdf,application/msword',
+            'g-recaptcha-response' => 'required|captcha',
         ];
     
         $validator = \Validator::make($request->all(), $rules); // Pass $request->all() as the first argument
@@ -192,25 +192,14 @@ class IndexController extends Controller
     public function comment_save(Request $request)
     {
         $commentData = $request->all();
-
-        $validator = Validator::make($commentData, [
-            'g-recaptcha-response' => 'required|captcha',
-        ]);
-        
-        if ($validator->fails()) {
-            $response = [
-                'status' => false,
-                'notification' => $validator->errors()->all()
-            ];
-        }else{
-            // Create the contact record
-            BlogComment::create($commentData);
-        
-            $response = [
-                'status' => true,
-                'notification' => 'Comment added successfully!',
-            ];
-        }      
+    
+        // Create the contact record
+        BlogComment::create($commentData);
+    
+        $response = [
+            'status' => true,
+            'notification' => 'Comment added successfully!',
+        ];
     
         return response()->json($response);
     }
