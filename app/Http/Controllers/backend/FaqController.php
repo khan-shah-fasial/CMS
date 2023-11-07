@@ -9,7 +9,7 @@ use App\Models\Faq;
 class FaqController extends Controller
 {
     public function index() {
-        $faq = Faq::all();
+        $faq = Faq::orderBy('id', 'desc')->get();
         return view('backend.pages.faq.index', compact('faq'));
     }
 
