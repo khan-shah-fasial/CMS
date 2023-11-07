@@ -1,5 +1,18 @@
 @extends('frontend.layouts.app')
 
+@php
+    $url = request()->segment('1');
+    $page = DB::table('blog_categories')->where('slug', $url)->first();
+@endphp
+
+@section('page.title', "$detail->meta_title")
+
+@section('page.description', "$detail->meta_description")
+
+@section('page.type', "$page->name")
+
+@section('page.publish_time', "$detail->updated_at")
+
 @section('page.content')
 
 <!-------================ blog detail start ============ ------------>
@@ -11,10 +24,7 @@
 </section>
 
 <!-- -------------------- blog details banner end   ---------------- -->
-@php
-    $url = request()->segment('1');
-    $page = DB::table('blog_categories')->where('slug', $url)->first();
-@endphp
+
 <!-- -------------------- blog details breadcrumb start ---------------- -->
 
 <section class="blog_details_page_breadcrumb">

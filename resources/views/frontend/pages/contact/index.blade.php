@@ -1,5 +1,11 @@
 @extends('frontend.layouts.app')
 
+@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+
+@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+
+@section('page.type', 'website')
+
 @section('page.content')
 
 <!----------========== contact start ===============-------------------->
@@ -67,9 +73,12 @@
                                 You can also contact us via:
                             </p>
                             <p class="phone_email" data-aos-once="true" data-aos="fade-up">
-                                <span>011-41023400 </span>
+
+                                <span> <a href="tel:011-41023400">011-41023400 </a></span>
                                 <br />
-                                <span> contact@ahlawatassociates.in </span>
+                                <span> <a href="mailto:contact@ahlawatassociates.in">
+                                        contact@ahlawatassociates.in
+                                    </a> </span>
                             </p>
                         </div>
                         <div class="col-md-6 px0">

@@ -1,5 +1,11 @@
 @extends('frontend.layouts.app')
 
+@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+
+@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+
+@section('page.type', 'blogs')
+
 @section('page.content')
 
 <!----------------=============== blog start ================------------->
@@ -60,7 +66,7 @@
 
                     <div class="blog_content">
                         <div
-                            class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row  gap-xl-4 gap-lg-0 gap-2 mb-2">
+                            class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row justify-content-between  gap-xl-4 gap-lg-0 gap-2 mb-2">
                             <p class="d-flex align-items-center gap-2 author mb-0">
                                 <img src="/assets/frontend/images/author.png" alt="" />
                                 <span>{{ $author->name }}</span>
