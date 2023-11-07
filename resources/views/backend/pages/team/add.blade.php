@@ -9,7 +9,7 @@
         </div>        
         <div class="col-sm-3">
             <div class="form-group mb-3">
-                <label for="image">Profile Image <span class="red">*</span></label>
+                <label for="image" >Profile Image <span class="red">*</span> <span class="font-size11">(Max file size 50kb - 250*360)</span></label>
                 <input accept="image/*" type="file" class="form-control" name="image" id="image" required>
             </div>
         </div>

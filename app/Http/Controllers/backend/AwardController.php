@@ -9,7 +9,7 @@ use App\Models\Award;
 class AwardController extends Controller
 {
     public function index() {
-        $award = Award::all();
+        $award = Award::orderBy('id', 'desc')->get();
         return view('backend.pages.award.index', compact('award'));
     }
 
