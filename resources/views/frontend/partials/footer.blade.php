@@ -145,12 +145,12 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
       <div class="info">
         <p>
           This website use cookies to help you have a superior and more relevant
-          browsing experience on the website. <a href="#"> Read more...</a>
+          browsing experience on the website. <a href="{{url(route('cookie-policy'))}}"> Read more...</a>
         </p>
       </div>
       <div class="buttons">
-        <button class="button" id="acceptBtn">Accept</button>
-        <button class="button">Decline</button>
+        <button class="cookies_button" id="cookieAccept">Accept</button>
+        <button class="cookies_button">Decline</button>
       </div>
     </div>
 <!--end cookies code-->

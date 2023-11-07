@@ -22,7 +22,7 @@
                     <img src="/assets/frontend/images/thankyou.png" alt="" class="py-3">
                     <h6>for Contacting us !</h6>
                     <p>We’ll reach you out immediately</p>
-                    <button>Back to Homepage</button>
+                    <a class="btn btn-success" href="{{url('/')}}">Back to Homepage</a>
                 </div>
             </div>
         </div>

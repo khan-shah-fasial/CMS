@@ -20,8 +20,10 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 
 <!-- -------------------- blog details banner start ---------------- -->
 
-<section class="blog_details_page_banner" style="background-image: url({{ asset('storage/' . $detail->main_image) }});">
-</section>
+<div class="blog_details_page_banner">
+<img src="{{ asset('storage/' . $detail->main_image) }}">
+
+</div>
 
 <!-- -------------------- blog details banner end   ---------------- -->
 

@@ -151,11 +151,11 @@ $(document).ready(function () {
 
 // ---- ---- Const ---- ---- //
 const cookiesBox = document.querySelector('.cookies_section'),
-  buttons = document.querySelectorAll('.button');
+  buttons = document.querySelectorAll('.cookies_button');
 
 // ---- ---- Show ---- ---- //
 const executeCodes = () => {
-  if (document.cookie.includes('AlexGolovanov')) return;
+  if (document.cookie.includes('Ahlawat')) return;
   cookiesBox.classList.add('show');
 
   // ---- ---- Button ---- ---- //
@@ -164,9 +164,9 @@ const executeCodes = () => {
       cookiesBox.classList.remove('show');
 
       // ---- ---- Time ---- ---- //
-      if (button.id == 'acceptBtn') {
+      if (button.id == 'cookieAccept') {
         document.cookie =
-          'cookieBy= AlexGolovanov; max-age=' + 60 * 60 * 24 * 30;
+          'cookieBy= Ahlawat; max-age=' + 60 * 60 * 24 * 30;
       }
     });
   });

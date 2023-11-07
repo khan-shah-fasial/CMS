@@ -24,15 +24,15 @@
     <div class="auth-fluid">
         <!--Auth fluid left content -->
         <div class="auth-fluid-form-box">
-            <div class="card-body d-flex flex-column h-100 gap-3">
+            <div class="card-body d-flex flex-column h-100">
 
                 <!-- Logo -->
                 <div class="auth-brand text-center text-lg-start">
-                    <a href="index.html" class="logo-dark">
-                        <span><img src="/assets/images/logo-dark.png" alt="dark logo" height="22"></span>
+                    <a href="/" class="logo-dark">
+                        <span><img src="/assets/images/logo-dark.png" alt="dark logo" height="122"></span>
                     </a>
-                    <a href="index.html" class="logo-light">
-                        <span><img src="/assets/images/logo.png" alt="logo" height="22"></span>
+                    <a href="/" class="logo-light">
+                        <span><img src="/assets/images/logo.png" alt="logo" height="122"></span>
                     </a>
                 </div>
 

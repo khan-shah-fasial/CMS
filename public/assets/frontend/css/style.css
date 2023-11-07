@@ -1326,14 +1326,8 @@ hr {
 
 /* ------------------ blog Details page banner start ------------- */
 
-.blog_details_page_banner {
-    background-image: url("/assets/frontend/images/blog_d_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    padding: 0;
-    height: 600px;
+.blog_details_page_banner img{
+   width:100%;
 }
 
 /* ------------------ blog Details page banner end ------------- */
@@ -2084,13 +2078,13 @@ select.aos-init.aos-animate.error {
 .cookies_section .info p a:hover {
     text-decoration: underline;
 }
-.cookies_section .buttons {
+.cookies_section .cookies_button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.cookies_section .button {
+.cookies_section .cookies_button {
     width: calc(100% / 2 - 10px);
     padding: 8px 0;
     border: none;
@@ -2100,6 +2094,6 @@ select.aos-init.aos-animate.error {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.cookies_section .button:hover {
+.cookies_section .cookies_button:hover {
     background-color: #e7403b;
 }
