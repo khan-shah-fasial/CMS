@@ -9,7 +9,7 @@ use App\Models\Publication;
 class PublicationController extends Controller
 {
     public function index() {
-        $publication = Publication::all();
+        $publication = Publication::orderBy('id', 'desc')->get();
         return view('backend.pages.publication.index', compact('publication'));
     }
 

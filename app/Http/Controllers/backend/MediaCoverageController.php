@@ -9,7 +9,7 @@ use App\Models\MediaCoverage;
 class MediaCoverageController extends Controller
 {
     public function index() {
-        $mediacoverage = MediaCoverage::all();
+        $mediacoverage = MediaCoverage::orderBy('id', 'desc')->get();
         return view('backend.pages.mediacoverage.index', compact('mediacoverage'));
     }
 

@@ -9,7 +9,7 @@ use App\Models\Contact;
 class ContactController extends Controller
 {
     public function index() {
-        $contact = Contact::all();
+        $contact = Contact::orderBy('id', 'desc')->get();
         return view('backend.pages.contact.index', compact('contact'));
     }    
 

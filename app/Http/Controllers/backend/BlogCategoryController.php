@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class BlogCategoryController extends Controller
 {
     public function index() {
-        $blogcategory = BlogCategory::all();
+        $blogcategory = BlogCategory::orderBy('id', 'desc')->get();
         return view('backend.pages.blogcategory.index', compact('blogcategory'));
     }
 

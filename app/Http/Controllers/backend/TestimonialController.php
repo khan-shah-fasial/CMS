@@ -9,7 +9,7 @@ use App\Models\Testimonial;
 class TestimonialController extends Controller
 {
     public function index() {
-        $testimonial = Testimonial::all();
+        $testimonial = Testimonial::orderBy('id', 'desc')->get();
         return view('backend.pages.testimonial.index', compact('testimonial'));
     }
 

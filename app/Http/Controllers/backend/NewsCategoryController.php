@@ -9,7 +9,7 @@ use App\Models\NewsCategory;
 class NewsCategoryController extends Controller
 {
     public function index() {
-        $newscategory = NewsCategory::all();
+        $newscategory = NewsCategory::orderBy('id', 'desc')->get();
         return view('backend.pages.newscategory.index', compact('newscategory'));
     }
 

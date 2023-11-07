@@ -9,7 +9,7 @@ use App\Models\BlogComment;
 class BlogCommentController extends Controller
 {
     public function index() {
-        $blogcomment = BlogComment::all();
+        $blogcomment = BlogComment::orderBy('id', 'desc')->get();
         return view('backend.pages.blogcomment.index', compact('blogcomment'));
     }
 

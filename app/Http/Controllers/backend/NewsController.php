@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 class NewsController extends Controller
 {
     public function index() {
-        $news = News::all();
+        $news = News::orderBy('id', 'desc')->get();
         return view('backend.pages.news.index', compact('news'));
     }
 

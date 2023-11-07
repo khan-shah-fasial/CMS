@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Storage;
 class PracticeAreaController extends Controller
 {
     public function index() {
-        $practicearea = PracticeArea::all();
+        $practicearea = PracticeArea::orderBy('id', 'desc')->get();
         return view('backend.pages.practicearea.index', compact('practicearea'));
     }
 
