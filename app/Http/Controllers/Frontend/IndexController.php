@@ -90,6 +90,11 @@ class IndexController extends Controller
         return view('frontend.pages.thankyou.index');
     }
 
+    public function cookie_policy(){
+
+        return view('frontend.pages.cookiePolicy.index');
+    }
+
 
 
     public function team_detail($slug){
