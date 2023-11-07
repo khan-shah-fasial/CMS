@@ -267,6 +267,11 @@
     }
     .main_heading {
         font-size: 24px;
+        line-height: 33px;
+    }
+
+    .contact .contact_info_box img {
+        width: 100%;
     }
     .service_get_in_touch a span:nth-child(2) {
         font-size: 26px;
@@ -282,9 +287,7 @@
         font-size: 24px !important;
         padding-top: 10px;
     }
-    .main_heading {
-        font-size: 20px;
-    }
+
     .service_get_in_touch a span:nth-child(2) {
         font-size: 26px;
     }
@@ -450,20 +453,20 @@
     .blog_details_page_title_desc h2 {
         font-size: 22px !important;
     }
-	
-	.practice_w_box .btn_hover {
-    margin: 0px 0px 0px;
-}
 
-.practice_w_box .btn-3 span {
-    padding: 30px 10px;
-}
-.practice_w_box .btn_hover span {
-    font-size: 20px;
-}
-.footer {
-    padding: 30px 0 20px 0;
-}
+    .practice_w_box .btn_hover {
+        margin: 0px 0px 0px;
+    }
+
+    .practice_w_box .btn-3 span {
+        padding: 30px 10px;
+    }
+    .practice_w_box .btn_hover span {
+        font-size: 20px;
+    }
+    .footer {
+        padding: 30px 0 20px 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -481,7 +484,15 @@
 
     .main_heading {
         font-size: 30px;
-        line-height: 25px;
+        line-height: 43px;
+    }
+
+    .contact .contact_info_box img {
+        width: 100%;
+    }
+
+    .contact .contact_info_box a {
+        font-size: 12px;
     }
     .about .link_number .number {
         font-size: 19px !important;
@@ -521,10 +532,6 @@
 
     .service_why_choose .nav-pills .nav-link {
         min-width: 240px;
-    }
-
-    .blog_big_box .blog_img {
-        height: 200px;
     }
 
     .blog_big_box .blog_content {

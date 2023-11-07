@@ -67,9 +67,12 @@
                                 You can also contact us via:
                             </p>
                             <p class="phone_email" data-aos-once="true" data-aos="fade-up">
-                                <span>011-41023400 </span>
+
+                                <span> <a href="tel:011-41023400">011-41023400 </a></span>
                                 <br />
-                                <span> contact@ahlawatassociates.in </span>
+                                <span> <a href="mailto:contact@ahlawatassociates.in">
+                                        contact@ahlawatassociates.in
+                                    </a> </span>
                             </p>
                         </div>
                         <div class="col-md-6 px0">
