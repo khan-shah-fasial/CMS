@@ -82,4 +82,4 @@ $url = url()->current();
 </script>
 <!--google tag manager code close-->
 
-<base id="" href="{{url('baseUrl')}}">
+<base id="baseUrl" href="{{url('')}}">
