@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
 @php
-    $url = request()->segment('1');
-    $page = DB::table('blog_categories')->where('slug', $url)->first();
+$url = request()->segment('1');
+$page = DB::table('blog_categories')->where('slug', $url)->first();
 @endphp
 
 @section('page.title', "$detail->meta_title")
@@ -77,14 +77,14 @@
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="category d-flex align-items-center gap-md-5 gap-2">
-                    @php 
-                        $category = json_decode($detail->blog_category_ids);
-                    @endphp 
-                    
-                    @foreach ($category as $row)
-                        @php  $category_name = DB::table('blog_categories')->where('id', $row)->first()->name; @endphp
+                    @php
+                    $category = json_decode($detail->blog_category_ids);
+                    @endphp
 
-                        <span data-aos="fade-up" data-aos-once="true">{{ $category_name }}</span>
+                    @foreach ($category as $row)
+                    @php $category_name = DB::table('blog_categories')->where('id', $row)->first()->name; @endphp
+
+                    <span data-aos="fade-up" data-aos-once="true">{{ $category_name }}</span>
                     @endforeach
 
                 </div>
@@ -111,15 +111,17 @@
             <div class="col-md-12">
                 <div class="buttons d-flex align-items-center justify-content-between">
                     @if($previous_slug != null)
-                    <a href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$previous_slug))] )) }}">
-                    <button data-aos="fade-up" data-aos-once="true">
-                        << Previous Post</button>
+                    <a
+                        href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$previous_slug))] )) }}">
+                        <button data-aos="fade-up" data-aos-once="true">
+                            << Previous Post</button>
                     </a>
                     @endif
 
                     @if($next_slug != null)
-                    <a href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$next_slug))] )) }}">
-                    <button data-aos="fade-up" data-aos-once="true">Next Post >></button>
+                    <a
+                        href="{{ url(route('blog.detail', ['category' => $url,'slug' => strtolower(str_replace(' ', '-',$next_slug))] )) }}">
+                        <button data-aos="fade-up" data-aos-once="true">Next Post >></button>
                     </a>
                     @endif
 
@@ -138,22 +140,24 @@
             <div class="col-md-12">
                 <h1 class="heading" data-aos="fade-up" data-aos-once="true">Comments</h1>
             </div>
-            @php $comment = DB::table('blog_comments')->where('status', 1)->where('blog_id', $detail->id)->orderBy('id', 'desc')->get(); @endphp
+            @php $comment = DB::table('blog_comments')->where('status', 1)->where('blog_id', $detail->id)->orderBy('id',
+            'desc')->get(); @endphp
 
             @foreach ($comment as $row)
-                
-                <div class="col-xl-1 col-md-2">
-                    <div class="avatar" data-aos="fade-up" data-aos-once="true">
-                        <img src="/assets/frontend/images/profile.png" alt="" />
-                    </div>
+
+            <div class="col-xl-1 col-md-2">
+                <div class="avatar" data-aos="fade-up" data-aos-once="true">
+                    <img src="/assets/frontend/images/profile.png" alt="" />
                 </div>
-                <div class="col-xl-9 col-md-8">
-                    <p class="name" data-aos="fade-up" data-aos-once="true">{{ $row->name }}</p>
-                    <p class="date" data-aos="fade-up" data-aos-once="true">{{ date('F d, Y \a\t h:i a', strtotime($row->created_at)) }}</p>
-                    <p class="comment" data-aos="fade-up" data-aos-once="true">
-                        {{ $row->comment }}
-                    </p>
-                </div>
+            </div>
+            <div class="col-xl-9 col-md-8">
+                <p class="name" data-aos="fade-up" data-aos-once="true">{{ $row->name }}</p>
+                <p class="date" data-aos="fade-up" data-aos-once="true">
+                    {{ date('F d, Y \a\t h:i a', strtotime($row->created_at)) }}</p>
+                <p class="comment" data-aos="fade-up" data-aos-once="true">
+                    {{ $row->comment }}
+                </p>
+            </div>
 
             @endforeach
 
@@ -179,7 +183,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="heading mb-4" data-aos="fade-up" data-aos-once="true">Related {{ ucfirst($page->name) }}</h1>
+                <h1 class="heading mb-4 text-center" data-aos="fade-up" data-aos-once="true">Related
+                    {{ ucfirst($page->name) }}</h1>
             </div>
 
             @foreach ($blog as $row)
@@ -216,7 +221,7 @@
 <!------------------ awards_section End -------------------------->
 
 @if($url == 'blog')
-    @include('frontend.component.comment_form')
+@include('frontend.component.comment_form')
 @endif
 
 
