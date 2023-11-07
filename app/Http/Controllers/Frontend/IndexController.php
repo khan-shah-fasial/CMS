@@ -36,7 +36,6 @@ class IndexController extends Controller
         } else {
             $blog = [];
         }
-
         
 
         if(empty($detail->parent_id)){  
@@ -49,7 +48,7 @@ class IndexController extends Controller
     }
 
     public function blog(){
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->get();
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('id', 'desc')->get();
 
         return view('frontend.pages.blog.index', compact('blog'));
     }
@@ -62,7 +61,7 @@ class IndexController extends Controller
 
         $author = User::find($detail->user_id);
 
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids))->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids)['0'])->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
 
         $current_id = $detail->id;
 
@@ -164,13 +163,13 @@ class IndexController extends Controller
     }
     
     public function news(){
-        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->get();
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('id', 'desc')->get();
 
         return view('frontend.pages.news.index', compact('news'));
     }
 
     public function deal_update(){
-        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->get();
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('id', 'desc')->get();
 
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }

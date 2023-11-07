@@ -2078,7 +2078,7 @@ select.aos-init.aos-animate.error {
 .cookies_section .info p a:hover {
     text-decoration: underline;
 }
-.cookies_section .cookies_button {
+.cookies_section .button {
     display: flex;
     justify-content: space-between;
     align-items: center;
