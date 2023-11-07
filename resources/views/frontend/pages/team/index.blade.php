@@ -56,7 +56,7 @@
                     <p class="desc">{{ ucfirst($row->designation) }}</p>
                     <hr />
                     <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        {{ str_replace('&amp;', ', ',strip_tags($row->description)) }}
+                        {{ str_replace([' ', '&amp;',', , '], [', ',', '], strip_tags($row->description)) }}
                     </p>
                     <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
                         data-aos="fade-up" data-aos-once="true">View Profile</a>
