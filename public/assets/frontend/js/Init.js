@@ -216,7 +216,7 @@ $(document).ready(function() {
         $('input, textarea').val('');
         $("select option:first").prop('selected', true);
         setTimeout(function() {
-            window.location.href = $('#baseUrl').attr('href') + '/thank-you';
+            location.reload();
         }, 2000);
     }
 });

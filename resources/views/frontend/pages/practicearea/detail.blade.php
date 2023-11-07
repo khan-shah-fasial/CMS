@@ -139,7 +139,7 @@
                             <div class="col-md-4" data-aos-once="true" data-aos="fade-up">
                                 <div class="practice_box m-0 mb-4">
                                     <div class="visible_box">
-                                        <img src="{{ asset('storage/' . $detail->thumnail_image) }}" alt="" />
+                                        <!--<img src="{{ asset('storage/' . $detail->thumnail_image) }}" alt="" />-->
                                         <h4>{{ $row->title }}</h4>
                                     </div>
                                     <div class="hover_box">
