@@ -32,7 +32,7 @@
     </div>
 	
 	<div class="mb-3">
-     <div class="g-recaptcha" data-sitekey="6LdGQvAoAAAAAB59mDDftKVu6Xo288Nm6kdTG_L_"></div>
+     <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
     </div>
 	
     <div class="">
@@ -56,7 +56,7 @@ $(document).ready(function() {
         $('input, textarea').val('');
         $("select option:first").prop('selected', true);
         setTimeout(function() {
-            location.reload();
+            window.location.href = $('#baseUrl').attr('href') + '/thank-you';
         }, 2000);
     }
 });
