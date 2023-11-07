@@ -56,7 +56,7 @@ $(document).ready(function() {
         $('input, textarea').val('');
         $("select option:first").prop('selected', true);
         setTimeout(function() {
-            location.reload();
+            window.location.href = $('#baseUrl').attr('href') + '/thank-you';
         }, 2000);
     }
 });

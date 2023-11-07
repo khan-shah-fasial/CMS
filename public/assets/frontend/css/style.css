@@ -391,6 +391,24 @@ header ul.dropdown li a:hover {
 
 /* banner open*/
 .banner_section {
+    position: relative;
+}
+.overlay_banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000000a1;
+}
+
+.carousel-caption {
+    bottom: 10.25rem !important;
+}
+
+.banner_section {
     padding: 0;
 }
 .banner_content {
@@ -406,18 +424,21 @@ header ul.dropdown li a:hover {
     font-weight: 400;
     line-height: 20px;
 }
+.banner_section .banner_content h3 {
+    color: #e7403b;
+    text-shadow: 0px 2px black;
+}
 
 .banner_section .banner_content p {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    color: black;
     margin-bottom: 21px;
 }
 
 .banner_section .banner_content a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -531,12 +552,13 @@ header ul.dropdown li a:hover {
 
 /*------------------practice ---------------- */
 .practice {
-    background-image: url("/assets/frontend/images/practice.png");
+    background-image: url("/assets/frontend/images/practice_bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 45px 0;
     color: white;
+    box-shadow: 1000px 1000px 1000px 1000px inset #000000de;
 }
 
 .practice_box {
@@ -1304,14 +1326,8 @@ hr {
 
 /* ------------------ blog Details page banner start ------------- */
 
-.blog_details_page_banner {
-    background-image: url("/assets/frontend/images/blog_d_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    padding: 0;
-    height: 600px;
+.blog_details_page_banner img{
+   width:100%;
 }
 
 /* ------------------ blog Details page banner end ------------- */
@@ -2062,13 +2078,13 @@ select.aos-init.aos-animate.error {
 .cookies_section .info p a:hover {
     text-decoration: underline;
 }
-.cookies_section .buttons {
+.cookies_section .cookies_button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.cookies_section .button {
+.cookies_section .cookies_button {
     width: calc(100% / 2 - 10px);
     padding: 8px 0;
     border: none;
@@ -2078,6 +2094,6 @@ select.aos-init.aos-animate.error {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.cookies_section .button:hover {
+.cookies_section .cookies_button:hover {
     background-color: #e7403b;
 }

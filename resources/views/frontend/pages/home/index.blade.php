@@ -2,7 +2,8 @@
 
 @section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal
+assistance for startups, FDI, Property law, IP, and more')
 
 @section('page.type', 'website')
 
@@ -11,7 +12,7 @@
 <!-----===== home content start============---->
 
 <section class="banner_section">
-    <div class="container">
+    <div class="container-fluid px0">
         <div class="row">
             <div class="col-md-12">
                 <!-- <div class="banner_content">
@@ -39,7 +40,8 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="/assets/frontend/images/banner_slider1.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <span class="overlay_banner"></span>
+                            <div class="carousel-caption ">
                                 <div class="banner_content">
                                     <span>Welcome To</span>
                                     <h3 class="main_heading">Ahlawat & Associates</h3>
@@ -56,7 +58,8 @@
                         </div>
                         <div class="carousel-item">
                             <img src="/assets/frontend/images/banner_slider2.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <span class="overlay_banner"></span>
+                            <div class="carousel-caption ">
                                 <div class="banner_content">
                                     <span>Welcome To</span>
                                     <h3 class="main_heading">Ahlawat & Associates</h3>
@@ -73,7 +76,8 @@
                         </div>
                         <div class="carousel-item">
                             <img src="/assets/frontend/images/banner_slider3.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
+                            <span class="overlay_banner"></span>
+                            <div class="carousel-caption ">
                                 <div class="banner_content">
                                     <span>Welcome To</span>
                                     <h3 class="main_heading">Ahlawat & Associates</h3>
@@ -100,59 +104,6 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-
-
-
-                <!-- <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/assets/frontend/images/banner_slider1.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/assets/frontend/images/banner_slider2.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/assets/frontend/images/banner_slider3.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/assets/frontend/images/banner_slider4.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div> -->
             </div>
         </div>
     </div>
@@ -209,7 +160,7 @@
             </div>
 
             <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
-                <img src="/assets/frontend/images/about_us_img.png" class="about_img" />
+                <img src="/assets/frontend/images/about_us_img.jpg" class="about_img" />
             </div>
         </div>
     </div>
@@ -235,7 +186,7 @@
                 <div class="news_box me-xl-5">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
                     </h1>
-                    <img src="/assets/frontend/images/news_1.png" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         A&A adopted an approach that demands the highest levels
                         of understanding in each of their practice areas,
@@ -257,7 +208,7 @@
                 <div class="news_box ms-xl-5">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Top Lawyer in Delhi
                     </h1>
-                    <img src="/assets/frontend/images/news_2.png" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img src="/assets/frontend/images/delhi_img.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         A&A adopted an approach that demands the highest levels
                         of understanding in each of their practice areas,
