@@ -1,5 +1,13 @@
 @extends('frontend.layouts.app')
 
+@section('page.title', "$detail->meta_title")
+
+@section('page.description', "$detail->meta_description")
+
+@section('page.type', 'practice area')
+
+@section('page.publish_time', "$detail->updated_at")
+
 @section('page.content')
 
 
