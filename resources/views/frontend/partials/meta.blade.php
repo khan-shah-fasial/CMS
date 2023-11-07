@@ -81,3 +81,5 @@ $url = url()->current();
   gtag('config', 'G-GTLLQV0KXE');
 </script>
 <!--google tag manager code close-->
+
+<base id="" href="{{url('baseUrl')}}">
