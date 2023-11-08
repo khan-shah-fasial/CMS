@@ -36,31 +36,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <!-- -------------------- blog banner end   ---------------- -->
 
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="d-flex align-items-center justify-content-around">
-                    <a href="" class="blog_filter_btn active">
-                        Blog
-                    </a>
-                    <a href="" class="blog_filter_btn">
-                        News
-                    </a>
-                    <a href="" class="blog_filter_btn">
-                        Publication
-                    </a>
-                    <a href="" class="blog_filter_btn">
-                        Media Coverage
-                    </a>
-                    <a href="" class="blog_filter_btn">
-                        Deal Update
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('frontend.component.category_breadcrumb')
 
 <!-- -------------------- blog banner start ---------------- -->
 

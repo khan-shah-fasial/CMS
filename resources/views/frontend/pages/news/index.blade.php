@@ -35,6 +35,8 @@
 
 <!-- -------------------- blog banner end   ---------------- -->
 
+@include('frontend.component.category_breadcrumb')
+
 <!-- -------------------- blog banner start ---------------- -->
 
 <section class="blog_page_cards">

@@ -1,4 +1,6 @@
-@php $media = DB::table('media_coverage')->where('status', 1)->get(); @endphp
+@php 
+$media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 'desc')->get();
+@endphp
 <!---========= Media coverage ==========--------------->
 
 <section class="media">

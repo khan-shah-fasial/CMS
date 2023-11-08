@@ -30,6 +30,10 @@ Route::get('/news', [IndexController::class, 'news'])->name('news');
 
 Route::get('/deal-update', [IndexController::class, 'deal_update'])->name('deal-update');
 
+Route::get('/media-coverage', [IndexController::class, 'media_coverage'])->name('media-coverage');
+
+Route::get('/publication', [IndexController::class, 'publication'])->name('publication');
+
 
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
 Route::get('/team-members/{slug}', [IndexController::class, 'team_detail'])->name('team.detail');
