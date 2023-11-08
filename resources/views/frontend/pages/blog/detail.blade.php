@@ -34,7 +34,15 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
         <div class="row">
             <div class="col-md-6 px0">
                 <ul class="d-flex align-items-center gap-3 list-unstyled" data-aos="fade-up" data-aos-once="true">
-                    <li>{{ ucfirst($page->name) }}</li>
+                    <li>
+                        <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
+                    </li>
+                    <li>></li>
+                    <li>
+                        <a href="{{ url(route(''. $url.'')) }}" data-aos="fade-up" data-aos-once="true">
+                            {{ ucfirst($page->name) }}
+                        </a>
+                    </li>
                     <li>></li>
                     <li>{{ $detail->title }}</li>
                 </ul>
