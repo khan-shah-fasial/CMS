@@ -27,7 +27,10 @@
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item "><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Team Members About
+                                <a href="{{ url(route('team')) }}">Team Members</a> 
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                {{ ucfirst($detail->name) }}
                             </li>
                         </ol>
                     </nav>
