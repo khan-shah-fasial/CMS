@@ -33,18 +33,21 @@ $team = DB::table('teams')->where('is_home', 1)->get();
                     @foreach ($team as $row)
 
                     <div class="item" data-aos-once="true" data-aos="fade-up">
-                        <div class="team_box">
-                            <div class="hover_img">
-                                <img src="{{ asset('storage/' . $row->image) }}" alt="" class="team_img" />
-                            </div>
+                        <a href="/" class="text-decoration-none">
+                            <div class="team_box">
+                                <div class="hover_img">
+                                    <img src="{{ asset('storage/' . $row->image) }}" alt="" class="team_img" />
+                                </div>
 
-                            <div class="d-flex align-items-center justify-content-center team_bio_container">
-                                <p class="team_bio_box">
-                                    <span class="name">{{ ucfirst($row->name) }}</span>
-                                    <span class="role">{{ ucfirst($row->designation) }}</span>
-                                </p>
+                                <div class="d-flex align-items-center justify-content-center team_bio_container">
+                                    <p class="team_bio_box">
+                                        <span class="name text-decoration-none">{{ ucfirst($row->name) }}</span>
+                                        <span class="role text-decoration-none">{{ ucfirst($row->designation) }}</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
 
                     @endforeach

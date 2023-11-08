@@ -100,7 +100,7 @@ p {
 header {
     position: sticky;
     background: #fff;
-    top: 0px;
+    top: 36px;
     z-index: 99;
 }
 .bottom_nav_links .nav_links a img {
@@ -274,8 +274,11 @@ header ul.dropdown li a:hover {
 }
 
 .search_right {
-    float: right;
     position: relative;
+}
+
+.top_nav_links {
+    float: right;
 }
 
 .menu_left_fixed {
@@ -302,13 +305,16 @@ header ul.dropdown li a:hover {
 .pd-0 {
     padding: 0px !important;
 }
+
 .top_baar {
-    position: relative;
+    position: sticky;
     width: 100%;
     z-index: 9999;
     padding-left: 45px;
     padding-right: 45px;
+    top: 0;
 }
+
 .menu_listing ul li {
     list-style: none;
     padding-bottom: 22px;
@@ -1063,14 +1069,12 @@ section.blog p.desc {
 
 /* ----------------- footer ---------------------- */
 
-.footer_count
-{
-	    column-count: 5;
+.footer_count {
+    column-count: 5;
 }
 
-.footer_colums
-{
-	    box-sizing: border-box;
+.footer_colums {
+    box-sizing: border-box;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid;
@@ -1339,8 +1343,8 @@ hr {
 
 /* ------------------ blog Details page banner start ------------- */
 
-.blog_details_page_banner img{
-   width:100%;
+.blog_details_page_banner img {
+    width: 100%;
 }
 
 /* ------------------ blog Details page banner end ------------- */
@@ -1840,7 +1844,6 @@ section.career_page_content li span {
     text-align: center;
     border-radius: 10px;
 }
-
 
 /* ----------------- career  Page popup form End ------------------ */
 
