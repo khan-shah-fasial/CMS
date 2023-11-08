@@ -2,7 +2,8 @@
 
 @section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal
+assistance for startups, FDI, Property law, IP, and more')
 
 @section('page.type', 'blogs')
 
@@ -34,6 +35,32 @@
 </section>
 
 <!-- -------------------- blog banner end   ---------------- -->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center justify-content-around">
+                    <a href="" class="blog_filter_btn active">
+                        Blog
+                    </a>
+                    <a href="" class="blog_filter_btn">
+                        News
+                    </a>
+                    <a href="" class="blog_filter_btn">
+                        Publication
+                    </a>
+                    <a href="" class="blog_filter_btn">
+                        Media Coverage
+                    </a>
+                    <a href="" class="blog_filter_btn">
+                        Deal Update
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- -------------------- blog banner start ---------------- -->
 

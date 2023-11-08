@@ -34,7 +34,8 @@ $team = DB::table('teams')->limit(5)->orderBy('series', 'asc')->get();
                     @foreach ($team as $row)
 
                     <div class="item" data-aos-once="true" data-aos="fade-up">
-                        <a href="/" class="text-decoration-none">
+                        <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
+                            class="text-decoration-none">
                             <div class="team_box">
                                 <div class="hover_img">
                                     <img src="{{ asset('storage/' . $row->image) }}" alt="" class="team_img" />

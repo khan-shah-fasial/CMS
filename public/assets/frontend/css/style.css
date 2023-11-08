@@ -7,6 +7,10 @@
     box-sizing: border-box !important;
 }
 
+.wcs_button {
+    background: #25d366 !important;
+}
+
 body {
     font-family: "Merriweather", serif !important;
     font-size: 14px;
@@ -188,7 +192,6 @@ header {
 
 .bottom_nav_links .nav_links li ul.dropdown li {
     display: block;
-    border-bottom: 1px solid #5351511e;
     padding: 7px 12px;
     text-align: start;
 }
@@ -204,15 +207,18 @@ header {
 }
 
 .bottom_nav_links .nav_links li ul.dropdown {
-    max-width: 230px;
     width: 100%;
     position: absolute;
     z-index: 999;
     display: none;
     margin-top: 10px;
     background: white;
+    max-width: max-content;
+    border-top: 2px solid #e36d6a;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding-left: 0;
+    padding-top: 10px;
+    column-count: 2;
+    padding-bottom: 10px;
 }
 .bottom_nav_links .nav_links li:hover ul.dropdown {
     display: block;
@@ -432,7 +438,6 @@ header ul.dropdown li a:hover {
 }
 .banner_section .banner_content h3 {
     color: #e7403b;
-    text-shadow: 0px 2px black;
 }
 
 .banner_section .banner_content p {
@@ -1354,6 +1359,9 @@ hr {
     padding: 36px 0;
     color: rgba(152, 152, 152, 1);
 }
+.blog_details_page_breadcrumb ul li a {
+    color: #e36d6a !important;
+}
 
 .blog_details_page_title_desc a {
     color: #e36d6a !important;
@@ -2113,4 +2121,23 @@ select.aos-init.aos-animate.error {
 }
 .cookies_section .cookies_button:hover {
     background-color: #e7403b;
+}
+
+.blog_filter_btn {
+    padding: 10px 25px;
+    background: lightgray;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.blog_filter_btn.active {
+    background: #e36d6a;
+    color: white;
+}
+.blog_filter_btn.active:hover {
+    color: white !important;
+}
+.blog_filter_btn:hover {
+    color: black !important;
 }

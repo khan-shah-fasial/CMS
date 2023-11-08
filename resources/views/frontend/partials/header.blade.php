@@ -26,7 +26,8 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                                     @if(!$subcategory->isEmpty())
                                     <ul class="dropdown">
                                         @foreach($subcategory as $item)
-                                        <li><a
+                                        <li>
+                                            <a
                                                 href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a>
                                         </li>
                                         @endforeach
@@ -81,41 +82,46 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 
                                 @php $i = 1 @endphp
                                 @foreach($practice_Area as $row)
-                                    @php $subcategory = DB::table('practice_areas')->where('parent_id', $row->id)->get(); @endphp
+                                @php $subcategory = DB::table('practice_areas')->where('parent_id', $row->id)->get();
+                                @endphp
 
-                                    @if(!$subcategory->isEmpty())
-                                        <li>
-                                            <label class="a-label__chevron" for="item-{{ $i }}">{{ $row->title }}</label>
-                                            <input type="checkbox" id="item-{{ $i }}" name="item-{{ $i }}" class="m-menu__checkbox" />
-                                            <div class="m-menu">
-                                                <div class="m-menu__header">
-                                                    <label class="m-menu__toggle" for="item-{{ $i }}">
-                                                        <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                                            stroke="#000000" stroke-width="2" stroke-linecap="butt"
-                                                            stroke-linejoin="arcs">
-                                                            <path d="M19 12H6M12 5l-7 7 7 7" />
-                                                        </svg>
-                                                    </label>
-                                                    <span>{{ $row->title }}</span>
-                                                </div>
-                                                <ul>
-                                                    
-                                                    @foreach($subcategory as $item)
-                                                        <li><a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a></li>
-                                                    @endforeach
+                                @if(!$subcategory->isEmpty())
+                                <li>
+                                    <label class="a-label__chevron" for="item-{{ $i }}">{{ $row->title }}</label>
+                                    <input type="checkbox" id="item-{{ $i }}" name="item-{{ $i }}"
+                                        class="m-menu__checkbox" />
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <label class="m-menu__toggle" for="item-{{ $i }}">
+                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                                    stroke="#000000" stroke-width="2" stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                            <span>{{ $row->title }}</span>
+                                        </div>
+                                        <ul>
 
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        @php $i++ @endphp
-                                    @else
-                                        <li>
-                                            <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
-                                                <span> {{ $row->title }} </span>
-                                            </a>
+                                            @foreach($subcategory as $item)
+                                            <li><a
+                                                    href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a>
+                                            </li>
+                                            @endforeach
 
-                                        </li>
-                                    @endif
+                                        </ul>
+                                    </div>
+                                </li>
+                                @php $i++ @endphp
+                                @else
+                                <li>
+                                    <a
+                                        href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
+                                        <span> {{ $row->title }} </span>
+                                    </a>
+
+                                </li>
+                                @endif
                                 @endforeach
 
                             </ul>

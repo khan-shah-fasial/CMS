@@ -21,7 +21,7 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <!-- -------------------- blog details banner start ---------------- -->
 
 <div class="blog_details_page_banner">
-<img src="{{ asset('storage/' . $detail->main_image) }}">
+    <img src="{{ asset('storage/' . $detail->main_image) }}">
 
 </div>
 
@@ -32,14 +32,16 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <section class="blog_details_page_breadcrumb">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
+            <div class="col-md-8 px0">
                 <ul class="d-flex align-items-center gap-3 list-unstyled" data-aos="fade-up" data-aos-once="true">
                     <li>
-                        <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
+                        <a href="{{ url(route('index')) }}" class="text-decoration-none" data-aos="fade-up"
+                            data-aos-once="true">Home</a>
                     </li>
                     <li>></li>
                     <li>
-                        <a href="{{ url(route(''. $url.'')) }}" data-aos="fade-up" data-aos-once="true">
+                        <a href="{{ url(route(''. $url.'')) }}" class="text-decoration-none" data-aos="fade-up"
+                            data-aos-once="true">
                             {{ ucfirst($page->name) }}
                         </a>
                     </li>
@@ -47,7 +49,7 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
                     <li>{{ $detail->title }}</li>
                 </ul>
             </div>
-            <div class="col-md-6 px0">
+            <div class="col-md-4 px0">
                 <div class="d-flex align-items-center justify-content-md-end gap-4">
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/author.png" alt="" />
@@ -100,12 +102,12 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
                 </div>
             </div>
             <div class="col-md-6 px0">
-                <div class="icons d-flex align-items-center justify-content-end gap-3 mt-md-2 mt-4">
+                <!-- <div class="icons d-flex align-items-center justify-content-end gap-3 mt-md-2 mt-4">
                     <img src="/assets/frontend/images/icon_1.png" alt="" data-aos="fade-up" data-aos-once="true" />
                     <img src="/assets/frontend/images/icon_2.png" alt="" data-aos="fade-up" data-aos-once="true" />
                     <img src="/assets/frontend/images/icon_3.png" alt="" data-aos="fade-up" data-aos-once="true" />
                     <img src="/assets/frontend/images/icon_4.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
