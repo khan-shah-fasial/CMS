@@ -4,7 +4,7 @@
 
 @section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
 
-@section('page.type', 'deal update')
+@section('page.type', 'media coverage')
 
 @section('page.content')
 
@@ -16,14 +16,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">Deal Update</h1>
+                    <h1 class="heading">Media Coverage</h1>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
                                 <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Deal Update
+                                Media Coverage
                             </li>
                         </ol>
                     </nav>
@@ -43,17 +43,17 @@
     <div class="container">
         <div class="row">
 
-            @foreach ($deal_update as $row)
+            @foreach ($media_coverage as $row)
 
 
             <div class="col-lg-4 col-md-6 px0" data-aos="fade-up" data-aos-once="true">
                 <div class="blog_big_box me-xl-3 mb-md-5 mb-3 ">
                     <div class="hover_effect_img">
-                        <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" data-aos="fade-up"
+                        <img src="{{ asset('storage/' . $row->image) }}" alt="" class="blog_img" data-aos="fade-up"
                             data-aos-once="true" />
                         <div class="overlay">
                             <a
-                                href="{{ url(route('blog.detail', ['category' =>'deal-update','slug' => $row->slug] )) }}">
+                                href="{{ $row->url }}">
                                 <div class="plus">
                                     +
                                 </div>
@@ -62,27 +62,19 @@
                         </div>
                     </div>
 
-                    @php
-                    $author = DB::table('users')->where('id', $row->user_id)->first();
-                    @endphp
-
                     <div class="blog_content">
                         <div
                             class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row  gap-xl-4 gap-lg-0 gap-2 mb-2">
-                            <p class="d-flex align-items-center gap-2 author mb-0">
-                                <img src="/assets/frontend/images/author.png" alt="" />
-                                <span>{{ $author->name }}</span>
-                            </p>
                             <p class="d-flex align-items-center gap-2 author mb-0">
                                 <img src="/assets/frontend/images/calender.png" alt="" />
                                 <span> {{ $row->created_at->format('F j, Y') }} </span>
                             </p>
                         </div>
                         <p>
-                            {{ $row->short_description }}
+                            {{ $row->title }}
                         </p>
                         <a
-                            href="{{ url(route('blog.detail', ['category' =>'deal-update','slug' => $row->slug] )) }}">View
+                            href="{{ $row->url }}">View
                             More</a>
                     </div>
                 </div>

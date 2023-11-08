@@ -12,6 +12,8 @@ use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Contact;
 use App\Models\BlogComment;
+use App\Models\MediaCoverage;
+use App\Models\Publication;
 
 class IndexController extends Controller
 {
@@ -172,6 +174,18 @@ class IndexController extends Controller
         $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('created_at', 'desc')->get();
 
         return view('frontend.pages.deal_update.index', compact('deal_update'));
+    }
+
+    public function media_coverage(){
+        $media_coverage = MediaCoverage::where('status', 1)->orderBy('created_at', 'desc')->get();
+
+        return view('frontend.pages.media_coverage.index', compact('media_coverage'));
+    }
+
+    public function publication(){
+        $publication = Publication::where('status', 1)->orderBy('created_at', 'desc')->get();
+
+        return view('frontend.pages.publication.index', compact('publication'));
     }
 
     public function search(Request $request){
