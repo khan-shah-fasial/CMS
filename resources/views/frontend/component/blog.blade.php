@@ -1,8 +1,8 @@
 @php
-$blog = DB::table('blogs')->where('status', 1)->limit(6)->orderBy('id', 'desc')->get()->toArray();
-$right_blog = array_slice($blog, 2);
+$blog = DB::table('blogs')->where('status', 1)->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
+$right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids', '4')->limit(4)->orderBy('created_at', 'desc')->get();
 @endphp
-@if(count($blog) > 5)
+@if(count($blog) > 1)
 <!-------============= blog ================---------------------->
 <section class="blog">
     <div class="container">
@@ -54,7 +54,7 @@ $right_blog = array_slice($blog, 2);
                     <span class="main_heading_color">News</span>
                 </h2>
 
-                @foreach ($right_blog as $row)
+                @foreach ($right_news as $row)
 
                 <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' .$row->main_image) }}" alt="" />
@@ -63,7 +63,7 @@ $right_blog = array_slice($blog, 2);
                             {{ $row->title }}
                         </p>
                         <a
-                            href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            href="{{ url(route('blog.detail', ['category' =>'news', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
                             More</a>
                     </div>
                 </div>
