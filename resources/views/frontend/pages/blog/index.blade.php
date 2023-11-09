@@ -49,7 +49,9 @@ assistance for startups, FDI, Property law, IP, and more')
         </div>
     </div>
     @if(count($blog) > '5')
-        <div class="btn btn-warning" id="load-more">View More</div>
+    <div class="text-center">
+        <button class="load-more" id="load-more">View More</button>
+    </div>
     @endif
 
 </section>
@@ -71,29 +73,31 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @section('component.scripts')
 <script>
-    var currentPage = 1; // Track the current page number
+var currentPage = 1; // Track the current page number
 
-    $('#load-more').click(function () {
-        currentPage++; // Increment the page number
+$('#load-more').click(function() {
+    currentPage++; // Increment the page number
 
-        $.ajax({
+    $.ajax({
             url: "{{ route('blog-data') }}",
             type: 'GET', // Change the method to GET
-            data: { page: currentPage },
+            data: {
+                page: currentPage
+            },
         })
-        .done(function (response) {
+        .done(function(response) {
             if (response.html === '') {
                 $('#load-more').hide(); // Hide the button when there's no more data
                 return;
             }
             $('#blog_data').append(response.html);
         })
-        .fail(function () {
+        .fail(function() {
             console.log("error");
         })
-        .always(function () {
+        .always(function() {
             console.log("complete");
         });
-    });
+});
 </script>
 @endsection

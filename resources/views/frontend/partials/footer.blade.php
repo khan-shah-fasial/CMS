@@ -6,7 +6,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 
 <section class="contact">
 
-    <div class="mobile_whatsapp">
+    <!-- <div class="mobile_whatsapp">
         <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
 
             <div class="wcs_button wcs_button_circle">
@@ -42,18 +42,10 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 </div>
             </div>
         </div>
-    </div>
-
-
-
+    </div> -->
 
     <div class="container">
         <div class="row">
-
-
-
-
-
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
                     <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
@@ -177,7 +169,43 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </ul>
                 </div>
             </div>
+
         </div>
+    </div>
+    <div class="fix_footer">
+        <a href="{{ url(route('index')) }}">
+            <span>
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </span>
+            <span>
+                Home
+            </span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=918882400643">
+            <span>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </span>
+            <span>
+                Whatsapp
+            </span>
+        </a>
+        <a href="tel:+011-41023400">
+            <span>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </span>
+            <span>
+                Call
+            </span>
+        </a>
+        <a href="mailto:contact@ahlawatassociates.in">
+            <span>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+            <span>
+                Mail
+            </span>
+        </a>
+
     </div>
 </footer>
 

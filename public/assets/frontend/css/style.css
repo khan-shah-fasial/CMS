@@ -2169,3 +2169,11 @@ select.aos-init.aos-animate.error {
     width: auto !important;
     height: auto !important;
 }
+
+.load-more {
+    background: #e36d6a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+}
