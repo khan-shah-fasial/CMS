@@ -71,7 +71,8 @@
 <!-- -------------------- service counter  end ---------------------- -->
 
 <!-- -------------------- service why choose start ---------------------- -->
-@if(!empty($child_detail) || !empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true)))
+
+@if(count($child_detail) > 0 || !empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true)))
 <section class="service_why_choose">
     <div class="container">
         <div class="row">
@@ -79,7 +80,7 @@
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     @php $a = 0; @endphp
 
-                    @if(!empty($child_detail))
+                    @if(count($child_detail) > 0)
                     @php $a = 1; @endphp
 
                     <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
@@ -119,7 +120,7 @@
                 <div class="tab-content" id="pills-tabContent">
                     @php $b = 0; @endphp
 
-                    @if(!empty($child_detail))
+                    @if(count($child_detail) > 0)
                     @php $b = 1; @endphp
 
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"

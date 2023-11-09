@@ -20,7 +20,7 @@ class IndexController extends Controller
     public function index(){
         return view('frontend.pages.home.index');
     }
-
+//--------------=============================== practice area =====================------------------------------
     public function practice_area(){
         $practiceAreas = PracticeArea::where('parent_id', null)->get();
         //return $practiceAreas;
@@ -48,6 +48,9 @@ class IndexController extends Controller
 
         return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
+//--------------=============================== practice area end =====================------------------------------
+
+//--------------=============================== Blog  ================================------------------------------
 
     public function blog(){
         $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('created_at', 'desc')->paginate(6);
@@ -95,11 +98,27 @@ class IndexController extends Controller
         return view('frontend.pages.blog.detail', compact('detail','author','blog','previous_slug','next_slug'));
     }
 
+//--------------=============================== Blog end ================================------------------------------
+
+//--------------=============================== Team  ================================------------------------------
+
     public function team_members(){
         $team = Team::orderBy('series', 'asc')->get();
 
         return view('frontend.pages.team.index', compact('team'));
     }
+
+    public function team_detail($slug){
+        $slug = str_replace('-', ' ', $slug);
+
+        $detail = Team::where('name', $slug)->where('status', 1)->first();
+
+        return view('frontend.pages.team.detail', compact('detail'));
+    }
+
+//--------------=============================== Team end ================================------------------------------
+
+//--------------=============================== other ================================------------------------------
 
     public function not_found(){
 
@@ -115,15 +134,9 @@ class IndexController extends Controller
         return view('frontend.pages.cookiePolicy.index');
     }
 
+//--------------=============================== other ================================------------------------------
 
-
-    public function team_detail($slug){
-        $slug = str_replace('-', ' ', $slug);
-
-        $detail = Team::where('name', $slug)->where('status', 1)->first();
-
-        return view('frontend.pages.team.detail', compact('detail'));
-    }
+//--------------=============================== Pages ================================------------------------------
 
     public function contact_us(){
         return view('frontend.pages.contact.index');
@@ -145,6 +158,10 @@ class IndexController extends Controller
     public function privacy_policy(){
         return view('frontend.pages.privacypolice.index');
     }
+
+//--------------=============================== Pages ================================------------------------------
+
+//--------------=============================== contact form save ===========================------------------------------
 
     public function contact_save(Request $request)
     {
@@ -182,7 +199,10 @@ class IndexController extends Controller
     
         return response()->json($response);
     }
-    
+   //--------------=============================== contact form save ===========================--------------------------
+   
+   //--------------=============================== news ==========================================-------------------------
+
     public function news(){
         $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('created_at', 'desc')->paginate(6);
 
@@ -204,6 +224,10 @@ class IndexController extends Controller
     
         return view('frontend.pages.news.index', compact('news'));
     }
+
+    //--------------=============================== news end ==========================================---------------------
+
+     //--------------=============================== Deal Update ====================================---------------------
 
     public function deal_update(){
         $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('created_at', 'desc')->paginate(6);
@@ -227,6 +251,10 @@ class IndexController extends Controller
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }
 
+//--------------=============================== Deal Update end =================================---------------------
+
+//--------------=============================== media coverage ====================================---------------------
+
     public function media_coverage(){
         $media_coverage = MediaCoverage::where('status', 1)->orderBy('created_at', 'desc')->paginate(6);
 
@@ -249,6 +277,10 @@ class IndexController extends Controller
         return view('frontend.pages.media_coverage.index', compact('media_coverage'));
     }
 
+  //--------------=============================== media coverage ====================================---------------------
+
+  //--------------=============================== publication ====================================---------------------
+
     public function publication(){
         $publication = Publication::where('status', 1)->orderBy('created_at', 'desc')->paginate(6);
 
@@ -270,6 +302,10 @@ class IndexController extends Controller
     
         return view('frontend.pages.publication.index', compact('publication'));
     }
+
+//--------------=============================== publication end ====================================---------------------
+
+//--------------=============================== other feature ====================================---------------------
 
     public function search(Request $request){
 
