@@ -43,11 +43,11 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
                         <p>
-                            Ahlawat & Associates is one of India’s leading
-                            full-service law firms, catering to domestic and
-                            international clients.
+                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
+                            catering to domestic
+                            and international clients since 1978
                         </p>
-                        <a href="about-us">Read More
+                        <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
                     </div>
@@ -61,11 +61,11 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
                         <p>
-                            Ahlawat & Associates is one of India’s leading
-                            full-service law firms, catering to domestic and
-                            international clients.
+                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
+                            catering to domestic
+                            and international clients since 1978
                         </p>
-                        <a href="about-us">Read More
+                        <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
                     </div>
@@ -79,11 +79,11 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
                         <p>
-                            Ahlawat & Associates is one of India’s leading
-                            full-service law firms, catering to domestic and
-                            international clients.
+                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
+                            catering to domestic
+                            and international clients since 1978
                         </p>
-                        <a href="about-us">Read More
+                        <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
                     </div>
@@ -118,33 +118,39 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="underline_heading">
-                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">About Us</h6>
+                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Who We Are</h6>
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
-                    Ahlawat & Associates is one of India’s leading
-                    full-service law firms, catering to domestic and
-                    international clients. Our services extend through diverse
-                    industry sectors, including assistance to facilitate
-                    foreign direct investments and business setup in India and
-                    our clientele includes an array of domestic and
-                    international individuals and companies.
+                    Ahlawat &amp; Associates is one of leading full-service law firms in India (1k-10k), catering to
+                    domestic and
+                    international clients. Incorporated in 1978 as a primary litigation practice by Mrs. Avnish
+                    Ahlawat(100-
+                    1k), A&amp;A gradually expanded its field of services and expertise and is now one of the leading
+                    corporate /
+                    dispute resolution law firms in India(100-1k). A&amp;A has been recognized for its expertise in
+                    addressing
+                    an array of legal issues especially those relating to Foreign Direct Investment (10k-100k)
+                    (FDI)(100k-
+                    1m), Joint Ventures(10k-100k), Corporate Compliance &amp; Governance as well as advisory support to
+                    the
+                    booming startup ecosystem, in both the domestic and international space.
                 </p>
-                <!-- <div class="d-flex align-items-start align-items-xl-center flex-xl-row flex-column gap-xl-4 mb-md-0 ">
+                <div class="d-flex align-items-start align-items-xl-center flex-xl-row flex-column gap-xl-4 mb-md-0 ">
                     <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
-                        <span class="desc">Praesent feugiat sem mattis.</span>
+                        <span class="desc">Best corporate law firm in India</span>
                     </p>
                     <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
-                        <span class="desc">Praesent feugiat sem mattis.</span>
+                        <span class="desc">Best dispute resolution law firm in India</span>
                     </p>
-                </div> -->
+                </div>
                 <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
                     data-aos="fade-up">
                     <p class="desc text-dark mb-0">
-                        Call to ask <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text-dark">any
-                            question</a>
+                        Any query <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text-dark">lets
+                            chat</a>
                     </p>
                     <span>
                         <a class="number" href="tel:011-41023400">011-41023400</a>
@@ -175,11 +181,18 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <section class="news">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row">
+            <div class="col-md-12 px0">
+                <div class="news_box me-xl-5">
+                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">How A&amp;A is best
+                        law firm in India(1k-10k)?
+                    </h1>
+
+                </div>
+            </div>
             <div class="col-md-6 px0">
                 <div class="news_box me-xl-5">
-                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Best Law firm in India
-                    </h1>
+
                     <img src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
 
                 </div>
@@ -187,20 +200,27 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-md-6 px0">
                 <div class="news_box me-xl-5">
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
-                        A&A adopted an approach that demands the highest levels
-                        of understanding in each of their practice areas,
-                        technical skill and service delivery allowing us to
-                        provide accurate, reliable, timely and cost-effective
-                        advice across a range of industry groups and sectors.
+                        Ahlawat &amp; Associates is one of the top law-firms in India(1k-10k) because we at A&amp;A
+                        adopted an
+                        approach that demands the highest levels of understanding in each of our practice areas,
+                        technical skill
+                        and service delivery allowing us to provide accurate, reliable, timely and cost-effective advice
+                        across a
+                        range of industry groups and sectors. This is reflected through our team of best lawyer in India
+                        (10k-
+                        100k), who abide by the system and ensure that the client’s needs always come first. With our
+                        expertise
+                        and diversity of experience within the teams, we can keep in touch with the changing environment
+                        that
+                        our clients operate in and provide them with personalized solutions to their business
+                        requirements or
+                        legal reservations.
+                    </p>
+                    <!-- <p class="desc">
                         This is reflected through our team of associates, who
                         abide by the system and ensure that the client’s needs
                         always come first.
-                    </p>
-                    <p class="desc">
-                        This is reflected through our team of associates, who
-                        abide by the system and ensure that the client’s needs
-                        always come first.
-                    </p>
+                    </p> -->
                 </div>
             </div>
             <!-- <div class="col-md-6 px0">

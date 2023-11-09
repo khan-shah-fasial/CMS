@@ -134,18 +134,26 @@
     transform: translate3d(0, 0, 0);
 }
 
+.mobile_whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
 @media (min-width: 992px) {
     .wrapper {
+        display: none;
+    }
+    .mobile_whatsapp {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
-	
-	.footer_count {
-    column-count: 2;
-}
-
+    .footer_count {
+        column-count: 2;
+    }
 
     .px0 {
         padding-left: 0 !important;

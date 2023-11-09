@@ -18,38 +18,46 @@
 
             <!--whatsapp chat box open-->
 
+            <div class="desktop_whatsapp">
+                <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
 
-            <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
-
-                <div class="wcs_button wcs_button_circle">
-                    <span class="fa fa-whatsapp"></span>
-                </div>
-                <div class="wcs_button_label">
-                    Need Help? Chat with us
-                </div>
-
-                <div class="wcs_popup">
-                    <div class="wcs_popup_close">
-                        <span class="fa fa-close"></span>
+                    <div class="wcs_button wcs_button_circle">
+                        <div class="whatsapp_blink">
+                            <span href="" class="btn-whatsapp-pulse">
+                                <span class="fa fa-whatsapp"></span>
+                            </span>
+                        </div>
                     </div>
-                    <div class="wcs_popup_header">
-                        <strong>Need Help? Chat with us</strong>
-                        <br>
-                        <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                    <div class="wcs_button_label">
+                        Need Help? Chat with us
                     </div>
-                    <div class="wcs_popup_person_container">
-                        <div class="wcs_popup_person" data-number="+91 8882400643">
-                            <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png"
-                                    alt="" /></div>
-                            <div class="wcs_popup_person_content">
-                                <div class="wcs_popup_person_name">Ahlawat & Associates</div>
-                                <div class="wcs_popup_person_description">Ahlawat & Associates</div>
-                                <div class="wcs_popup_person_status">I'm Online</div>
+
+                    <div class="wcs_popup">
+                        <div class="wcs_popup_close">
+                            <span class="fa fa-close"></span>
+                        </div>
+                        <div class="wcs_popup_header">
+                            <strong>Need Help? Chat with us</strong>
+                            <br>
+                            <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                        </div>
+                        <div class="wcs_popup_person_container">
+                            <div class="wcs_popup_person" data-number="+91 8882400643">
+                                <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png"
+                                        alt="" /></div>
+                                <div class="wcs_popup_person_content">
+                                    <div class="wcs_popup_person_name">Ahlawat & Associates</div>
+                                    <div class="wcs_popup_person_description">Ahlawat & Associates</div>
+                                    <div class="wcs_popup_person_status">I'm Online</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
 
 
             <!--whatsapp chat box close-->

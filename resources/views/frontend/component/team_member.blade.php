@@ -20,10 +20,11 @@ $team = DB::table('teams')->limit(5)->orderBy('series', 'asc')->get();
             </div>
             <div class="col-md-6 px0">
                 <p class="desc mt-md-4 mt-2" data-aos-once="true" data-aos="fade-up">
-                    Aenean tincidunt id mauris idology auctor. Donec at ligula
-                    lacus. Nulla dig nissimmi quis neque interdum. An Ohio man
-                    allegedly punched his lawyer in the face in court Tuesday
-                    upon finding out he was sentenced.
+                    Contact the best lawyers in India (10k-100k) Our team of Lawyers is highly skilled and confident in
+                    their
+                    ability to offer advice that transcends borders. They understand and align themselves with the
+                    clients&#39;
+                    needs and collaborate closely to assist them in achieving their goals.
                 </p>
             </div>
         </div>
