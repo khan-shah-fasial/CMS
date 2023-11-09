@@ -20,13 +20,13 @@
             <div class="col-md-6 px0">
 
                 <div
-                    class="top_nav_links d-flex align-items-center justify-content-between gap-5 mb-md-0 mb-2 gap_seven">
+                    class="top_nav_links d-md-flex d-none align-items-center justify-content-between gap-5 mb-md-0 mb-2 gap_seven">
 
                     <div class="phone_email d-flex align-items-center gap-lg-4 gap-md-2">
                         <div>
                             <a href="tel:+011-41023400">
                                 <img src="/assets/frontend/images/call.png" alt="call icon" />
-                                <span>011-41023400</span>
+                                <span class="">011-41023400</span>
                             </a>
                         </div>
                         <div>

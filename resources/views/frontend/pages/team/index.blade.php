@@ -20,7 +20,8 @@ assistance for startups, FDI, Property law, IP, and more')
                 <div class="text-center">
                     <h1 class="heading">Team Members</h1>
                     <p class="desc">
-                        Dedicated To Solving The Most Complex Challenges
+                        Get in touch with the team of best lawyer in India dedicated to solving the most complex
+                        challenges.
                     </p>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">

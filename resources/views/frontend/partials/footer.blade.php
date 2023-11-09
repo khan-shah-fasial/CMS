@@ -5,6 +5,45 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
 <!------------------ Contact Start -------------------------->
 
 <section class="contact">
+
+    <!-- <div class="mobile_whatsapp">
+        <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
+
+            <div class="wcs_button wcs_button_circle">
+                <div class="whatsapp_blink">
+                    <span href="" class="btn-whatsapp-pulse">
+                        <span class="fa fa-whatsapp"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="wcs_button_label">
+                Need Help? Chat with us
+            </div>
+
+            <div class="wcs_popup">
+                <div class="wcs_popup_close">
+                    <span class="fa fa-close"></span>
+                </div>
+                <div class="wcs_popup_header">
+                    <strong>Need Help? Chat with us</strong>
+                    <br>
+                    <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                </div>
+                <div class="wcs_popup_person_container">
+                    <div class="wcs_popup_person" data-number="+91 8882400643">
+                        <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png" alt="" />
+                        </div>
+                        <div class="wcs_popup_person_content">
+                            <div class="wcs_popup_person_name">Ahlawat & Associates</div>
+                            <div class="wcs_popup_person_description">Ahlawat & Associates</div>
+                            <div class="wcs_popup_person_status">I'm Online</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-6">
@@ -101,9 +140,9 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
             @endif
             @endforeach
         </div>
-		
-		<div class="row">
-		   <div class="col-md-12 mt-md-5 mt-2">
+
+        <div class="row">
+            <div class="col-md-12 mt-md-5 mt-2">
                 <div
                     class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column">
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
@@ -130,28 +169,68 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </ul>
                 </div>
             </div>
-		</div>
+
+        </div>
+    </div>
+    <div class="fix_footer">
+        <a href="{{ url(route('index')) }}">
+            <span>
+                <i class="fa fa-home" aria-hidden="true"></i>
+            </span>
+            <span>
+                Home
+            </span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=918882400643">
+            <span>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </span>
+            <span>
+                Whatsapp
+            </span>
+        </a>
+        <a href="tel:+011-41023400">
+            <span>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </span>
+            <span>
+                Call
+            </span>
+        </a>
+        <a href="mailto:contact@ahlawatassociates.in">
+            <span>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+            <span>
+                Mail
+            </span>
+        </a>
+
     </div>
 </footer>
+
+
+
 
 <!------------------ footer End -------------------------->
 
 
 <!--start cookies code-->
-   <div class="cookies_section">
-      <div class="title-box">
+<div class="cookies_section">
+    <div class="title-box">
         <i class="bx bx-cookie"></i>
-        <h3> <img src="/assets/frontend/images/cookie_image.png" alt=""/>  Cookies Consent</h3>
-      </div>
-      <div class="info">
+        <h3> <img src="/assets/frontend/images/cookie_image.png" alt="" /> Cookies Consent</h3>
+    </div>
+    <div class="info">
         <p>
-          We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.
-<a href="{{url(route('cookie-policy'))}}"> Read more...</a>
+            We use cookies to help you navigate efficiently and perform certain functions. You will find detailed
+            information about all cookies under each consent category below.
+            <a href="{{url(route('cookie-policy'))}}"> Read more...</a>
         </p>
-      </div>
-      <div class="buttons">
+    </div>
+    <div class="buttons">
         <button class="cookies_button" id="cookieAccept">Accept</button>
         <button class="cookies_button">Decline</button>
-      </div>
     </div>
+</div>
 <!--end cookies code-->

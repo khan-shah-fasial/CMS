@@ -1,6 +1,7 @@
 @php
 $blog = DB::table('blogs')->where('status', 1)->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
-$right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids', '4')->limit(4)->orderBy('created_at', 'desc')->get();
+$right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
+'4')->limit(4)->orderBy('created_at', 'desc')->get();
 @endphp
 @if(count($blog) > 1)
 <!-------============= blog ================---------------------->
@@ -13,8 +14,7 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                     <h6 class="main_heading">Latest Blog</h6>
                 </div>
                 <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">
-                    Learn something more <br />
-                    from our latest <span class="main_heading_color">Blog</span>
+                    Enhance your legal knowledge <br> with Blogs! <span class="main_heading_color">Blog</span>
                 </h1>
                 <div class="row">
 
@@ -50,8 +50,8 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
 
             <div class="col-lg-4 px0 ">
                 <h2 class="heading mb-4 mt-4">
-                    Learn something more from our latest
-                    <span class="main_heading_color">News</span>
+                    Get yourself updated with A&amp;A
+                    <span class="main_heading_color">Newscast!</span>
                 </h2>
 
                 @foreach ($right_news as $row)
