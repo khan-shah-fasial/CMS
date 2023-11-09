@@ -1,6 +1,6 @@
 @php
 //$team = DB::table('teams')->where('is_home', 1)->orderBy('series', 'asc')->get();
-$team = DB::table('teams')->limit(5)->orderBy('series', 'asc')->get();
+$team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
 @endphp
 
 <!----------------================= Team start =======================-------------->
