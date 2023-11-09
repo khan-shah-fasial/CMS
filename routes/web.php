@@ -20,6 +20,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->name('practicearea');
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
 Route::get('/blogs', [IndexController::class, 'blog'])->name('blog');
+Route::get('/blogs-data', [IndexController::class, 'blog_data'])->name('blog-data');
 
 $postCategories = DB::table('blog_categories')->pluck('slug')->toArray();
 Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
@@ -27,12 +28,16 @@ Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
     ->name('blog.detail');
 
 Route::get('/news', [IndexController::class, 'news'])->name('news');
+Route::get('/news-data', [IndexController::class, 'news_data'])->name('news-data');
 
 Route::get('/deal-update', [IndexController::class, 'deal_update'])->name('deal-update');
+Route::get('/deal-update-data', [IndexController::class, 'deal_update_data'])->name('deal-update-data');
 
 Route::get('/media-coverage', [IndexController::class, 'media_coverage'])->name('media-coverage');
+Route::get('/media-coverage-data', [IndexController::class, 'media_coverage_data'])->name('media-coverage-data');
 
 Route::get('/publication', [IndexController::class, 'publication'])->name('publication');
+Route::get('/publication-data', [IndexController::class, 'publication_data'])->name('publication-data');
 
 
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');

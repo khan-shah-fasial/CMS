@@ -41,49 +41,15 @@
 
 <section class="blog_page_cards">
     <div class="container">
-        <div class="row">
+        <div class="row" id="publication_data">
 
-            @foreach ($publication as $row)
-
-
-            <div class="col-lg-4 col-md-6 px0" data-aos="fade-up" data-aos-once="true">
-                <div class="blog_big_box me-xl-3 mb-md-5 mb-3 ">
-                    <div class="hover_effect_img">
-                        <img src="{{ asset('storage/' . $row->image) }}" alt="" class="blog_img" data-aos="fade-up"
-                            data-aos-once="true" />
-                        <div class="overlay">
-                            <a
-                                href="{{ $row->url }}">
-                                <div class="plus">
-                                    +
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <div class="blog_content">
-                        <div
-                            class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row  gap-xl-4 gap-lg-0 gap-2 mb-2">
-                            <p class="d-flex align-items-center gap-2 author mb-0">
-                                <img src="/assets/frontend/images/calender.png" alt="" />
-                                <span> {{ $row->created_at->format('F j, Y') }} </span>
-                            </p>
-                        </div>
-                        <p>
-                            {{ $row->title }}
-                        </p>
-                        <a
-                            href="{{ $row->url }}">View
-                            More</a>
-                    </div>
-                </div>
-            </div>
-
-            @endforeach
+            @include('frontend.component.publication_card')
 
         </div>
     </div>
+    @if(count($publication) > '5')
+        <div class="btn btn-warning" id="load-more">View More</div>
+    @endif
 </section>
 
 <!-- -------------------- blog banner end   ---------------- -->
@@ -99,4 +65,33 @@
 <!------------------ awards_section End -------------------------->
 
 <!----------------=============== blog end ================------------->
+@endsection
+
+@section('component.scripts')
+<script>
+    var currentPage = 1; // Track the current page number
+
+    $('#load-more').click(function () {
+        currentPage++; // Increment the page number
+
+        $.ajax({
+            url: "{{ route('publication-data') }}",
+            type: 'GET', // Change the method to GET
+            data: { page: currentPage },
+        })
+        .done(function (response) {
+            if (response.html === '') {
+                $('#load-more').hide(); // Hide the button when there's no more data
+                return;
+            }
+            $('#publication_data').append(response.html);
+        })
+        .fail(function () {
+            console.log("error");
+        })
+        .always(function () {
+            console.log("complete");
+        });
+    });
+</script>
 @endsection
