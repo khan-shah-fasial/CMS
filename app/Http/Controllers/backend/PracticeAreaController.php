@@ -74,6 +74,8 @@ class PracticeAreaController extends Controller
         unset($data['faq_description']);
 
         $slug = Str::slug($request->input('slug'), '-');
+
+        $focusArea = $request->input('focus_area', []);
         
         // Create the PracticeArea record with 'PracticeArea_category_ids' included
         PracticeArea::create([
@@ -82,11 +84,13 @@ class PracticeAreaController extends Controller
             'slug' => $slug,
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
-            'focus_area' => $request->input('focus_area'),
+            'focus_area' => json_encode($focusArea),
             'why_choose_us' => $request->input('why_choose_us'),
             'faq' => $data['faq'],
             'thumnail_image' => $imagePath,
+            'alt_thumnail_image' => $request->input('alt_thumnail_image'),
             'section_image' => $imagePath2,
+            'alt_section_image' => $request->input('alt_section_image'),
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'breadcrumb_title' => $request->input('breadcrumb_title'),
@@ -217,9 +221,11 @@ class PracticeAreaController extends Controller
         $practicearea->parent_id = $request->input('parent_id');
         $practicearea->title = $request->input('title');
         $practicearea->slug = $slug;
+        $practicearea->alt_thumnail_image = $request->input('alt_thumnail_image');
+        $practicearea->alt_section_image = $request->input('alt_section_image');
         $practicearea->short_description = $request->input('short_description');
         $practicearea->content = $request->input('content');
-        $practicearea->focus_area = $request->input('focus_area');
+        $practicearea->focus_area = json_encode($request->input('focus_area'));
         $practicearea->why_choose_us = $request->input('why_choose_us');
         $practicearea->faq = $data['faq'];
         $practicearea->meta_title = $request->input('meta_title');
