@@ -20,7 +20,7 @@
             <div class="col-md-12 px0">
                 <div class="text-center">
                     <h1 class="heading">{{ $detail->breadcrumb_title }}</h1>
-                    <p class="desc">{{ $detail->breadcrumb_subtitle }}</p>
+                    <h2 class="desc">{{ $detail->breadcrumb_subtitle }}</h2>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>

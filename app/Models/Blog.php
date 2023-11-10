@@ -16,6 +16,7 @@ class Blog extends Model
         'slug',
         'short_description',
         'main_image',
+        'alt_main_image',
         'content',
         'meta_title',
         'meta_description',

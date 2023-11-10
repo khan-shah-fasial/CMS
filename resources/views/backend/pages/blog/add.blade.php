@@ -5,7 +5,7 @@
 	     <div class="row">
 		     <div class="col-sm-6">
             <div class="form-group mb-3">
-                <label>Blog Title <span class="red">*</span></label>
+                <label>Title <span class="red">*</span></label>
                 <input maxlength="191" type="text" class="form-control" name="title" value="" required>
             </div>
         </div>
@@ -79,6 +79,10 @@
 	
 	
         <div class="col-md-6">
+            <div class="form-group mb-3">
+                <label>Alt Image</label>
+                <input type="text" class="form-control" name="alt_main_image" value="">
+            </div>
 		   <div class="form-group mb-3">
                 <label>Content <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="content" rows="5" required></textarea>

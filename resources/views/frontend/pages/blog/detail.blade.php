@@ -21,7 +21,7 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <!-- -------------------- blog details banner start ---------------- -->
 
 <div class="blog_details_page_banner">
-    <img src="{{ asset('storage/' . $detail->main_image) }}">
+    <img src="{{ asset('storage/' . $detail->main_image) }}" alt="{{ $detail->alt_main_image }}" />
 
 </div>
 
