@@ -8,6 +8,35 @@
 
 @section('page.publish_time', "$detail->updated_at")
 
+@section('page.schema')
+<!--------------------------- Page Schema --------------------------------->
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+        "@type": "ListItem", 
+        "position": 1, 
+        "name": "Home",
+        "item": "{{ url(route('index')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 2, 
+        "name": "Practice Areas",
+        "item": "{{ url(route('practicearea')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 3, 
+        "name": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
+        "item": "{{ url()->current() }}"  
+      }]
+    }
+</script>
+  
+<!--------------------------- Page Schema end--------------------------------->
+@endsection
+
 @section('page.content')
 
 
