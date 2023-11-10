@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('parent_id')->nullable();
             $table->string('thumnail_image', 255)->nullable();
+            $table->string('alt_thumnail_image', 255)->nullable();
             $table->string('section_image', 255)->nullable();
+            $table->string('alt_section_image', 255)->nullable();
             $table->string('title', 355);
             $table->string('slug')->unique();
             $table->longText('short_description')->nullable();

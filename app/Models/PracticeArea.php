@@ -14,7 +14,9 @@ class PracticeArea extends Model
     protected $fillable = [
         'parent_id',
         'thumnail_image',
+        'alt_thumnail_image',
         'section_image',
+        'alt_section_image',
         'title',
         'short_description',
         'slug',

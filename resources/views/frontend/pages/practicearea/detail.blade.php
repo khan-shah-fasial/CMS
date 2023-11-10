@@ -58,7 +58,7 @@
 @if(!empty($detail->section_image))
 
 <section class="service_img" data-aos-once="true" data-aos="fade-up">
-    <img src="{{ asset('storage/' . $detail->section_image) }}" alt="">
+    <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
 </section>
 
 @endif
@@ -130,9 +130,11 @@
                                 <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">
                                     Our Focus Area
                                 </h2>
+                                {{--
                                 <p class="desc mb-5 d-none" data-aos-once="true" data-aos="fade-up">
                                     {{ $detail->focus_area }}
-                                </p>
+                                </p> 
+                                --}}
                             </div>
 
                             @foreach($child_detail as $row)

@@ -46,15 +46,16 @@
 
 
 
-
-                <!-- <a
+                {{--
+                 <a
                     href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
                     <div class="practice_w_card d-flex align-items-center justify-content-center m-2 py-5">
-                        {{--<img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}"
-                        class="mb-4 w-100" />--}}
+                        <img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}"
+                        class="mb-4 w-100" />
                         <h4 class="heading text-center">{{$row->title}}</h4>
                     </div>
-                </a> -->
+                </a> 
+                --}}
             </div>
             @endforeach
         </div>
