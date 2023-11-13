@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\IndexController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,4 +80,13 @@ Route::get('/create-storage-link', function () {
     } else {
         return 'Error creating storage link.';
     }
+});
+
+Route::get('/send-test-email', function () {
+    Mail::raw('Test email content', function ($message) {
+        $message->to('khanfaisal.makent@gmail.com')
+                ->subject('Test Email');
+    });
+
+    return 'Test email sent!';
 });

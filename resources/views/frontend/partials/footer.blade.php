@@ -49,9 +49,9 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
                     <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
-                    <a href="tel:011-41023400" class="mobile" data-aos-once="true" data-aos="fade-up">011-41023400</a>
-                    <a href="mailto:info@ahlawatassociates.in" class="email" data-aos-once="true"
-                        data-aos="fade-up">info@ahlawatassociates.in</a>
+                    <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true" data-aos="fade-up">{{ get_settings('mobile') }}</a>
+                    <a href="mailto:{{ get_settings('email') }}" class="email" data-aos-once="true"
+                        data-aos="fade-up">{{ get_settings('email') }}</a>
                 </div>
             </div>
             <div class="col-md-3 col-6">
@@ -85,9 +85,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Delhi (Head Office)</p>
                     <p data-aos-once="true" data-aos="fade-up">
-                        Plot No. 66, LGF, #TheHub, <br class="br" />
-                        Okhla Phase III, Okhla Industrial <br class="br" />
-                        Estate, New Delhi, 110020,
+                        {{ get_settings('delhi_address') }}
                     </p>
                 </div>
             </div>
@@ -95,9 +93,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Mumbai</p>
                     <p data-aos-once="true" data-aos="fade-up">
-                        No. 611, Reliables Pride opp. <br class="br" />
-                        Om Heera Panna Mall, Anand <br class="br" />
-                        Nagar, Jogeshwari West, Mumbai.
+                        {{ get_settings('mumbai_address') }}
                     </p>
                 </div>
             </div>
@@ -105,8 +101,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Chandigarh</p>
                     <p data-aos-once="true" data-aos="fade-up">
-                        Space jam, SCO, 50-51, <br class="br" />
-                        Sector 34A, Chandigarh, <br class="br" />160022, India
+                        {{ get_settings('chandigarh_address') }}
                     </p>
                 </div>
             </div>
@@ -152,18 +147,18 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-0">
                         <li>
-                            <a href="#"><img src="assets/frontend/images/instagram.png" alt="" /></a>
+                            <a href="{{ get_settings('instagram') }}"><img src="assets/frontend/images/instagram.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/ahlawatassociates/" target="_blank"><img
+                            <a href="{{ get_settings('facebook') }}" target="_blank"><img
                                     src="assets/frontend/images/facebook.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/company/ahlawat-associates?originalSubdomain=in"
+                            <a href="{{ get_settings('linkedin') }}"
                                 target="_blank"><img src="assets/frontend/images/linkedIn.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FAhlawatLaw%2F"
+                            <a href="{{ get_settings('twitter') }}"
                                 target="_blank"><img src="assets/frontend/images/twitter.png" alt="" /></a>
                         </li>
                     </ul>
@@ -181,7 +176,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 Home
             </span>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=918882400643">
+        <a href="https://api.whatsapp.com/send?phone={{ get_settings('whatsapp') }}">
             <span>
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </span>
@@ -189,7 +184,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 Whatsapp
             </span>
         </a>
-        <a href="tel:+011-41023400">
+        <a href="tel:+{{ get_settings('mobile') }}">
             <span>
                 <i class="fa fa-phone" aria-hidden="true"></i>
             </span>
@@ -197,7 +192,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->limit(8)
                 Call
             </span>
         </a>
-        <a href="mailto:contact@ahlawatassociates.in">
+        <a href="mailto:{{ get_settings('email') }}">
             <span>
                 <i class="fa fa-envelope" aria-hidden="true"></i>
             </span>

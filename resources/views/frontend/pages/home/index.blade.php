@@ -153,7 +153,7 @@ assistance for startups, FDI, Property law, IP, and more')
                             chat</a>
                     </p>
                     <span>
-                        <a class="number" href="tel:011-41023400">011-41023400</a>
+                        <a class="number" href="tel:011-41023400">{{ get_settings('mobile') }}</a>
 
                     </span>
                 </div>

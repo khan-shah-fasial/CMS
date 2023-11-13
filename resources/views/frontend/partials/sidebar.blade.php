@@ -42,7 +42,7 @@
                             <div class="wcs_popup_header_description">Click one of our representatives below</div>
                         </div>
                         <div class="wcs_popup_person_container">
-                            <div class="wcs_popup_person" data-number="+91 8882400643">
+                            <div class="wcs_popup_person" data-number="+{{ get_settings('whatsapp') }}">
                                 <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png"
                                         alt="" /></div>
                                 <div class="wcs_popup_person_content">
