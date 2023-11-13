@@ -79,7 +79,11 @@
 	</div>
 	</div>
 	<div class="col-md-6">
-	<div class="form-group mb-3">
+            <div class="form-group mb-3">
+                <label>Alt Image</label>
+                <input type="text" class="form-control" name="alt_main_image" value="{{ $blog->alt_main_image }}">
+            </div>
+	        <div class="form-group mb-3">
                 <label>Content <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="content" rows="5" required>{{ $blog->content }}</textarea>
             </div>

@@ -20,9 +20,10 @@ class IndexController extends Controller
     public function index(){
         return view('frontend.pages.home.index');
     }
-//--------------=============================== practice area =====================------------------------------
+//--------------=============================== practice area =====================---------------------------
     public function practice_area(){
-        $practiceAreas = PracticeArea::where('parent_id', null)->get();
+        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '8', '38', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10', '33'])->get();
+
         //return $practiceAreas;
         return view('frontend.pages.practicearea.index', compact('practiceAreas'));
     }
@@ -41,7 +42,10 @@ class IndexController extends Controller
         
 
         if(empty($detail->parent_id)){  
-            $child_detail = PracticeArea::where('parent_id', $detail->id)->where('status', 1)->get();
+            $focusAreaIds = json_decode($detail->focus_area, true);
+            $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
+
+            $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
         } else  {
             $child_detail = [];
         }

@@ -44,6 +44,19 @@
 						</div>
 						<div class="col-sm-12">
 							<div class="form-group mb-3">
+								<label>Focus Area <span class="red">*</span></label>
+								<select class="form-select select2" name="focus_area[]" multiple>
+									<option value="" disabled>Select Focus Area</option>
+									@foreach($allpracticearea as $row)
+										<option value="{{ $row->id }}" @if(in_array($row->id, json_decode($practicearea->focus_area, true))) selected @endif>
+											{{ $row->title }}
+										</option>
+									@endforeach
+								</select> 
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form-group mb-3">
 								<label>Why Choose Us </label>
 								<textarea class="form-control trumbowyg" name="why_choose_us" rows="5">{{ $practicearea->why_choose_us }}</textarea>
 							</div>
@@ -146,7 +159,13 @@
 					    	@if($practicearea->thumnail_image) 
 					    		<img src="{{ asset('storage/' . $practicearea->thumnail_image) }}" class="img-thumbnail"> 
 							@endif
-						</div>						
+						</div>
+						<div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label>Alt Thumnail Image</label>
+                                <input type="text" class="form-control" name="alt_thumnail_image" value="{{ $practicearea->alt_thumnail_image }}">
+                            </div>
+                        </div>						
 						<div class="col-sm-9">
 							<div class="form-group mb-3">
 								<label>Section Image <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
@@ -160,7 +179,13 @@
 					    	@if($practicearea->section_image) 
 					    		<img src="{{ asset('storage/' . $practicearea->section_image) }}" class="img-thumbnail"> 
 							@endif
-						</div>					
+						</div>
+						<div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label>Alt Section Image</label>
+                                <input type="text" class="form-control" name="alt_section_image" value="{{ $practicearea->alt_section_image }}">
+                            </div>
+                        </div>					
 					</div>
 				</div>
 			</div>

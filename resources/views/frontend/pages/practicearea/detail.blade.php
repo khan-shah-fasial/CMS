@@ -8,6 +8,35 @@
 
 @section('page.publish_time', "$detail->updated_at")
 
+@section('page.schema')
+<!--------------------------- Page Schema --------------------------------->
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+        "@type": "ListItem", 
+        "position": 1, 
+        "name": "Home",
+        "item": "{{ url(route('index')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 2, 
+        "name": "Practice Areas",
+        "item": "{{ url(route('practicearea')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 3, 
+        "name": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
+        "item": "{{ url()->current() }}"  
+      }]
+    }
+</script>
+  
+<!--------------------------- Page Schema end--------------------------------->
+@endsection
+
 @section('page.content')
 
 
@@ -20,7 +49,7 @@
             <div class="col-md-12 px0">
                 <div class="text-center">
                     <h1 class="heading">{{ $detail->breadcrumb_title }}</h1>
-                    <p class="desc">{{ $detail->breadcrumb_subtitle }}</p>
+                    <h2 class="desc">{{ $detail->breadcrumb_subtitle }}</h2>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
@@ -58,7 +87,7 @@
 @if(!empty($detail->section_image))
 
 <section class="service_img" data-aos-once="true" data-aos="fade-up">
-    <img src="{{ asset('storage/' . $detail->section_image) }}" alt="">
+    <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
 </section>
 
 @endif
@@ -130,9 +159,11 @@
                                 <h2 class="heading3 mb-3" data-aos-once="true" data-aos="fade-up">
                                     Our Focus Area
                                 </h2>
+                                {{--
                                 <p class="desc mb-5 d-none" data-aos-once="true" data-aos="fade-up">
                                     {{ $detail->focus_area }}
-                                </p>
+                                </p> 
+                                --}}
                             </div>
 
                             @foreach($child_detail as $row)

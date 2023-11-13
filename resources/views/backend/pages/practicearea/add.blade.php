@@ -45,10 +45,15 @@
                                     <textarea class="form-control trumbowyg" name="content" rows="2" required></textarea>
                                 </div>
                             </div>
-                            <div class="col-sm-12 d-none">
+                            <div class="col-sm-12">
                                 <div class="form-group mb-3">
                                     <label>Focus Area</label>
-                                    <input type="hidden" class="form-control" name="focus_area" value="" >
+                                    <select class="select2 form-select" name="focus_area[]" multiple>
+                                        <option value="" disabled>Select Focus Area</option>
+                                        @foreach($practicearea as $row)
+                                            <option value="{{ $row->id }}">{{ $row->title }}</option>
+                                        @endforeach
+                                    </select> 
                                 </div>
                             </div> 
                             <div class="col-sm-12">
@@ -134,8 +139,20 @@
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
+                                <label>Alt Thumnail Image</label>
+                                <input type="text" class="form-control" name="alt_thumnail_image" value="" >
+                            </div>
+                        </div> 
+                        <div class="col-sm-12">
+                            <div class="form-group mb-3">
                                 <label>Section Image <span class="font-size11">(Max file size 80kb - 1125*460)</span></label>
                                 <input class="form-control" type="file" id="section_image" name="section_image">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label>Alt Section Image</label>
+                                <input type="text" class="form-control" name="alt_section_image" value="">
                             </div>
                         </div>                                        
                     </div>

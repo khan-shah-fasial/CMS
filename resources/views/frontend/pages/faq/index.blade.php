@@ -6,6 +6,38 @@
 
 @section('page.type', 'website')
 
+@section('page.schema')
+@php 
+$count = count($faq);
+$i = 1; 
+@endphp
+<!------------------------ Faq Schema ---------------------------------->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      @foreach ($faq as $row)
+        {
+          "@type": "Question",
+          "name": "{{ $row->question }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode(strip_tags($row->answer))) @endphp"
+          }
+        }@if($i < $count),@endif
+        @php $i++; @endphp
+      @endforeach
+    ]
+  }
+</script>
+  
+
+<!------------------------- Faq Schema ------------------------------------->
+
+@endsection
+
 @section('page.content')
 
 

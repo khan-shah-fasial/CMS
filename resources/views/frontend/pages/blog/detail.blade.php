@@ -13,6 +13,65 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 
 @section('page.publish_time', "$detail->updated_at")
 
+@section('page.schema')
+<!--------------------------- Page Schema --------------------------------->
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/", 
+      "@type": "BreadcrumbList", 
+      "itemListElement": [{
+        "@type": "ListItem", 
+        "position": 1, 
+        "name": "Home",
+        "item": "{{ url(route('index')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 2, 
+        "name": "{{ $page->name }}",
+        "item": "{{ url(route(''.$url.'')) }}"  
+      },{
+        "@type": "ListItem", 
+        "position": 3, 
+        "name": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
+        "item": "{{ url()->current() }}"  
+      }]
+    }
+</script>
+
+@if($page->name != 'Deal Update' )
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{{ $page->name }}Posting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url()->current() }}"
+      },
+      "headline": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
+      "description": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->short_description)); @endphp",
+      "image": "{{ asset('storage/' . $detail->main_image) }}",  
+      "author": {
+        "@type": "Person",
+        "name": "{{ $author->name }}",
+        "url": "{{ url('') }}/"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ url('') }}/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ asset('/assets/frontend/images/logo.png') }}"
+        }
+      },
+      "datePublished": "{{ $detail->updated_at }}"
+    }
+</script>
+@endif
+    
+<!--------------------------- Page Schema end--------------------------------->
+@endsection
+
 @section('page.content')
 
 <!-------================ blog detail start ============ ------------>
@@ -21,7 +80,7 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <!-- -------------------- blog details banner start ---------------- -->
 
 <div class="blog_details_page_banner">
-    <img src="{{ asset('storage/' . $detail->main_image) }}">
+    <img src="{{ asset('storage/' . $detail->main_image) }}" alt="{{ $detail->alt_main_image }}" />
 
 </div>
 

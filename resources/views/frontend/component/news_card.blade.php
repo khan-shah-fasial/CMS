@@ -4,7 +4,7 @@
 <div class="col-lg-4 col-md-6 px0" data-aos="fade-up" data-aos-once="true">
     <div class="blog_big_box me-xl-3 mb-md-5 mb-3 ">
         <div class="hover_effect_img">
-            <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" data-aos="fade-up"
+            <img src="{{ asset('storage/' . $row->main_image) }}" alt="{{ $row->alt_main_image }}" class="blog_img" data-aos="fade-up"
                 data-aos-once="true" />
             <div class="overlay">
                 <a

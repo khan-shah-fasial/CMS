@@ -51,6 +51,7 @@ class BlogController extends Controller
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
             'main_image' => $imagePath,
+            'alt_main_image' => $request->input('alt_main_image'),
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'user_id' => $request->input('user_id'),
@@ -134,6 +135,7 @@ class BlogController extends Controller
         $blog->blog_category_ids = json_encode($request->input('blog_category_ids'));
         $blog->title = $request->input('title');
         $blog->slug = $slug;
+        $blog->alt_main_image = $request->input('alt_main_image');
         $blog->short_description = $request->input('short_description');
         $blog->content = $request->input('content');
         $blog->meta_title = $request->input('meta_title');
