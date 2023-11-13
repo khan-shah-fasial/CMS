@@ -14,6 +14,8 @@ use App\Models\Contact;
 use App\Models\BlogComment;
 use App\Models\MediaCoverage;
 use App\Models\Publication;
+use Illuminate\Support\Facades\Mail;
+
 
 class IndexController extends Controller
 {
@@ -192,9 +194,41 @@ class IndexController extends Controller
         // Create the contact record, including 'cv' if provided
         $contactData = $request->all();
         $contactData['cv'] = $cvPath;
-    
+
         // Create the contact record
         Contact::create($contactData);
+
+        // Send email if $cvPath is not null
+
+        $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
+        $subject = 'Lead Enquiry';
+
+        // Format $contactData into an HTML table
+        $body = '<table>';
+        foreach ($contactData as $key => $value) {
+                if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
+                    $body .= "<tr><td>$key</td><td>$value</td></tr>";
+                }
+            }
+        $body .= '</table>';
+
+        if ($cvPath !== null) {
+             // Optional attachments
+            $attachments = [
+                [
+                    'path' => storage_path("app/public/$cvPath"), // Replace with the actual path
+                    'name' => 'CV.pdf', // Replace with the desired attachment name
+                ],
+                // Add more attachments if needed
+            ];
+
+            // Send the email
+            sendEmail($recipient, $subject, $body, $attachments);
+
+        }
+
+        sendEmail($recipient, $subject, $body);
+
     
         $response = [
             'status' => true,

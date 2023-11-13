@@ -17,6 +17,7 @@ use App\Http\Controllers\backend\TrumbowygController;
 use App\Http\Controllers\backend\MediaCoverageController;
 use App\Http\Controllers\backend\PublicationController;
 use App\Http\Controllers\backend\ContactController;
+use App\Http\Controllers\backend\BusinessSettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -182,4 +183,20 @@ Route::group(['prefix' => 'contact'], function () {
     Route::get('/index', [ContactController::class, 'index'])->name('contact.index');
     Route::get('/view/{id}', [ContactController::class, 'view'])->name('contact.view');
     Route::post('/delete/{id}', [ContactController::class, 'delete'])->name('contact.delete');
+});
+
+//setting
+Route::group(['prefix' => 'setting'], function () {
+    Route::get('/index', [BusinessSettingController::class, 'index'])->name('setting.index');
+    Route::post('/update', [BusinessSettingController::class, 'update'])->name('setting.update');
+});
+
+
+//clear cache
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('cache:clear');
+    $exitCode = Artisan::call('config:clear');
+    $exitCode = Artisan::call('view:clear');
+    //$exitCode = Artisan::call('route:cache');
+    //$exitCode = Artisan::call('key:generate');
 });
