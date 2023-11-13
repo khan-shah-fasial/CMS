@@ -520,6 +520,15 @@
     .footer {
         padding: 30px 0 20px 0;
     }
+
+    .searc_boxex {
+        padding: 15px 20px;
+    }
+
+    .searc_boxex h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

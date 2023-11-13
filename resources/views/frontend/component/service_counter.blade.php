@@ -18,7 +18,7 @@
                                     <p class="about_counter_number">
                                         <span class="counter-value" data-count="40">0</span>k
                                     </p>
-                                    <p class="about_counter_para">40+ years of experience</p>
+                                    <p class="about_counter_para">years of experience</p>
                                 </div>
                             </div>
                         </div>
