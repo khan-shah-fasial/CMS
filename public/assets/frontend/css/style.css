@@ -203,7 +203,7 @@ header {
 }
 
 .bottom_nav_links .nav_links li ul.dropdown {
-    width: 100%;
+    width: auto;
     position: absolute;
     z-index: 999;
     display: none;
@@ -781,7 +781,7 @@ header ul.dropdown li a:hover {
 }
 
 .team .team_box {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .team_main_img {
     overflow: hidden;
@@ -859,7 +859,7 @@ header ul.dropdown li a:hover {
 }
 
 .media .media_box {
-    margin-top: 32px;
+    margin-top: 20px;
 }
 
 .media .media_box img {
@@ -2176,4 +2176,21 @@ select.aos-init.aos-animate.error {
     padding: 10px 20px;
     border: none;
     border-radius: 30px;
+}
+.common_btn {
+    background: #e36d6a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.common_btn:hover {
+    background: lightgray;
+    color: black !important;
+}
+
+.wcs_button_circle .fa {
+    font-size: 48px !important;
 }

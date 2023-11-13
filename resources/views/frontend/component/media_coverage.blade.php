@@ -1,4 +1,4 @@
-@php 
+@php
 $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 'desc')->get();
 @endphp
 <!---========= Media coverage ==========--------------->
@@ -29,6 +29,12 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
 
                     @endforeach
 
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="text-center mt-3">
+                    <a href="{{ url(route('media-coverage')) }}" class="common_btn">View More</a>
                 </div>
             </div>
         </div>
