@@ -20,7 +20,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->name('practicearea');
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
 
-Route::get('/blogs', [IndexController::class, 'blog'])->name('blog');
+Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
 Route::get('/blogs-data', [IndexController::class, 'blog_data'])->name('blog-data');
 
 $postCategories = DB::table('blog_categories')->pluck('slug')->toArray();

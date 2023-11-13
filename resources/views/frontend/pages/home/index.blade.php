@@ -136,7 +136,7 @@ assistance for startups, FDI, Property law, IP, and more')
                     the
                     booming startup ecosystem, in both the domestic and international space.
                 </p>
-                <div class="d-flex align-items-start align-items-xl-center flex-xl-row flex-column gap-xl-4 mb-md-0 ">
+                <!-- <div class="d-flex align-items-start align-items-xl-center flex-xl-row flex-column gap-xl-4 mb-md-0 ">
                     <p data-aos-once="true" data-aos="fade-up" class="mb-1">
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
                         <span class="desc">Best corporate law firm in India</span>
@@ -145,7 +145,7 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span><img src="/assets/frontend/images/check.png" alt="" /></span>
                         <span class="desc">Best dispute resolution law firm in India</span>
                     </p>
-                </div>
+                </div> -->
                 <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
                     data-aos="fade-up">
                     <p class="desc text-dark mb-0">
@@ -183,7 +183,7 @@ assistance for startups, FDI, Property law, IP, and more')
     <div class="container">
         <div class="row">
             <div class="col-md-12 px0">
-                <div class="news_box me-xl-5">
+                <div class="news_box ">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">How A&amp;A is best
                         law firm in India(1k-10k)?
                     </h1>
@@ -191,14 +191,14 @@ assistance for startups, FDI, Property law, IP, and more')
                 </div>
             </div>
             <div class="col-md-6 px0">
-                <div class="news_box me-xl-5">
+                <div class="news_box">
 
                     <img src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
 
                 </div>
             </div>
             <div class="col-md-6 px0">
-                <div class="news_box me-xl-5">
+                <div class="news_box">
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         Ahlawat &amp; Associates is one of the top law-firms in India(1k-10k) because we at A&amp;A
                         adopted an
