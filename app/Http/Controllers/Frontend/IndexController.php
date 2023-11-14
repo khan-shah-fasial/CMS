@@ -44,14 +44,14 @@ class IndexController extends Controller
         }
         
 
-        if(empty($detail->parent_id)){  
+       // if(empty($detail->parent_id)){  
             $focusAreaIds = json_decode($detail->focus_area, true);
             $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
 
             $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
-        } else  {
-            $child_detail = [];
-        }
+        //} else  {
+            //$child_detail = [];
+        //} 
 
         return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
