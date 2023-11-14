@@ -2180,9 +2180,8 @@ select.aos-init.aos-animate.error {
 .common_btn {
     background: #e36d6a;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border: none;
-    border-radius: 30px;
     transition: all 0.5s;
     text-decoration: none;
 }
