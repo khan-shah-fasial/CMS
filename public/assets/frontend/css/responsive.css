@@ -224,18 +224,20 @@
     }
 
     .banner_section .banner_content p {
-        font-size: 12px !important;
+        font-size: 10px !important;
         margin-bottom: 0px;
-        line-height: 17px !important;
+        line-height: 14px !important;
         color: white;
     }
 
     .banner_section .banner_content h3 {
         font-size: 23px;
+        line-height: 26px;
     }
 
     .banner_section .banner_content a {
         color: white;
+        font-size: 14px;
     }
 
     .owl-theme .owl-nav {
