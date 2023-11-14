@@ -34,7 +34,7 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
 
             <div class="col-md-12">
                 <div class="text-center mt-3">
-                    <a href="{{ url(route('media-coverage')) }}" class="common_btn">View More</a>
+                    <a class="common_btn" href="{{ url(route('media-coverage')) }}">View More</a>
                 </div>
             </div>
         </div>
