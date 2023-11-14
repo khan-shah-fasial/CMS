@@ -24,7 +24,8 @@ class IndexController extends Controller
     }
 //--------------=============================== practice area =====================---------------------------
     public function practice_area(){
-        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '8', '38', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10', '33'])->get();
+        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '8', '38', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10', '33'])
+        ->orderByRaw("FIELD(id, '7', '9', '8', '38', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10', '33')")->get();
 
         //return $practiceAreas;
         return view('frontend.pages.practicearea.index', compact('practiceAreas'));
