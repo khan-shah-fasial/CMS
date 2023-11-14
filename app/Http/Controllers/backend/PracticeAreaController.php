@@ -17,7 +17,7 @@ class PracticeAreaController extends Controller
     }
 
     public function add() {
-        $practicearea = PracticeArea::where('status', 1)->where('parent_id', null)->get();
+        $practicearea = PracticeArea::where('status', 1)->get();
         return view('backend.pages.practicearea.add', compact('practicearea'));
     }  
     
@@ -108,7 +108,7 @@ class PracticeAreaController extends Controller
 
     public function edit($id) {
         $practicearea = PracticeArea::find($id);
-        $allpracticearea = PracticeArea::where('status', 1)->where('parent_id', null)->get();
+        $allpracticearea = PracticeArea::where('status', 1)->get();
         return view('backend.pages.practicearea.edit', compact('practicearea', 'allpracticearea'));
     }
     
