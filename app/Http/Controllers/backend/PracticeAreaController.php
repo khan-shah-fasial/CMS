@@ -217,6 +217,8 @@ class PracticeAreaController extends Controller
         unset($data['faq_description']);
 
         $slug = Str::slug($request->input('slug'), '-');
+
+        $focusArea = $request->input('focus_area', []);
     
         $practicearea->parent_id = $request->input('parent_id');
         $practicearea->title = $request->input('title');
@@ -225,7 +227,13 @@ class PracticeAreaController extends Controller
         $practicearea->alt_section_image = $request->input('alt_section_image');
         $practicearea->short_description = $request->input('short_description');
         $practicearea->content = $request->input('content');
-        $practicearea->focus_area = json_encode($request->input('focus_area'));
+        
+        if (empty($focusArea) || $focusArea === '[]') {
+            $practicearea->focus_area = '[]';
+        } else {
+            $practicearea->focus_area = json_encode($focusArea);
+        }
+
         $practicearea->why_choose_us = $request->input('why_choose_us');
         $practicearea->faq = $data['faq'];
         $practicearea->meta_title = $request->input('meta_title');
