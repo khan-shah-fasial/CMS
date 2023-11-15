@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'Career in Law: Join Ahlawat & Associates')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'If you are interested in joining the A&amp;A team for a career in law, please email us at admin@ahlawatassociates.in or contact any of our offices directly.')
 
 @section('page.type', 'website')
 

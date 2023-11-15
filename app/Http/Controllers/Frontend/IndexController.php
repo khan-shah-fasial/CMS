@@ -201,11 +201,11 @@ class IndexController extends Controller
 
         // Send email if $cvPath is not null
 
-        $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
+        $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
         $subject = 'Lead Enquiry';
 
         // Format $contactData into an HTML table
-        $body = '<table>';
+        $body = '<h2>A lead enquiry from the website ahlawatassociates.webtesting.pw.</h2></br><table>';
         foreach ($contactData as $key => $value) {
                 if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
                     $body .= "<tr><td>$key</td><td>$value</td></tr>";

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'Privacy Policy of the Website | Ahlawat & Associates Privacy Policy')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'A&amp;A’s Privacy Policy is relevant to anyone who uses the website or provides personal data relating to a natural person who can be identified.')
 
 @section('page.type', 'website')
 

@@ -146,7 +146,7 @@ $practice_Area = DB::table('practice_areas')
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
                         <li><a href="{{ url(route('privacy-policy')) }}">Privacy Policy </a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-md-0 mb-3">
                         <li>

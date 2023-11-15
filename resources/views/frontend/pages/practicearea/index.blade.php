@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'Practice Areas | Leading Law firms in India – Ahlawat & Associates')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Ahlawat & Associates is one of the leading law firms in India having expertise in diverse legal areas including corporate law, intellectual property, litigation, and real estate.')
 
 @section('page.type', 'practice area')
 
