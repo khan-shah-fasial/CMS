@@ -3,6 +3,8 @@
 @php
 $url = request()->segment('1');
 $page = DB::table('blog_categories')->where('slug', $url)->first();
+$count = count($author);
+$i = 1;
 @endphp
 
 @section('page.title', "$detail->meta_title")
@@ -48,12 +50,16 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
         "@type": "WebPage",
         "@id": "{{ url()->current() }}"
       },
-      "headline": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
-      "description": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->short_description)); @endphp",
+      "headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
+      "description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
       "image": "{{ asset('storage/' . $detail->main_image) }}",  
       "author": {
         "@type": "Person",
-        "name": "{{ $author->name }}",
+        "name": [
+          @foreach ($author as $row) @php $author_name = DB::table('users')->where('id', $row)->first(); @endphp
+            "{{ $author_name->name }}",
+          @endforeach
+        ],
         "url": "{{ url('') }}/"
       },  
       "publisher": {
@@ -112,7 +118,14 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
                 <div class="d-flex align-items-center justify-content-md-end gap-4">
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/author.png" alt="" />
-                        <span>{{ $author->name }}</span>
+                        <span>
+                            @foreach ($author as $row) 
+                                @php $author_name = DB::table('users')->where('id', $row)->first(); 
+                                @endphp
+                                {{ $author_name->name }} @if($count > $i), @endif
+                                @php $i++ @endphp 
+                            @endforeach
+                        </span>
                     </p>
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/calender.png" alt="" />

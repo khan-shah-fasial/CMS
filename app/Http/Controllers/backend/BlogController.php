@@ -43,6 +43,17 @@ class BlogController extends Controller
 
         $slug = Str::slug($request->input('slug'), '-');
 
+        $user_id = $request->input('user_id', []);
+
+        $sortedUserIds = json_decode($request->input('sortedUserIds'));
+
+        if(!empty($sortedUserIds)){
+            $user_id = json_decode($request->input('sortedUserIds'));
+        } else {
+            $user_id = $request->input('user_id', []);
+        }
+
+        
         // Create the Blog record with 'blog_category_ids' included
         DB::table('blogs')->insert([
             'blog_category_ids' => json_encode($request->input('blog_category_ids')),
@@ -54,10 +65,11 @@ class BlogController extends Controller
             'alt_main_image' => $request->input('alt_main_image'),
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
-            'user_id' => $request->input('user_id'),
+            'user_id' => json_encode($user_id),
             'created_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
             'updated_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
         ]);
+
 
         $response = [
             'status' => true,
@@ -131,6 +143,15 @@ class BlogController extends Controller
         }
         
         $slug = Str::slug($request->input('slug'), '-');
+        //$user_id = $blog->user_id;
+
+        $sortedUserIds = json_decode($request->input('sortedUserIds'));
+
+        if($sortedUserIds != NULL){
+            $user_id = json_decode($request->input('sortedUserIds'));
+        } else {
+            $user_id = $blog->user_id;
+        }
 
         $blog->blog_category_ids = json_encode($request->input('blog_category_ids'));
         $blog->title = $request->input('title');
@@ -140,7 +161,13 @@ class BlogController extends Controller
         $blog->content = $request->input('content');
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
-        $blog->user_id = $request->input('user_id');
+    
+        if (empty($user_id) || $user_id === '[]') {
+            $blog->user_id = '[]';
+        } else {
+            $blog->user_id = json_encode($user_id);
+        }
+        
         $blog->updated_at = date('Y-m-d H:i:s', strtotime($request->input('updated_at')));
         $blog->save();
 

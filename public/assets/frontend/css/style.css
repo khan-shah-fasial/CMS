@@ -925,7 +925,18 @@ section.blog p.desc {
     font-weight: 400;
     line-height: 14px;
     color: rgba(139, 139, 139, 1);
+    width: 174px;
 }
+
+.blog_big_box .blog_content .author .authorName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
 
 .blog_big_box .blog_content p {
     font-size: 15px;

@@ -90,7 +90,7 @@ class IndexController extends Controller
 
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
 
-        $author = User::find($detail->user_id);
+        $author = json_decode($detail->user_id, true);
 
         $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids)['0'])->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
 

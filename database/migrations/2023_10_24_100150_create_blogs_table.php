@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('meta_title', 255)->nullable();
             $table->longText('meta_description')->nullable();
             $table->tinyInteger('status')->default(1); 
-            $table->unsignedBigInteger('user_id');
+            $table->string('user_id', 255)->nullable();
             $table->timestamps();
         });
     }
