@@ -17,6 +17,7 @@ use App\Models\Publication;
 use Illuminate\Support\Facades\Mail;
 
 
+
 class IndexController extends Controller
 {
     public function index(){

@@ -30,7 +30,7 @@
                 </p>
                 <p class="d-flex align-items-center gap-2 author mb-0">
                     <img src="/assets/frontend/images/calender.png" alt="" />
-                    <span> {{ $row->created_at->format('F j, Y') }} </span>
+                    <span> {{ $row->updated_at->format('F j, Y') }} </span>
                 </p>
             </div>
             <p>
