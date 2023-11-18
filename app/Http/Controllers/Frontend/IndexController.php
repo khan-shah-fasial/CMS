@@ -24,8 +24,8 @@ class IndexController extends Controller
     }
 //--------------=============================== practice area =====================---------------------------
     public function practice_area(){
-        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '8', '38', '37', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10','63','62','33'])
-        ->orderByRaw("FIELD(id, '7', '9', '8', '38', '37', '14', '17', '12', '31', '39', '19', '11', '35', '36', '13', '10', '63','62','33')")->get();
+        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '8','11','37', '14','10', '38', '17', '12', '31', '39', '19','35', '36', '13','63','62','33'])
+        ->orderByRaw("FIELD(id, '7', '9', '8','11','37', '14','10','38', '17', '12', '31', '39', '19','35', '36', '13','63','62','33')")->get();
 
         //return $practiceAreas;
         return view('frontend.pages.practicearea.index', compact('practiceAreas'));
@@ -60,7 +60,7 @@ class IndexController extends Controller
 //--------------=============================== Blog  ================================------------------------------
 
     public function blog(){
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('created_at', 'desc')->paginate(6);
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.blog.index', compact('blog'));
     }
@@ -72,7 +72,7 @@ class IndexController extends Controller
     
         $blog = Blog::where('status', 1)
             ->whereJsonContains('blog_category_ids', '3')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('updated_at', 'desc')
             ->paginate($perPage, ['*'], 'page', $page);
     
         if ($request->ajax()) {

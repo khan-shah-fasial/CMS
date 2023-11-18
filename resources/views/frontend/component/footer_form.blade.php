@@ -1,5 +1,5 @@
 @php
-$practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy('series', 'asc')->get();
+$practice_Area = DB::table('practice_areas')->get();
 @endphp
 
 <!-----------================= Footer form start =============--------------->
@@ -30,7 +30,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 
 
         <div class="w-100">
-            <select class="form-select" data-aos-once="true" name="services" data-aos="fade-up" required>
+            <select class="form-select select2" data-aos-once="true" name="services" data-aos="fade-up" required>
                 <option value="">Select the Service</option>
 
                 @foreach ($practice_Area as $row)

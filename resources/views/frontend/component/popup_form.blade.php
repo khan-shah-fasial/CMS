@@ -1,5 +1,5 @@
 @php
-$practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy('series', 'asc')->get();
+$practice_Area = DB::table('practice_areas')->get();
 @endphp
 <!--------=============== Popup Form start ==============------------------>
 <form class="contact_form" id="add_popup_form" action="{{url(route('contact.create'))}}" method="post"
@@ -30,7 +30,7 @@ $practice_Area = DB::table('practice_areas')->where('parent_id', null)->orderBy(
 	
 	<div class="w-100" >
 	
-	<select class="" data-aos-once="true" name="services" data-aos="fade-up" required>
+	<select class="select2" data-aos-once="true" name="services" data-aos="fade-up" required>
             <option value="">Select the Service</option>
 
             @foreach ($practice_Area as $row)
