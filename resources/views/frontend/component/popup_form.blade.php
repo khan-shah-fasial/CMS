@@ -30,7 +30,7 @@ $practice_Area = DB::table('practice_areas')->get();
 
         <div class="w-100">
 
-            <select class="" data-aos-once="true" name="services" data-aos="fade-up" required>
+            <select class="select2" data-aos-once="true" name="services" data-aos="fade-up" required>
                 <option value="">Select the Service</option>
 
                 @foreach ($practice_Area as $row)
