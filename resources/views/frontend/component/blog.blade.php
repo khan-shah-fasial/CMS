@@ -14,7 +14,8 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                     <h6 class="main_heading">Latest Blog</h6>
                 </div>
                 <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">
-                    Enhance your legal knowledge <br> with Blogs! <span class="main_heading_color">Blog</span>
+                    Enhance your legal knowledge <br> with <a href="{{ url(route('blog')) }}"
+                        class="main_heading_color text-decoration-none cursor-pointer">Blog</a>
                 </h1>
                 <div class="row">
 
@@ -51,7 +52,8 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
             <div class="col-lg-4 px0 ">
                 <h2 class="heading mb-4 mt-4">
                     Get yourself updated with A&amp;A
-                    <span class="main_heading_color">Newscast!</span>
+                    <a href="{{ url(route('news')) }}"
+                        class="main_heading_color text-decoration-none cursor-pointer">Newscast!</a>
                 </h2>
 
                 @foreach ($right_news as $row)

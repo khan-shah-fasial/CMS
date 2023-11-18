@@ -5,11 +5,22 @@
         </div>
         <div class="menu_listing">
             <ul>
-                <li><a href="{{ url(route('practicearea')) }}">Practice Area</a></li>
-                <li><a href="{{ url(route('team')) }}">Team</a></li>
-                <li><a href="{{ url(route('blog')) }}">Blog</a></li>
-                <li><a href="{{ url(route('news')) }}">News</a></li>
-                <li><a href="{{ url(route('deal-update')) }}">Deal Update</a></li>
+                <li><a href="{{ url(route('about')) }}">Who We Are?</a></li>
+                <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
+                <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
+                <div class="sidebar_item">
+                    <a class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
+                    </a>
+                    <div class="sub-menu">
+                        <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
+                        <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
+                        <a href="{{ url(route('deal-update')) }}" class="sub-item">Deal Updates</a>
+                        <a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a>
+                        <a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>
+                    </div>
+                </div>
+                <li><a href="{{ url(route('career')) }}">Career</a></li>
+
             </ul>
             <div class="text-center">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us

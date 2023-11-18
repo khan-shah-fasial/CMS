@@ -19,62 +19,62 @@ $i = 1;
 <!--------------------------- Page Schema --------------------------------->
 
 <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-        "@type": "ListItem", 
-        "position": 1, 
+{
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
         "name": "Home",
-        "item": "{{ url(route('index')) }}"  
-      },{
-        "@type": "ListItem", 
-        "position": 2, 
+        "item": "{{ url(route('index')) }}"
+    }, {
+        "@type": "ListItem",
+        "position": 2,
         "name": "{{ $page->name }}",
-        "item": "{{ url(route(''.$url.'')) }}"  
-      },{
-        "@type": "ListItem", 
-        "position": 3, 
+        "item": "{{ url(route(''.$url.'')) }}"
+    }, {
+        "@type": "ListItem",
+        "position": 3,
         "name": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
-        "item": "{{ url()->current() }}"  
-      }]
-    }
+        "item": "{{ url()->current() }}"
+    }]
+}
 </script>
 
 @if($page->name != 'Deal Update' )
 <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "{{ $page->name }}Posting",
-      "mainEntityOfPage": {
+{
+    "@context": "https://schema.org",
+    "@type": "{{ $page->name }}Posting",
+    "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "{{ url()->current() }}"
-      },
-      "headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
-      "description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
-      "image": "{{ asset('storage/' . $detail->main_image) }}",  
-      "author": {
+    },
+    "headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
+    "description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
+    "image": "{{ asset('storage/' . $detail->main_image) }}",
+    "author": {
         "@type": "Person",
         "name": [
-          @foreach ($author as $row) @php $author_name = DB::table('users')->where('id', $row)->first(); @endphp
-            "{{ $author_name->name }}",
-          @endforeach
+            @foreach($author as $row) @php $author_name = DB::table('users') - > where('id', $row) - >
+            first();@endphp "{{ $author_name->name }}",
+            @endforeach
         ],
         "url": "{{ url('') }}/"
-      },  
-      "publisher": {
+    },
+    "publisher": {
         "@type": "Organization",
         "name": "{{ url('') }}/",
         "logo": {
-          "@type": "ImageObject",
-          "url": "{{ asset('/assets/frontend/images/logo.png') }}"
+            "@type": "ImageObject",
+            "url": "{{ asset('/assets/frontend/images/logo.png') }}"
         }
-      },
-      "datePublished": "{{ $detail->updated_at }}"
-    }
+    },
+    "datePublished": "{{ $detail->updated_at }}"
+}
 </script>
 @endif
-    
+
 <!--------------------------- Page Schema end--------------------------------->
 @endsection
 
@@ -115,19 +115,19 @@ $i = 1;
                 </ul>
             </div>
             <div class="col-md-4 px0">
-                <div class="d-flex align-items-center justify-content-md-end gap-4">
+                <div class="d-flex align-items-center justify-content-md-end gap-2">
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/author.png" alt="" />
                         <span>
-                            @foreach ($author as $row) 
-                                @php $author_name = DB::table('users')->where('id', $row)->first(); 
-                                @endphp
-                                {{ $author_name->name }} @if($count > $i), @endif
-                                @php $i++ @endphp 
+                            @foreach ($author as $row)
+                            @php $author_name = DB::table('users')->where('id', $row)->first();
+                            @endphp
+                            {{ $author_name->name }} @if($count > $i), @endif
+                            @php $i++ @endphp
                             @endforeach
                         </span>
                     </p>
-                    <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
+                    <p class="d-flex align-items-center gap-2 author w120" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/calender.png" alt="" />
                         <span>{{ $detail->updated_at->format('F j, Y') }}</span>
                     </p>
