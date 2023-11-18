@@ -227,9 +227,9 @@
                                     @endphp
 
                                     <li class="mb-4 mt-4" data-aos-once="true" data-aos="fade-up">
-                                        <h6>
+                                        <h3>
                                             <strong>{{ $question }}</strong>
-                                        </h6>
+                                        </h3>
                                         @php echo html_entity_decode($answer) @endphp
                                     </li>
 
