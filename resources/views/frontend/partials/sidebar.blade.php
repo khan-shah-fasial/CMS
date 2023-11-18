@@ -11,6 +11,7 @@
                 <div class="sidebar_item">
                     <a class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
                     </a>
+                    
                     <div class="sub-menu">
                         <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
                         <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
