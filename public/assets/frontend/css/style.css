@@ -208,6 +208,7 @@ header {
     z-index: 999;
     display: none;
     margin-top: 10px;
+    margin-right: 20px;
     background: white;
     max-width: max-content;
     border-top: 2px solid #e36d6a;
@@ -334,16 +335,6 @@ header ul.dropdown li a:hover {
     line-height: 20px;
 }
 
-.menu_btn {
-    padding: 8px 16px;
-    border: none;
-    background: #000;
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    transition: all 0.5s;
-}
 .menu_btn:hover {
     background: #e7403b;
     color: black;
@@ -409,11 +400,11 @@ header ul.dropdown li a:hover {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #000000a1;
+    background-color: #000000cc;
 }
 
 .carousel-caption {
-    bottom: 10.25rem !important;
+    bottom: 13rem !important;
 }
 
 .banner_section {
@@ -494,6 +485,24 @@ header ul.dropdown li a:hover {
 .awards_section button i {
     font-size: 30px;
 }
+.team button.owl-prev {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, color 0.3s;
+    left: 0;
+}
+
+.team button.owl-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, color 0.3s;
+    right: 0;
+}
+.team button i {
+    font-size: 30px;
+}
 
 .awards_section button:hover {
     background: transparent !important;
@@ -535,6 +544,12 @@ header ul.dropdown li a:hover {
 
 .about_counter_img:hover {
     background: gray;
+}
+
+.text_dark {
+    font-size: 20px;
+    text-decoration: none;
+    color: #e36d6a;
 }
 
 .about_right_counter {
@@ -812,8 +827,7 @@ header ul.dropdown li a:hover {
 #banner_slider_carousel .team_box .team_img:hover {
     transform: scale(1.1);
 }
-#banner_slider_carousel .owl-dots,
-#banner_slider_carousel .owl-nav {
+#banner_slider_carousel .owl-dots {
     display: none;
 }
 
@@ -928,15 +942,13 @@ section.blog p.desc {
     width: 174px;
 }
 
-.blog_big_box .blog_content .author .authorName{
+.blog_big_box .blog_content .author .authorName {
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-
-
 
 .blog_big_box .blog_content p {
     font-size: 15px;
@@ -1357,6 +1369,10 @@ hr {
 
 .blog_details_page_banner img {
     width: 100%;
+}
+
+.w120 {
+    width: 120px;
 }
 
 /* ------------------ blog Details page banner end ------------- */
@@ -2158,7 +2174,7 @@ select.aos-init.aos-animate.error {
     align-items: center;
     width: 0;
     height: 0;
-    padding: 35px;
+    padding: 27px;
     text-decoration: none;
     border-radius: 50%;
     animation-name: pulse;
@@ -2202,5 +2218,81 @@ select.aos-init.aos-animate.error {
 }
 
 .wcs_button_circle .fa {
-    font-size: 48px !important;
+    font-size: 30px !important;
+}
+
+/* side bar drop down */
+
+.sidebar_item {
+    position: relative;
+    cursor: pointer;
+}
+.sidebar_item a {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 22px;
+    color: black;
+}
+
+.sidebar_item i {
+    margin-right: 15px;
+}
+
+.sidebar_item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.sidebar_item .sub-menu {
+    display: none;
+}
+
+.footer_text {
+    font-size: 11px !important;
+    color: gray;
+    line-height: 20px !important;
+    margin-bottom: 25px;
+}
+
+.menu_btn {
+    padding: 8px 16px;
+    border: none;
+    background: #000;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    transition: all 0.5s;
+    position: relative;
+}
+.menu_btn::after {
+    background-color: black;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    animation-name: blink;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes blink {
+    0% {
+        transform: scale3d(1, 1, 1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale3d(1.1, 1.3, 1.1);
+        opacity: 0;
+    }
 }

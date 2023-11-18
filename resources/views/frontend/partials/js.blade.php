@@ -1,9 +1,9 @@
-
 <script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/frontend/js/jquery.min.js"></script>
 
 <!--aos js-->
 <script src="/assets/frontend/js/aos.js"></script>
+<script src="/assets/frontend/js/core.js"></script>
 
 <!--owl carousel js-->
 <script src="/assets/frontend/js/owl.carousel.js"></script>

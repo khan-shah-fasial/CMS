@@ -1,8 +1,8 @@
 @php
 $practice_Area = DB::table('practice_areas')
-    ->whereIn('id', ['7', '9', '11', '8', '10', '12', '13', '14'])
-    ->orderByRaw("FIELD(id, '7', '9', '11', '8', '10', '12', '13', '14')")
-    ->get();
+->whereIn('id', ['7', '9', '11', '8', '10', '12', '13', '14'])
+->orderByRaw("FIELD(id, '7', '9', '11', '8', '10', '12', '13', '14')")
+->get();
 @endphp
 <!--------------------footer start----------------------------->
 <!------------------ Contact Start -------------------------->
@@ -52,7 +52,8 @@ $practice_Area = DB::table('practice_areas')
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
                     <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
-                    <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true" data-aos="fade-up">{{ get_settings('mobile') }}</a>
+                    <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true"
+                        data-aos="fade-up">{{ get_settings('mobile') }}</a>
                     <a href="mailto:{{ get_settings('email') }}" class="email" data-aos-once="true"
                         data-aos="fade-up">{{ get_settings('email') }}</a>
                 </div>
@@ -76,7 +77,7 @@ $practice_Area = DB::table('practice_areas')
                             </li>
                             <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('blog')) }}">Blog </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('faq')) }}">Faq </a></li>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('faq')) }}">FAQs </a></li>
                         </ul>
                     </div>
                 </div>
@@ -140,7 +141,15 @@ $practice_Area = DB::table('practice_areas')
         </div>
 
         <div class="row">
-            <div class="col-md-12 mt-md-5 mt-2">
+            <div class="col-md-12 mt-4">
+                <p class="footer_text">
+                    As per the rules of the Bar Council of India, we are not permitted to solicit work and
+                    advertise. The user acknowledges that there has been no advertisement and personal
+                    communication from A&amp;A, any information obtained, or material downloaded from this
+                    website is completely at the user’s volition and any transmission, receipt or use of this
+                    site would not create any lawyer-client relationship. In cases where the user has any
+                    legal issues, he/she in all cases must seek independent legal advice.
+                </p>
                 <div
                     class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column mb-md-0 mb-5">
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
@@ -149,20 +158,20 @@ $practice_Area = DB::table('practice_areas')
                         <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-md-0 mb-3">
-                        <li>
+                        <!-- <li>
                             <a href="{{ get_settings('instagram') }}"><img src="assets/frontend/images/instagram.png" alt="" /></a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ get_settings('facebook') }}" target="_blank"><img
                                     src="assets/frontend/images/facebook.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="{{ get_settings('linkedin') }}"
-                                target="_blank"><img src="assets/frontend/images/linkedIn.png" alt="" /></a>
+                            <a href="{{ get_settings('linkedin') }}" target="_blank"><img
+                                    src="assets/frontend/images/linkedIn.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="{{ get_settings('twitter') }}"
-                                target="_blank"><img src="assets/frontend/images/twitter.png" alt="" /></a>
+                            <a href="{{ get_settings('twitter') }}" target="_blank"><img
+                                    src="assets/frontend/images/twitter.png" alt="" /></a>
                         </li>
                     </ul>
                 </div>

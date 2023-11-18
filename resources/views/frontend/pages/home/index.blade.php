@@ -42,11 +42,14 @@ assistance for startups, FDI, Property law, IP, and more')
                     <div class="banner_content">
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <p>
-                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
-                            catering to domestic
-                            and international clients since 1978
-                        </p>
+
+                        <div class="animation_text">
+
+                            <span id="ani_text">
+
+                            </span>
+                        </div>
+
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
@@ -60,11 +63,12 @@ assistance for startups, FDI, Property law, IP, and more')
                     <div class="banner_content">
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <p>
-                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
-                            catering to domestic
-                            and international clients since 1978
-                        </p>
+                        <div class="animation_text">
+                            <span id="ani_2">
+
+                            </span>
+                        </div>
+
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
@@ -78,11 +82,12 @@ assistance for startups, FDI, Property law, IP, and more')
                     <div class="banner_content">
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <p>
-                            Ahlawat &amp; Associates is one of the leading full-service law firm in India (1k-10k)
-                            catering to domestic
-                            and international clients since 1978
-                        </p>
+                        <div class="animation_text">
+                            <span id="ani_3">
+
+                            </span>
+                        </div>
+
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
                         </a>
@@ -148,14 +153,14 @@ assistance for startups, FDI, Property law, IP, and more')
                 </div> -->
                 <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
                     data-aos="fade-up">
-                    <p class="desc text-dark mb-0">
-                        Any query <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text-dark">lets
-                            chat</a>
+                    <p class="desc text-dark mb-md-0 mb-3">
+                        Any query <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text_dark">lets
+                            chat <img src="/assets/frontend/images/right.png" alt="" /></a>
                     </p>
-                    <span>
+                    <!-- <span>
                         <a class="number" href="tel:011-41023400">{{ get_settings('mobile') }}</a>
 
-                    </span>
+                    </span> -->
                 </div>
             </div>
 
