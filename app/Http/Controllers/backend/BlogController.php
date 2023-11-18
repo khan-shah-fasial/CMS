@@ -148,7 +148,8 @@ class BlogController extends Controller
         $sortedUserIds = json_decode($request->input('sortedUserIds'));
 
         if($sortedUserIds != NULL){
-            $user_id = json_decode($request->input('sortedUserIds'));
+            $user_id1 = json_decode($request->input('sortedUserIds'));
+            $user_id = json_encode($user_id1);
         } else {
             $user_id = $blog->user_id;
         }
@@ -165,7 +166,7 @@ class BlogController extends Controller
         if (empty($user_id) || $user_id === '[]') {
             $blog->user_id = '[]';
         } else {
-            $blog->user_id = json_encode($user_id);
+            $blog->user_id = $user_id;
         }
         
         $blog->updated_at = date('Y-m-d H:i:s', strtotime($request->input('updated_at')));
