@@ -38,7 +38,7 @@
                         @endforeach
                     </span>
                 </p>
-                <p class="d-flex align-items-center gap-2 author mb-0">
+                <p class="d-flex align-items-center gap-2 author mb-0 w120">
                     <img src="/assets/frontend/images/calender.png" alt="" />
                     <span> {{ $row->updated_at->format('F j, Y') }} </span>
                 </p>
