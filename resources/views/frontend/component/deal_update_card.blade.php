@@ -18,7 +18,8 @@
         </div>
 
         @php
-        $author = DB::table('users')->where('id', $row->user_id)->first();
+        $author = json_decode($row->user_id, true);
+        $count = count($author);
         @endphp
 
         <div class="blog_content">
@@ -26,9 +27,18 @@
                 class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row  gap-xl-4 gap-lg-0 gap-2 mb-2">
                 <p class="d-flex align-items-center gap-2 author mb-0">
                     <img src="/assets/frontend/images/author.png" alt="" />
-                    <span>{{ $author->name }}</span>
+                    <span>
+                        @php $i = 1; @endphp
+                        @foreach ($author as $details)
+                        @php $author_name = DB::table('users')->where('id', $details)->first();
+                        @endphp
+                        {{ $author_name->name }}
+                        @if($count > $i), @endif
+                        @php $i++; @endphp
+                        @endforeach
+                    </span>
                 </p>
-                <p class="d-flex align-items-center gap-2 author mb-0">
+                <p class="d-flex align-items-center gap-2 author mb-0 w120">
                     <img src="/assets/frontend/images/calender.png" alt="" />
                     <span> {{ $row->updated_at->format('F j, Y') }} </span>
                 </p>
