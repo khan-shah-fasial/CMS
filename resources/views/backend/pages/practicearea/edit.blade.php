@@ -27,7 +27,8 @@
 							<div class="form-group mb-3">
 								<label>Main Practice Area</label>
 								<select class="form-select select2" name="parent_id">
-									<option value="">--Select--</option> @foreach($allpracticearea as $row)
+									<option value="">--Select--</option> 
+									@foreach($allpracticearea as $row)
 									<option value="{{ $row->id }}" @if( $row->id == $practicearea->parent_id ) selected @endif>{{ $row->title }}</option> @endforeach </select>
 							</div>
 						</div>
@@ -184,6 +185,16 @@
                             <div class="form-group mb-3">
                                 <label>Alt Section Image</label>
                                 <input type="text" class="form-control" name="alt_section_image" value="{{ $practicearea->alt_section_image }}">
+                            </div>
+                        </div>
+						<div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label>Special Service</label>
+                                <select class="form-select" name="special_service">
+                                    <option value="0" @if( $practicearea->special_service == '0') selected @endif>--Select--</option>
+                                    <option value="1" @if( $practicearea->special_service == '1') selected @endif>Specialised Services</option>
+                                    <option value="2" @if( $practicearea->special_service == '2') selected @endif>Page</option>
+                                </select> 
                             </div>
                         </div>					
 					</div>

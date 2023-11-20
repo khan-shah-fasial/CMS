@@ -127,7 +127,7 @@ assistance for startups, FDI, Property law, IP, and more')
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
-                    Ahlawat &amp; Associates is one of leading full-service law firms in India , catering to
+                    Ahlawat &amp; Associates is one of leading full-service law firms in India, catering to
                     domestic and
                     international clients. Incorporated in 1978 as a primary litigation practice by Mrs. Avnish
                     Ahlawat, A&amp;A gradually expanded its field of services and expertise and is now one of the leading

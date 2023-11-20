@@ -154,6 +154,16 @@
                                 <label>Alt Section Image</label>
                                 <input type="text" class="form-control" name="alt_section_image" value="">
                             </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label>Special Service</label>
+                                <select class="form-select" name="special_service">
+                                    <option value="0">--Select--</option>
+                                    <option value="1">Specialised Services</option>
+                                    <option value="2">Page</option>
+                                </select> 
+                            </div>
                         </div>                                        
                     </div>
                 </div>

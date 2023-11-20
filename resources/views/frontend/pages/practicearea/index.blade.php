@@ -39,8 +39,14 @@
         <div class="row">
             @foreach($practiceAreas as $row)
             <div class="col-md-4 mb-2 px0">
-                <a href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}"
-                    class="btn_hover btn-3 hover-border-5 text-center ">
+                <a href="{{ 
+                    $row->special_service == '1' ? 
+                        url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                    ($row->special_service == '2' ?
+                        url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                        url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                ) }}"
+                class="btn_hover btn-3 hover-border-5 text-center ">
                     <span>{{$row->title}}</span>
                 </a>
 
