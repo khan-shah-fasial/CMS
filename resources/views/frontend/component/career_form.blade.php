@@ -19,8 +19,8 @@
     </div>
     <div class="d-flex align-items-center flex-md-row flex-column gap-md-4">
         <div class="mb-3 w-100">
-            <input type="number" class="form-control" name="phone" placeholder=" Your Phone No" data-aos-once="true"
-                data-aos="fade-up" required />
+            <input id="career" type="tel" class="form-control phone" name="phone" placeholder=" Your Phone No"
+                data-aos-once="true" data-aos="fade-up" required />
         </div>
 
         <div class="mb-3 w-100">
@@ -37,15 +37,15 @@
             <label for="formFile" class="form-label">Upload Your CV</label>
             <input class="form-control" type="file" name="cv" id="formFile" required accept=".pdf,.docx">
         </div>
-		
+
     </div>
 
 
-<div class="d-flex align-items-center gap-2">
+    <div class="d-flex align-items-center gap-2">
 
-		<div class="w-100 mb-3">
-           <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
-		   </div>
+        <div class="w-100 mb-3">
+            <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
+        </div>
     </div>
 
 

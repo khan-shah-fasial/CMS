@@ -3,7 +3,13 @@
 
 <!--aos js-->
 <script src="/assets/frontend/js/aos.js"></script>
+
+<!-- Animation Typing--------- -->
 <script src="/assets/frontend/js/core.js"></script>
+
+
+<!-- Animation International Phone Number--------- -->
+<script src="/assets/frontend/js/intlTelInput.min.js"></script>
 
 <!--owl carousel js-->
 <script src="/assets/frontend/js/owl.carousel.js"></script>
