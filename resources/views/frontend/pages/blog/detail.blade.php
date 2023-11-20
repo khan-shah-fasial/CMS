@@ -41,39 +41,39 @@ $i = 1;
 }
 </script>
 
-@if($page->name != 'Deal Update' )
+{{--@if($page->name != 'Deal Update' )
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "{{ $page->name }}Posting",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ url()->current() }}"
-    },
-    "headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
-    "description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
-    "image": "{{ asset('storage/' . $detail->main_image) }}",
-    "author": {
-        "@type": "Person",
-        "name": [
-            @foreach($author as $row) @php $author_name = DB::table('users') - > where('id', $row) - >
-            first();@endphp "{{ $author_name->name }}",
-            @endforeach
-        ],
-        "url": "{{ url('') }}/"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "{{ url('') }}/",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "{{ asset('/assets/frontend/images/logo.png') }}"
-        }
-    },
-    "datePublished": "{{ $detail->updated_at }}"
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "{{ url()->current() }}"
+},
+"headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
+"description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
+"image": "{{ asset('storage/' . $detail->main_image) }}",
+"author": {
+"@type": "Person",
+"name": [
+@foreach($author as $row) @php $author_name = DB::table('users') - > where('id', $row) - >
+first();@endphp "{{ $author_name->name }}",
+@endforeach
+],
+"url": "{{ url('') }}/"
+},
+"publisher": {
+"@type": "Organization",
+"name": "{{ url('') }}/",
+"logo": {
+"@type": "ImageObject",
+"url": "{{ asset('/assets/frontend/images/logo.png') }}"
+}
+},
+"datePublished": "{{ $detail->updated_at }}"
 }
 </script>
-@endif
+@endif--}}
 
 <!--------------------------- Page Schema end--------------------------------->
 @endsection
