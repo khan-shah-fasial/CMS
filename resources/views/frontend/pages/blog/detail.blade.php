@@ -41,7 +41,7 @@ $i = 1;
 }
 </script>
 
-{{--@if($page->name != 'Deal Update' )
+@if($page->name != 'Deal Update' )
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -56,8 +56,9 @@ $i = 1;
 "author": {
 "@type": "Person",
 "name": [
-@foreach($author as $row) @php $author_name = DB::table('users') - > where('id', $row) - >
-first();@endphp "{{ $author_name->name }}",
+@foreach($author as $row) @php $author_name = DB::table('users')->where('id', $row)->
+first();
+@endphp "{{ $author_name->name }}",
 @endforeach
 ],
 "url": "{{ url('') }}/"
@@ -73,7 +74,7 @@ first();@endphp "{{ $author_name->name }}",
 "datePublished": "{{ $detail->updated_at }}"
 }
 </script>
-@endif--}}
+@endif
 
 <!--------------------------- Page Schema end--------------------------------->
 @endsection
