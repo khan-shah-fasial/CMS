@@ -32,5 +32,6 @@ class PracticeArea extends Model
         'status',
         'series',
         'is_home',
+        'special_service'
     ];    
 }

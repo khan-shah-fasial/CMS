@@ -20,8 +20,13 @@ $practice_Area = DB::table('practice_areas')
                                 @endphp
 
                                 <li>
-                                    <a
-                                        href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
+                                    <a href="{{ 
+                                        $row->special_service == '1' ? 
+                                            url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                        ($row->special_service == '2' ?
+                                            url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                            url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                    ) }}">
                                         <span>{{ $row->title }}</span>
                                         @if(!$subcategory->isEmpty())
                                         <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
@@ -31,8 +36,13 @@ $practice_Area = DB::table('practice_areas')
                                     <ul class="dropdown">
                                         @foreach($subcategory as $item)
                                         <li>
-                                            <a
-                                                href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a>
+                                            <a href="{{ 
+                                                $row->special_service == '1' ? 
+                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                ($row->special_service == '2' ?
+                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                            ) }}">{{ $item->title }}</a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -108,8 +118,13 @@ $practice_Area = DB::table('practice_areas')
                                         <ul>
 
                                             @foreach($subcategory as $item)
-                                            <li><a
-                                                    href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) }}">{{ $item->title }}</a>
+                                            <li>                <a href="{{ 
+                                                $row->special_service == '1' ? 
+                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                ($row->special_service == '2' ?
+                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                            ) }}">{{ $item->title }}</a>
                                             </li>
                                             @endforeach
 
@@ -119,8 +134,13 @@ $practice_Area = DB::table('practice_areas')
                                 @php $i++ @endphp
                                 @else
                                 <li>
-                                    <a
-                                        href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
+                                    <a href="{{ 
+                                        $row->special_service == '1' ? 
+                                            url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                        ($row->special_service == '2' ?
+                                            url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                            url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                    ) }}">
                                         <span> {{ $row->title }} </span>
                                     </a>
 
