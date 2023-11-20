@@ -96,6 +96,7 @@ class PracticeAreaController extends Controller
             'breadcrumb_title' => $request->input('breadcrumb_title'),
             'breadcrumb_subtitle' => $request->input('breadcrumb_subtitle'),
             'breadcrumb_image' => $imagePath1,
+            'special_service' => $request->input('special_service'),
         ]);
     
         $response = [
@@ -240,6 +241,7 @@ class PracticeAreaController extends Controller
         $practicearea->meta_description = $request->input('meta_description');
         $practicearea->breadcrumb_title = $request->input('breadcrumb_title');
         $practicearea->breadcrumb_subtitle = $request->input('breadcrumb_subtitle');
+        $practicearea->special_service = $request->input('special_service');
     
         $practicearea->save();
 

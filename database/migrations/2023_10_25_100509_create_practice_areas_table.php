@@ -33,6 +33,7 @@ return new class extends Migration
             $table->boolean('status')->default(1);
             $table->integer('series')->nullable();
             $table->boolean('is_home')->default(0);
+            $table->boolean('special_service')->default(0);
             $table->timestamps();
         });
     }
