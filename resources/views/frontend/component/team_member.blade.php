@@ -20,7 +20,7 @@ $team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
             </div>
             <div class="col-md-6 px0">
                 <p class="desc mt-md-4 mt-2" data-aos-once="true" data-aos="fade-up">
-                    Contact the best lawyers in India (10k-100k) Our team of Lawyers is highly skilled and confident in
+                    Contact the best lawyers in India  Our team of Lawyers is highly skilled and confident in
                     their
                     ability to offer advice that transcends borders. They understand and align themselves with the
                     clients&#39;

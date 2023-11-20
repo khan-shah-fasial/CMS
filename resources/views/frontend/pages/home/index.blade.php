@@ -43,7 +43,7 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
 
-                        <div class="animation_text">
+                        <!-- <div class="animation_text">
 
                             <span id="ani_text">
 
@@ -52,7 +52,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ assistance for startups, FDI, Property law, IP, and more')
                     <div class="banner_content">
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <div class="animation_text">
+                        <!-- <div class="animation_text">
                             <span id="ani_2">
 
                             </span>
@@ -71,7 +71,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@ assistance for startups, FDI, Property law, IP, and more')
                     <div class="banner_content">
                         <span>Welcome To</span>
                         <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <div class="animation_text">
+                        <!-- <div class="animation_text">
                             <span id="ani_3">
 
                             </span>
@@ -90,7 +90,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
                         <a href="about-us">Know More
                             <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -123,21 +123,18 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="underline_heading">
-                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Who We Are</h6>
+                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Who We Are ?</h6>
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
-                    Ahlawat &amp; Associates is one of leading full-service law firms in India (1k-10k), catering to
+                    Ahlawat &amp; Associates is one of leading full-service law firms in India , catering to
                     domestic and
                     international clients. Incorporated in 1978 as a primary litigation practice by Mrs. Avnish
-                    Ahlawat(100-
-                    1k), A&amp;A gradually expanded its field of services and expertise and is now one of the leading
+                    Ahlawat, A&amp;A gradually expanded its field of services and expertise and is now one of the leading
                     corporate /
-                    dispute resolution law firms in India(100-1k). A&amp;A has been recognized for its expertise in
+                    dispute resolution law firms in India. A&amp;A has been recognized for its expertise in
                     addressing
-                    an array of legal issues especially those relating to Foreign Direct Investment (10k-100k)
-                    (FDI)(100k-
-                    1m), Joint Ventures(10k-100k), Corporate Compliance &amp; Governance as well as advisory support to
+                    an array of legal issues especially those relating to Foreign Direct Investment, Joint Ventures, Corporate Compliance &amp; Governance as well as advisory support to
                     the
                     booming startup ecosystem, in both the domestic and international space.
                 </p>
@@ -190,7 +187,7 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-md-12 px0">
                 <div class="news_box ">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">How A&amp;A is best
-                        law firm in India(1k-10k)?
+                        law firm in India
                     </h1>
 
                 </div>
@@ -205,15 +202,14 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-md-6 px0">
                 <div class="news_box">
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
-                        Ahlawat &amp; Associates is one of the top law-firms in India(1k-10k) because we at A&amp;A
+                        Ahlawat &amp; Associates is one of the top law-firms in India because we at A&amp;A
                         adopted an
                         approach that demands the highest levels of understanding in each of our practice areas,
                         technical skill
                         and service delivery allowing us to provide accurate, reliable, timely and cost-effective advice
                         across a
                         range of industry groups and sectors. This is reflected through our team of best lawyer in India
-                        (10k-
-                        100k), who abide by the system and ensure that the client’s needs always come first. With our
+                         who abide by the system and ensure that the client’s needs always come first. With our
                         expertise
                         and diversity of experience within the teams, we can keep in touch with the changing environment
                         that
