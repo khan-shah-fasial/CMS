@@ -1075,6 +1075,14 @@ section.blog p.desc {
     color: black;
 }
 
+.contact_form .iti__country-name {
+    color: black;
+}
+
+.contact_form .iti {
+    width: 100%;
+}
+
 .contact .address_box {
     margin-top: 30px;
 }
