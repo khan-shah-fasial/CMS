@@ -939,7 +939,6 @@ section.blog p.desc {
     font-weight: 400;
     line-height: 14px;
     color: rgba(139, 139, 139, 1);
-    width: 174px;
 }
 
 .blog_big_box .blog_content .author .authorName {
@@ -2295,4 +2294,8 @@ select.aos-init.aos-animate.error {
         transform: scale3d(1.1, 1.3, 1.1);
         opacity: 0;
     }
+}
+
+.w120 {
+    width: 160px;
 }
