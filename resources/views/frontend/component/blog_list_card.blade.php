@@ -25,7 +25,7 @@
         <div class="blog_content">
             <div
                 class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row justify-content-between  gap-xl-4 gap-lg-0 gap-2 mb-2">
-                <p class="d-flex align-items-center gap-2 author mb-0">
+                <p class="d-flex align-items-center gap-2 author mb-0 w145">
                     <img src="/assets/frontend/images/author.png" alt="" />
                     <span class="authorName">
                         @php $i = 1; @endphp
@@ -38,7 +38,7 @@
                         @endforeach
                     </span>
                 </p>
-                <p class="d-flex align-items-center gap-2 author mb-0 w120">
+                <p class="d-flex align-items-center gap-2 author mb-0 w160">
                     <img src="/assets/frontend/images/calender.png" alt="" />
                     <span> {{ $row->updated_at->format('F j, Y') }} </span>
                 </p>

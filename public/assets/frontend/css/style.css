@@ -2296,6 +2296,9 @@ select.aos-init.aos-animate.error {
     }
 }
 
-.w120 {
+.w160 {
     width: 160px;
+}
+.w145 {
+    width: 145px;
 }
