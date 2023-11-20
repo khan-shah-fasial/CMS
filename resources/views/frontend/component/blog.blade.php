@@ -1,5 +1,6 @@
 @php
-$blog = DB::table('blogs')->where('status', 1)->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
+$blog = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
+'3')->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
 $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
 '4')->limit(4)->orderBy('created_at', 'desc')->get();
 @endphp
