@@ -13,6 +13,7 @@ use App\Models\BusinessSetting;
 //use App\Models\Publication;
 //use App\Models\Team;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 
     if (!function_exists('datetimeFormatter')) {
@@ -64,5 +65,12 @@ use Illuminate\Support\Facades\Mail;
                 }
             });
         }  
+    }
+
+    if(!function_exists('customSlug')){
+        function customSlug($value)
+        {
+            return preg_replace('/[^a-z0-9\/]/i', '-', Str::lower($value));
+        }
     }
 

@@ -32,6 +32,11 @@ $slug = DB::table('practice_areas')->pluck('slug')->toArray();
 Route::get('/{slug}', [IndexController::class, 'practice_area_detail'])
     ->where('slug', implode('|', $slug ))
     ->name('practicearea-detail-page');
+// ------------------------------------ extra paremeter service ------------------------
+// ------------------------------ normal service --------------------------------------
+Route::get('/area-of-practice/{slug1}', [IndexController::class, 'practice_area_detail'])
+    ->where('slug1', implode('|', $slug ))
+    ->name('practicearea-detail-extra'); 
 //-------------------------- service --------------------------------------------
 
 Route::get('/blog', [IndexController::class, 'blog'])->name('blog');

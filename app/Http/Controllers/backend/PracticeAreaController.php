@@ -73,7 +73,7 @@ class PracticeAreaController extends Controller
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
 
-        $slug = Str::slug($request->input('slug'), '-');
+        $slug = customSlug($request->input('slug'));
 
         $focusArea = $request->input('focus_area', []);
         
@@ -217,7 +217,7 @@ class PracticeAreaController extends Controller
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
 
-        $slug = Str::slug($request->input('slug'), '-');
+        $slug = customSlug($request->input('slug'));
 
         $focusArea = $request->input('focus_area', []);
     

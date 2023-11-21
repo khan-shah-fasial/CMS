@@ -37,11 +37,17 @@
                 <td>
                     <a target="_blank" href="{{ 
                         $row->special_service == '1' ? 
-                            url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                        ($row->special_service == '2' ?
-                            url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                            url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
-                    ) }}">{{$row->slug}}</a>
+                            url(route('practicearea-detail-specialised', ['slug' => $row->slug] )) :
+                            (
+                                $row->special_service == '2' ?
+                                    url(route('practicearea-detail-page', ['slug' => $row->slug] )) :
+                                    (
+                                        $row->special_service == '3' ?
+                                            url(route('practicearea-detail-extra', ['slug1' => $row->slug] )) :
+                                            url(route('practicearea-detail', ['slug' => $row->slug] ))
+                                    )
+                            )
+                    }}">{{$row->slug}}</a>
                 </td>                
                 <td>
                     @if($row->status)

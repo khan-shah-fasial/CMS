@@ -132,12 +132,18 @@ $practice_Area = DB::table('practice_areas')
                     @foreach($subcategory as $item)
                     <li data-aos-once="true" data-aos="fade-up"><a
                             href="{{ 
-                                $row->special_service == '1' ? 
-                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                ($row->special_service == '2' ?
-                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
-                            ) }}">{{ $item->title }}</a>
+                                $item->special_service == '1' ? 
+                                    url(route('practicearea-detail-specialised', ['slug' => $item->slug] )) :
+                                    (
+                                        $item->special_service == '2' ?
+                                            url(route('practicearea-detail-page', ['slug' => $item->slug] )) :
+                                            (
+                                                $item->special_service == '3' ?
+                                                    url(route('practicearea-detail-extra', ['slug1' => $item->slug] )) :
+                                                    url(route('practicearea-detail', ['slug' => $item->slug] ))
+                                            )
+                                    )
+                            }}">{{ $item->title }}</a>
                     </li>
                     @endforeach
                 </ul>

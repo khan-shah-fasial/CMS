@@ -194,6 +194,7 @@
                                     <option value="0" @if( $practicearea->special_service == '0') selected @endif>--Select--</option>
                                     <option value="1" @if( $practicearea->special_service == '1') selected @endif>Specialised Services</option>
                                     <option value="2" @if( $practicearea->special_service == '2') selected @endif>Page</option>
+									<option value="3" @if( $practicearea->special_service == '3') selected @endif>Inner Page</option>
                                 </select> 
                             </div>
                         </div>					

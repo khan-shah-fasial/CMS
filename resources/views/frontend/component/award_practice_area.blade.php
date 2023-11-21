@@ -32,11 +32,17 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                         <a
                             href="{{ 
                                 $row->special_service == '1' ? 
-                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                ($row->special_service == '2' ?
-                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
-                            ) }}">Read
+                                    url(route('practicearea-detail-specialised', ['slug' => $row->slug] )) :
+                                    (
+                                        $row->special_service == '2' ?
+                                            url(route('practicearea-detail-page', ['slug' => $row->slug] )) :
+                                            (
+                                                $row->special_service == '3' ?
+                                                    url(route('practicearea-detail-extra', ['slug1' => $row->slug] )) :
+                                                    url(route('practicearea-detail', ['slug' => $row->slug] ))
+                                            )
+                                    )
+                            }}">Read
                             More <img src="/assets/frontend/images/right.png" alt="" />
                         </a>
                     </div>

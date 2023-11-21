@@ -162,6 +162,7 @@
                                     <option value="0">--Select--</option>
                                     <option value="1">Specialised Services</option>
                                     <option value="2">Page</option>
+                                    <option value="3">Inner Page</option>
                                 </select> 
                             </div>
                         </div>                                        
