@@ -192,7 +192,13 @@
                                             {{ $row->short_description }}
                                         </p>
                                         <a
-                                            href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">Read
+                                            href="{{ 
+                                                $row->special_service == '1' ? 
+                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                ($row->special_service == '2' ?
+                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                            ) }}">Read
                                             More <img src="/assets/frontend/images/right.png" alt="" />
                                         </a>
                                     </div>

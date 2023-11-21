@@ -35,7 +35,13 @@
                 <td>{{$i++}}</td>
                 <td>{{$row->title}}</td>
                 <td>
-                    <a target="_blank" href="{{url(route('practicearea-detail', $row->slug))}}">{{$row->slug}}</a>
+                    <a target="_blank" href="{{ 
+                        $row->special_service == '1' ? 
+                            url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                        ($row->special_service == '2' ?
+                            url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
+                            url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                    ) }}">{{$row->slug}}</a>
                 </td>                
                 <td>
                     @if($row->status)
