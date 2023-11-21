@@ -208,9 +208,11 @@
     }
 
     .banner_content {
-        width: auto;
-        margin-top: 0;
-        color: #e75954;
+        height: 25vh;
+    }
+
+    #banner_slider_carousel {
+        margin-bottom: -49px;
     }
 
     .banner_section {
@@ -534,6 +536,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .banner_content {
+        height: 30vh;
+    }
     .service_why_choose .nav-pills .nav-link {
         min-width: 221px;
     }
@@ -588,6 +593,9 @@
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
+    .banner_content {
+        height: 40vh;
+    }
     .blog .blog_right_box {
         align-items: start;
         gap: 0;

@@ -63,19 +63,19 @@ $practice_Area = DB::table('practice_areas')
                     <div class="quick_links_box">
                         <h6 class="q_links_heading" data-aos-once="true" data-aos="fade-up">Quick Links</h6>
                         <ul>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('about')) }}">About Us</a>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('about')) }}">Our Journey</a>
                             </li>
                             <li data-aos-once="true" data-aos="fade-up">
-                                <a href="{{ url(route('practicearea')) }}">Practice Area </a>
+                                <a href="{{ url(route('practicearea')) }}">Our Expertise</a>
                             </li>
                             <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('career')) }}">Career </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('team')) }}">Teams </a>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('team')) }}">Our Professionals </a>
                             </li>
                             <li data-aos-once="true" data-aos="fade-up">
                                 <a href="{{ url(route('contact')) }}">Contact Us </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('blog')) }}">Blog </a>
+                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('blog')) }}">Blogs </a>
                             </li>
                             <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('faq')) }}">FAQs </a></li>
                         </ul>
@@ -85,7 +85,7 @@ $practice_Area = DB::table('practice_areas')
             <div class="col-md-6">
                 @include('frontend.component.footer_form')
             </div>
-            <div class="col-md-3 col-12">
+            <div class="col-md-4 col-12">
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Delhi (Head Office)</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -93,7 +93,7 @@ $practice_Area = DB::table('practice_areas')
                     </p>
                 </div>
             </div>
-            <div class="col-md-3 col-12">
+            <div class="col-md-4 col-12">
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Mumbai</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -101,7 +101,7 @@ $practice_Area = DB::table('practice_areas')
                     </p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up">Chandigarh</p>
                     <p data-aos-once="true" data-aos="fade-up">

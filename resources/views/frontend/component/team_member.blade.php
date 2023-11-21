@@ -8,17 +8,17 @@ $team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
 <section class="team">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
-                <div class="underline_heading">
-                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Team member</h6>
+            <div class="col-md-12  px0">
+                <div class="underline_heading d-flex align-items-center justify-content-center">
+                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Team member</h6>
                 </div>
-                <h1 class="main_heading" data-aos-once="true" data-aos="fade-up">
-                    We feel very proud <br />
+                <h1 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">
+                    We feel very proud 
                     for our
                     <span class="main_heading_color"> Experts </span>
                 </h1>
             </div>
-            <div class="col-md-6 px0">
+            <!-- <div class="col-md-6 px0">
                 <p class="desc mt-md-4 mt-2" data-aos-once="true" data-aos="fade-up">
                     Contact the best lawyers in India  Our team of Lawyers is highly skilled and confident in
                     their
@@ -26,7 +26,7 @@ $team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
                     clients&#39;
                     needs and collaborate closely to assist them in achieving their goals.
                 </p>
-            </div>
+            </div> -->
         </div>
         <div class="row">
             <div class="col-md-12">

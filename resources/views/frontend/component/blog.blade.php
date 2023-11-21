@@ -12,11 +12,11 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
 
             <div class="col-lg-8 px0">
                 <div class="underline_heading" data-aos-once="true" data-aos="fade-up">
-                    <h6 class="main_heading">Latest Blog</h6>
+                    <h6 class="main_heading">Latest Blogs</h6>
                 </div>
                 <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">
                     Enhance your legal knowledge <br> with <a href="{{ url(route('blog')) }}"
-                        class="main_heading_color text-decoration-none cursor-pointer">Blog</a>
+                        class="main_heading_color text-decoration-none cursor-pointer">Blogs</a>
                 </h1>
                 <div class="row">
 
