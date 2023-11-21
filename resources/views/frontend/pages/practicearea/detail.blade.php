@@ -101,7 +101,8 @@
 
 <!-- -------------------- service why choose start ---------------------- -->
 
-@if(count($child_detail) > 0 || !empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true)))
+{{--@if(count($child_detail) > 0 || !empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true))) --}}
+@if(count($child_detail) > 0 || empty($detail->why_choose_us) || !empty(json_decode($detail->faq, true)))
 <section class="service_why_choose">
     <div class="container">
         <div class="row">
@@ -132,6 +133,18 @@
                         </button>
                     </li>
                     @php $a = 1; @endphp
+
+                    @else
+
+                    <li class="nav-item" role="presentation" data-aos-once="true" data-aos="fade-up">
+                        <button class="nav-link @if($a != 1) active @endif" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="@if($a != 1) true @else false @endif">
+                            Why Choose Us
+                        </button>
+                    </li>
+                    @php $a = 1; @endphp
+
                     @endif
 
                     @if(!empty(json_decode($detail->faq, true)))
@@ -205,6 +218,43 @@
                     </div>
 
                     @php $b = 1; @endphp
+
+                    @else
+
+                    <div class="tab-pane fade @if($b != 1) show active @endif" id="pills-profile" role="tabpanel"
+                    aria-labelledby="pills-profile-tab">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                    Experienced Team
+                                </h2>
+                                  <p class="desc" data-aos-once="true" data-aos="fade-up">
+                                    A&A is among the top corporate law firms in India. At A&A, we believe that we are as good as our team, Our principle has guided us to ensure that we have the best corporate lawyers in India based at our main offices while the leading corporate lawyers in other parts of the world run our various practices across the nation, thus ensuring optimum management and service of even the most complex transactions. It is due to our standards of professional responsibility when dealing with our clients and various matters, which we stringently abide by that has enabled us to qualify as one of the reputed corporate law firms in India.
+                                  </p>
+                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                    Industry Experience
+                                </h2>
+                                  <p class="desc" data-aos-once="true" data-aos="fade-up">
+                                    Whilst A&A commercial law services has been able to cater to legal needs pan India as well as globally, its main founding office and headquarters is in Delhi and it is due to this foothold. A&A corporate lawyer in India has played a vital role in providing advice to the government on various legal and policy-related issues and is amongst the few corporate law firms in India to have the experience and optimal understanding of interpretation and drafting of policy matters.
+                                  </p>
+                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                    Client-Centric Approach
+                                </h2>
+                                  <p class="desc" data-aos-once="true" data-aos="fade-up">
+                                    A&A adopts an approach that demands the highest levels of knowledge, technical skill and service delivery allowing us to provide accurate, reliable, timely, and cost-effective advice while maintaining international standards of excellence and create a bespoke approach for every client and their business. Our commercial law solicitors unique perspective of working on our client’s matters as a critical part of their team allows us to address their problems like our own. We believe that each client comes with different requirements and concerns – and we work tirelessly to achieve their goals and pursue their objectives.
+                                  </p>
+                                <h2 class="heading" data-aos-once="true" data-aos="fade-up">
+                                    Cost-Efficient
+                                </h2>
+                                  <p class="desc" data-aos-once="true" data-aos="fade-up">
+                                    We make sure that our fee structure and the legal costs involved are very transparent and predictable for our clients. We believe that client relationships are based on trust and a sense of common purpose and we never falter on our promise making us one of the best corporate law firms in India. Our priority has been to deliver the best legal & business solutions and our fee arrangements are tailored to the needs of the client, the client’s goals, and the nature of the matter.
+                                  </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @php $b = 1; @endphp
+
                     @endif
 
                     @if(!empty(json_decode($detail->faq, true)))

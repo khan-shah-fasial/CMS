@@ -37,11 +37,11 @@ $practice_Area = DB::table('practice_areas')
                                         @foreach($subcategory as $item)
                                         <li>
                                             <a href="{{ 
-                                                $row->special_service == '1' ? 
-                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                                ($row->special_service == '2' ?
-                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                                $item->special_service == '1' ? 
+                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) :
+                                                ($item->special_service == '2' ?
+                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) :
+                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] ))
                                             ) }}">{{ $item->title }}</a>
                                         </li>
                                         @endforeach
@@ -151,11 +151,11 @@ $practice_Area = DB::table('practice_areas')
 
                                             @foreach($subcategory as $item)
                                             <li>                <a href="{{ 
-                                                $row->special_service == '1' ? 
-                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                                ($row->special_service == '2' ?
-                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) :
-                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] ))
+                                                $item->special_service == '1' ? 
+                                                    url(route('practicearea-detail-specialised', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) :
+                                                ($item->special_service == '2' ?
+                                                    url(route('practicearea-detail-page', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] )) :
+                                                    url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$item->slug))] ))
                                             ) }}">{{ $item->title }}</a>
                                             </li>
                                             @endforeach

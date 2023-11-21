@@ -9,6 +9,7 @@ class Blog extends Model
 {
     use HasFactory;
     public $timestamps = true;
+    //protected $dates = ['updated_at'];
     protected $table = 'blogs';
     protected $fillable = [
         'blog_category_ids',
