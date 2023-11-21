@@ -126,14 +126,14 @@ $url = url()->current();
 <!---------------- Contact Address Schema end ------------------->
 
 <!--google tag manager code open-->
-<script type="rocketlazyloadscript" async
+{{--<script type="rocketlazyloadscript" async
     data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-GTLLQV0KXE"></script>
 <script type="rocketlazyloadscript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-GTLLQV0KXE');
-</script>
+</script> --}}
 <!--google tag manager code close-->
 
 <base id="baseUrl" href="{{url('')}}">
