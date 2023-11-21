@@ -88,9 +88,41 @@ $practice_Area = DB::table('practice_areas')
                                 </label>
                             </div>
                             <ul>
-                                <li><a href="{{ url(route('practicearea')) }}">Practice Area</a></li>
-                                <li><a href="{{ url(route('team')) }}">Team</a></li>
-                                <li><a href="{{ url(route('blog')) }}">Blog</a></li>
+                                <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
+                                <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
+                                <li>
+                                    <label class="a-label__chevron" for="blog">Insights</label>
+                                    <input type="checkbox" id="blog" name="blog"
+                                        class="m-menu__checkbox" />
+                                    <div class="m-menu">
+                                        <div class="m-menu__header">
+                                            <label class="m-menu__toggle" for="blog">
+                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                                    stroke="#000000" stroke-width="2" stroke-linecap="butt"
+                                                    stroke-linejoin="arcs">
+                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                                                </svg>
+                                            </label>
+                                            <span>Insights</span>
+                                        </div>
+                                        <ul>
+                                        <div class="sub-menu" style="display: block;">
+                       
+                    </div>
+
+                                           
+                                            <li>                <a href="{{ url(route('blog')) }}">Blogs</a>
+                                            </li>
+                                            <li>                <a href="{{ url(route('news')) }}">A&amp;A Newscast</a>
+                                            </li>
+                                            <li>                <a href="{{ url(route('media-coverage')) }}">Media Coverages</a>
+                                            </li>
+                                            <li>                <a href="{{ url(route('news')) }}">Life at A&amp;A</a>
+                                            </li>
+                                          
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li><a href="{{ url(route('contact')) }}">Contact Us</a></li>
                                 <li><a href="{{ url(route('career')) }}">Careers</a></li>
 

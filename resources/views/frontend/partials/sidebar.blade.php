@@ -5,7 +5,7 @@
         </div>
         <div class="menu_listing">
             <ul>
-                <li><a href="{{ url(route('about')) }}">Who We Are?</a></li>
+                <li><a href="{{ url(route('about')) }}">Our Journey</a></li>
                 <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
                 <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
                 <div class="sidebar_item">
@@ -15,7 +15,6 @@
                     <div class="sub-menu">
                         <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
                         <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
-                        <a href="{{ url(route('deal-update')) }}" class="sub-item">Deal Updates</a>
                         <a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a>
                         <a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>
                     </div>

@@ -12,100 +12,13 @@ assistance for startups, FDI, Property law, IP, and more')
 <!-----===== home content start============---->
 
 <section class="banner_section">
-    <!-- <div class="banner_content">
+    <div class="banner_content">
                     <span>Welcome To</span>
                     <h3 class="main_heading">Ahlawat & Associates</h3>
-                    <p>
-                        Ahlawat & Associates is one of India’s leading
-                        full-service law firms, catering to domestic and
-                        international clients.
-                    </p>
-                    <a href="about-us">Read More
-                        <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                    </a>
-                </div> -->
-
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/assets/frontend/images/banner_slider1.jpg" class="d-block w-100" alt="...">
-                <span class="overlay_banner"></span>
-                <div class="carousel-caption ">
-                    <div class="banner_content">
-                        <span>Welcome To</span>
-                        <h3 class="main_heading">Ahlawat & Associates</h3>
-
-                        <!-- <div class="animation_text">
-
-                            <span id="ani_text">
-
-                            </span>
-                        </div>
-
-                        <a href="about-us">Know More
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a> -->
-                    </div>
+                  
                 </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/assets/frontend/images/banner_slider2.jpg" class="d-block w-100" alt="...">
-                <span class="overlay_banner"></span>
-                <div class="carousel-caption ">
-                    <div class="banner_content">
-                        <span>Welcome To</span>
-                        <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <!-- <div class="animation_text">
-                            <span id="ani_2">
 
-                            </span>
-                        </div>
-
-                        <a href="about-us">Know More
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/assets/frontend/images/banner_slider3.jpg" class="d-block w-100" alt="...">
-                <span class="overlay_banner"></span>
-                <div class="carousel-caption ">
-                    <div class="banner_content">
-                        <span>Welcome To</span>
-                        <h3 class="main_heading">Ahlawat & Associates</h3>
-                        <!-- <div class="animation_text">
-                            <span id="ani_3">
-
-                            </span>
-                        </div>
-
-                        <a href="about-us">Know More
-                            <span><img src="/assets/frontend/images/right.png" alt="" /></span>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    
 </section>
 
 <!------------------ Banner End -------------------------->
@@ -118,12 +31,12 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <!------------------ About Start -------------------------->
 
-<section class="about">
+<section class="about pb-0">
     <div class="container">
         <div class="row">
             <div class="col-md-6 px0">
                 <div class="underline_heading">
-                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Who We Are ?</h6>
+                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h6>
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
                 <p class="desc" data-aos-once="true" data-aos="fade-up">
@@ -148,17 +61,17 @@ assistance for startups, FDI, Property law, IP, and more')
                         <span class="desc">Best dispute resolution law firm in India</span>
                     </p>
                 </div> -->
-                <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
+                <!-- <div class="d-flex align-items-center gap-md-5 gap-2 link_number" data-aos-once="true"
                     data-aos="fade-up">
                     <p class="desc text-dark mb-md-0 mb-3">
                         Any query <a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="text_dark">lets
                             chat <img src="/assets/frontend/images/right.png" alt="" /></a>
                     </p>
-                    <!-- <span>
+                    <span>
                         <a class="number" href="tel:011-41023400">{{ get_settings('mobile') }}</a>
 
-                    </span> -->
-                </div>
+                    </span>
+                </div> -->
             </div>
 
             <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
@@ -186,8 +99,8 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-md-12 px0">
                 <div class="news_box ">
-                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">How A&amp;A is best
-                        law firm in India
+                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">What makes A&amp;A one of the best law
+firms in India
                     </h1>
 
                 </div>
