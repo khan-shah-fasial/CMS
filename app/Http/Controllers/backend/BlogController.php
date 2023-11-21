@@ -170,6 +170,7 @@ class BlogController extends Controller
         }
         
         $blog->updated_at = date('Y-m-d H:i:s', strtotime($request->input('updated_at')));
+
         $blog->save();
 
         $response = [

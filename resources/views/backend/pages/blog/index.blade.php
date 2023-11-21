@@ -40,7 +40,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
-                <td>{{datetimeFormatter($row->created_at)}}</td>
+                <td>{{datetimeFormatter($row->updated_at)}}</td>
                 <td>
                     <a href="{{ url(route('blogs.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">
                         @if ($row->status == '1')
