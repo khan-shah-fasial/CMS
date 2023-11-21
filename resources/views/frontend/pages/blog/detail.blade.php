@@ -31,7 +31,7 @@ $i = 1;
         "@type": "ListItem",
         "position": 2,
         "name": "{{ $page->name }}",
-        "item": "{{ url(route(''.$url.'')) }}"
+        "item": "($url == 'blog' || $url == 'news' || $url == 'deal-update') ? url(route($url)) : url()->current()"
     }, {
         "@type": "ListItem",
         "position": 3,
@@ -105,6 +105,7 @@ first();
                             data-aos-once="true">Home</a>
                     </li>
                     <li>></li>
+                    @if($url == 'blog' || $url == 'news' || $url == 'deal-update')
                     <li>
                         <a href="{{ url(route(''. $url.'')) }}" class="text-decoration-none" data-aos="fade-up"
                             data-aos-once="true">
@@ -112,6 +113,7 @@ first();
                         </a>
                     </li>
                     <li>></li>
+                    @endif
                     <li>{{ $detail->title }}</li>
                 </ul>
             </div>

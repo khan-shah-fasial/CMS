@@ -22,7 +22,7 @@ Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->nam
 // ------------------------------ normal service --------------------------------------
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])
     ->name('practicearea-detail');
-    
+
 $slug = DB::table('practice_areas')->pluck('slug')->toArray();
 // ---------------------------- specialised-services ----------------------------------
 Route::get('/specialised-services/{slug}', [IndexController::class, 'practice_area_detail'])
