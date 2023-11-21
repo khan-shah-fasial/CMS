@@ -22,13 +22,15 @@ Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->nam
 // ------------------------------ normal service --------------------------------------
 Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])
     ->name('practicearea-detail');
-
+    
+$slug = DB::table('practice_areas')->pluck('slug')->toArray();
 // ---------------------------- specialised-services ----------------------------------
 Route::get('/specialised-services/{slug}', [IndexController::class, 'practice_area_detail'])
+    ->where('slug', implode('|', $slug ))
     ->name('practicearea-detail-specialised');
 
 // ------------------------------ page service ----------------------------------------
-$slug = DB::table('practice_areas')->pluck('slug')->toArray();
+
 Route::get('/{slug}', [IndexController::class, 'practice_area_detail'])
     ->where('slug', implode('|', $slug ))
     ->name('practicearea-detail-page');
