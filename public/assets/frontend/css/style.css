@@ -94,6 +94,11 @@ p {
     left: 120px;
 }
 
+.blog_details_page_title_desc table tr td {
+    border: 1px solid black !important;
+    padding: 10px !important;
+}
+
 /* ------------------owl carousel -------------- */
 
 /* ------------------------headers--------------- */
