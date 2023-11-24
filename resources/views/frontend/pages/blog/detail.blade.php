@@ -162,8 +162,8 @@ first();
 <section class="blog_details_social pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
-                <div class="category d-flex align-items-center gap-md-5 gap-2">
+            <div class="col-md-12 px0">
+                <div class="category d-flex align-items-center flex-wrap gap-md-5 gap-2">
                     @php
                     $category = json_decode($detail->blog_category_ids);
                     @endphp
@@ -175,14 +175,6 @@ first();
                     @endforeach
 
                 </div>
-            </div>
-            <div class="col-md-6 px0">
-                <!-- <div class="icons d-flex align-items-center justify-content-end gap-3 mt-md-2 mt-4">
-                    <img src="/assets/frontend/images/icon_1.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_2.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_3.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_4.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                </div> -->
             </div>
         </div>
     </div>
