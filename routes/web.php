@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\SitemapController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
@@ -76,6 +77,8 @@ Route::post('/contact-save', [IndexController::class, 'contact_save'])->name('co
 Route::post('/comment-save', [IndexController::class, 'comment_save'])->name('comment.create');
 
 Route::get('/search', [IndexController::class, 'search'])->name('search');
+
+Route::get('/sitemap', [SitemapController::class, 'newSitemap'])->name('sitemap');
 // Home END
 
 
