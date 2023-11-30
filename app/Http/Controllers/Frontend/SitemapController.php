@@ -22,6 +22,8 @@ use Illuminate\Support\Str;
 
 class SitemapController extends Controller
 {
+
+
     public function newSitemap() {
         $otherUrls = [
             url('/area-of-practices'),
@@ -56,7 +58,7 @@ class SitemapController extends Controller
 
         //$my_file = '/home/bigdeals24x7/public_html/sitemap.xml';
         // Adjusted file path
-        $directory = '../sitemap';
+        $directory = public_path('sitemap');
         $my_file = $directory . '/sitemap.xml';
 
         // Create directory if it doesn't exist
