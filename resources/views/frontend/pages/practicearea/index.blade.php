@@ -39,7 +39,7 @@
         <div class="row">
             @foreach($practiceAreas as $row)
             <div class="col-md-4 mb-2 px0">
-                <a href={{ 
+                <a href="{{ 
                     $row->special_service == '1' ? 
                         url(route('practicearea-detail-specialised', ['slug' => $row->slug] )) :
                         (
