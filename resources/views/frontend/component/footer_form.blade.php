@@ -24,7 +24,7 @@ $practice_Area = DB::table('practice_areas')->get();
     <div class="d-flex align-items-center gap-3 mb-3">
 
         <div class="w-100">
-            <input id="footer" type="tel" class="form-control phone" placeholder="Write Your Phone No" name="phone"
+            <input type="tel" id="mobile-number" class="form-control phone" placeholder="Write Your Phone No" name="phone"
                 data-aos-once="true" data-aos="fade-up" required />
         </div>
 

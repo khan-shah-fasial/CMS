@@ -262,23 +262,9 @@ typewriter
     .start();
 
 // How to build international phone number input in HTML and JavaScript
-const phoneInputField = document.querySelector("#phone");
-const footerInputField = document.querySelector("#footer");
-const careerInputField = document.querySelector("#career");
 
-const phoneInput = window.intlTelInput(phoneInputField, {
-    preferredCountries: ["in", "us", "de"],
-    utilsScript:
-        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
+$("#mobile-number").intlTelInput(); 
+$("#mobile-number1").intlTelInput(); 
+$("#mobile-number2").intlTelInput(); 
 
-const footerInput = window.intlTelInput(footerInputField, {
-    preferredCountries: ["in", "us", "de"],
-    utilsScript:
-        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
-const careerInput = window.intlTelInput(careerInputField, {
-    preferredCountries: ["in", "us", "de"],
-    utilsScript:
-        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-});
+      

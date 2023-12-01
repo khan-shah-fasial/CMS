@@ -128,6 +128,36 @@
                                     <li>
                                         <a href="{{ route('blogcomment.index') }}">Comment</a>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('author.index') }}">Author</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a data-bs-toggle="collapse" href="{{ url('#sidebarEmail') }}" aria-expanded="false" aria-controls="sidebarEmail" class="side-nav-link">
+                                <i class="ri-article-line"></i>
+                                <span> Page </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="sidebarEmail">
+                                <ul class="side-nav-second-level">
+                                    {{--
+                                    <li>
+                                        <a href="{{ route('contactpage.index') }}">Contact Page</a>
+                                    </li> --}}
+                                    <li>
+                                        <a href="{{ route('setting.privacy') }}">Privacy Policy Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('setting.cookie') }}">Cookie Policy Page</a>
+                                    </li>
+                                    {{--
+                                    <li>
+                                        <a href="{{ route('setting.refund_policy') }}">Refund Policy</a>
+                                    </li>
+                                    --}}
                                 </ul>
                             </div>
                         </li>

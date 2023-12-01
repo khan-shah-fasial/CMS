@@ -19,7 +19,7 @@
     </div>
     <div class="mb-3">
 
-        <input type="tel" placeholder="Phone" name="phone" data-aos-once="true" class="phone" data-aos="fade-up"
+        <input type="tel" id="mobile-number2" placeholder="Phone" name="phone" data-aos-once="true" class="phone" data-aos="fade-up"
             required />
     </div>
     <div class="mb-3">

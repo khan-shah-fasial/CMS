@@ -12,6 +12,14 @@ class BusinessSettingController extends Controller
     public function index() {
         return view('backend.pages.setting.index');
     }
+
+    public function privacy_policy() {
+        return view('backend.pages.privacy.index');
+    }
+
+    public function cookie_policy() {
+        return view('backend.pages.cookie.index');
+    }
       
     public function update(Request $request) {
         // Assuming the request data is in key-value pairs
