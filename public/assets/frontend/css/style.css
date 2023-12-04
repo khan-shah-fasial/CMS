@@ -426,16 +426,16 @@ header ul.dropdown li a:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("/assets/frontend/images/banner_slider1.jpg");
+    background-image: url("/assets/frontend/images/banner_slider_5.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 1000px 1000px 1000px 1000px inset #00000094;
     color: white;
-    transition: 1s;
+    transition: 2s;
     animation-name: animate;
     animation-direction: alternate-reverse;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-play-state: running;
@@ -444,13 +444,19 @@ header ul.dropdown li a:hover {
 
 @keyframes animate {
     0% {
-        background-image: url("/assets/frontend/images/banner_slider1.jpg");
-    }
-    50% {
         background-image: url("/assets/frontend/images/banner_slider2.jpg");
     }
-    100% {
+    25% {
         background-image: url("/assets/frontend/images/banner_slider3.jpg");
+    }
+    50% {
+        background-image: url("/assets/frontend/images/banner_slider1.jpg");
+    }
+    75% {
+        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+    }
+    100% {
+        background-image: url("/assets/frontend/images/banner_slider_4.jpg");
     }
 }
 
