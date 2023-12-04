@@ -244,7 +244,7 @@ class IndexController extends Controller
    //--------------=============================== news ==========================================-------------------------
 
     public function news(){
-        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('created_at', 'desc')->paginate(6);
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.news.index', compact('news'));
     }
@@ -254,7 +254,7 @@ class IndexController extends Controller
         $page = $request->input('page', 1);
         $perPage = 6;
     
-        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('created_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
     
         if ($request->ajax()) {
             $view = view('frontend.component.news_card', compact('news'))->render();
@@ -270,7 +270,7 @@ class IndexController extends Controller
      //--------------=============================== Deal Update ====================================---------------------
 
     public function deal_update(){
-        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('created_at', 'desc')->paginate(6);
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }
@@ -280,7 +280,7 @@ class IndexController extends Controller
         $page = $request->input('page', 1);
         $perPage = 6;
     
-        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('created_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
     
         if ($request->ajax()) {
             $view = view('frontend.component.deal_update_card', compact('deal_update'))->render();
@@ -296,7 +296,7 @@ class IndexController extends Controller
 //--------------=============================== media coverage ====================================---------------------
 
     public function media_coverage(){
-        $media_coverage = MediaCoverage::where('status', 1)->orderBy('created_at', 'desc')->paginate(6);
+        $media_coverage = MediaCoverage::where('status', 1)->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.media_coverage.index', compact('media_coverage'));
     }
@@ -306,7 +306,7 @@ class IndexController extends Controller
         $page = $request->input('page', 1);
         $perPage = 6;
     
-        $media_coverage = MediaCoverage::where('status', 1)->orderBy('created_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+        $media_coverage = MediaCoverage::where('status', 1)->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
     
         if ($request->ajax()) {
             $view = view('frontend.component.media_coverage_card', compact('media_coverage'))->render();
@@ -322,7 +322,7 @@ class IndexController extends Controller
   //--------------=============================== publication ====================================---------------------
 
     public function publication(){
-        $publication = Publication::where('status', 1)->orderBy('created_at', 'desc')->paginate(6);
+        $publication = Publication::where('status', 1)->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.publication.index', compact('publication'));
     }
@@ -332,7 +332,7 @@ class IndexController extends Controller
         $page = $request->input('page', 1);
         $perPage = 6;
     
-        $publication = Publication::where('status', 1)->orderBy('created_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+        $publication = Publication::where('status', 1)->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
     
         if ($request->ajax()) {
             $view = view('frontend.component.publication_card', compact('publication'))->render();
