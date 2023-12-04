@@ -100,7 +100,7 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-md-12 px0">
                 <div class="news_box ">
                     <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">What makes A&amp;A one of the best law
-firms in India
+firms in India?
                     </h1>
 
                 </div>

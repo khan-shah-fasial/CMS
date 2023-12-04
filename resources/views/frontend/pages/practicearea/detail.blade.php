@@ -117,7 +117,7 @@
                         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
                             aria-selected="true">
-                            Our Focus Are
+                            Our Focus Area
                         </button>
                     </li>
 
