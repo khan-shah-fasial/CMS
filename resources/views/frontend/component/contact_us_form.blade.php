@@ -1,3 +1,10 @@
+@php
+$session_data = json_decode(session('user_ip'), true);
+/*
+if (!isset($session_data['country'])) {
+    $session_data['country'] = 'IN';
+}*/
+@endphp
 <!----============ Form start =================-------------------->
 <form id="add_contact_us_form" action="{{url(route('contact.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -8,6 +15,10 @@
     <div class="mb-3">
 
         <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+    </div>
+    <div class="mb-3">
+
+        <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
     </div>
     <div class="mb-3">
 

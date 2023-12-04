@@ -1,6 +1,13 @@
 @php
 $practice_Area = DB::table('practice_areas')->get();
 @endphp
+@php
+$session_data = json_decode(session('user_ip'), true);
+/*
+if (!isset($session_data['country'])) {
+    $session_data['country'] = 'IN';
+}*/
+@endphp
 
 <!-----------================= Footer form start =============--------------->
 <form class="contact_form" id="add_footer_form" action="{{url(route('contact.create'))}}" method="post"
@@ -9,6 +16,7 @@ $practice_Area = DB::table('practice_areas')->get();
     <h3 data-aos-once="true" data-aos="fade-up">Any query? Let’s connect</h3>
     <input type="hidden" name="section" value="Footer Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
     <div class="d-flex align-items-center gap-3 mb-3">
         <div class="w-100">
             <input type="text" class="form-control" placeholder="Write Your Name..." name="name" data-aos-once="true"
