@@ -1,12 +1,20 @@
 @php
 $practice_Area = DB::table('practice_areas')->get();
 @endphp
+@php
+$session_data = json_decode(session('user_ip'), true);
+/*
+if (!isset($session_data['country'])) {
+    $session_data['country'] = 'IN';
+}*/
+@endphp
 <!--------=============== Popup Form start ==============------------------>
 <form class="contact_form" id="add_popup_form" action="{{url(route('contact.create'))}}" method="post"
     enctype="multipart/form-data">
     @csrf
     <input type="hidden" name="section" value="Contact Us Now Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
     <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
     <div class="d-flex align-items-center flex-md-row flex-column gap-3 mb-3">
         <div class="w-100">

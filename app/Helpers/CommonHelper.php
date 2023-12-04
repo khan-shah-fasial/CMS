@@ -74,3 +74,43 @@ use Illuminate\Support\Str;
         }
     }
 
+    if(!function_exists('ip_info')){
+        function ip_info(){
+            
+            if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            } else {
+                $ip = $_SERVER['REMOTE_ADDR'] ?  $_SERVER['REMOTE_ADDR'] : '';
+            }
+            $ip = explode(',', $ip);
+            $ip = $ip[0];
+            //$ip = '103.175.61.38111';
+            		
+            //$info = file_get_contents("http://ipinfo.io/{$ip}/geo");
+            
+            $curl = curl_init();
+            
+            curl_setopt($curl, CURLOPT_URL, 'ipinfo.io/'.$ip.'?token='.env('IPINFO_API_TOKEN'));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_ENCODING, '');
+            curl_setopt($curl, CURLOPT_MAXREDIRS, 10);
+            curl_setopt($curl, CURLOPT_TIMEOUT, 0);
+            curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+            curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
+            
+            $info = curl_exec($curl);
+            curl_close($curl);
+            
+            if(!empty($info)){
+                return $info; //return in json
+            }else{
+                $info = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
+                return $info; //return in json
+            }
+        }
+    }
+
+
