@@ -10,13 +10,13 @@ $team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
         <div class="row">
             <div class="col-md-12  px0">
                 <div class="underline_heading d-flex align-items-center justify-content-center">
-                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Team member</h6>
+                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Our Professionals</h6>
                 </div>
-                <h1 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">
+                <!-- <h1 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">
                     We feel very proud 
                     for our
                     <span class="main_heading_color"> Experts </span>
-                </h1>
+                </h1> -->
             </div>
             <!-- <div class="col-md-6 px0">
                 <p class="desc mt-md-4 mt-2" data-aos-once="true" data-aos="fade-up">

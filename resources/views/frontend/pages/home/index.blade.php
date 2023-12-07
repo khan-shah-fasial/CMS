@@ -13,8 +13,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <section class="banner_section">
     <div class="banner_content">
-                    <span>Welcome To</span>
-                    <h3 class="main_heading">Ahlawat & Associates</h3>
+                   
                   
                 </div>
 

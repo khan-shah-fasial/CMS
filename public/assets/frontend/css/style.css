@@ -2384,3 +2384,7 @@ select.aos-init.aos-animate.error {
 input#mobile-number1 {
     padding-left: 43px;
 }
+
+.contact .contact_form input#mobile-number {
+    padding-left: 43px;
+}
