@@ -202,7 +202,7 @@ class IndexController extends Controller
 
         // Send email if $cvPath is not null
 
-        $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
+        $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
         $subject = 'Lead Enquiry';
 
         // Format $contactData into an HTML table
