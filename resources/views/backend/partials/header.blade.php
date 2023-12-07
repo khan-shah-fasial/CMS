@@ -343,6 +343,9 @@
                             </a>
                         </li>
                     --}}
+                        <li class="d-sm-inline-block">
+                            <a href="{{ url(route('clear-cache')) }}" class="btn btn-success">Clear Cache</a>
+                        </li>
 
                         <li class="d-none d-sm-inline-block">
                             <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" aria-label="Theme Mode" data-bs-original-title="Theme Mode">
@@ -399,6 +402,14 @@
                                 </a>
                             --}}
                                 <!-- item-->
+                                <a onclick="smallModal('{{ url(route('user.edit',['id' => auth()->user()->id])) }}', 'Edit Profile')" class="dropdown-item">
+                                    <i class="mdi mdi-square-edit-outline"></i>
+                                    <span>Profile</span>
+                                </a>
+                                <a onclick="smallModal('{{ url(route('user.password',['id' => auth()->user()->id])) }}', 'Reset Password')" class="dropdown-item">
+                                    <i class="mdi mdi-square-edit-outline"></i>
+                                    <span>Reset Password</span>
+                                </a>
                                 <a href="{{ route('backend.logout') }}" class="dropdown-item">
                                     <i class="mdi mdi-logout me-1"></i>
                                     <span>Logout</span>

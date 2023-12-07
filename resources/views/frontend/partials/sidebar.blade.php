@@ -5,11 +5,22 @@
         </div>
         <div class="menu_listing">
             <ul>
-                <li><a href="{{ url(route('practicearea')) }}">Practice Area</a></li>
-                <li><a href="{{ url(route('team')) }}">Team</a></li>
-                <li><a href="{{ url(route('blog')) }}">Blog</a></li>
-                <li><a href="{{ url(route('news')) }}">News</a></li>
-                <li><a href="{{ url(route('deal-update')) }}">Deal Update</a></li>
+                <li><a href="{{ url(route('about')) }}">Our Journey</a></li>
+                <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
+                <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
+                <div class="sidebar_item">
+                    <a class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
+                    </a>
+                    
+                    <div class="sub-menu">
+                        <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
+                        <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
+                        <a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a>
+                        <a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>
+                    </div>
+                </div>
+                <li><a href="{{ url(route('career')) }}">Career</a></li>
+
             </ul>
             <div class="text-center">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us
@@ -18,38 +29,46 @@
 
             <!--whatsapp chat box open-->
 
+            <div class="desktop_whatsapp">
+                <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
 
-            <div class="whatsapp_chat_support wcs_fixed_right" id="example_1">
-
-                <div class="wcs_button wcs_button_circle">
-                    <span class="fa fa-whatsapp"></span>
-                </div>
-                <div class="wcs_button_label">
-                    Need Help? Chat with us
-                </div>
-
-                <div class="wcs_popup">
-                    <div class="wcs_popup_close">
-                        <span class="fa fa-close"></span>
+                    <div class="wcs_button wcs_button_circle">
+                        <div class="whatsapp_blink">
+                            <span href="" class="btn-whatsapp-pulse">
+                                <span class="fa fa-whatsapp"></span>
+                            </span>
+                        </div>
                     </div>
-                    <div class="wcs_popup_header">
-                        <strong>Need Help? Chat with us</strong>
-                        <br>
-                        <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                    <div class="wcs_button_label">
+                        Need Help? Chat with us
                     </div>
-                    <div class="wcs_popup_person_container">
-                        <div class="wcs_popup_person" data-number="+91 8882400643">
-                            <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png"
-                                    alt="" /></div>
-                            <div class="wcs_popup_person_content">
-                                <div class="wcs_popup_person_name">Ahlawat & Associates</div>
-                                <div class="wcs_popup_person_description">Ahlawat & Associates</div>
-                                <div class="wcs_popup_person_status">I'm Online</div>
+
+                    <div class="wcs_popup">
+                        <div class="wcs_popup_close">
+                            <span class="fa fa-close"></span>
+                        </div>
+                        <div class="wcs_popup_header">
+                            <strong>Need Help? Chat with us</strong>
+                            <br>
+                            <div class="wcs_popup_header_description">Click one of our representatives below</div>
+                        </div>
+                        <div class="wcs_popup_person_container">
+                            <div class="wcs_popup_person" data-number="+{{ get_settings('whatsapp') }}">
+                                <div class="wcs_popup_person_img"><img src="/assets/frontend/images/whats_icon1.png"
+                                        alt="" /></div>
+                                <div class="wcs_popup_person_content">
+                                    <div class="wcs_popup_person_name">Ahlawat & Associates</div>
+                                    <div class="wcs_popup_person_description">Ahlawat & Associates</div>
+                                    <div class="wcs_popup_person_status">I'm Online</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
+
 
 
             <!--whatsapp chat box close-->

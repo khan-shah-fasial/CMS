@@ -1,10 +1,42 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'FAQ for Law and Legal Support – Ahlawat & Associates')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Get answers to questions related to law and related issues. Contact us for effective law and legal support.')
 
 @section('page.type', 'website')
+
+@section('page.schema')
+@php 
+$count = count($faq);
+$i = 1; 
+@endphp
+<!------------------------ Faq Schema ---------------------------------->
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      @foreach ($faq as $row)
+        {
+          "@type": "Question",
+          "name": "{{ $row->question }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode(strip_tags($row->answer))) @endphp"
+          }
+        }@if($i < $count),@endif
+        @php $i++; @endphp
+      @endforeach
+    ]
+  }
+</script>
+  
+
+<!------------------------- Faq Schema ------------------------------------->
+
+@endsection
 
 @section('page.content')
 

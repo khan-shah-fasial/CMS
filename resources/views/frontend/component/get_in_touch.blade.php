@@ -10,10 +10,11 @@
                     <p class="desc" data-aos-once="true" data-aos="fade-up">
                         We can be reached at
                     </p>
-                    <a href="tel:011-41023400" class="d-flex align-items-center justify-content-center gap-2"
-                        data-aos-once="true" data-aos="fade-up">
-                        <span><img src="/assets/frontend/images/phone.png" alt="" /></span>
-                        <span>011-41023400</span>
+                    <a type="button" data-bs-toggle="modal" data-bs-target="#contact"
+                        class="d-flex align-items-center justify-content-center gap-2" data-aos-once="true"
+                        data-aos="fade-up">
+
+                        <span class="mt-2">Let's Talk</span>
                     </a>
                 </div>
             </div>

@@ -43,6 +43,17 @@ class BlogController extends Controller
 
         $slug = Str::slug($request->input('slug'), '-');
 
+        $user_id = $request->input('user_id', []);
+
+        $sortedUserIds = json_decode($request->input('sortedUserIds'));
+
+        if(!empty($sortedUserIds)){
+            $user_id = json_decode($request->input('sortedUserIds'));
+        } else {
+            $user_id = $request->input('user_id', []);
+        }
+
+        
         // Create the Blog record with 'blog_category_ids' included
         DB::table('blogs')->insert([
             'blog_category_ids' => json_encode($request->input('blog_category_ids')),
@@ -51,12 +62,14 @@ class BlogController extends Controller
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
             'main_image' => $imagePath,
+            'alt_main_image' => $request->input('alt_main_image'),
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
-            'user_id' => $request->input('user_id'),
+            'user_id' => json_encode($user_id),
             'created_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
             'updated_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
         ]);
+
 
         $response = [
             'status' => true,
@@ -120,27 +133,41 @@ class BlogController extends Controller
             ], 200);
         } 
 
+        // Assuming $request is an instance of Request
         $id = $request->input('id');
-        $blog = Blog::find($id);
-    
+            
         if ($request->hasFile('image')) {
             // Update the image if a new one is uploaded
             $imagePath = $request->file('image')->store('assets/image/blog', 'public');
-            $blog->main_image = $imagePath;
+            DB::table('blogs')
+                ->where('id', $id)
+                ->update(['main_image' => $imagePath]);
         }
         
         $slug = Str::slug($request->input('slug'), '-');
-
-        $blog->blog_category_ids = json_encode($request->input('blog_category_ids'));
-        $blog->title = $request->input('title');
-        $blog->slug = $slug;
-        $blog->short_description = $request->input('short_description');
-        $blog->content = $request->input('content');
-        $blog->meta_title = $request->input('meta_title');
-        $blog->meta_description = $request->input('meta_description');
-        $blog->user_id = $request->input('user_id');
-        $blog->updated_at = date('Y-m-d H:i:s', strtotime($request->input('updated_at')));
-        $blog->save();
+        $sortedUserIds = json_decode($request->input('sortedUserIds'));
+        
+        if ($sortedUserIds !== null) {
+            $user_id1 = json_decode($request->input('sortedUserIds'));
+            $user_id = json_encode($user_id1);
+        } else {
+            $user_id = DB::table('blogs')->where('id', $id)->value('user_id');
+        }
+        
+        DB::table('blogs')
+            ->where('id', $id)
+            ->update([
+                'blog_category_ids' => json_encode($request->input('blog_category_ids')),
+                'title' => $request->input('title'),
+                'slug' => $slug,
+                'alt_main_image' => $request->input('alt_main_image'),
+                'short_description' => $request->input('short_description'),
+                'content' => $request->input('content'),
+                'meta_title' => $request->input('meta_title'),
+                'meta_description' => $request->input('meta_description'),
+                'user_id' => $user_id,
+                'updated_at' => date('Y-m-d H:i:s', strtotime($request->input('updated_at'))),
+            ]);
 
         $response = [
             'status' => true,

@@ -23,6 +23,10 @@ $(document).ready(function () {
                 items: 3.5,
             },
         },
+        navText: [
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>',
+        ],
     });
 });
 $(document).ready(function () {
@@ -44,6 +48,36 @@ $(document).ready(function () {
                 items: 4.5,
             },
         },
+        navText: [
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>',
+        ], // Add this line
+    });
+});
+
+$(document).ready(function () {
+    var owl = $("#blogs");
+    owl.owlCarousel({
+        margin: 20,
+        nav: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1.2,
+            },
+            1100: {
+                items: 2,
+            },
+        },
+        navText: [
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>',
+        ], // Add this line
     });
 });
 
@@ -145,33 +179,92 @@ $(document).ready(function () {
     });
 });
 
-
-
 /*-- cookies code open--*/
 
 // ---- ---- Const ---- ---- //
-const cookiesBox = document.querySelector('.cookies_section'),
-  buttons = document.querySelectorAll('.cookies_button');
+const cookiesBox = document.querySelector(".cookies_section"),
+    buttons = document.querySelectorAll(".cookies_button");
 
 // ---- ---- Show ---- ---- //
 const executeCodes = () => {
-  if (document.cookie.includes('Ahlawat')) return;
-  cookiesBox.classList.add('show');
+    if (document.cookie.includes("Ahlawat")) return;
+    cookiesBox.classList.add("show");
 
-  // ---- ---- Button ---- ---- //
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      cookiesBox.classList.remove('show');
+    // ---- ---- Button ---- ---- //
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            cookiesBox.classList.remove("show");
 
-      // ---- ---- Time ---- ---- //
-      if (button.id == 'cookieAccept') {
-        document.cookie =
-          'cookieBy= Ahlawat; max-age=' + 60 * 60 * 24 * 30;
-      }
+            // ---- ---- Time ---- ---- //
+            if (button.id == "cookieAccept") {
+                document.cookie =
+                    "cookieBy= Ahlawat; max-age=" + 60 * 60 * 24 * 30;
+            }
+        });
     });
-  });
 };
 
-window.addEventListener('load', executeCodes);
+window.addEventListener("load", executeCodes);
 
 /*-- cookies code close--*/
+
+$(document).ready(function () {
+    $(".sub-btn").click(function () {
+        $(this).next(".sub-menu").slideToggle();
+    });
+});
+
+var app = document.getElementById("ani_text");
+var text2 = document.getElementById("ani_2");
+var text3 = document.getElementById("ani_3");
+
+var typewriter = new Typewriter(app, {
+    loop: true,
+});
+
+typewriter
+    .typeString(
+        "Welcome to Ahlawat & Associates a full-service Indian law firm"
+    )
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString("catering to international & domestic clients since 1978")
+    .pauseFor(2500)
+    .deleteAll()
+    .start();
+var typewriter = new Typewriter(text3, {
+    loop: true,
+});
+
+typewriter
+    .typeString(
+        "Welcome to Ahlawat & Associates a full-service Indian law firm"
+    )
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString("catering to international & domestic clients since 1978")
+    .pauseFor(2500)
+    .deleteAll()
+    .start();
+var typewriter = new Typewriter(text2, {
+    loop: true,
+});
+
+typewriter
+    .typeString(
+        "Welcome to Ahlawat & Associates a full-service Indian law firm"
+    )
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString("catering to international & domestic clients since 1978")
+    .pauseFor(2500)
+    .deleteAll()
+    .start();
+
+// How to build international phone number input in HTML and JavaScript
+
+$("#mobile-number").intlTelInput(); 
+$("#mobile-number1").intlTelInput(); 
+$("#mobile-number2").intlTelInput(); 
+
+      

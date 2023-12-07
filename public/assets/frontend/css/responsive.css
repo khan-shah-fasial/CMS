@@ -134,18 +134,60 @@
     transform: translate3d(0, 0, 0);
 }
 
+.mobile_whatsapp {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+}
+
+.fix_footer {
+    background: white;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #d3d3d394;
+}
+
+.fix_footer a {
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 14px;
+}
+.fix_footer a i {
+    font-size: 20px;
+}
+
 @media (min-width: 992px) {
     .wrapper {
+        display: none;
+    }
+    .fix_footer,
+    .mobile_whatsapp {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
-	
-	.footer_count {
-    column-count: 2;
-}
+    header {
+        top: 35px;
+    }
 
+    .top_nav_links {
+        display: none;
+    }
+    .footer_count {
+        column-count: 2;
+    }
 
     .px0 {
         padding-left: 0 !important;
@@ -153,7 +195,7 @@
     }
 
     .carousel-caption {
-        bottom: 0rem !important;
+        bottom: 3rem !important;
     }
 
     .top_baar {
@@ -166,9 +208,11 @@
     }
 
     .banner_content {
-        width: auto;
-        margin-top: 0;
-        color: #e75954;
+        height: 25vh;
+    }
+
+    #banner_slider_carousel {
+        margin-bottom: -49px;
     }
 
     .banner_section {
@@ -182,18 +226,20 @@
     }
 
     .banner_section .banner_content p {
-        font-size: 12px !important;
+        font-size: 10px !important;
         margin-bottom: 0px;
-        line-height: 17px !important;
+        line-height: 14px !important;
         color: white;
     }
 
     .banner_section .banner_content h3 {
         font-size: 23px;
+        line-height: 26px;
     }
 
     .banner_section .banner_content a {
         color: white;
+        font-size: 14px;
     }
 
     .owl-theme .owl-nav {
@@ -478,15 +524,27 @@
     .footer {
         padding: 30px 0 20px 0;
     }
+
+    .searc_boxex {
+        padding: 15px 20px;
+    }
+
+    .searc_boxex h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .banner_content {
+        height: 30vh;
+    }
     .service_why_choose .nav-pills .nav-link {
         min-width: 221px;
     }
 
     .carousel-caption {
-        bottom: 3.25rem !important;
+        bottom: 8.25rem !important;
     }
 
     .d-none {
@@ -535,6 +593,9 @@
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
+    .banner_content {
+        height: 40vh;
+    }
     .blog .blog_right_box {
         align-items: start;
         gap: 0;
@@ -565,7 +626,7 @@
     }
 
     .carousel-caption {
-        bottom: 4.25rem !important;
+        bottom: 9.25rem !important;
     }
 }
 

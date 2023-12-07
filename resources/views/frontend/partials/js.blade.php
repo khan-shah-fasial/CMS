@@ -1,9 +1,15 @@
-
 <script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/frontend/js/jquery.min.js"></script>
 
 <!--aos js-->
 <script src="/assets/frontend/js/aos.js"></script>
+
+<!-- Animation Typing--------- -->
+<script src="/assets/frontend/js/core.js"></script>
+
+
+<!-- Animation International Phone Number--------- -->
+<script src="https://octanetworks.com/js/intlTelInput.js"></script>
 
 <!--owl carousel js-->
 <script src="/assets/frontend/js/owl.carousel.js"></script>
@@ -28,4 +34,6 @@
 
 <!--Custom Js-->
 <script src="/assets/frontend/js/Init.js"></script>
+
+
 <script src="/assets/frontend/js/script.js"></script>

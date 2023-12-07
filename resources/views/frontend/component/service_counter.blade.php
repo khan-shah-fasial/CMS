@@ -16,9 +16,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="23">0</span>k
+                                        <span class="counter-value" data-count="45">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Trusted Clients</p>
+                                    <p class="about_counter_para">Years of Experience</p>
                                 </div>
                             </div>
                         </div>
@@ -34,9 +34,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="162">0</span>k
+                                        <span class="counter-value" data-count="2000">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Recovered Clients</p>
+                                    <p class="about_counter_para">Clients Served</p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                     <p class="about_counter_number">
                                         <span class="counter-value" data-count="90">0</span>%
                                     </p>
-                                    <p class="about_counter_para">Special Cases</p>
+                                    <p class="about_counter_para">Happy clients</p>
                                 </div>
                             </div>
                         </div>
@@ -71,9 +71,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="115">0</span>k
+                                        <span class="counter-value" data-count="50">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Personal Injury Cases</p>
+                                    <p class="about_counter_para">Expert professionals</p>
                                 </div>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'Team Members | Ahlawat &amp; Associates')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'The profound team member of Ahlawat &amp; associates one of the best full-service law firms in India catering to domestic &amp; international clients')
 
 @section('page.type', 'team')
 
@@ -19,7 +19,8 @@
                 <div class="text-center">
                     <h1 class="heading">Team Members</h1>
                     <p class="desc">
-                        Dedicated To Solving The Most Complex Challenges
+                        Get in touch with the team of best lawyer in India dedicated to solving the most complex
+                        challenges.
                     </p>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
@@ -45,22 +46,25 @@
             @foreach ($team as $row)
 
             <div class="col-xl-3 col-md-4 col-6 ">
-                <div class="team_box">
-                    <div class="team_main_img">
-                        <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up"
-                            data-aos-once="true" />
+                <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}">
+                    <div class="team_box">
+                        <div class="team_main_img">
+                            <img src="{{ asset('storage/' . $row->image) }}" alt="" data-aos="fade-up"
+                                data-aos-once="true" />
+                        </div>
+                        <p class="name text-dark" data-aos="fade-up" data-aos-once="true">
+                            {{ ucfirst($row->name) }}
+                        </p>
+                        <p class="desc text-secondary">{{ ucfirst($row->designation) }}</p>
+                        <hr class="text-dark" />
+                        <p class="bio text-dark" data-aos="fade-up" data-aos-once="true">
+                            {{ str_replace([' ', '&amp;',', , '], [', ',', '], strip_tags($row->description)) }}
+                        </p>
+                        <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
+                            data-aos="fade-up" data-aos-once="true">View Profile</a>
                     </div>
-                    <p class="name" data-aos="fade-up" data-aos-once="true">
-                        {{ ucfirst($row->name) }}
-                    </p>
-                    <p class="desc">{{ ucfirst($row->designation) }}</p>
-                    <hr />
-                    <p class="bio" data-aos="fade-up" data-aos-once="true">
-                        {{ str_replace('&amp;', ', ',strip_tags($row->description)) }}
-                    </p>
-                    <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
-                        data-aos="fade-up" data-aos-once="true">View Profile</a>
-                </div>
+                </a>
+
             </div>
 
             @endforeach

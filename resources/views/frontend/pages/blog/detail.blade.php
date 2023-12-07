@@ -3,6 +3,8 @@
 @php
 $url = request()->segment('1');
 $page = DB::table('blog_categories')->where('slug', $url)->first();
+$count = count($author);
+$i = 1;
 @endphp
 
 @section('page.title', "$detail->meta_title")
@@ -13,6 +15,70 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 
 @section('page.publish_time', "$detail->updated_at")
 
+@section('page.schema')
+<!--------------------------- Page Schema --------------------------------->
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "{{ url(route('index')) }}"
+    }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ $page->name }}",
+        "item": "($url == 'blog' || $url == 'news' || $url == 'deal-update') ? url(route($url)) : url()->current()"
+    }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "@php echo str_replace('&nbsp;',' ',htmlspecialchars_decode ($detail->title)); @endphp",
+        "item": "{{ url()->current() }}"
+    }]
+}
+</script>
+
+@if($page->name != 'Deal Update' )
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "{{ $page->name }}Posting",
+"mainEntityOfPage": {
+"@type": "WebPage",
+"@id": "{{ url()->current() }}"
+},
+"headline": "{{ strip_tags(htmlspecialchars_decode($detail->title)) }}",
+"description": "{{ strip_tags(htmlspecialchars_decode($detail->short_description)) }}",
+"image": "{{ asset('storage/' . $detail->main_image) }}",
+"author": {
+"@type": "Person",
+"name": [
+@foreach($author as $row) @php $author_name = DB::table('users')->where('id', $row)->
+first();
+@endphp "{{ $author_name->name }}",
+@endforeach
+],
+"url": "{{ url('') }}/"
+},
+"publisher": {
+"@type": "Organization",
+"name": "{{ url('') }}/",
+"logo": {
+"@type": "ImageObject",
+"url": "{{ asset('/assets/frontend/images/logo.png') }}"
+}
+},
+"datePublished": "{{ $detail->updated_at }}"
+}
+</script>
+@endif
+
+<!--------------------------- Page Schema end--------------------------------->
+@endsection
+
 @section('page.content')
 
 <!-------================ blog detail start ============ ------------>
@@ -21,7 +87,7 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <!-- -------------------- blog details banner start ---------------- -->
 
 <div class="blog_details_page_banner">
-<img src="{{ asset('storage/' . $detail->main_image) }}">
+    <img src="{{ asset('storage/' . $detail->main_image) }}" alt="{{ $detail->alt_main_image }}" />
 
 </div>
 
@@ -32,22 +98,41 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <section class="blog_details_page_breadcrumb">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
+            <div class="col-md-8 px0">
                 <ul class="d-flex align-items-center gap-3 list-unstyled" data-aos="fade-up" data-aos-once="true">
-                    <li>{{ ucfirst($page->name) }}</li>
+                    <li>
+                        <a href="{{ url(route('index')) }}" class="text-decoration-none" data-aos="fade-up"
+                            data-aos-once="true">Home</a>
+                    </li>
                     <li>></li>
+                    @if($url == 'blog' || $url == 'news' || $url == 'deal-update')
+                    <li>
+                        <a href="{{ url(route(''. $url.'')) }}" class="text-decoration-none" data-aos="fade-up"
+                            data-aos-once="true">
+                            {{ ucfirst($page->name) }}
+                        </a>
+                    </li>
+                    <li>></li>
+                    @endif
                     <li>{{ $detail->title }}</li>
                 </ul>
             </div>
-            <div class="col-md-6 px0">
-                <div class="d-flex align-items-center justify-content-md-end gap-4">
+            <div class="col-md-4 px0">
+                <div class="d-flex align-items-center justify-content-md-end gap-2">
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/author.png" alt="" />
-                        <span>{{ $author->name }}</span>
+                        <span>
+                            @foreach ($author as $row)
+                            @php $author_name = DB::table('users')->where('id', $row)->first();
+                            @endphp
+                            {{ $author_name->name }} @if($count > $i), @endif
+                            @php $i++ @endphp
+                            @endforeach
+                        </span>
                     </p>
-                    <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
+                    <p class="d-flex align-items-center gap-2 author w120" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/calender.png" alt="" />
-                        <span>{{ $detail->created_at->format('F j, Y') }}</span>
+                        <span>{{ $detail->updated_at->format('F j, Y') }}</span>
                     </p>
                 </div>
             </div>
@@ -77,8 +162,8 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
 <section class="blog_details_social pt-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
-                <div class="category d-flex align-items-center gap-md-5 gap-2">
+            <div class="col-md-12 px0">
+                <div class="category d-flex align-items-center flex-wrap gap-md-5 gap-2">
                     @php
                     $category = json_decode($detail->blog_category_ids);
                     @endphp
@@ -89,14 +174,6 @@ $page = DB::table('blog_categories')->where('slug', $url)->first();
                     <span data-aos="fade-up" data-aos-once="true">{{ $category_name }}</span>
                     @endforeach
 
-                </div>
-            </div>
-            <div class="col-md-6 px0">
-                <div class="icons d-flex align-items-center justify-content-end gap-3 mt-md-2 mt-4">
-                    <img src="/assets/frontend/images/icon_1.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_2.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_3.png" alt="" data-aos="fade-up" data-aos-once="true" />
-                    <img src="/assets/frontend/images/icon_4.png" alt="" data-aos="fade-up" data-aos-once="true" />
                 </div>
             </div>
         </div>

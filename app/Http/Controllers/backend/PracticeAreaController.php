@@ -17,7 +17,7 @@ class PracticeAreaController extends Controller
     }
 
     public function add() {
-        $practicearea = PracticeArea::where('status', 1)->where('parent_id', null)->get();
+        $practicearea = PracticeArea::where('status', 1)->get();
         return view('backend.pages.practicearea.add', compact('practicearea'));
     }  
     
@@ -73,7 +73,9 @@ class PracticeAreaController extends Controller
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
 
-        $slug = Str::slug($request->input('slug'), '-');
+        $slug = customSlug($request->input('slug'));
+
+        $focusArea = $request->input('focus_area', []);
         
         // Create the PracticeArea record with 'PracticeArea_category_ids' included
         PracticeArea::create([
@@ -82,16 +84,19 @@ class PracticeAreaController extends Controller
             'slug' => $slug,
             'short_description' => $request->input('short_description'),
             'content' => $request->input('content'),
-            'focus_area' => $request->input('focus_area'),
+            'focus_area' => json_encode($focusArea),
             'why_choose_us' => $request->input('why_choose_us'),
             'faq' => $data['faq'],
             'thumnail_image' => $imagePath,
+            'alt_thumnail_image' => $request->input('alt_thumnail_image'),
             'section_image' => $imagePath2,
+            'alt_section_image' => $request->input('alt_section_image'),
             'meta_title' => $request->input('meta_title'),
             'meta_description' => $request->input('meta_description'),
             'breadcrumb_title' => $request->input('breadcrumb_title'),
             'breadcrumb_subtitle' => $request->input('breadcrumb_subtitle'),
             'breadcrumb_image' => $imagePath1,
+            'special_service' => $request->input('special_service'),
         ]);
     
         $response = [
@@ -104,7 +109,7 @@ class PracticeAreaController extends Controller
 
     public function edit($id) {
         $practicearea = PracticeArea::find($id);
-        $allpracticearea = PracticeArea::where('status', 1)->where('parent_id', null)->get();
+        $allpracticearea = PracticeArea::where('status', 1)->get();
         return view('backend.pages.practicearea.edit', compact('practicearea', 'allpracticearea'));
     }
     
@@ -212,20 +217,31 @@ class PracticeAreaController extends Controller
         // Remove the 'faq_description' key as it's not needed anymore
         unset($data['faq_description']);
 
-        $slug = Str::slug($request->input('slug'), '-');
+        $slug = customSlug($request->input('slug'));
+
+        $focusArea = $request->input('focus_area', []);
     
         $practicearea->parent_id = $request->input('parent_id');
         $practicearea->title = $request->input('title');
         $practicearea->slug = $slug;
+        $practicearea->alt_thumnail_image = $request->input('alt_thumnail_image');
+        $practicearea->alt_section_image = $request->input('alt_section_image');
         $practicearea->short_description = $request->input('short_description');
         $practicearea->content = $request->input('content');
-        $practicearea->focus_area = $request->input('focus_area');
+        
+        if (empty($focusArea) || $focusArea === '[]') {
+            $practicearea->focus_area = '[]';
+        } else {
+            $practicearea->focus_area = json_encode($focusArea);
+        }
+
         $practicearea->why_choose_us = $request->input('why_choose_us');
         $practicearea->faq = $data['faq'];
         $practicearea->meta_title = $request->input('meta_title');
         $practicearea->meta_description = $request->input('meta_description');
         $practicearea->breadcrumb_title = $request->input('breadcrumb_title');
         $practicearea->breadcrumb_subtitle = $request->input('breadcrumb_subtitle');
+        $practicearea->special_service = $request->input('special_service');
     
         $practicearea->save();
 

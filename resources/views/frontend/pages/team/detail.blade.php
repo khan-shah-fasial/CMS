@@ -1,8 +1,28 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', "$detail->meta_title")
+@section('page.title', ucfirst($detail->name) . ' - Ahlawat & Associates')
 
-@section('page.description', "$detail->meta_description")
+@php
+$description = strip_tags(html_entity_decode($detail->about)); // Remove HTML tags
+$description = html_entity_decode($description);
+$wordLimit = 26; // Set your desired word limit
+
+// Split the string into an array of words
+$words = preg_split('/\s+/', $description, -1, PREG_SPLIT_NO_EMPTY);
+
+// Limit the array to the desired number of words
+$limitedWords = array_slice($words, 0, $wordLimit);
+
+// Join the limited words back into a string
+$tem_desc = implode(' ', $limitedWords);
+
+// Add ellipsis (...) if the original string had more words
+//if (count($words) > $wordLimit) {
+    //$blog_desc .= '...';
+//}
+@endphp
+
+@section('page.description', $tem_desc)
 
 @section('page.type', 'team')
 
@@ -27,7 +47,10 @@
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item "><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Team Members About
+                                <a href="{{ url(route('team')) }}">Team Members</a> 
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                {{ ucfirst($detail->name) }}
                             </li>
                         </ol>
                     </nav>

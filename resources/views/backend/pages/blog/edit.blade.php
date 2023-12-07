@@ -32,7 +32,7 @@
                 <input type="text" class="form-control" name="short_description" value="{{ $blog->short_description }}" required>
             </div>
         </div>
-<div class="col-sm-12">
+        <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Category <span class="red">*</span></label>
                 <select class="form-select select2" name="blog_category_ids[]" multiple required>
@@ -45,7 +45,7 @@
                 </select> 
             </div>
         </div>
-<div class="col-sm-12">
+        <div class="col-sm-12">
             <div class="form-group mb-3">
                 <label>Meta Title <span class="red">*</span></label>
                 <input type="text" class="form-control" name="meta_title" value="{{ $blog->meta_title }}" required>
@@ -60,14 +60,21 @@
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Author</label>
-                <select class="select2 form-select" name="user_id" required>
+                <select class="select2 form-select" name="user_id[]" id="mySelect" multiple required>
                     <option value="" disabled>Select Author</option>
                     @foreach($users as $row)
-                        <option value="{{ $row->id }}" @if($blog->user_id == $row->id) selected @endif>{{ $row->name }}</option>
+
+                        <option value="{{ $row->id }}" @if(in_array($row->id, json_decode($blog->user_id, true))) selected @endif>
+                            {{ $row->name }}
+                        </option>
+
                     @endforeach
                 </select> 
             </div>
-        </div>         
+        </div>
+        
+        <input type="hidden" name="sortedUserIds" id="sortedUserIds">
+        
         <div class="col-sm-6">
             <div class="form-group mb-3">
                 <label>Updated Date <span class="red">*</span></label>
@@ -79,7 +86,11 @@
 	</div>
 	</div>
 	<div class="col-md-6">
-	<div class="form-group mb-3">
+            <div class="form-group mb-3">
+                <label>Alt Image</label>
+                <input type="text" class="form-control" name="alt_main_image" value="{{ $blog->alt_main_image }}">
+            </div>
+	        <div class="form-group mb-3">
                 <label>Content <span class="red">*</span></label>
                 <textarea class="form-control trumbowyg" name="content" rows="5" required>{{ $blog->content }}</textarea>
             </div>
@@ -106,4 +117,62 @@ $("#edit_blog_form").submit(function(e) {
 var responseHandler = function(response) {
     location.reload();
 }
+</script>
+
+<!-- JavaScript code -->
+<script>
+    $(document).ready(function () {
+        // Initialize Select2
+        $('#mySelect').select2();
+
+        // Store selected values in an array
+        var selectedValues = [];
+
+        // Counter for dynamic value
+        var dynamicValue = 1;
+
+        // Update the array when a selection is made or removed
+        $('#mySelect').on('select2:select select2:unselect', function (e) {
+            updateSelectedValues();
+        });
+
+        function updateSelectedValues() {
+            // Get selected values directly from Select2
+            var selectedOptions = $('#mySelect').select2('data');
+
+            // Map the selected values to the desired format with initially assigned order
+            selectedValues = selectedOptions.map(function (option) {
+                // Check if the order is already assigned for this ID
+                var existingItem = selectedValues.find(function (item) {
+                    return item.id === option.id;
+                });
+
+                // If the order is not assigned, assign it based on the dynamicValue
+                var order = existingItem ? existingItem.order : dynamicValue++;
+
+                return {
+                    id: option.id,
+                    order: order
+                };
+            });
+
+            // Sort the array based on the order in ascending order
+            selectedValues.sort(function (a, b) {
+                return a.order - b.order;
+            });
+
+            // Log the sorted array (you can remove this line in production)
+            //console.log(selectedValues);
+
+            // Extract only the 'id' values and append them to the hidden input field
+            var sortedIds = selectedValues.map(item => item.id);
+            $('#sortedUserIds').val(JSON.stringify(sortedIds));
+        }
+
+        // Submit the form
+        $('form').submit(function () {
+            // Ensure the hidden input field is updated before submitting
+            updateSelectedValues();
+        });
+    });
 </script>

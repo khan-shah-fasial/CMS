@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\SitemapController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +20,30 @@ use Illuminate\Support\Facades\DB;
 // Home START
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/area-of-practices', [IndexController::class, 'practice_area'])->name('practicearea');
-Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])->name('practicearea-detail');
-Route::get('/blogs', [IndexController::class, 'blog'])->name('blog');
+// ------------------------------ normal service --------------------------------------
+Route::get('/area-of-practice/{slug}', [IndexController::class, 'practice_area_detail'])
+    ->name('practicearea-detail');
+
+$slug = DB::table('practice_areas')->pluck('slug')->toArray();
+// ---------------------------- specialised-services ----------------------------------
+Route::get('/specialised-services/{slug}', [IndexController::class, 'practice_area_detail'])
+    ->where('slug', implode('|', $slug ))
+    ->name('practicearea-detail-specialised');
+
+// ------------------------------ page service ----------------------------------------
+
+Route::get('/{slug}', [IndexController::class, 'practice_area_detail'])
+    ->where('slug', implode('|', $slug ))
+    ->name('practicearea-detail-page');
+// ------------------------------------ extra paremeter service ------------------------
+// ------------------------------ normal service --------------------------------------
+Route::get('/area-of-practice/{slug1}', [IndexController::class, 'practice_area_detail'])
+    ->where('slug1', implode('|', $slug ))
+    ->name('practicearea-detail-extra'); 
+//-------------------------- service --------------------------------------------
+
+Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
+Route::get('/blogs-data', [IndexController::class, 'blog_data'])->name('blog-data');
 
 $postCategories = DB::table('blog_categories')->pluck('slug')->toArray();
 Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
@@ -27,8 +51,16 @@ Route::get('/{category}/{slug}', [IndexController::class, 'blog_detail'])
     ->name('blog.detail');
 
 Route::get('/news', [IndexController::class, 'news'])->name('news');
+Route::get('/news-data', [IndexController::class, 'news_data'])->name('news-data');
 
 Route::get('/deal-update', [IndexController::class, 'deal_update'])->name('deal-update');
+Route::get('/deal-update-data', [IndexController::class, 'deal_update_data'])->name('deal-update-data');
+
+Route::get('/media-coverage', [IndexController::class, 'media_coverage'])->name('media-coverage');
+Route::get('/media-coverage-data', [IndexController::class, 'media_coverage_data'])->name('media-coverage-data');
+
+Route::get('/publication', [IndexController::class, 'publication'])->name('publication');
+Route::get('/publication-data', [IndexController::class, 'publication_data'])->name('publication-data');
 
 
 Route::any('/team-members', [IndexController::class, 'team_members'])->name('team');
@@ -45,6 +77,8 @@ Route::post('/contact-save', [IndexController::class, 'contact_save'])->name('co
 Route::post('/comment-save', [IndexController::class, 'comment_save'])->name('comment.create');
 
 Route::get('/search', [IndexController::class, 'search'])->name('search');
+
+Route::get('/sitemap', [SitemapController::class, 'newSitemap'])->name('sitemap');
 // Home END
 
 
@@ -69,4 +103,13 @@ Route::get('/create-storage-link', function () {
     } else {
         return 'Error creating storage link.';
     }
+});
+
+Route::get('/send-test-email', function () {
+    Mail::raw('Test email content', function ($message) {
+        $message->to('khanfaisal.makent@gmail.com')
+                ->subject('Test Email');
+    });
+
+    return 'Test email sent!';
 });

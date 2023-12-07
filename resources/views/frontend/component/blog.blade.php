@@ -1,8 +1,10 @@
 @php
-$blog = DB::table('blogs')->where('status', 1)->limit(6)->orderBy('id', 'desc')->get()->toArray();
-$right_blog = array_slice($blog, 2);
+$blog = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
+'3')->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
+$right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
+'4')->limit(4)->orderBy('created_at', 'desc')->get();
 @endphp
-@if(count($blog) > 5)
+@if(count($blog) > 1)
 <!-------============= blog ================---------------------->
 <section class="blog">
     <div class="container">
@@ -10,11 +12,11 @@ $right_blog = array_slice($blog, 2);
 
             <div class="col-lg-8 px0">
                 <div class="underline_heading" data-aos-once="true" data-aos="fade-up">
-                    <h6 class="main_heading">Latest Blog</h6>
+                    <h6 class="main_heading">Latest Blogs</h6>
                 </div>
                 <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">
-                    Learn something more <br />
-                    from our latest <span class="main_heading_color">Blog</span>
+                    Enhance your legal knowledge <br> with <a href="{{ url(route('blog')) }}"
+                        class="main_heading_color text-decoration-none cursor-pointer">Blogs</a>
                 </h1>
                 <div class="row">
 
@@ -50,11 +52,12 @@ $right_blog = array_slice($blog, 2);
 
             <div class="col-lg-4 px0 ">
                 <h2 class="heading mb-4 mt-4">
-                    Learn something more from our latest
-                    <span class="main_heading_color">News</span>
+                    Get yourself updated with A&amp;A
+                    <a href="{{ url(route('news')) }}"
+                        class="main_heading_color text-decoration-none cursor-pointer">Newscast!</a>
                 </h2>
 
-                @foreach ($right_blog as $row)
+                @foreach ($right_news as $row)
 
                 <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' .$row->main_image) }}" alt="" />
@@ -63,7 +66,7 @@ $right_blog = array_slice($blog, 2);
                             {{ $row->title }}
                         </p>
                         <a
-                            href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            href="{{ url(route('blog.detail', ['category' =>'news', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
                             More</a>
                     </div>
                 </div>

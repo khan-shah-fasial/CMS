@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'News | Ahlawat & Associates')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Get yourself legally updated with the legal updates in India via the blogs written by the some of the best lawyers online in India')
 
 @section('page.type', 'news')
 
@@ -35,61 +35,24 @@
 
 <!-- -------------------- blog banner end   ---------------- -->
 
+@include('frontend.component.category_breadcrumb')
+
 <!-- -------------------- blog banner start ---------------- -->
 
 <section class="blog_page_cards">
     <div class="container">
-        <div class="row">
+        <div class="row" id="news_data">
 
-            @foreach ($news as $row)
-
-
-            <div class="col-lg-4 col-md-6 px0" data-aos="fade-up" data-aos-once="true">
-                <div class="blog_big_box me-xl-3 mb-md-5 mb-3 ">
-                    <div class="hover_effect_img">
-                        <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" data-aos="fade-up"
-                            data-aos-once="true" />
-                        <div class="overlay">
-                            <a
-                                href="{{ url(route('blog.detail', ['category' =>'news','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
-                                <div class="plus">
-                                    +
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    @php
-                    $author = DB::table('users')->where('id', $row->user_id)->first();
-                    @endphp
-
-                    <div class="blog_content">
-                        <div
-                            class="d-flex align-items-xl-center align-items-lg-start align-items-center  flex-xl-row flex-lg-column flex-row  gap-xl-4 gap-lg-0 gap-2 mb-2">
-                            <p class="d-flex align-items-center gap-2 author mb-0">
-                                <img src="/assets/frontend/images/author.png" alt="" />
-                                <span>{{ $author->name }}</span>
-                            </p>
-                            <p class="d-flex align-items-center gap-2 author mb-0">
-                                <img src="/assets/frontend/images/calender.png" alt="" />
-                                <span> {{ $row->created_at->format('F j, Y') }} </span>
-                            </p>
-                        </div>
-                        <p>
-                            {{ $row->short_description }}
-                        </p>
-                        <a
-                            href="{{ url(route('blog.detail', ['category' =>'news','slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
-                            More</a>
-                    </div>
-                </div>
-            </div>
-
-            @endforeach
+            @include('frontend.component.news_card')
 
         </div>
     </div>
+    @if(count($news) > '5')
+
+    <div class="text-center">
+        <button class="load-more" id="load-more">View More</button>
+    </div>
+    @endif
 </section>
 
 <!-- -------------------- blog banner end   ---------------- -->
@@ -105,4 +68,35 @@
 <!------------------ awards_section End -------------------------->
 
 <!----------------=============== blog end ================------------->
+@endsection
+
+@section('component.scripts')
+<script>
+var currentPage = 1; // Track the current page number
+
+$('#load-more').click(function() {
+    currentPage++; // Increment the page number
+
+    $.ajax({
+            url: "{{ route('news-data') }}",
+            type: 'GET', // Change the method to GET
+            data: {
+                page: currentPage
+            },
+        })
+        .done(function(response) {
+            if (response.html === '') {
+                $('#load-more').hide(); // Hide the button when there's no more data
+                return;
+            }
+            $('#news_data').append(response.html);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+});
+</script>
 @endsection

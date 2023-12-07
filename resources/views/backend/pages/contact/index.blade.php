@@ -21,6 +21,7 @@
         <thead>
             <tr>
                 <th>#</th>
+                <th>IP</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone No</th>
@@ -40,6 +41,7 @@
             @foreach($contact as $row)
             <tr>
                 <td>{{$i++}}</td>
+                <td>{{$row->ip}}</td>
                 <td>{{$row->name}}</td>
                 <td>{{$row->email}}</td>
                 <td>{{$row->phone}}</td>

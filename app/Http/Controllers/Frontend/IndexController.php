@@ -12,15 +12,22 @@ use App\Models\Team;
 use App\Models\Faq;
 use App\Models\Contact;
 use App\Models\BlogComment;
+use App\Models\MediaCoverage;
+use App\Models\Publication;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class IndexController extends Controller
 {
     public function index(){
         return view('frontend.pages.home.index');
     }
-
+//--------------=============================== practice area =====================---------------------------
     public function practice_area(){
-        $practiceAreas = PracticeArea::where('parent_id', null)->get();
+        $practiceAreas = PracticeArea::whereIn('id', ['7', '9', '11','37', '14','10', '38', '17', '12', '8', '31', '39', '19','35', '36', '13','63','62','33'])
+        ->orderByRaw("FIELD(id, '7', '9', '11','37', '14','10','38', '17', '12', '8', '31', '39', '19','35', '36', '13','63','62','33')")->get();
+
         //return $practiceAreas;
         return view('frontend.pages.practicearea.index', compact('practiceAreas'));
     }
@@ -38,18 +45,43 @@ class IndexController extends Controller
         }
         
 
-        if(empty($detail->parent_id)){  
-            $child_detail = PracticeArea::where('parent_id', $detail->id)->where('status', 1)->get();
-        } else  {
-            $child_detail = [];
-        }
+       // if(empty($detail->parent_id)){  
+            $focusAreaIds = json_decode($detail->focus_area, true);
+            $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
+
+            $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
+        //} else  {
+            //$child_detail = [];
+        //} 
 
         return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
+//--------------=============================== practice area end =====================------------------------------
+
+//--------------=============================== Blog  ================================------------------------------
 
     public function blog(){
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('id', 'desc')->get();
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '3')->orderBy('updated_at', 'desc')->paginate(6);
 
+        return view('frontend.pages.blog.index', compact('blog'));
+    }
+
+    public function blog_data(Request $request)
+    {
+        $page = $request->input('page', 1);
+        $perPage = 6;
+    
+        $blog = Blog::where('status', 1)
+            ->whereJsonContains('blog_category_ids', '3')
+            ->orderBy('updated_at', 'desc')
+            ->paginate($perPage, ['*'], 'page', $page);
+    
+        if ($request->ajax()) {
+            $view = view('frontend.component.blog_list_card', compact('blog'))->render();
+    
+            return response()->json(['html' => $view]);
+        }
+    
         return view('frontend.pages.blog.index', compact('blog'));
     }
 
@@ -59,9 +91,9 @@ class IndexController extends Controller
 
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
 
-        $author = User::find($detail->user_id);
+        $author = json_decode($detail->user_id, true);
 
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids)['0'])->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
 
         $current_id = $detail->id;
 
@@ -74,11 +106,27 @@ class IndexController extends Controller
         return view('frontend.pages.blog.detail', compact('detail','author','blog','previous_slug','next_slug'));
     }
 
+//--------------=============================== Blog end ================================------------------------------
+
+//--------------=============================== Team  ================================------------------------------
+
     public function team_members(){
         $team = Team::orderBy('series', 'asc')->get();
 
         return view('frontend.pages.team.index', compact('team'));
     }
+
+    public function team_detail($slug){
+        $slug = str_replace('-', ' ', $slug);
+
+        $detail = Team::where('name', $slug)->where('status', 1)->first();
+
+        return view('frontend.pages.team.detail', compact('detail'));
+    }
+
+//--------------=============================== Team end ================================------------------------------
+
+//--------------=============================== other ================================------------------------------
 
     public function not_found(){
 
@@ -94,15 +142,9 @@ class IndexController extends Controller
         return view('frontend.pages.cookiePolicy.index');
     }
 
+//--------------=============================== other ================================------------------------------
 
-
-    public function team_detail($slug){
-        $slug = str_replace('-', ' ', $slug);
-
-        $detail = Team::where('name', $slug)->where('status', 1)->first();
-
-        return view('frontend.pages.team.detail', compact('detail'));
-    }
+//--------------=============================== Pages ================================------------------------------
 
     public function contact_us(){
         return view('frontend.pages.contact.index');
@@ -124,6 +166,10 @@ class IndexController extends Controller
     public function privacy_policy(){
         return view('frontend.pages.privacypolice.index');
     }
+
+//--------------=============================== Pages ================================------------------------------
+
+//--------------=============================== contact form save ===========================------------------------------
 
     public function contact_save(Request $request)
     {
@@ -150,9 +196,41 @@ class IndexController extends Controller
         // Create the contact record, including 'cv' if provided
         $contactData = $request->all();
         $contactData['cv'] = $cvPath;
-    
+
         // Create the contact record
         Contact::create($contactData);
+
+        // Send email if $cvPath is not null
+
+        $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
+        $subject = 'Lead Enquiry';
+
+        // Format $contactData into an HTML table
+        $body = '<h2>A lead enquiry from the website ahlawatassociates.webtesting.pw.</h2></br><table>';
+        foreach ($contactData as $key => $value) {
+                if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
+                    $body .= "<tr><td>$key</td><td>$value</td></tr>";
+                }
+            }
+        $body .= '</table>';
+
+        if ($cvPath !== null) {
+             // Optional attachments
+            $attachments = [
+                [
+                    'path' => storage_path("app/public/$cvPath"), // Replace with the actual path
+                    'name' => 'CV.pdf', // Replace with the desired attachment name
+                ],
+                // Add more attachments if needed
+            ];
+
+            // Send the email
+            sendEmail($recipient, $subject, $body, $attachments);
+
+        }
+
+        sendEmail($recipient, $subject, $body);
+
     
         $response = [
             'status' => true,
@@ -161,18 +239,113 @@ class IndexController extends Controller
     
         return response()->json($response);
     }
-    
+   //--------------=============================== contact form save ===========================--------------------------
+   
+   //--------------=============================== news ==========================================-------------------------
+
     public function news(){
-        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('id', 'desc')->get();
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.news.index', compact('news'));
     }
 
+    public function news_data(Request $request)
+    {
+        $page = $request->input('page', 1);
+        $perPage = 6;
+    
+        $news = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '4')->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+    
+        if ($request->ajax()) {
+            $view = view('frontend.component.news_card', compact('news'))->render();
+    
+            return response()->json(['html' => $view]);
+        }
+    
+        return view('frontend.pages.news.index', compact('news'));
+    }
+
+    //--------------=============================== news end ==========================================---------------------
+
+     //--------------=============================== Deal Update ====================================---------------------
+
     public function deal_update(){
-        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('id', 'desc')->get();
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('updated_at', 'desc')->paginate(6);
 
         return view('frontend.pages.deal_update.index', compact('deal_update'));
     }
+
+    public function deal_update_data(Request $request)
+    {
+        $page = $request->input('page', 1);
+        $perPage = 6;
+    
+        $deal_update = Blog::where('status', 1)->whereJsonContains('blog_category_ids', '5')->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+    
+        if ($request->ajax()) {
+            $view = view('frontend.component.deal_update_card', compact('deal_update'))->render();
+    
+            return response()->json(['html' => $view]);
+        }
+    
+        return view('frontend.pages.deal_update.index', compact('deal_update'));
+    }
+
+//--------------=============================== Deal Update end =================================---------------------
+
+//--------------=============================== media coverage ====================================---------------------
+
+    public function media_coverage(){
+        $media_coverage = MediaCoverage::where('status', 1)->orderBy('updated_at', 'desc')->paginate(6);
+
+        return view('frontend.pages.media_coverage.index', compact('media_coverage'));
+    }
+
+    public function media_coverage_data(Request $request)
+    {
+        $page = $request->input('page', 1);
+        $perPage = 6;
+    
+        $media_coverage = MediaCoverage::where('status', 1)->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+    
+        if ($request->ajax()) {
+            $view = view('frontend.component.media_coverage_card', compact('media_coverage'))->render();
+    
+            return response()->json(['html' => $view]);
+        }
+    
+        return view('frontend.pages.media_coverage.index', compact('media_coverage'));
+    }
+
+  //--------------=============================== media coverage ====================================---------------------
+
+  //--------------=============================== publication ====================================---------------------
+
+    public function publication(){
+        $publication = Publication::where('status', 1)->orderBy('updated_at', 'desc')->paginate(6);
+
+        return view('frontend.pages.publication.index', compact('publication'));
+    }
+
+    public function publication_data(Request $request)
+    {
+        $page = $request->input('page', 1);
+        $perPage = 6;
+    
+        $publication = Publication::where('status', 1)->orderBy('updated_at', 'desc')->paginate($perPage, ['*'], 'page', $page);
+    
+        if ($request->ajax()) {
+            $view = view('frontend.component.publication_card', compact('publication'))->render();
+    
+            return response()->json(['html' => $view]);
+        }
+    
+        return view('frontend.pages.publication.index', compact('publication'));
+    }
+
+//--------------=============================== publication end ====================================---------------------
+
+//--------------=============================== other feature ====================================---------------------
 
     public function search(Request $request){
 
@@ -206,6 +379,11 @@ class IndexController extends Controller
         ];
     
         return response()->json($response);
+    }
+
+    public function uncategorized()
+    {
+        echo'hello';
     }
 
 }

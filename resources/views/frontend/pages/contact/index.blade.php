@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
+@section('page.title', 'Facing Legal Issue? Contact us and Get your legal issue solved now')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Feel free to contact us we are one of the India&#039;s leading full service law firm with expertise in all the practice area and get your legal issue solved')
 
 @section('page.type', 'website')
 
@@ -47,9 +47,8 @@
 
                         <div class="col-md-6 px0">
                             <h1 class="heading" data-aos-once="true" data-aos="fade-up">
-                                Contact our support guys or make appointment
-                                with
-                                <span class="main_heading_color"> Our Consultant </span>
+                                We&#39;re eager to help you with your legal query. Connect with one of
+                                <span class="main_heading_color"> our experts. </span>
                             </h1>
                             <p class="desc" data-aos-once="true" data-aos="fade-up">
                                 Please contact us using the information below. For
