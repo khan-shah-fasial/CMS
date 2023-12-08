@@ -22,7 +22,7 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
                         <a href="{{ $row->url }}" class="media_link">
                             <div class="media_box" data-aos-once="true" data-aos="fade-up">
                                 <img src="{{ asset('storage/' . $row->image) }}" alt="" />
-                                <h4 class="title">{{ $row->title }}</h4>
+                                <h4 class="title">{{ htmlspecialchars_decode($row->title) }}</h4>
                             </div>
                         </a>
                     </div>

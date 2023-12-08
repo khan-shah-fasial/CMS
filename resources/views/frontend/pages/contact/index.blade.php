@@ -47,24 +47,17 @@
 
                         <div class="col-md-6 px0">
                             <h1 class="heading" data-aos-once="true" data-aos="fade-up">
-                                We&#39;re eager to help you with your legal query. Connect with one of
-                                <span class="main_heading_color"> our experts. </span>
+                                {{ get_settings('contact_us_title') }}
+                                <span class="main_heading_color"> {{ get_settings('contact_us_title2') }} </span>
                             </h1>
-                            <p class="desc" data-aos-once="true" data-aos="fade-up">
-                                Please contact us using the information below. For
-                                additional information on our management consulting
-                                services, please visit the appropriate page on our site.
-                            </p>
+                            @php echo html_entity_decode(get_settings('contact_us_content')) @endphp
 
                             <div class="address">
                                 <p class="title mb-0 main_heading_color" data-aos-once="true" data-aos="fade-up">
                                     Delhi (Head Office)
                                 </p>
                                 <p data-aos-once="true" data-aos="fade-up" class="desc">
-                                    Plot No. 66, LGF, <br />
-                                    #TheHub, Okhla Phase III, <br />
-                                    Okhla Industrial Estate, New <br />
-                                    Delhi, 110020, India
+                                    {{ get_settings('delhi_address') }}
                                 </p>
                             </div>
 
@@ -73,10 +66,10 @@
                             </p>
                             <p class="phone_email" data-aos-once="true" data-aos="fade-up">
 
-                                <span> <a href="tel:011-41023400">011-41023400 </a></span>
+                                <span> <a href="tel:{{ get_settings('mobile') }}">{{ get_settings('mobile') }} </a></span>
                                 <br />
-                                <span> <a href="mailto:contact@ahlawatassociates.in">
-                                        contact@ahlawatassociates.in
+                                <span> <a href="mailto:{{ get_settings('email') }}">
+                                    {{ get_settings('email') }}
                                     </a> </span>
                             </p>
                         </div>
@@ -105,9 +98,7 @@
                                     Mumbai
                                 </p>
                                 <p data-aos-once="true" data-aos="fade-up">
-                                    No. 611, Reliables Pride opp. Om Heera Panna Mall,<br />
-                                    Anand Nagar, Jogeshwari West, <br />
-                                    Mumbai, Maharashtra, 400102, India
+                                    {{ get_settings('mumbai_address') }}
                                 </p>
                             </div>
                         </div>

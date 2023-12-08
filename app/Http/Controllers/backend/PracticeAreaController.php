@@ -28,8 +28,8 @@ class PracticeAreaController extends Controller
             'slug' => 'required|unique:practice_areas',
             'short_description' => 'required',
             'content' => 'required',
-            'thumnail_image' => 'image',
-            'section_image' => 'image',
+            //'thumnail_image' => 'image',
+            //'section_image' => 'image',
             'meta_title' => 'required|max:255',
             'meta_description' => 'required',
             'breadcrumb_title' => 'required|max:191',
@@ -45,8 +45,20 @@ class PracticeAreaController extends Controller
         }        
     
         // Upload image
-        $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
+        
         $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('assets/image/practicearea', 'public');
+        } else {
+            $imagePath = null;
+        }
+
+        if ($request->hasFile('breadcrumb_image')) {
+            $imagePath1 = $request->file('breadcrumb_image')->store('assets/image/practicearea', 'public');
+        } else {
+            $imagePath1 = null;
+        }
 
         if ($request->hasFile('section_image')) {
             $imagePath2 = $request->file('section_image')->store('assets/image/practicearea', 'public');
@@ -146,8 +158,8 @@ class PracticeAreaController extends Controller
             'slug' => 'required|unique:practice_areas,slug,'. $request->input('id'),
             'short_description' => 'required',
             'content' => 'required',
-            'thumnail_image' => 'image',
-            'section_image' => 'image',
+            //'thumnail_image' => 'image',
+            //'section_image' => 'image',
             'meta_title' => 'required|max:255',
             'meta_description' => 'required',
             'breadcrumb_title' => 'required|max:191',

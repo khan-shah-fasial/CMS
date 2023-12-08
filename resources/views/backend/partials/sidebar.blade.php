@@ -148,10 +148,22 @@
                                         <a href="{{ route('contactpage.index') }}">Contact Page</a>
                                     </li> --}}
                                     <li>
+                                        <a href="{{ route('setting.home') }}">Home Page</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('setting.privacy') }}">Privacy Policy Page</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('setting.cookie') }}">Cookie Policy Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('setting.about') }}">About Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('setting.career') }}">Career Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('setting.contact') }}">Contact Page</a>
                                     </li>
                                     {{--
                                     <li>
