@@ -100,3 +100,4 @@ $('#load-more').click(function() {
 });
 </script>
 @endsection
+

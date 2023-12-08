@@ -5,6 +5,9 @@ if (!isset($session_data['country'])) {
     $session_data['country'] = 'IN';
 }*/
 @endphp
+@php
+$practice_Area = DB::table('practice_areas')->get();
+@endphp
 <!----============ Form start =================-------------------->
 <form id="add_contact_us_form" action="{{url(route('contact.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -34,8 +37,14 @@ if (!isset($session_data['country'])) {
             required />
     </div>
     <div class="mb-3">
+        <select class="form-select select2" data-aos-once="true" name="services" data-aos="fade-up" required>
+            <option value="">Select the Service</option>
 
-        <input type="text" placeholder="Other" name="other_info" data-aos-once="true" data-aos="fade-up" />
+            @foreach ($practice_Area as $row)
+            <option value="{{ $row->title }}">{{ $row->title }}</option>
+            @endforeach
+
+        </select>
     </div>
     <div class="mb-3">
 
@@ -58,6 +67,7 @@ if (!isset($session_data['country'])) {
 @section('component.scripts')
 <script>
 $(document).ready(function() {
+    initSelect2('.select2');
     initValidate('#add_contact_us_form');
     $("#add_contact_us_form").submit(function(e) {
         var form = $(this);

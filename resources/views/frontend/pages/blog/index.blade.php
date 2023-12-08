@@ -71,6 +71,7 @@
 @endsection
 
 @section('component.scripts')
+
 <script>
 var currentPage = 1; // Track the current page number
 
