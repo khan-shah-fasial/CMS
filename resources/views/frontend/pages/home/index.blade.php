@@ -63,7 +63,7 @@ assistance for startups, FDI, Property law, IP, and more')
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+    background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,19 +81,16 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @keyframes animate {
     0% {
-        background-image: url("/assets/frontend/images/banner_slider2.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
     }
     25% {
-        background-image: url("/assets/frontend/images/banner_slider3.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_3')) }}");
     }
     50% {
-        background-image: url("/assets/frontend/images/banner_slider1.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
     }
     75% {
-        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
-    }
-    100% {
-        background-image: url("/assets/frontend/images/banner_slider_4.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
     }
 }
 

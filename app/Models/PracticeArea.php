@@ -16,6 +16,7 @@ class PracticeArea extends Model
         'thumnail_image',
         'alt_thumnail_image',
         'section_image',
+        'section_link',
         'alt_section_image',
         'title',
         'short_description',
