@@ -267,5 +267,9 @@ $("#mobile-number").intlTelInput();
 $("#mobile-number1").intlTelInput(); 
 $("#mobile-number2").intlTelInput(); 
 
+$(document).ready(function() {
+    initSelect2('.select2');
+});
+
 
       
