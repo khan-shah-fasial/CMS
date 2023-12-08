@@ -195,6 +195,14 @@ Route::group(['prefix' => 'setting'], function () {
     Route::get('/privacy-policy', [BusinessSettingController::class, 'privacy_policy'])->name('setting.privacy');
 
     Route::get('/cookie-policy', [BusinessSettingController::class, 'cookie_policy'])->name('setting.cookie');
+
+    Route::get('/about-us', [BusinessSettingController::class, 'about_us'])->name('setting.about');
+
+    Route::get('/career', [BusinessSettingController::class, 'career'])->name('setting.career');
+
+    Route::get('/contact-us', [BusinessSettingController::class, 'contact_us'])->name('setting.contact');
+
+    Route::get('/home', [BusinessSettingController::class, 'home_page'])->name('setting.home');
 });
 
 

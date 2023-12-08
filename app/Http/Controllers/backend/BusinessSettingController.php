@@ -20,6 +20,18 @@ class BusinessSettingController extends Controller
     public function cookie_policy() {
         return view('backend.pages.cookie.index');
     }
+
+    public function about_us() {
+        return view('backend.pages.about.index');
+    }
+
+    public function career() {
+        return view('backend.pages.career.index');
+    }
+
+    public function contact_us() {
+        return view('backend.pages.contact_us.index');
+    }
       
     public function update(Request $request) {
         // Assuming the request data is in key-value pairs

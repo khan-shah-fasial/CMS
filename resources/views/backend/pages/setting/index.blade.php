@@ -60,7 +60,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group mb-3">
                                         <label>Chandigarh</label>
-                                        <textarea class="form-control" name="chandigarh_address" rows="3">{{ get_settings('mumbai_address') }}</textarea>
+                                        <textarea class="form-control" name="chandigarh_address" rows="3">{{ get_settings('chandigarh_address') }}</textarea>
                                     </div>
                                 </div>                    
                             </div>
