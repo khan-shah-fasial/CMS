@@ -1,3 +1,11 @@
+<style>
+ pre{
+      background-color: #f4f4f4;
+      padding: 10px;
+      white-space: pre-wrap;
+    }
+</style>
+
 <form id="add_blogs_form" action="{{url(route('blogs.create'))}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="row">
@@ -98,6 +106,21 @@
         
     </div>
 </form>
+
+<pre>
+<h4 class="mb-0">Blog Quote Code</h4>
+&lt;div class="quote_section"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-1"&gt; 
+      &lt;i class="fa fa-quote-left" aria-hidden="true"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-11"&gt;
+      &lt;p &gt;A project office allows a foreign company to have a presence in India for the sole purpose of executing a project in India. Such offices can only undertake or carry on activities that relate to and are incidental to the execution of their project.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
 
 <script>
 $(document).ready(function() {

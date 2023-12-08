@@ -1520,13 +1520,13 @@ hr {
 }
 
 .blog_details_page_comments .avatar {
-    width: 94px;
-    height: 94px;
+    
     border-radius: 100%;
 }
 
 .blog_details_page_comments .avatar img {
     border-radius: 100%;
+	width:100%;
 }
 
 .blog_details_page_comments .name {
@@ -2377,4 +2377,34 @@ input#mobile-number1 {
     margin-right: 6px;
     color: #000;
     font-size: 13px;
+}
+
+.quote_section {
+    background: #EFEFEF;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 20px 40px 20px 20px;
+}
+
+.quote_section p {
+    margin-bottom: 0;
+    font-size: 16px !important;
+    font-weight: 700;
+    color: #737373;
+}
+
+ 
+	
+.quote_section i {
+    background: #fff;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    line-height: 86px;
+    position: relative;
+    left: -25px;
+    top: -35px;
+    border-radius: 0px 50px 50px 0px;
+    font-size: 25px;
+    color: #e73f3a;
 }

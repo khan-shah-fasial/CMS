@@ -224,12 +224,12 @@ first();
 
             @foreach ($comment as $row)
 
-            <div class="col-xl-1 col-md-2">
+            <div class="col-xl-2 col-md-2">
                 <div class="avatar" data-aos="fade-up" data-aos-once="true">
-                    <img src="/assets/frontend/images/profile.png" alt="" />
+                    <img src="/assets/frontend/images/usericons.jpg" alt="" />
                 </div>
             </div>
-            <div class="col-xl-9 col-md-8">
+            <div class="col-xl-10 col-md-8">
                 <p class="name" data-aos="fade-up" data-aos-once="true">{{ $row->name }}</p>
                 <p class="date" data-aos="fade-up" data-aos-once="true">
                     {{ date('F d, Y \a\t h:i a', strtotime($row->created_at)) }}</p>
