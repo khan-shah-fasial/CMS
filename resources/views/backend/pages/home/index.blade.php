@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('page.name', 'Privacy policy Content Setting')
+@section('page.name', 'Home Page Content Setting')
 
 @section('page.content')
 <div class="card">
@@ -21,27 +21,60 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h4 class="header-title"><b>Content</b></h4>
+                                        <h4 class="header-title"><b>Our Journey</b></h4>
                                         <hr>
-                                    </div>                         
+                                    </div>
                                     <div class="col-sm-12">
                                         <div class="form-group mb-3">
-                                            {{--<label>Email</label> --}}
-                                            <textarea class="form-control trumbowyg" name="privacy_content" rows="5">{{ get_settings('privacy_content') }}</textarea>
+                                            <label>Title</label>
+                                            <input type="text" class="form-control" name="oj_home" value="{{ get_settings('oj_home') }}" >
+                                        </div>
+                                    </div>                          
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3">
+                                            <label>Contain</label>
+                                            <textarea class="form-control trumbowyg" name="oj_content" rows="5">{{ get_settings('oj_content') }}</textarea>
                                         </div>
                                     </div>        
                                 </div>
 
-                                <div class="col-sm-12">
-                                    <div class="d-flex justify-content-end " >
-                                        <div class="form-group d-grid mb-3 w-25 text-end">
-                                            <button type="submit" class="btn btn-block btn-primary">Update</button>
-                                        </div>
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="header-title"><b>A&A Section</b></h4>
+                                        <hr>
                                     </div>
-                                    
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3">
+                                            <label>Title</label>
+                                            <input type="text" class="form-control" name="ana_home" value="{{ get_settings('ana_home') }}" >
+                                        </div>
+                                    </div>                          
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3">
+                                            <label>Contain</label>
+                                            <textarea class="form-control trumbowyg" name="ana_content" rows="5">{{ get_settings('ana_content') }}</textarea>
+                                        </div>
+                                    </div>        
                                 </div>
 
                             </div>
+                        </div>
+
+
+                        <div class="col-sm-12">
+                            <div class="d-flex justify-content-end " >
+                                <div class="form-group d-grid mb-3 w-25 text-end">
+                                    <button type="submit" class="btn btn-block btn-primary">Update</button>
+                                </div>
+                            </div>
+                            
                         </div>
  
                     </div>               

@@ -32,6 +32,10 @@ class BusinessSettingController extends Controller
     public function contact_us() {
         return view('backend.pages.contact_us.index');
     }
+
+    public function home_page() {
+        return view('backend.pages.home.index');
+    }
       
     public function update(Request $request) {
         // Assuming the request data is in key-value pairs
