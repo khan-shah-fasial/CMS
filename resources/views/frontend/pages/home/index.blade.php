@@ -115,7 +115,7 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <!------------------ About Start -------------------------->
 
-<section class="about pb-0">
+<section class="about pb-0 contentjstfy">
     <div class="container">
         <div class="row">
             <div class="col-md-6 px0">
@@ -146,7 +146,7 @@ assistance for startups, FDI, Property law, IP, and more')
 <!------------------ practice End -------------------------->
 <!------------------ news Start -------------------------->
 
-<section class="news">
+<section class="news contentjstfy">
     <div class="container">
         <div class="row">
             <div class="col-md-12 px0">

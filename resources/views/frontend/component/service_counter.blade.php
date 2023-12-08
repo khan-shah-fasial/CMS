@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="15">15</span>B+
+                                        <span class="counter-value" data-count="15">15 </span>Bn+
                                     </p>
                                     <p class="about_counter_para">Deal Value Handled</p>
                                 </div>
