@@ -11,6 +11,50 @@ assistance for startups, FDI, Property law, IP, and more')
 
 <!-----===== home content start============---->
 
+<style>
+.banner_content {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*box-shadow: 1000px 1000px 1000px 1000px inset #00000094;*/
+    color: white;
+    transition: 2s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        background-image: url("/assets/frontend/images/banner_slider2.jpg");
+    }
+    25% {
+        background-image: url("/assets/frontend/images/banner_slider3.jpg");
+    }
+    50% {
+        background-image: url("/assets/frontend/images/banner_slider1.jpg");
+    }
+    75% {
+        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+    }
+    100% {
+        background-image: url("/assets/frontend/images/banner_slider_4.jpg");
+    }
+}
+
+
+</style>
 <section class="banner_section">
     <div class="banner_content">
                    
@@ -38,7 +82,7 @@ assistance for startups, FDI, Property law, IP, and more')
                     <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h6>
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">Ahlawat & Associates</h2>
-                <p class="desc" data-aos-once="true" data-aos="fade-up">
+                <p class="desc textjustify me-2" data-aos-once="true" data-aos="fade-up">
                     Ahlawat &amp; Associates is one of leading full-service law firms in India, catering to
                     domestic and
                     international clients. Incorporated in 1978 as a primary litigation practice by Mrs. Avnish
@@ -113,7 +157,7 @@ firms in India?
             </div>
             <div class="col-md-6 px0">
                 <div class="news_box">
-                    <p class="desc" data-aos-once="true" data-aos="fade-up">
+                    <p class="desc textjustify ms-2" data-aos-once="true" data-aos="fade-up">
                         Ahlawat &amp; Associates is one of the top law-firms in India because we at A&amp;A
                         adopted an
                         approach that demands the highest levels of understanding in each of our practice areas,

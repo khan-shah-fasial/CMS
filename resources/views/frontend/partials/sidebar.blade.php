@@ -1,7 +1,7 @@
 <div class="col-lg-2 col-0 pd-0">
     <div class="menu_left_fixed">
         <div class="logo">
-            <a href="{{ url(route('index')) }}"><img src="/assets/frontend/images/logo.png" alt="logo" /></a>
+            <a href="{{ url(route('index')) }}"><img src="/assets/frontend/images/header_logo.webp" alt="logo" /></a>
         </div>
         <div class="menu_listing">
             <ul>

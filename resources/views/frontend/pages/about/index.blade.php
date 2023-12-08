@@ -74,13 +74,13 @@
                     options to best suit their needs. A&A takes pride in being amongst
                     the most sought-after qualitative legal service provider globally.
                 </p>
-                <p class="desc mb-lg-5 mb-3" data-aos-once="true" data-aos="fade-up">
+                <p class="desc mb-lg-1 mb-3" data-aos-once="true" data-aos="fade-up">
                     With an aim to provide valued, practical and strategic legal
                     solutions to help clients achieve their goals, A&A combines the
                     highest global standards with local expertise.
                 </p>
-                <img src="/assets/frontend/images/aboutUs.png" alt="" class="about_content_img" data-aos-once="true"
-                    data-aos="fade-up" />
+                <!--<img src="/assets/frontend/images/aboutUs.png" alt="" class="about_content_img" data-aos-once="true"
+                    data-aos="fade-up" />-->
             </div>
         </div>
     </div>

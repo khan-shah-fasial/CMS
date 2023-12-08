@@ -71,7 +71,7 @@ $practice_Area = DB::table('practice_areas')
                     <nav>
 
                         <div class="logo">
-                            <a href="{{ url(route('index')) }}"><img src="/assets/frontend/images/logo.png"
+                            <a href="{{ url(route('index')) }}"><img src="/assets/frontend/images/header_logo.webp"
                                     alt="logo" /></a>
                         </div>
                         <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox" />

@@ -270,7 +270,8 @@
     }
 
     .contact .contact_form {
-        display: none;
+        display: block;
+		margin-bottom:20px;
     }
 
     .contact_info_box img {
