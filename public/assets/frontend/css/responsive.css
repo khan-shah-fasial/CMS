@@ -181,7 +181,10 @@
     header {
         top: 35px;
     }
-
+.blog_details_page_banner img {
+    height: auto;
+    object-fit: cover;
+}
     .top_nav_links {
         display: none;
     }

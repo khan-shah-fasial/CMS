@@ -16,7 +16,7 @@
                         <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
                         <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
                         <a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a>
-                        <a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>
+                        <!--<a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>-->
                     </div>
                 </div>
                 <li><a href="{{ url(route('career')) }}">Career</a></li>

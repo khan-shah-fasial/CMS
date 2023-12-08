@@ -69,8 +69,8 @@ p {
 }
 
 .underline_heading .main_heading {
-    font-size: 20px;
-    font-weight: 400;
+        font-size: 24px;
+    font-weight: 600;
     line-height: 25px;
     border-bottom: 2px solid rgba(183, 183, 183, 1);
     width: 320px;
@@ -2348,6 +2348,7 @@ input#mobile-number1 {
 
 .contact .contact_form input#mobile-number {
     padding-left: 43px;
+	    height: 40px !important;
 }
 
 .textjustify
@@ -2407,4 +2408,94 @@ input#mobile-number1 {
     border-radius: 0px 50px 50px 0px;
     font-size: 25px;
     color: #e73f3a;
+}
+
+span.select2-selection.select2-selection--single {
+    border: none !important;
+    background: #d2d2d2 ;
+    width: 100% !important;
+	    padding: 5px 14px;
+    border-radius: 10px;
+}
+.select2.select2-container {
+    width: 100% !important;
+	font-size: 12px;
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: auto !important;
+    user-select: none;
+    -webkit-user-select: none;
+	border-radius: 10px;
+}
+
+span#select2-services-gq-container {
+    font-size: 12px !important;
+    padding: 5px 20px;
+    height: auto !important;
+}
+input#mobile-number1 {
+    height: 38px !important;
+}
+
+.intl-tel-input .flag-dropdown .selected-flag {
+    margin: 1px;
+    padding: 10px 16px 10px 6px !important;
+}
+
+form#add_footer_form span.select2-selection.select2-selection--single {
+    background: transparent !important;
+    border: 1px solid #494949 !important;
+    border-radius: 5px !important;
+    color: #fff !important;
+}
+
+form#add_footer_form .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #9f9f9f !important;
+	    font-size: 10px !important;
+}
+
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    z-index: 9999;
+}
+input#mobile-number2 {
+        padding-left: 43px !important;
+    height: 42px;
+    background: rgba(243, 243, 243, 1);
+}
+
+section.contact_p_form span.select2-selection.select2-selection--single {
+    background: rgba(243, 243, 243, 1);
+}
+
+section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
+    margin: 1px;
+    padding: 12px 16px 13px 6px !important;
+}
+
+.contact_p_form .select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    z-index: auto;
+}
+
+.contentjstfy p
+{
+	text-align:justify;
+}
+
+.blog_details_page_banner img {
+    height: 446px;
+    object-fit: contain;
 }

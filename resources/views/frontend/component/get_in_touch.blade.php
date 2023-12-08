@@ -7,14 +7,12 @@
                     <h1 class="heading" data-aos-once="true" data-aos="fade-up">
                         GET IN TOUCH WITH US TODAY
                     </h1>
-                    <p class="desc" data-aos-once="true" data-aos="fade-up">
-                        We can be reached at
-                    </p>
+                    
                     <a type="button" data-bs-toggle="modal" data-bs-target="#contact"
                         class="d-flex align-items-center justify-content-center gap-2" data-aos-once="true"
                         data-aos="fade-up">
 
-                        <span class="mt-2">Let's Talk</span>
+                        <span class="mt-2">Contact Us Now</span>
                     </a>
                 </div>
             </div>
