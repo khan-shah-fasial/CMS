@@ -420,7 +420,6 @@ header ul.dropdown li a:hover {
     padding: 0;
 }
 
-
 .banner_section .banner_content span {
     font-size: 16px;
     font-weight: 400;
@@ -1545,11 +1544,12 @@ hr {
     padding-left: 20px;
 }
 .blog_details_page_comments .comment {
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: 400 !important;
-    line-height: 26px !important;
+    line-height: 30px !important;
     margin-bottom: 58px;
     padding-left: 20px;
+
 }
 
 .blog_details_page_comments button {
@@ -2197,13 +2197,13 @@ select.aos-init.aos-animate.error {
 .whatsapp_blink .btn-whatsapp-pulse {
     background: #25d366;
     color: white;
-    font-size: 40px;
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 0;
     height: 0;
-    padding: 27px;
+    padding: 23px;
     text-decoration: none;
     border-radius: 50%;
     animation-name: pulse;
@@ -2247,7 +2247,7 @@ select.aos-init.aos-animate.error {
 }
 
 .wcs_button_circle .fa {
-    font-size: 30px !important;
+    font-size: 26px !important;
 }
 
 /* side bar drop down */
@@ -2348,4 +2348,33 @@ input#mobile-number1 {
 
 .contact .contact_form input#mobile-number {
     padding-left: 43px;
+}
+
+.textjustify
+{
+	text-align:justify;
+}
+
+.service_title_desc p {
+    text-align: justify;
+}
+
+.service_why_choose p {
+    text-align: justify;
+}
+.blog_details_page_title_desc p {
+    text-align: justify;
+}
+.logo img {
+    width: 164px;
+}
+
+.intl-tel-input .flag-dropdown .country-list .country .dial-code {
+    color: #000 !important;
+	font-size:13px;
+}
+.intl-tel-input .flag-dropdown .country-list .flag, .intl-tel-input .flag-dropdown .country-list .country-name {
+    margin-right: 6px;
+    color: #000;
+    font-size: 13px;
 }

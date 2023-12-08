@@ -192,14 +192,12 @@ $practice_Area = DB::table('practice_areas')
         </div>
     </div>
     <div class="fix_footer">
-        <a href="{{ url(route('index')) }}">
-            <span>
-                <i class="fa fa-home" aria-hidden="true"></i>
-            </span>
-            <span>
-                Home
-            </span>
-        </a>
+	   
+	   
+         <div class="text-center">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us
+                    Now</button>
+            </div>
         <a href="https://api.whatsapp.com/send?phone={{ get_settings('whatsapp') }}">
             <span>
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
