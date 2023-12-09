@@ -20,7 +20,42 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                 </h1>
                 <div class="row">
 
-                    <div class="col-md-6 col-6  ">
+                <div class="col-md-12">
+                <div class="owl-carousel owl-theme" id="blog_slider">
+
+                       
+                       <div class="item">
+                       <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
+                            <img src="{{ asset('storage/' .$blog[0]->main_image) }}" alt="" class="blog_img" />
+                            <div class="blog_content">
+                                <p>
+                                    {{ $blog[0]->title }}
+                                </p>
+                                <a
+                                    href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View
+                                    More</a>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="item">
+                       <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
+                            <img src="{{ asset('storage/' .$blog[0]->main_image) }}" alt="" class="blog_img" />
+                            <div class="blog_content">
+                                <p>
+                                    {{ $blog[1]->title }}
+                                </p>
+                                <a
+                                    href="{{ url(route('blog.detail', ['category' =>'blog', 'slug' => strtolower(str_replace(' ', '-',$blog[0]->slug))] )) }}">View
+                                    More</a>
+                            </div>
+                        </div>
+                       </div>
+                       
+                       
+                       </div>
+                </div>
+
+                    <!-- <div class="col-md-6 col-6  ">
                         <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
                             <img src="{{ asset('storage/' .$blog[0]->main_image) }}" alt="" class="blog_img" />
                             <div class="blog_content">
@@ -46,7 +81,12 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                                     More</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
+
+
+
+
                 </div>
             </div>
 
@@ -57,9 +97,12 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                         class="main_heading_color text-decoration-none cursor-pointer">Newscast!</a>
                 </h2>
 
-                @foreach ($right_news as $row)
 
-                <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
+                <div class="logos">
+      <div class="logos-slide">
+      @foreach ($right_news as $row)
+                <div class="item">
+                  <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' .$row->main_image) }}" alt="" />
                     <div>
                         <p class="desc">
@@ -69,9 +112,33 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                             href="{{ url(route('blog.detail', ['category' =>'news', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
                             More</a>
                     </div>
+                  </div>
                 </div>
-
+               
                 @endforeach
+      </div>
+    </div>
+
+                
+
+                <!-- <marquee direction="up">
+                @foreach ($right_news as $row)
+                <div class="item">
+                  <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
+                    <img src="{{ asset('storage/' .$row->main_image) }}" alt="" />
+                    <div>
+                        <p class="desc">
+                            {{ $row->title }}
+                        </p>
+                        <a
+                            href="{{ url(route('blog.detail', ['category' =>'news', 'slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">View
+                            More</a>
+                    </div>
+                  </div>
+                </div>
+               
+                @endforeach
+                </marquee> -->
 
             </div>
         </div>

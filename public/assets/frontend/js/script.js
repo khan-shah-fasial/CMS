@@ -30,6 +30,31 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
+    var owl = $("#blog_slider");
+    owl.owlCarousel({
+        margin: 12,
+        nav: true,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 1.2,
+            },
+            1000: {
+                items: 2,
+            },
+        },
+        navText: [
+            '<i class="fa fa-angle-left"></i>',
+            '<i class="fa fa-angle-right"></i>',
+        ],
+    });
+});
+$(document).ready(function () {
     var owl = $("#media_slider_carousel");
     owl.owlCarousel({
         margin: 20,
@@ -78,6 +103,36 @@ $(document).ready(function () {
             '<i class="fa fa-angle-left"></i>',
             '<i class="fa fa-angle-right"></i>',
         ], // Add this line
+    });
+});
+$(document).ready(function () {
+    var owl = $("#blogs_vertical");
+    owl.owlCarousel({
+        items: 1,
+        margin: 10,
+        loop: true,
+        autoHeight: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        animateOut: "fadeOutUp", // Animation for sliding up
+        animateIn: "fadeInUp", // Animation for sliding down
+        mouseDrag: false, // Disable mouse drag for vertical carousel
+        touchDrag: false, // Disable touch drag for vertical carousel
+        pullDrag: false, // Disable pull drag for vertical carousel
+        freeDrag: false, // Disable free drag for vertical carousel
+        vertical: true, // Enable vertical slide
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 3,
+            },
+            1000: {
+                items: 4,
+            },
+        },
     });
 });
 
@@ -263,13 +318,13 @@ typewriter
 
 // How to build international phone number input in HTML and JavaScript
 
-$("#mobile-number").intlTelInput(); 
-$("#mobile-number1").intlTelInput(); 
-$("#mobile-number2").intlTelInput(); 
+$("#mobile-number").intlTelInput();
+$("#mobile-number1").intlTelInput();
+$("#mobile-number2").intlTelInput();
 
-$(document).ready(function() {
-    initSelect2('.select2');
+$(document).ready(function () {
+    initSelect2(".select2");
 });
 
-
-      
+var copy = document.querySelector(".logos-slide").cloneNode(true);
+document.querySelector(".logos").appendChild(copy);
