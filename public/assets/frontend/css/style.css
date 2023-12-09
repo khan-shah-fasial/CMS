@@ -2498,32 +2498,6 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     object-fit: contain;
 }
 
-/* @keyframes slide {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-.logos {
-    overflow: hidden;
-    padding: 60px 0;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-}
-
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
-
-.logos-slide {
-    display: inline-block;
-    animation: 5s slide infinite linear;
-} */
-
 @keyframes slide {
     from {
         transform: translateY(0);
@@ -2548,4 +2522,31 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
 .logos-slide {
     display: inline-block;
     animation: 5s slide infinite linear; /* Adjust the duration as needed */
+}
+.team_box ul li {
+    margin-bottom: 6px;
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.team_box ul li:after {
+    position: absolute;
+    content: ",";
+}
+.team_box ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.team-member {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #333;
+    padding-top: 11px;
+    font-weight: 800;
 }

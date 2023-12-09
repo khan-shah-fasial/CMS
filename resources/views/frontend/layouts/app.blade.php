@@ -9,6 +9,8 @@
     <!-----------Stylesheets------------>
     @include('frontend.partials.css')
 
+    <?= get_settings('header_script') ?>
+
 </head>
 
 <body>

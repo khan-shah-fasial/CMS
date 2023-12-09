@@ -16,9 +16,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="45">0</span>+
+                                        <span class="counter-value" data-count="{{ get_settings('c_exp') }}">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Years of Experience</p>
+                                    <p class="about_counter_para">{{ get_settings('c_exp_title') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -34,9 +34,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="2000">0</span>+
+                                        <span class="counter-value" data-count="{{ get_settings('c_client') }}">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Clients Served</p>
+                                    <p class="about_counter_para">{{ get_settings('c_client_title') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -53,9 +53,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="15">15 </span>Bn+
+                                        <span class="counter-value" data-count="{{ get_settings('c_lic') }}">0</span>Bn+
                                     </p>
-                                    <p class="about_counter_para">Deal Value Handled</p>
+                                    <p class="about_counter_para">{{ get_settings('c_lic_title') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -71,9 +71,9 @@
                                 </div>
                                 <div class="about_counter">
                                     <p class="about_counter_number">
-                                        <span class="counter-value" data-count="50">0</span>+
+                                        <span class="counter-value" data-count="{{ get_settings('c_team') }}">0</span>+
                                     </p>
-                                    <p class="about_counter_para">Expert Professionals</p>
+                                    <p class="about_counter_para">{{ get_settings('c_team_title') }}</p>
                                 </div>
                             </div>
                         </div>

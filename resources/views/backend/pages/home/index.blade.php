@@ -141,24 +141,24 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="col-md-12">
-                                    <h4 class="header-title"><b>Home Page Counter</b></h4>
+                                    <h4 class="header-title"><b>Page Counter Content</b></h4>
                                     <hr>
                                 </div>                    
                                 <div class="col-sm-12">
                                     <div class="form-group mb-3">
-                                        <label>Years of Experience</label>
+                                        <input type="text" class="form-control mb-1" name="c_exp_title" value="{{ get_settings('c_exp_title') }}" >
                                         <input type="text" class="form-control" name="c_exp" value="{{ get_settings('c_exp') }}" >
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Satisfied Clients</label>
+                                        <input type="text" class="form-control mb-1" name="c_client_title" value="{{ get_settings('c_client_title') }}" >
                                         <input type="text" class="form-control" name="c_client" value="{{ get_settings('c_client') }}" >
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Licenses & Registration Done</label>
+                                        <input type="text" class="form-control mb-1" name="c_lic_title" value="{{ get_settings('c_lic_title') }}" >
                                         <input type="text" class="form-control" name="c_lic" value="{{ get_settings('c_lic') }}" >
                                     </div>
                                     <div class="form-group mb-3">
-                                        <label>Team of Experts</label>
+                                        <input type="text" class="form-control mb-1" name="c_team_title" value="{{ get_settings('c_team_title') }}" >
                                         <input type="text" class="form-control" name="c_team" value="{{ get_settings('c_team') }}" >
                                     </div>
                                 </div>
