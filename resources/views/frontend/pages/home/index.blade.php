@@ -9,50 +9,6 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @section('page.content')
 
-<style>
-    .banner_content {
-        width: 100%;
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 1000px 1000px 1000px 1000px inset #00000094;
-        color: white;
-        transition: 2s;
-        animation-name: animate;
-        animation-direction: alternate-reverse;
-        animation-duration: 15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-play-state: running;
-        animation-timing-function: ease-in-out;
-    }
-
-    @keyframes animate {
-        0% {
-            background-image: url("/assets/frontend/images/banner_slider2.jpg");
-        }
-        25% {
-            background-image: url("/assets/frontend/images/banner_slider3.jpg");
-        }
-        50% {
-            background-image: url("/assets/frontend/images/banner_slider1.jpg");
-        }
-        75% {
-            background-image: url("/assets/frontend/images/banner_slider_5.jpg");
-        }
-        100% {
-            background-image: url("/assets/frontend/images/banner_slider_4.jpg");
-        }
-    }
-
-</style>
-
 <!-----===== home content start============---->
 
 <style>
@@ -81,19 +37,24 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @keyframes animate {
     0% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
     }
     25% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_3')) }}");
-    }
-    50% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
-    }
-    75% {
         background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
     }
+    50% {
+        background-image: url("{{ asset('storage/' . get_settings('Banner_3')) }}");
+    }
+    75% {
+        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
+    }
+    100% {
+        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
+    }
+    0% {
+        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
+    }
 }
-
 
 </style>
 <section class="banner_section">
