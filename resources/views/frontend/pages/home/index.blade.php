@@ -37,22 +37,22 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @keyframes animate {
     0% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
     }
     25% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
     }
     50% {
         background-image: url("{{ asset('storage/' . get_settings('Banner_3')) }}");
     }
     75% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
     }
     100% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
     }
     0% {
-        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
     }
 }
 
