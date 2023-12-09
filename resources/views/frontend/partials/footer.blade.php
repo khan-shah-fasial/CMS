@@ -155,12 +155,7 @@ $practice_Area = DB::table('practice_areas')
         <div class="row">
             <div class="col-md-12 mt-4">
                 <p class="footer_text">
-                    As per the rules of the Bar Council of India, we are not permitted to solicit work and
-                    advertise. The user acknowledges that there has been no advertisement and personal
-                    communication from A&amp;A, any information obtained, or material downloaded from this
-                    website is completely at the user’s volition and any transmission, receipt or use of this
-                    site would not create any lawyer-client relationship. In cases where the user has any
-                    legal issues, he/she in all cases must seek independent legal advice.
+                    <?= nl2br(get_settings('footer_content')) ?>
                 </p>
                 <div
                     class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column mb-md-0 mb-5">

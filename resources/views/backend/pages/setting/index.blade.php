@@ -64,7 +64,43 @@
                                     </div>
                                 </div>                    
                             </div>
-                        </div>                
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="header-title"><b>Website Header</b></h4>
+                                        <hr>
+                                    </div>                         
+       
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3">
+                                            <label>Script</label>
+                                            <textarea class="form-control" name="header_script" rows="3">{{ get_settings('header_script') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                </div>                                      
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="header-title"><b>Website Footer</b></h4>
+                                        <hr>
+                                    </div>                         
+       
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3">
+                                            <label>Footer Content</label>
+                                            <textarea class="form-control" name="footer_content" rows="3">{{ get_settings('footer_content') }}</textarea>
+                                        </div>
+                                    </div>
+
+                                </div>                                      
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
