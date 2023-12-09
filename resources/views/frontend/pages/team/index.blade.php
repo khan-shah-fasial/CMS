@@ -54,9 +54,13 @@
                         </p>
                         <p class="desc text-secondary">{{ ucfirst($row->designation) }}</p>
                         <hr class="text-dark" />
-                        <p class="bio text-dark" data-aos="fade-up" data-aos-once="true">
-                            {{ str_replace([' ', '&amp;',', , '], [', ',', '], strip_tags($row->description)) }}
-                        </p>
+                        {{-- <p class="bio text-dark" data-aos="fade-up" data-aos-once="true">
+                           
+                            {{ str_replace([' ', '&amp;',', , '], [', ',', '], strip_tags($row->description)) }} 
+
+                            
+                        </p>--}}
+                        <div class="team-member" data-description="{{ $row->description }}"></div>
                         <a href="{{ url(route('team.detail', ['slug' => strtolower(str_replace(' ', '-',$row->name))] )) }}"
                             data-aos="fade-up" data-aos-once="true">View Profile</a>
                     </div>
@@ -84,4 +88,33 @@
 
 <!--------============== Team end ================-------------->
 
+@endsection
+
+@section('component.scripts')
+<script>
+    function clear_data() {
+        var teamMembers = document.querySelectorAll('.team-member');
+
+        teamMembers.forEach(function (element) {
+            var data = element.getAttribute('data-description');
+            var cleanedData = sanitizeHTML(data);
+            element.innerHTML = cleanedData;
+        });
+    }
+
+    function sanitizeHTML(html) {
+        // Replace '</li>' with ','
+
+        // Replace '</li></ul>' with ' . '
+        html = html.replace(/<\/li><\/ul>/g, ' ');
+        html = html.replace(/<\/li>/g, ', ');
+
+        // Clean HTML tags
+        var doc = new DOMParser().parseFromString(html, 'text/html');
+        return doc.body.textContent || "";
+    }
+
+    // Call the function when needed
+    clear_data();
+</script>
 @endsection

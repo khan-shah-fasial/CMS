@@ -28,13 +28,14 @@
                 <p class="d-flex align-items-center gap-2 author mb-0 w145">
                     <img src="/assets/frontend/images/author.png" alt="" />
                     <span>
-                        @php $i = 1; @endphp
                         @foreach ($author as $details)
-                        @php $author_name = DB::table('users')->where('id', $details)->first();
-                        @endphp
-                        {{ $author_name->name }}
-                        @if($count > $i), @endif
-                        @php $i++; @endphp
+                            @php 
+                                $author_name = DB::table('users')->where('id', $details)->first();
+                            @endphp
+                            @if ($author_name)
+                                {{ $author_name->name }}
+                                @break
+                            @endif
                         @endforeach
                     </span>
                 </p>
