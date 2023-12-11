@@ -2530,3 +2530,10 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     padding-top: 11px;
     font-weight: 800;
 }
+
+#blog_slider .owl-nav {
+    display: none;
+}
+#blog_slider .owl-dots {
+    display: none;
+}
