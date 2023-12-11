@@ -2498,31 +2498,11 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     object-fit: contain;
 }
 
-@keyframes slide {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100%);
-    }
-}
-
-.logos {
+.main_marque {
+    height: 380px;
     overflow: hidden;
-    padding: 60px 0;
-    background: white;
-    white-space: nowrap;
-    position: relative;
 }
 
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
-
-.logos-slide {
-    display: inline-block;
-    animation: 5s slide infinite linear; /* Adjust the duration as needed */
-}
 .team_box ul li {
     margin-bottom: 6px;
     float: left;

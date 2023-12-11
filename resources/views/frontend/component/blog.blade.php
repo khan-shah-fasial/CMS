@@ -2,7 +2,7 @@
 $blog = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
 '3')->limit(2)->orderBy('created_at', 'desc')->get()->toArray();
 $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_category_ids',
-'4')->limit(4)->orderBy('created_at', 'desc')->get();
+'4')->limit(10)->orderBy('created_at', 'desc')->get();
 @endphp
 @if(count($blog) > 1)
 <!-------============= blog ================---------------------->
@@ -98,9 +98,9 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                 </h2>
 
 
-                <div class="logos">
-      <div class="logos-slide">
-      @foreach ($right_news as $row)
+    <div class="marquee main_marque ">
+            @foreach ($right_news as $row)
+
                 <div class="item">
                   <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' .$row->main_image) }}" alt="" />
@@ -115,9 +115,8 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                   </div>
                 </div>
                
-                @endforeach
+            @endforeach
       </div>
-    </div>
 
                 
 
