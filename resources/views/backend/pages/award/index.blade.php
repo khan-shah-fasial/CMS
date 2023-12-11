@@ -24,6 +24,7 @@
                 <th>Title</th>
                 <th>Image</th>
                 <th>Status</th>
+                <th>Series</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -46,6 +47,7 @@
                     <span class="badge bg-danger">Inctive</span>
                     @endif
                 </td>
+                <td>{{ $row->series }}</td>
                 <td>{{datetimeFormatter($row->created_at)}}</td>
                 <td>
                     <a href="{{ url(route('award.status', ['id' => $row->id, 'status' => ($row->status == '1') ? '0' : '1'])) }}" class="action-icon">

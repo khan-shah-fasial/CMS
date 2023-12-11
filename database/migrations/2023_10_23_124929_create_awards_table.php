@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255);
             $table->string('image', 255)->nullable(); // Use "nullable" if the image is optional
-            $table->tinyInteger('status')->default(1); 
+            $table->tinyInteger('status')->default(1);
+            $table->integer('series');
             $table->timestamps();
         });
     }

@@ -16,6 +16,12 @@
             </div>
         </div>
         <div class="col-sm-12">
+            <div class="form-group mb-3">
+                <label for="series">Order</label>
+                <input max="10000" type="number" class="form-control" name="series" id="series" value="{{ $award->series }}">
+            </div>
+        </div> 
+        <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
                 <button type="submit" class="btn btn-block btn-primary">Update</button>
             </div>
