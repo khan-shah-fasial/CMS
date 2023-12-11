@@ -325,6 +325,3 @@ $("#mobile-number2").intlTelInput();
 $(document).ready(function () {
     initSelect2(".select2");
 });
-
-var copy = document.querySelector(".logos-slide").cloneNode(true);
-document.querySelector(".logos").appendChild(copy);

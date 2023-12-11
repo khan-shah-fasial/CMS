@@ -44,3 +44,17 @@
 
 <script src="/assets/frontend/js/script.js"></script>
 
+<script src="/assets/frontend/js/jquery.marquee.min.js"></script>
+
+<script>
+    $(".marquee").marquee({
+    duration: 18000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: "up",
+    duplicated: true,
+    pauseOnHover: true,
+});
+
+</script>
+
