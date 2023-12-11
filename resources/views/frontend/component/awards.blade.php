@@ -8,8 +8,8 @@ $awards = DB::table('awards')->get();
     <div class="container">
         <div class="row">
             <div class="col-md-12 px0">
-                <div class="underline_heading d-flex align-items-center justify-content-center">
-                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Awards &
+                <div class="underline_heading d-flex align-items-center justify-content-center mb-md-0 mb-3">
+                    <h6 class="main_heading text-center " data-aos-once="true" data-aos="fade-up">Awards &
                     Recognitions</h6>
                 </div>
                 <!-- <h2 class="main_heading text-center mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Awards &
