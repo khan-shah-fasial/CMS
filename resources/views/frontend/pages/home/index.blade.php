@@ -10,7 +10,7 @@ assistance for startups, FDI, Property law, IP, and more')
 @section('page.content')
 
 <!-----===== home content start============---->
-
+<!-- 
 <style>
 .banner_content {
     width: 100%;
@@ -56,14 +56,32 @@ assistance for startups, FDI, Property law, IP, and more')
     }
 }
 
-</style>
+</style> -->
 <section class="banner_section">
-    <div class="banner_content">
-                   
-                  
-                </div>
-
-    
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </section>
 
 <!------------------ Banner End -------------------------->
