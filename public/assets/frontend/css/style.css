@@ -115,7 +115,7 @@ header {
     position: sticky;
     background: #fff;
     top: 36px;
-    z-index: 99;
+    z-index: 99999;
 }
 .bottom_nav_links .nav_links a img {
     margin-left: auto;

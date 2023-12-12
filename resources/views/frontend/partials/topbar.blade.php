@@ -30,9 +30,9 @@
                             </a>
                         </div>
                         <div>
-                            <a href="mailto:contact@ahlawatassociates.com">
+                            <a href="mailto:contact@ahlawatassociates.in">
                                 <img src="/assets/frontend/images/email.png" alt="email icon" />
-                                <span>contact@ahlawatassociates.com</span>
+                                <span>contact@ahlawatassociates.in</span>
                             </a>
                         </div>
                     </div>
