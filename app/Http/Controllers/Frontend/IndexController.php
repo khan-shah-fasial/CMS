@@ -177,6 +177,8 @@ class IndexController extends Controller
     {
         $rules = [
             'cv' => 'nullable|mimetypes:application/pdf,application/msword',
+            'phone' => 'required|regex:/^[0-9\s\+]{10,}$/',
+            'description' => 'nullable|regex:/^[a-zA-Z0-9\s,&-]+$/',
             'g-recaptcha-response' => 'required|captcha',
         ];
     
@@ -202,16 +204,30 @@ class IndexController extends Controller
         // Create the contact record
         Contact::create($contactData);
 
+        $user_data = json_decode(session('user_ip'), true);
+
         // Send email if $cvPath is not null
 
-        $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+        //$recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+        $recipient = 'khanfaisal.makent@gmail.com';
         $subject = 'Lead Enquiry';
 
         // Format $contactData into an HTML table
-        $body = '<h2>A lead enquiry from the website ahlawatassociates.webtesting.pw.</h2></br><table>';
+        if ($cvPath !== null) {
+            $body = '<h2>A Career inquiry from the website ahlawatassociates.com.</h2></br><table>';
+        } else {
+            $body = '<h2>A lead enquiry from the website ahlawatassociates.com.</h2></br><table>';
+        }
         foreach ($contactData as $key => $value) {
                 if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
-                    $body .= "<tr><td>$key</td><td>$value</td></tr>";
+                    if($key == 'ip'){
+                        $body .= "</br><h4>User Location</h4></br>";
+                        $body .= "<tr><td>$key</td><td>$value</td></tr>";
+                        $body .= "</br><tr><td><h5>" .$user_data['city'] . ' ' .$user_data['region'] . ' ' .$user_data['country'] . "</h5></td></tr></br>";
+                    } else {
+                        $body .= "<tr><td>$key</td><td>$value</td></tr>";
+                    }
+                    
                 }
             }
         $body .= '</table>';
