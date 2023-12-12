@@ -102,6 +102,11 @@ p {
     width: 100% !important;
     table-layout: fixed !important;
 }
+.blog_details_page_title_desc blockquote {
+    font-size: 14px !important;
+    text-align: justify !important;
+    line-height: 26px !important;
+}
 
 /* ------------------owl carousel -------------- */
 

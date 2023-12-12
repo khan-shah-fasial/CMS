@@ -47,7 +47,7 @@ $tem_desc = implode(' ', $limitedWords);
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item "><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="{{ url(route('team')) }}">Team Members</a> 
+                                <a href="{{ url(route('team')) }}">Our Professionals</a> 
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 {{ ucfirst($detail->name) }}
