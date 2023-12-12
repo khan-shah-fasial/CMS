@@ -178,6 +178,17 @@
 }
 
 @media (max-width: 767px) {
+    .blog_details_page_breadcrumb .author {
+        width: 100%;
+    }
+    .blog_details_page_breadcrumb .breadcrumb {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .blog_details_page_breadcrumb .breadcrumb li {
+        text-align: center;
+    }
+
     .g-recaptcha {
         transform: scale(0.87);
         transform-origin: 0 0;

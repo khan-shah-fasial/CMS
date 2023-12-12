@@ -115,7 +115,7 @@ header {
     position: sticky;
     background: #fff;
     top: 36px;
-    z-index: 99999;
+    z-index: 999;
 }
 .bottom_nav_links .nav_links a img {
     margin-left: auto;
@@ -985,6 +985,7 @@ section.blog p.desc {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    height: 52px;
 }
 
 .blog_big_box .blog_content a {

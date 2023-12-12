@@ -35,7 +35,7 @@ $(document).ready(function () {
         margin: 12,
         nav: true,
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         autoplayTimeout: 5000,
         responsive: {
             0: {
