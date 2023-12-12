@@ -76,7 +76,7 @@ use Illuminate\Support\Str;
 
     if(!function_exists('ip_info')){
         function ip_info(){
-            
+            /*
             if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
                 $ip = $_SERVER['HTTP_CLIENT_IP'];
             } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -84,9 +84,9 @@ use Illuminate\Support\Str;
             } else {
                 $ip = $_SERVER['REMOTE_ADDR'] ?  $_SERVER['REMOTE_ADDR'] : '';
             }
-            $ip = explode(',', $ip);
-            $ip = $ip[0];
-            //$ip = '103.175.61.38111';
+            $ip = explode(',', $ip); */
+            //$ip = $ip[0];
+            $ip = '103.175.61.38';
             		
             //$info = file_get_contents("http://ipinfo.io/{$ip}/geo");
             
