@@ -358,9 +358,6 @@
 
 <!-- -------------------- service get in touch  end ---------------------- -->
 
-<!------------------ awards_section Start -------------------------->
-@include('frontend.component.awards')
-<!------------------ awards_section End -------------------------->
 
 <!-------===========practicearea end===================------------>
 @endsection

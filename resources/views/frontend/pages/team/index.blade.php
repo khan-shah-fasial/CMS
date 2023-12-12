@@ -17,13 +17,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">Team Members</h1>
+                    <h1 class="heading">Our Professionals</h1>
                     
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Team Members
+                            Our Professionals
                             </li>
                         </ol>
                     </nav>
