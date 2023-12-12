@@ -29,7 +29,6 @@ class StoreIpInSession
                 $user_ip = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
                 Session::put('user_ip', $user_ip);
             } else {
-                
                 Session::put('user_ip', $user_ip);
             }
         } else {
