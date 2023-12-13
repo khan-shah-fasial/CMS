@@ -57,6 +57,7 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                         class="main_heading_color text-decoration-none cursor-pointer">Newscast!</a>
                 </h2>
 
+                <div class="marquee main_marque " style="height:380px; overflow:hidden;">
                 @foreach ($right_news as $row)
 
                 <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
@@ -72,11 +73,16 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
                 </div>
 
                 @endforeach
+				
+				</div>
 
             </div>
         </div>
     </div>
 </section>
+
+	
+	
 @endif
 
 <!----------============== blog =============------------->
