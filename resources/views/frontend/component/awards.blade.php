@@ -23,7 +23,7 @@ $awards = DB::table('awards')->orderBy('series', 'asc')->get();
                     <div class="item">
                         <div class="awards_box">
                             <h4>{{ $row->title }}</h4>
-                            <img src="{{ asset('storage/' . $row->image) }}" alt="Awards Image"/>
+                            <img loading="lazy" src="{{ asset('storage/' . $row->image) }}" alt="Awards Image"/>
                         </div>
                     </div>
 

@@ -61,16 +61,16 @@ assistance for startups, FDI, Property law, IP, and more')
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="d-block w-100" alt="...">
+      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="d-block w-100" alt="...">
+      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="d-block w-100" alt="...">
+      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="d-block w-100" alt="...">
+      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -106,7 +106,7 @@ assistance for startups, FDI, Property law, IP, and more')
             </div>
 
             <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
-                <img src="/assets/frontend/images/about_us_img_new.jpg" alt="About Us" class="about_img" />
+                <img loading="lazy" src="/assets/frontend/images/about_us_img_new.jpg" alt="About Us" class="about_img" />
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-md-6 px0">
                 <div class="news_box">
 
-                    <img src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img loading="lazy" src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
 
                 </div>
             </div>

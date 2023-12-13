@@ -22,7 +22,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
             <div class="col-md-4 mb-4">
                 <div class="practice_box" data-aos-once="true" data-aos="fade-up">
                     <div class="visible_box">
-                        <img src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
+                        <img loading="lazy" src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
                         <h4>{{ $row->title }}</h4>
                     </div>
                     <div class="hover_box">
@@ -42,7 +42,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                                             )
                                     )
                             }}">Learn 
-                            More <img src="/assets/frontend/images/right.png" alt="" />
+                            More <img loading="lazy" src="/assets/frontend/images/right.png" alt="" />
                         </a>
                     </div>
                 </div>
