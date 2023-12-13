@@ -106,7 +106,7 @@ assistance for startups, FDI, Property law, IP, and more')
             </div>
 
             <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
-                <img src="/assets/frontend/images/about_us_img_new.jpg" class="about_img" />
+                <img src="/assets/frontend/images/about_us_img_new.jpg" alt="About Us" class="about_img" />
             </div>
         </div>
     </div>
