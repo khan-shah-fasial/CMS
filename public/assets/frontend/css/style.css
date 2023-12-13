@@ -2260,7 +2260,7 @@ select.aos-init.aos-animate.error {
     position: relative;
     cursor: pointer;
 }
-.sidebar_item a {
+.sidebar_item span {
     font-size: 16px;
     text-decoration: none;
     display: block;
@@ -2542,4 +2542,8 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
 }
 #blog_slider .owl-dots {
     display: none;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    width: 48px;
 }

@@ -29,8 +29,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                         <p>
                             {{ $row->short_description }}
                         </p>
-                        <a
-                            href="{{ 
+                        <a href="{{ 
                                 $row->special_service == '1' ? 
                                     url(route('practicearea-detail-specialised', ['slug' => $row->slug] )) :
                                     (
@@ -42,7 +41,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                                                     url(route('practicearea-detail', ['slug' => $row->slug] ))
                                             )
                                     )
-                            }}">Read
+                            }}">Learn 
                             More <img src="/assets/frontend/images/right.png" alt="" />
                         </a>
                     </div>

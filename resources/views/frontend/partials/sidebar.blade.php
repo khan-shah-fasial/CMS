@@ -9,8 +9,8 @@
                 <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
                 <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
                 <div class="sidebar_item">
-                    <a class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
-                    </a>
+                    <span class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
+                    </span>
                     
                     <div class="sub-menu">
                         <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
