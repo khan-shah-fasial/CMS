@@ -128,7 +128,7 @@
                         <div class="col-sm-12">
                             <div class="form-group mb-3">
                                 <label>Breadcrumb Image <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label>
-                                <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image" required>
+                                <input class="form-control" type="file" id="breadcrumb_image" name="breadcrumb_image">
                             </div>
                         </div>                    
                         <div class="col-sm-12">

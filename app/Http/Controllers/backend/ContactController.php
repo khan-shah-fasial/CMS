@@ -9,9 +9,14 @@ use App\Models\Contact;
 class ContactController extends Controller
 {
     public function index() {
-        $contact = Contact::orderBy('id', 'desc')->get();
+        $contact = Contact::where('section', '!=', 'Career Form')->orderBy('id', 'desc')->get();
         return view('backend.pages.contact.index', compact('contact'));
-    }    
+    }
+    
+    public function career(){
+        $contact = Contact::where('section','Career Form')->orderBy('id', 'desc')->get();
+        return view('backend.pages.contact.career', compact('contact'));
+    }
 
     public function view($id) {
         $contact = Contact::find($id);

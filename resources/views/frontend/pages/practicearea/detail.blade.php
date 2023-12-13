@@ -87,9 +87,13 @@
 @if(!empty($detail->section_image))
 
 <section class="service_img" data-aos-once="true" data-aos="fade-up">
-    <a href="@if(!empty($detail->section_link)){{ $detail->section_link }}@else # @endif" target="_blank">
+    @if(!empty($detail->section_link))
+        <a href="{{ $detail->section_link }}" target="_blank">
+            <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
+        </a>
+    @else
         <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
-    </a>
+    @endif
 </section>
 
 @endif

@@ -113,4 +113,31 @@ use Illuminate\Support\Str;
         }
     }
 
+    if (!function_exists('blog_url_comment')) {
+        function blog_url_comment($value)
+        {
+            return Cache::remember('blog_url_comment_' . $value, now()->addDay(), function () use ($value) {
+                $blog = DB::table('blogs')->where('id', $value)->get()->first();
+    
+                if ($blog) {
+                    $category = json_decode($blog->blog_category_ids);
+                    if(!empty($category)){
+                        $category_slug = DB::table('blog_categories')->where('id', $category[0])->value('slug');
+                        $url = url(route('blog.detail', ['category' => $category_slug, 'slug' => strtolower(str_replace(' ', '-', $blog->slug))]));
+        
+                        $data = json_encode(['url' => $url, 'title' => $blog->title]);
+                    } else {
+                        $data = "Category Not exist";
+                    }
+
+                } else {
+                    $data = "No Blog Found";
+                }
+    
+                return $data;
+            });
+        }
+    }
+
+
 
