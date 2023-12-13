@@ -39,7 +39,7 @@ $team = DB::table('teams')->limit(6)->orderBy('series', 'asc')->get();
                             class="text-decoration-none">
                             <div class="team_box">
                                 <div class="hover_img">
-                                    <img src="{{ asset('storage/' . $row->image) }}" alt="" class="team_img" />
+                                    <img loading="lazy" src="{{ asset('storage/' . $row->image) }}" alt="" class="team_img" />
                                 </div>
 
                                 <div class="d-flex align-items-center justify-content-center team_bio_container">
