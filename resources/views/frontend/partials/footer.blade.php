@@ -51,7 +51,7 @@ $practice_Area = DB::table('practice_areas')
         <div class="row">
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
-                    <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img loading="lazy" src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
                     <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true"
                         data-aos="fade-up">{{ get_settings('mobile') }}</a>
                     <a href="mailto:{{ get_settings('email') }}" class="email" data-aos-once="true"
