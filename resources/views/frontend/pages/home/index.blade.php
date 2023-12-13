@@ -9,52 +9,8 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @section('page.content')
 
-<style>
-    .banner_content {
-        width: 100%;
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 1000px 1000px 1000px 1000px inset #00000094;
-        color: white;
-        transition: 2s;
-        animation-name: animate;
-        animation-direction: alternate-reverse;
-        animation-duration: 15s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        animation-play-state: running;
-        animation-timing-function: ease-in-out;
-    }
-
-    @keyframes animate {
-        0% {
-            background-image: url("/assets/frontend/images/banner_slider2.jpg");
-        }
-        25% {
-            background-image: url("/assets/frontend/images/banner_slider3.jpg");
-        }
-        50% {
-            background-image: url("/assets/frontend/images/banner_slider1.jpg");
-        }
-        75% {
-            background-image: url("/assets/frontend/images/banner_slider_5.jpg");
-        }
-        100% {
-            background-image: url("/assets/frontend/images/banner_slider_4.jpg");
-        }
-    }
-
-</style>
-
 <!-----===== home content start============---->
-
+<!-- 
 <style>
 .banner_content {
     width: 100%;
@@ -63,7 +19,7 @@ assistance for startups, FDI, Property law, IP, and more')
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+    background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,31 +37,51 @@ assistance for startups, FDI, Property law, IP, and more')
 
 @keyframes animate {
     0% {
-        background-image: url("/assets/frontend/images/banner_slider2.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
     }
     25% {
-        background-image: url("/assets/frontend/images/banner_slider3.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_4')) }}");
     }
     50% {
-        background-image: url("/assets/frontend/images/banner_slider1.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_3')) }}");
     }
     75% {
-        background-image: url("/assets/frontend/images/banner_slider_5.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_2')) }}");
     }
     100% {
-        background-image: url("/assets/frontend/images/banner_slider_4.jpg");
+        background-image: url("{{ asset('storage/' . get_settings('Banner_1')) }}");
+    }
+    0% {
+        background-image: url("{{ asset('storage/' . get_settings('Banner_5')) }}");
     }
 }
 
-
-</style>
+</style> -->
 <section class="banner_section">
-    <div class="banner_content">
-                   
-                  
-                </div>
-
-    
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 </section>
 
 <!------------------ Banner End -------------------------->

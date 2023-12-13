@@ -9,7 +9,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="underline_heading d-flex align-items-center justify-content-center">
+                <div class="underline_heading d-flex align-items-center justify-content-center mb-md-0 mb-3">
                     <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Our <span class="main_heading_color"> Practice</span> Area</h6>
                 </div>
                 <!-- <h1 class="main_heading text-center mb-md-4 mb-3" data-aos-once="true" data-aos="fade-up">

@@ -12,7 +12,13 @@
                 <label>Image <span class="red">*</span> <span class="font-size11">(Max file size 10kb - 190*64)</span></label>
                 <input class="form-control" type="file" id="image" name="image" required>
             </div>
-        </div> 
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group mb-3">
+                <label for="series">Order</label>
+                <input max="10000" type="number" class="form-control" name="series" id="series">
+            </div>
+        </div>  
         <div class="col-sm-12">
             <div class="form-group mb-3 text-end">
                 <button type="submit" class="btn btn-block btn-primary">Create</button>

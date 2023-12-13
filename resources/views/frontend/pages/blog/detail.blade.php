@@ -99,7 +99,7 @@ first();
     <div class="container">
         <div class="row">
             <div class="col-md-8 px0">
-                <ul class="d-flex align-items-center gap-3 list-unstyled" data-aos="fade-up" data-aos-once="true">
+                <ul class="d-flex align-items-center breadcrumb gap-md-3 gap-1 list-unstyled" data-aos="fade-up" data-aos-once="true">
                     <li>
                         <a href="{{ url(route('index')) }}" class="text-decoration-none" data-aos="fade-up"
                             data-aos-once="true">Home</a>

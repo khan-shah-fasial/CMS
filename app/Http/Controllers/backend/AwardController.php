@@ -9,7 +9,7 @@ use App\Models\Award;
 class AwardController extends Controller
 {
     public function index() {
-        $award = Award::orderBy('id', 'desc')->get();
+        $award = Award::orderBy('series', 'asc')->get();
         return view('backend.pages.award.index', compact('award'));
     }
 
@@ -31,6 +31,7 @@ class AwardController extends Controller
         Award::create([
             'title' => $request->input('title'),
             'image' => $imagePath,
+            'series' => $request->input('series'),
         ]);
 
         $response = [
@@ -85,6 +86,7 @@ class AwardController extends Controller
         }
     
         $award->title = $request->input('title');
+        $award->series = $request->input('series');
     
         $award->save();
 

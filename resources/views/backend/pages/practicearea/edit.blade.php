@@ -189,6 +189,12 @@
                         </div>
 						<div class="col-sm-12">
                             <div class="form-group mb-3">
+                                <label>Section Image Link</label>
+                                <input type="text" class="form-control" name="section_link" value="{{ $practicearea->section_link }}">
+                            </div>
+                        </div>
+						<div class="col-sm-12">
+                            <div class="form-group mb-3">
                                 <label>Special Service</label>
                                 <select class="form-select" name="special_service">
                                     <option value="0" @if( $practicearea->special_service == '0') selected @endif>--Select--</option>

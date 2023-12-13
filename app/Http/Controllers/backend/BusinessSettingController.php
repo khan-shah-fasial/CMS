@@ -44,10 +44,29 @@ class BusinessSettingController extends Controller
         $requestData = $request->all();
     
         foreach ($requestData as $key => $value) {
-            if($key != '_token'){
-                BusinessSetting::where('type', $key)->update(['value' => $value]);
+            
+            if ($key === 'header_script') {
+                if (empty($value)) {
+                    BusinessSetting::where('type', $key)->update(['value' => '']);
+                } else {
+                    BusinessSetting::where('type', $key)->update(['value' => $value]);
+                }
+            }
+
+            if ($key !== '_token' && $value !== null) {
+                if ($key === 'Banner_1' || $key === 'Banner_2' || $key === 'Banner_3' || $key === 'Banner_4') {
+                    // Handle image update here
+                    $type = $key;
+                    
+                    $imagePath = $value->store('assets/image/banner', 'public');
+                    BusinessSetting::where('type', $type)->update(['value' => $imagePath]);
+                } else {
+                    BusinessSetting::where('type', $key)->update(['value' => $value]);
+                }
+
             }
         }
+
 
         $response = [
             'status' => true,

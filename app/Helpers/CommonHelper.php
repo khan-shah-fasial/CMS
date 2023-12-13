@@ -86,7 +86,7 @@ use Illuminate\Support\Str;
             }
             $ip = explode(',', $ip);
             $ip = $ip[0];
-            //$ip = '103.175.61.38111';
+            //$ip = '103.175.61.38';
             		
             //$info = file_get_contents("http://ipinfo.io/{$ip}/geo");
             

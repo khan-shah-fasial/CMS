@@ -44,19 +44,17 @@
 
 <script src="/assets/frontend/js/script.js"></script>
 
+<script src="/assets/frontend/js/jquery.marquee.min.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js"></script>
 <script>
-    $('.marquee').marquee({
-        //speed in milliseconds of the marquee
-        duration: 18000,
-        //gap in pixels between the tickers
-        gap: 0,
-        //time in milliseconds before the marquee will start animating
-        delayBeforeStart: 0,
-        //'left' or 'right'
-        direction: 'up',
-        //true or false - should the marquee be duplicated to show an effect of continues flow
-        duplicated: true,
-		pauseOnHover: true
-    });</script>
+    $(".marquee").marquee({
+    duration: 18000,
+    gap: 0,
+    delayBeforeStart: 0,
+    direction: "up",
+    duplicated: true,
+    pauseOnHover: true,
+});
+
+</script>
+

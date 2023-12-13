@@ -9,9 +9,17 @@
     <!-----------Stylesheets------------>
     @include('frontend.partials.css')
 
+    <?= get_settings('header_script') ?>
+
 </head>
 
 <body>
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T93DNMW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <!----=========topbar=========----->
 
