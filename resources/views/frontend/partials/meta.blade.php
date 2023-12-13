@@ -126,7 +126,7 @@ $url = url()->current();
 
 <!---------------- Contact Address Schema end ------------------->
 
-<!-- Yandex.Metrika counter 
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
   m[i].l=1*new Date();
@@ -140,25 +140,23 @@ $url = url()->current();
        accurateTrackBounce:true,
        webvisor:true
   });
-</script>-->
-<!--<noscript><div><img src="https://mc.yandex.ru/watch/95221741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
- /Yandex.Metrika counter -->
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/95221741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 
-<!-- Google Tag Manager
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T93DNMW');</script>
-End Google Tag Manager -->
+<!-- End Google Tag Manager -->
 
 
-<!-- Google tag (gtag.js)  
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0N029ZM0WG"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0N029ZM0WG'); </script>
--->
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-0N029ZM0WG"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0N029ZM0WG'); </script>
 
-<!-- Google tag (gtag.js)
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLLQV0KXE"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GTLLQV0KXE'); </script>
- --> 
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLLQV0KXE"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GTLLQV0KXE'); </script>
+
 <base id="baseUrl" href="{{url('')}}">
