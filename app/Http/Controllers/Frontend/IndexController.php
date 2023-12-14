@@ -221,9 +221,13 @@ class IndexController extends Controller
         $user_data = json_decode(session('user_ip'), true);
 
         // Send email if $cvPath is not null
-
-        $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
-        $subject = 'Lead Enquiry';
+        if ($cvPath !== null) {
+            $recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
+            $subject = 'Career Enquiry';
+        } else {
+            $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+            $subject = 'Lead Enquiry';
+        }
 
         // Format $contactData into an HTML table
         if ($cvPath !== null) {
