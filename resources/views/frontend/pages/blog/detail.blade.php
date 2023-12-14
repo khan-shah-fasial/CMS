@@ -98,7 +98,7 @@ first();
 <section class="blog_details_page_breadcrumb">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 px0">
+            <div class="col-md-7 px0">
                 <ul class="d-flex align-items-center breadcrumb gap-md-3 gap-1 list-unstyled" data-aos="fade-up" data-aos-once="true">
                     <li>
                         <a href="{{ url(route('index')) }}" class="text-decoration-none" data-aos="fade-up"
@@ -117,7 +117,7 @@ first();
                     <li>{{ $detail->title }}</li>
                 </ul>
             </div>
-            <div class="col-md-4 px0">
+            <div class="col-md-5 px0">
                 <div class="d-flex align-items-center justify-content-md-end gap-2">
                     <p class="d-flex align-items-center gap-2 author" data-aos="fade-up" data-aos-once="true">
                         <img src="/assets/frontend/images/author.png" alt="" />

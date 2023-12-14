@@ -53,6 +53,14 @@ class BusinessSettingController extends Controller
                 }
             }
 
+            if ($key === 'cookie_content') {
+                if (empty($value)) {
+                    BusinessSetting::where('type', $key)->update(['value' => '']);
+                } else {
+                    BusinessSetting::where('type', $key)->update(['value' => $value]);
+                }
+            }
+
             if ($key !== '_token' && $value !== null) {
                 if ($key === 'Banner_1' || $key === 'Banner_2' || $key === 'Banner_3' || $key === 'Banner_4') {
                     // Handle image update here

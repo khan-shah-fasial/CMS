@@ -87,9 +87,13 @@
 @if(!empty($detail->section_image))
 
 <section class="service_img" data-aos-once="true" data-aos="fade-up">
-    <a href="@if(!empty($detail->section_link)){{ $detail->section_link }}@else # @endif" target="_blank">
+    @if(!empty($detail->section_link))
+        <a href="{{ $detail->section_link }}" target="_blank">
+            <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
+        </a>
+    @else
         <img src="{{ asset('storage/' . $detail->section_image) }}" alt="{{ $detail->alt_section_image }}">
-    </a>
+    @endif
 </section>
 
 @endif
@@ -332,7 +336,7 @@
 
             @foreach ($blog as $row)
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
                 <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">

@@ -178,6 +178,12 @@
 }
 
 @media (max-width: 767px) {
+    .breadcrumb ol {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
     .blog_details_page_breadcrumb .author {
         width: 100%;
     }
@@ -558,6 +564,14 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .practice_w_box .btn_hover span {
+        font-size: 14px;
+    }
+
+    .practice_w_box .btn-3 span {
+        padding: 15px 10px;
+    }
+
     .banner_content {
         height: 30vh;
     }
