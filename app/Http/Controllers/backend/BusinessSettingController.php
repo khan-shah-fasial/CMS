@@ -39,7 +39,8 @@ class BusinessSettingController extends Controller
       
     public function update(Request $request) {
         // Assuming the request data is in key-value pairs
-    
+        $i = 0;
+        $imgs = [];
         // Get all the data from the request
         $requestData = $request->all();
     
@@ -63,18 +64,40 @@ class BusinessSettingController extends Controller
 
             if ($key !== '_token' && $value !== null) {
                 if ($key === 'Banner_1' || $key === 'Banner_2' || $key === 'Banner_3' || $key === 'Banner_4') {
-                    // Handle image update here
+                   
+                    
                     $type = $key;
 
-                    $imgs = [];
+                    //var_dump($key);
+                    //echo'<pre>';
+                    //var_dump($value);
+                    //echo'<pre>';
+
+                    //var_dump(count($value));
+                    //echo'<pre>';
+
+                    
+                    
                     for ($j = 0; $j < count($value); $j++) {
 
-                        $imagePath = $value[$j]->store('assets/image/banner', 'public');
-                        $imgs[] = $imagePath;    
+                        if($type != 'Banner_2'){
+                            
+                            
+                            $imagePath = $value[$i]->store('assets/image/banner', 'public');
+                            $imgs[] = $imagePath;
+                        } else {
+                            //echo'Banner_2';
+                           $imgs[] = $value[$j];
+                           
+                        } 
+                        $i++;   
                     }
+
+                    //echo'<pre>';
+                    //var_dump($imgs);
                                         
                     //$imagePath = $value->store('assets/image/banner', 'public');
-                    BusinessSetting::where('type', $type)->update(['value' =>  $imgs]);
+                    BusinessSetting::where('type', 'Banner_1')->update(['value' =>  $imgs]);
                 } else {
                     BusinessSetting::where('type', $key)->update(['value' => $value]);
                 }

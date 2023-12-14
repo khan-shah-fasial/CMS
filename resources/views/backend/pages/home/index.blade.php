@@ -41,6 +41,8 @@
 
                                                                             <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]">
 
+                                                                            <input type="hidden" class="form-control" name="Banner_2[]" value="{{ $row }}">
+
                                                                         </div>
 
                                                                         <div class="col-sm-3">
