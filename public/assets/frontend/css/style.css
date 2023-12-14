@@ -957,7 +957,7 @@ section.blog p.desc {
     line-height: 26px !important;
 }
 .blog_big_box .blog_content {
-    padding: 23px 25px;
+    padding: 23px 15px;
 }
 
 .blog_big_box .blog_content .author {
@@ -2267,7 +2267,14 @@ select.aos-init.aos-animate.error {
     padding-bottom: 22px;
     color: black;
 }
-
+.sidebar_item .sub-menu a {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 22px;
+    color: black;
+    text-align: left;
+}
 .sidebar_item i {
     margin-right: 15px;
 }
@@ -2544,6 +2551,6 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     display: none;
 }
 
-.owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav [class*="owl-"] {
     width: 48px;
 }
