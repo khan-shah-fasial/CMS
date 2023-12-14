@@ -351,7 +351,6 @@ header ul.dropdown li a:hover {
 
 .menu_btn:hover {
     background: #e7403b;
-    color: black;
 }
 
 @media (max-width: 991px) {
@@ -951,13 +950,14 @@ section.blog p.desc {
 .blog_big_box .blog_img {
     width: 100%;
     object-fit: cover;
+    height: 216px;
 }
 .blog_details_page_title_desc li {
     font-size: 14px !important;
     line-height: 26px !important;
 }
 .blog_big_box .blog_content {
-    padding: 23px 25px;
+    padding: 23px 15px;
 }
 
 .blog_big_box .blog_content .author {
@@ -965,6 +965,7 @@ section.blog p.desc {
     font-weight: 400;
     line-height: 14px;
     color: rgba(139, 139, 139, 1);
+    height: auto;
 }
 
 .blog_big_box .blog_content .author .authorName {
@@ -1112,6 +1113,8 @@ section.blog p.desc {
 
 .contact .address_box {
     margin-top: 30px;
+    text-decoration: none;
+    color: white;
 }
 
 .contact .address_box p {
@@ -1413,7 +1416,7 @@ hr {
 /* ------------------ blog Details page breadcrumb start ------------- */
 
 .blog_details_page_breadcrumb {
-    padding: 36px 0;
+    padding: 25px 0 0 0;
     color: rgba(152, 152, 152, 1);
 }
 .blog_details_page_breadcrumb ul li a {
@@ -2188,7 +2191,7 @@ select.aos-init.aos-animate.error {
     transition: all 0.5s;
 }
 .blog_filter_btn.active {
-    background: #e36d6a;
+    background: #e73f3a;
     color: white;
 }
 .blog_filter_btn.active:hover {
@@ -2231,7 +2234,7 @@ select.aos-init.aos-animate.error {
 }
 
 .load-more {
-    background: #e36d6a;
+    background: #e73f3a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -2267,7 +2270,14 @@ select.aos-init.aos-animate.error {
     padding-bottom: 22px;
     color: black;
 }
-
+.sidebar_item .sub-menu a {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 22px;
+    color: black;
+    text-align: left;
+}
 .sidebar_item i {
     margin-right: 15px;
 }
@@ -2299,7 +2309,7 @@ select.aos-init.aos-animate.error {
 .menu_btn {
     padding: 8px 16px;
     border: none;
-    background: #000;
+    background: #e73f3a;
     color: white;
     font-size: 16px;
     font-weight: 400;
@@ -2308,7 +2318,7 @@ select.aos-init.aos-animate.error {
     position: relative;
 }
 .menu_btn::after {
-    background-color: black;
+    background-color: #e36d6a;
     content: "";
     display: block;
     width: 100%;
@@ -2544,6 +2554,6 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     display: none;
 }
 
-.owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav [class*="owl-"] {
     width: 48px;
 }

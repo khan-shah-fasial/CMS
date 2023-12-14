@@ -336,7 +336,7 @@
 
             @foreach ($blog as $row)
 
-            <div class="col-md-4">
+            <div class="col-md-4 mt-3">
                 <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
                     <img src="{{ asset('storage/' . $row->main_image) }}" alt="" class="blog_img" />
                     <div class="blog_content">

@@ -129,8 +129,7 @@ $practice_Area = DB::table('practice_areas')
                                             </li>
                                             <li>                <a href="{{ url(route('media-coverage')) }}">Media Coverages</a>
                                             </li>
-                                            <li>                <a href="{{ url(route('news')) }}">Life at A&amp;A</a>
-                                            </li>
+                                        
                                           
                                         </ul>
                                     </div>
