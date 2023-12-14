@@ -26,16 +26,16 @@ class SitemapController extends Controller
 
     public function newSitemap() {
         $otherUrls = [
-            url('area-of-practices'),
-            url('blog'),
-            url('news'),
-            url('deal-update'),
-            url('publication'),
-            url('media-coverage'),
-            url('team-members'),
-            url('career'),
-            url('about-us'),
-            url('faq'),
+            url('/area-of-practices'),
+            url('/blog'),
+            url('/news'),
+            url('/deal-update'),
+            url('/publication'),
+            url('/media-coverage'),
+            url('/team-members'),
+            url('/career'),
+            url('/about-us'),
+            url('/faq'),
         ];
 
         $practiceAreaUrls = $this->getPracticeAreaUrls(0);
@@ -89,7 +89,7 @@ class SitemapController extends Controller
         }
 
         foreach ($practiceAreaUrls as $url) {
-            $url = url('area-of-practice/' . $url);
+            $url = url('/area-of-practice/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -100,7 +100,7 @@ class SitemapController extends Controller
         }
         
         foreach ($practiceAreaUrls1 as $url) {
-            $url = url('specialised-services/' . $url);
+            $url = url('/specialised-services/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -111,7 +111,7 @@ class SitemapController extends Controller
         }
         
         foreach ($practiceAreaUrls2 as $url) {
-            $url = url('' . $url);
+            $url = url('/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -124,7 +124,7 @@ class SitemapController extends Controller
         
 
         foreach ($practiceAreaUrls3 as $url) {
-            $url = url('area-of-practice/' . $url);
+            $url = url('/area-of-practice/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -135,7 +135,7 @@ class SitemapController extends Controller
         }
 
         foreach ($blogsUrls as $url) {
-            $url = url('blog/' . $url);
+            $url = url('/blog/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -146,7 +146,7 @@ class SitemapController extends Controller
         }
 
         foreach ($newsUrls as $url) {
-            $url = url('news/' . $url);
+            $url = url('/news/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -157,7 +157,7 @@ class SitemapController extends Controller
         }
 
         foreach ($deal_updateUrls as $url) {
-            $url = url('deal-update/' . $url);
+            $url = url('/deal-update/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -168,7 +168,7 @@ class SitemapController extends Controller
         }
         
         foreach ($uncategorizedUrls as $url) {
-            $url = url('uncategorized/' . $url);
+            $url = url('/uncategorized/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
@@ -180,7 +180,7 @@ class SitemapController extends Controller
         
 
         foreach ($teamsUrls as $url) {
-            $url = url('team-members/' . $url);
+            $url = url('/team-members/' . $url);
             $sitemapContent .= '
             <url>
                 <loc>'.$url.'</loc>
