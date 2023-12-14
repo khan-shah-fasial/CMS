@@ -97,7 +97,7 @@ assistance for startups, FDI, Property law, IP, and more')
 <section class="about pb-0 contentjstfy">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 px0">
+            <div class="col-lg-6 px0">
                 <div class="underline_heading">
                     <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h6>
                 </div>
@@ -105,7 +105,7 @@ assistance for startups, FDI, Property law, IP, and more')
                 @php echo html_entity_decode(get_settings('oj_content')) @endphp
             </div>
 
-            <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
+            <div class="col-lg-6 px0" data-aos-once="true" data-aos="fade-up">
                 <img src="/assets/frontend/images/about_us_img.jpg" class="about_img" />
             </div>
         </div>
@@ -135,14 +135,14 @@ assistance for startups, FDI, Property law, IP, and more')
 
                 </div>
             </div>
-            <div class="col-md-6 px0">
+            <div class="col-lg-6 px0">
                 <div class="news_box">
 
                     <img src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
 
                 </div>
             </div>
-            <div class="col-md-6 px0">
+            <div class="col-lg-6 px0">
                 <div class="news_box">
                     @php echo html_entity_decode(get_settings('ana_content')) @endphp
                     <!-- <p class="desc">

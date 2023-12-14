@@ -38,7 +38,7 @@ if (!isset($session_data['country'])) {
 
         <div class="w-100">
 
-            <select class="form-control select2" data-aos-once="true" name="services" data-aos="fade-up" required>
+            <select class="form-control select2" id="popup_select" data-aos-once="true" name="services" data-aos="fade-up" required>
                 <option value="">Select the Service</option>
 
                 @foreach ($practice_Area as $row)

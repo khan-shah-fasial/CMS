@@ -85,29 +85,29 @@ $practice_Area = DB::table('practice_areas')
             <div class="col-md-6">
                 @include('frontend.component.footer_form')
             </div>
-            <div class="col-md-4 col-12">
-                <div class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Delhi (Head Office)</p>
+            <div class="col-md-4 mt-4 col-12">
+                <a href="https://www.google.com/maps/place/%23TheHub/@28.5495141,77.2648649,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce362dba5bca1:0x191c6dd29ebbec30!8m2!3d28.5495094!4d77.2674398!16s%2Fg%2F11h18n3l7n" class="address_box">
+                    <p class="title" data-aos-once="true" data-aos="fade-up"  >Delhi (Head Office)</p>
                     <p data-aos-once="true" data-aos="fade-up">
                         {{ get_settings('delhi_address') }}
                     </p>
-                </div>
+                </a>
             </div>
-            <div class="col-md-4 col-12">
-                <div class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Mumbai</p>
+            <div class="col-md-4 mt-4 col-12">
+                <a href="https://maps.app.goo.gl/RcJ5axxjePFqYTX68" class="address_box" >
+                    <p class="title" data-aos-once="true" data-aos="fade-up" >Mumbai</p>
                     <p data-aos-once="true" data-aos="fade-up">
                         {{ get_settings('mumbai_address') }}
                     </p>
-                </div>
+                </a>
             </div>
-            <div class="col-md-4">
-                <div class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Chandigarh</p>
+            <div class="col-md-4 mt-4">
+                <a href="https://maps.app.goo.gl/NGnUVsVvMeb6ERFv7" class="address_box">
+                    <p class="title" data-aos-once="true" data-aos="fade-up" >Chandigarh</p>
                     <p data-aos-once="true" data-aos="fade-up">
                         {{ get_settings('chandigarh_address') }}
                     </p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -171,10 +171,6 @@ $practice_Area = DB::table('practice_areas')
                         <li>
                             <a href="{{ get_settings('facebook') }}" target="_blank"><img
                                     src="assets/frontend/images/facebook.png" alt="" /></a>
-                        </li>
-                        <li>
-                            <a href="{{ get_settings('linkedin') }}" target="_blank"><img
-                                    src="assets/frontend/images/linkedIn.png" alt="" /></a>
                         </li>
                         <li>
                             <a href="{{ get_settings('twitter') }}" target="_blank"><img
