@@ -26,61 +26,55 @@
                                             <h4 class="header-title">Home Page Banner</h4>
                                             <hr>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-9">
-                                                <div class="form-group mb-3">
-                                                <label>Banner 1 <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*515)</span></label>
-                                                    <input class="form-control" type="file" id="image" name="Banner_1">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                @if(get_settings('Banner_1')) 
-                                                    <img src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="img-thumbnail"> 
-                                                @endif
-                                            </div>
-                                        </div>
-        
-                                        <div class="row">
-                                            <div class="col-sm-9">
-                                                <div class="form-group mb-3">
-                                                    <label>Banner 2 <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*515)</span></label>
-                                                    <input class="form-control" type="file" id="image" name="Banner_2">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                @if(get_settings('Banner_2')) 
-                                                    <img src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="img-thumbnail"> 
-                                                @endif
-                                            </div>
-                                        </div>
                                         
-                                        <div class="row">
-                                            <div class="col-sm-9">
-                                                <div class="form-group mb-3">
-                                                    <label>Banner 3 <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*515)</span></label>
-                                                    <input class="form-control" type="file" id="image" name="Banner_3">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                @if(get_settings('Banner_3')) 
-                                                    <img src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="img-thumbnail"> 
-                                                @endif
+                                        <div class="col-sm-12">
+                                            <div class="form-group mb-3">
+                                                <label>Banner <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label> 
+                                                <div id="Content_list_add_more" style="margin: 10px;"> @php $i = 1; $Content_list = json_decode(get_settings('Banner_1')); 
+                                                if(!empty($Content_list)) { foreach ($Content_list as $row){  @endphp
+                                                    <div class="Content_list">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-md-11">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-9">
+
+                                                                            <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]">
+
+                                                                        </div>
+
+                                                                        <div class="col-sm-3">
+                                                                            @if(get_settings('Banner_4')) 
+                                                                                <img src="{{ asset('storage/' . $row )}}" class="img-thumbnail"> 
+                                                                            @endif
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-1"> @if($i == 1) <i style="font-size: 25px; color: #0b0; cursor: pointer; margin-left: 10px;" class="ri-add-circle-fill" id="add_Content_list"></i> @else <i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_Content_list($(this));"></i> @endif </div>
+                                                            </div>
+                                                        </div>
+                                                        </br>
+                                                    </div> @php $i++; } @endphp  @php } else { @endphp
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                        <div class="col-md-11">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+
+                                                                    <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]">
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1"><i style="font-size: 25px; color: #0b0; cursor: pointer; margin-left: 10px;" class="ri-add-circle-fill" id="add_Content_list"></i></div>
+                                                        </div>
+                                                        </br>
+                                                    </div> @php } @endphp </div>
                                             </div>
                                         </div>
-                                        
-                                        <div class="row">
-                                            <div class="col-sm-9">
-                                                <div class="form-group mb-3">
-                                                    <label>Banner 4 <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*515)</span></label>
-                                                    <input class="form-control" type="file" id="image" name="Banner_4">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                @if(get_settings('Banner_4')) 
-                                                    <img src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="img-thumbnail"> 
-                                                @endif
-                                            </div>
-                                        </div> 
+
                                     </div>
                                 </div>
                                 <div class="card">
@@ -192,9 +186,36 @@
 
 @section("page.scripts")
 <script>
+
+    function remove_Content_list(_this) {
+        _this.closest(".Content_list").remove();
+    }
+
     $(document).ready(function() {
         initTrumbowyg('.trumbowyg');
     });
+
+    $("#add_Content_list").on("click", function() {
+
+    var new_Content_list = `
+        <div class="Content_list form-group">
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"><i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_Content_list($(this));"></i></div>
+            </div>
+            </br>
+        </div>
+    `;
+
+    $("#Content_list_add_more").append(new_Content_list);
+    });
+
 </script>
 
 <script>

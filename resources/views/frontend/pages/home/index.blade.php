@@ -10,6 +10,7 @@ assistance for startups, FDI, Property law, IP, and more')
 @section('page.content')
 
 <!-----===== home content start============---->
+{{--
 <!-- 
 <style>
 .banner_content {
@@ -57,32 +58,42 @@ assistance for startups, FDI, Property law, IP, and more')
 }
 
 </style> -->
-<section class="banner_section">
-<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_1')) }}" class="d-block w-100" alt="...">
+--}}
+@php
+    $banner = json_decode(get_settings('Banner_1'));
+    $banner1 = array_shift($banner);
+@endphp
+
+@if(!empty($banner)) 
+    <section class="banner_section">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+        <img loading="lazy" src="{{ asset('storage/' . $banner1) }}" class="d-block w-100" alt="...">
+        </div>
+
+        @foreach ($banner as $row)
+            <div class="carousel-item">
+            <img loading="lazy" src="{{ asset('storage/' . $row) }}" class="d-block w-100" alt="...">
+            </div>
+        @endforeach
+        
     </div>
-    <div class="carousel-item">
-      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_2')) }}" class="d-block w-100" alt="...">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
     </div>
-    <div class="carousel-item">
-      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_3')) }}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img loading="lazy" src="{{ asset('storage/' . get_settings('Banner_4')) }}" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</section>
+    </section>
+@endif
+
+
+
 
 <!------------------ Banner End -------------------------->
 

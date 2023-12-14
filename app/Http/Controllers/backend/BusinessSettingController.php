@@ -65,9 +65,16 @@ class BusinessSettingController extends Controller
                 if ($key === 'Banner_1' || $key === 'Banner_2' || $key === 'Banner_3' || $key === 'Banner_4') {
                     // Handle image update here
                     $type = $key;
-                    
-                    $imagePath = $value->store('assets/image/banner', 'public');
-                    BusinessSetting::where('type', $type)->update(['value' => $imagePath]);
+
+                    $imgs = [];
+                    for ($j = 0; $j < count($value); $j++) {
+
+                        $imagePath = $value[$j]->store('assets/image/banner', 'public');
+                        $imgs[] = $imagePath;    
+                    }
+                                        
+                    //$imagePath = $value->store('assets/image/banner', 'public');
+                    BusinessSetting::where('type', $type)->update(['value' =>  $imgs]);
                 } else {
                     BusinessSetting::where('type', $key)->update(['value' => $value]);
                 }
