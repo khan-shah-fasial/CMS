@@ -2263,11 +2263,14 @@ select.aos-init.aos-animate.error {
     position: relative;
     cursor: pointer;
 }
+ol.sub-menu li {
+    padding-bottom: 0;
+}
 .sidebar_item span {
     font-size: 16px;
     text-decoration: none;
     display: block;
-    padding-bottom: 22px;
+    padding-bottom: 0px;
     color: black;
 }
 .sidebar_item .sub-menu a {

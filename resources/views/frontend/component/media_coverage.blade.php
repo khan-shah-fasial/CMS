@@ -8,9 +8,9 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
         <div class="row">
             <div class="col-md-12">
                 <div class="underline_heading d-flex align-items-center justify-content-center mt-5">
-                    <h6 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Media</h6>
+                    <h5 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Media</h5>
                 </div>
-                <h1 class="main_heading mb-md-2 text-center" data-aos-once="true" data-aos="fade-up">Media Coverages</h1>
+                <h6 class="main_heading mb-md-2 text-center" data-aos-once="true" data-aos="fade-up">Media Coverages</h6>
             </div>
 
             <div class="col-md-12">

@@ -8,17 +8,17 @@
                 <li><a href="{{ url(route('about')) }}">Our Journey</a></li>
                 <li><a href="{{ url(route('practicearea')) }}">Our Expertise</a></li>
                 <li><a href="{{ url(route('team')) }}">Our Professionals</a></li>
-                <div class="sidebar_item">
+                <li class="sidebar_item">
                     <span class="sub-btn">Insights <img src="/assets/frontend/images/arrow_icon.png" alt="down Arrow" />
                     </span>
                     
-                    <div class="sub-menu">
-                        <a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a>
-                        <a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a>
-                        <a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a>
+                    <ol class="sub-menu">
+                        <li><a href="{{ url(route('blog')) }}" class="sub-item">Blogs</a></li>
+                        <li><a href="{{ url(route('news')) }}" class="sub-item">A&amp;A Newscast</a></li>
+                        <li><a href="{{ url(route('media-coverage')) }}" class="sub-item">Media Coverages</a></li>
                         <!--<a href="{{ url(route('news')) }}" class="sub-item">Life at A&amp;A</a>-->
-                    </div>
-                </div>
+					</ol>
+                </li>
                 <li><a href="{{ url(route('career')) }}">Career</a></li>
 
             </ul>
