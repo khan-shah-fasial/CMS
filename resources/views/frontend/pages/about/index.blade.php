@@ -19,7 +19,7 @@
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
-                                <a href="#" data-aos="fade-up" data-aos-once="true">Home</a>
+                                <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 About Us
@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-md-12 padd00mb">
               
-                @php echo html_entity_decode(get_settings('about_us_content2')) @endphp
+                @php echo html_entity_decode(get_settings('about_us_content1')) @endphp
                 {{--<img src="/assets/frontend/images/aboutUs.png" alt="" class="about_content_img" data-aos-once="true"
                     data-aos="fade-up" />--}}
             </div>

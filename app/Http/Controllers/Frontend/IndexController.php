@@ -35,26 +35,30 @@ class IndexController extends Controller
     public function practice_area_detail($slug){
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
 
-        //$slug = str_replace('-', ' ', $slug);
-        $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
+        if($detail){
+            //$slug = str_replace('-', ' ', $slug);
+            $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
 
-        if(!empty($blog_Catg)){
-            $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
+            if(!empty($blog_Catg)){
+                $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
+            } else {
+                $blog = [];
+            }
+            
+
+        // if(empty($detail->parent_id)){  
+                $focusAreaIds = json_decode($detail->focus_area, true);
+                $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
+
+                $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
+            //} else  {
+                //$child_detail = [];
+            //} 
+
+            return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
         } else {
-            $blog = [];
+            return view('frontend.pages.404.index');
         }
-        
-
-       // if(empty($detail->parent_id)){  
-            $focusAreaIds = json_decode($detail->focus_area, true);
-            $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
-
-            $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
-        //} else  {
-            //$child_detail = [];
-        //} 
-
-        return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
 //--------------=============================== practice area end =====================------------------------------
 
@@ -91,21 +95,27 @@ class IndexController extends Controller
 
         $detail = Blog::where('slug', $slug)->where('status', 1)->first();
 
-        $author = json_decode($detail->user_id, true);
+        if($detail){
+            $author = json_decode($detail->user_id, true);
 
-        //$blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+            //$blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+    
+            $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids))->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
+    
+            $current_id = $detail->id;
+    
+            $previous = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '<', $current_id)->orderBy('id', 'desc')->first();
+            $next = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '>', $current_id)->orderBy('id', 'asc')->first();
+    
+            $previous_slug = $previous ? $previous->slug : null;
+            $next_slug = $next ? $next->slug : null;
+    
+            return view('frontend.pages.blog.detail', compact('detail','author','blog','previous_slug','next_slug'));
+        } else {
+            return view('frontend.pages.404.index');
+        }
 
-        $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', json_decode($detail->blog_category_ids))->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '!=', $detail->id)->limit(3)->orderBy('id', 'desc')->get();
 
-        $current_id = $detail->id;
-
-        $previous = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '<', $current_id)->orderBy('id', 'desc')->first();
-        $next = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$category_id->id.'')->where('id', '>', $current_id)->orderBy('id', 'asc')->first();
-
-        $previous_slug = $previous ? $previous->slug : null;
-        $next_slug = $next ? $next->slug : null;
-
-        return view('frontend.pages.blog.detail', compact('detail','author','blog','previous_slug','next_slug'));
     }
 
 //--------------=============================== Blog end ================================------------------------------
@@ -123,7 +133,11 @@ class IndexController extends Controller
 
         $detail = Team::where('name', $slug)->where('status', 1)->first();
 
-        return view('frontend.pages.team.detail', compact('detail'));
+        if($detail){
+            return view('frontend.pages.team.detail', compact('detail'));
+        } else {
+            return view('frontend.pages.404.index');
+        }
     }
 
 //--------------=============================== Team end ================================------------------------------

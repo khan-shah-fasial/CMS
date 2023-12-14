@@ -62,6 +62,13 @@
                         </li>
 
                         <li class="side-nav-item">
+                            <a href="{{ route('contact.career') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
+                                <i class="ri-file-paper-2-line"></i> 
+                                <span> Career </span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
                             <a href="{{ route('practicearea.index') }}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                                 <i class="ri-suitcase-line"></i> 
                                 <span> Practice Area </span>

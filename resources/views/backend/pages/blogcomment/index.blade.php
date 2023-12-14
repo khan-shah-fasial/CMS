@@ -24,6 +24,7 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Blog</th>
                 <th>Comment</th>
                 <th>Status</th>
                 <th>Date</th>
@@ -37,6 +38,19 @@
                 <td>{{$i++}}</td>
                 <td>{{$row->name}}</td>
                 <td>{{$row->email}}</td>
+                <td>
+                    @php
+                        $blogInfo = json_decode(blog_url_comment($row->blog_id), true);
+                    @endphp
+                    
+
+                    @if ($blogInfo != NULL)
+                        <a target="_blank" href="{{ $blogInfo['url'] }}">{{ $blogInfo['title'] }}</a>
+                    @else
+                        <span>Blog Not Found</span>
+                    @endif
+
+                </td>
                 <td>{{$row->comment}}</td>
                 <td>
                     @if($row->status)

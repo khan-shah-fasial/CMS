@@ -21,7 +21,7 @@
                     <h2>404</h2>
                     <h4>Something’s missing.</h4>
                     <p>This page is missing or you assembled the link incorrectly.</p>
-                    <button>Go to Website</button>
+                    <a href="{{ url(route('index')) }}"><button>Go to Website</button></a>
                 </div>
             </div>
         </div>

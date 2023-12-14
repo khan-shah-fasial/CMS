@@ -51,7 +51,7 @@ $practice_Area = DB::table('practice_areas')
         <div class="row">
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
-                    <img src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img loading="lazy" src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true" data-aos="fade-up" />
                     <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true"
                         data-aos="fade-up">{{ get_settings('mobile') }}</a>
                     <a href="mailto:{{ get_settings('email') }}" class="email" data-aos-once="true"
@@ -162,18 +162,20 @@ $practice_Area = DB::table('practice_areas')
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
                         <li><a href="{{ url(route('privacy-policy')) }}">Privacy Policy </a></li>
-                        <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
+                        @if(!empty(get_settings('cookie_content')))
+                            <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
+                        @endif
                     </ul>
                     <ul class="d-flex align-items-center gap-3 mb-md-0 mb-3">
                         <!-- <li>
                             <a href="{{ get_settings('instagram') }}"><img src="assets/frontend/images/instagram.png" alt="" /></a>
                         </li> -->
                         <li>
-                            <a href="{{ get_settings('facebook') }}" target="_blank"><img
+                            <a href="{{ get_settings('facebook') }}" target="_blank" aria-label="Facebook Link"><img
                                     src="assets/frontend/images/facebook.png" alt="" /></a>
                         </li>
                         <li>
-                            <a href="{{ get_settings('twitter') }}" target="_blank"><img
+                            <a href="{{ get_settings('twitter') }}" target="_blank" aria-label="Twitter Link"><img
                                     src="assets/frontend/images/twitter.png" alt="" /></a>
                         </li>
                     </ul>
@@ -183,8 +185,6 @@ $practice_Area = DB::table('practice_areas')
         </div>
     </div>
     <div class="fix_footer">
-	   
-	   
          <div class="text-center">
                 <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us
                     Now</button>

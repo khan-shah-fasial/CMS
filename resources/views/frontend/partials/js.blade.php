@@ -9,7 +9,7 @@
 
 
 <!-- Animation International Phone Number--------- -->
-<script src="https://octanetworks.com/js/intlTelInput.js"></script>
+<script src="/assets/frontend/js/intlTelInput.js"></script>
 
 <!--owl carousel js-->
 <script src="/assets/frontend/js/owl.carousel.js"></script>
