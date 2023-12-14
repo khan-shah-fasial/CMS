@@ -13,18 +13,21 @@
                         class="blog_filter_btn @if(request()->routeIs('news') ) active @endif">
                         News
                     </a>
+                    {{--
                     <a href="{{ url(route('publication')) }}"
                         class="blog_filter_btn @if(request()->routeIs('publication') ) active @endif">
                         Publication
-                    </a>
+                    </a> --}}
                     <a href="{{ url(route('media-coverage')) }}"
                         class="blog_filter_btn @if(request()->routeIs('media-coverage') ) active @endif">
                         Media Coverage
                     </a>
+                    {{--
                     <a href="{{ url(route('deal-update')) }}"
                         class="blog_filter_btn @if(request()->routeIs('deal-update') ) active @endif">
                         Deal Update
                     </a>
+                    --}}
                 </div>
             </div>
         </div>
