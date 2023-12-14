@@ -110,7 +110,7 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-lg-6 px0">
                 <div class="underline_heading">
-                    <h6 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h6>
+                    <h4 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h4>
                 </div>
                 <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">{{ get_settings('oj_home') }}</h2>
                 @php echo html_entity_decode(get_settings('oj_content')) @endphp
