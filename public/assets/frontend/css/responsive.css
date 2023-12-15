@@ -172,6 +172,7 @@
         display: none;
     }
     .fix_footer,
+    .fix_btn,
     .mobile_whatsapp {
         display: none;
     }
@@ -182,6 +183,11 @@
         align-items: center;
         text-align: center;
         justify-content: center;
+    }
+    .fix_btn {
+        position: fixed;
+        bottom: 70px;
+        right: 10px;
     }
 
     .blog_details_page_breadcrumb .author {

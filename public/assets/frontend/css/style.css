@@ -107,6 +107,16 @@ p {
     text-align: justify !important;
     line-height: 26px !important;
 }
+.blog_details_page_title_desc span {
+    font-size: 14px !important;
+    text-align: justify !important;
+    line-height: 26px !important;
+}
+.blog_details_page_title_desc a {
+    font-size: 14px !important;
+    text-align: justify !important;
+    line-height: 26px !important;
+}
 
 /* ------------------owl carousel -------------- */
 
@@ -1416,7 +1426,7 @@ hr {
 /* ------------------ blog Details page breadcrumb start ------------- */
 
 .blog_details_page_breadcrumb {
-    padding: 25px 0 0 0;
+    padding: 10px 0 0 0;
     color: rgba(152, 152, 152, 1);
 }
 .blog_details_page_breadcrumb ul li a {
