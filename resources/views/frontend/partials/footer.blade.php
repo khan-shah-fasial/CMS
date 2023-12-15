@@ -185,16 +185,20 @@ $practice_Area = DB::table('practice_areas')
         </div>
     </div>
     <div class="fix_footer">
-         <div class="text-center">
-                <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn">Contact Us
-                    Now</button>
-            </div>
-        <a href="https://api.whatsapp.com/send?phone={{ get_settings('whatsapp') }}">
+            <a href="{{ url(route('index')) }}">
             <span>
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
             </span>
             <span>
-                Whatsapp
+                Home
+            </span>
+        </a>
+            <a href="mailto:{{ get_settings('email') }}">
+            <span>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+            <span>
+                Mail
             </span>
         </a>
         <a href="tel:+{{ get_settings('mobile') }}">
@@ -205,16 +209,23 @@ $practice_Area = DB::table('practice_areas')
                 Call
             </span>
         </a>
-        <a href="mailto:{{ get_settings('email') }}">
+        <a href="https://api.whatsapp.com/send?phone={{ get_settings('whatsapp') }}">
             <span>
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </span>
             <span>
-                Mail
+                Whatsapp
             </span>
         </a>
+        
+        
 
     </div>
+
+    <div class="text-center">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#contact" class="menu_btn fix_btn">Contact Us
+                    Now</button>
+            </div>
 </footer>
 
 
