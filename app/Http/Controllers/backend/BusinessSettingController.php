@@ -81,16 +81,15 @@ class BusinessSettingController extends Controller
                     for ($j = 0; $j < count($value); $j++) {
 
                         if($type != 'Banner_2'){
-                            
-                            
                             $imagePath = $value[$i]->store('assets/image/banner', 'public');
                             $imgs[] = $imagePath;
+                            $i++; 
                         } else {
                             //echo'Banner_2';
                            $imgs[] = $value[$j];
                            
                         } 
-                        $i++;   
+                          
                     }
 
                     //echo'<pre>';

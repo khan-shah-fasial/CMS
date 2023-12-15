@@ -28,8 +28,15 @@
                                         </div>
                                         
                                         <div class="col-sm-12">
+                                            <label>Banner <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label> 
+
+                                            <div style="text-align: end;"> 
+                                                <i style="font-size: 25px; color: #0b0; cursor: pointer; margin-left: 10px;" class="ri-add-circle-fill" id="add_Content_list"></i>
+                                            </div>
+                                            
+
                                             <div class="form-group mb-3">
-                                                <label>Banner <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label> 
+                                                
                                                 <div id="Content_list_add_more" style="margin: 10px;"> @php $i = 1; $Content_list = json_decode(get_settings('Banner_1')); 
                                                 if(!empty($Content_list)) { foreach ($Content_list as $row){  @endphp
                                                     <div class="Content_list">
@@ -39,7 +46,7 @@
                                                                     <div class="row">
                                                                         <div class="col-sm-9">
 
-                                                                            <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]">
+                                                                            <input type="file" id="image" style="margin-bottom: 3px;" class="form-control" name="Banner_1[]" disabled>
 
                                                                             <input type="hidden" class="form-control" name="Banner_2[]" value="{{ $row }}">
 
@@ -53,7 +60,7 @@
 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-1"> @if($i == 1) <i style="font-size: 25px; color: #0b0; cursor: pointer; margin-left: 10px;" class="ri-add-circle-fill" id="add_Content_list"></i> @else <i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_Content_list($(this));"></i> @endif </div>
+                                                                <div class="col-md-1"> @if($i == 1) <i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_Content_list($(this));"></i> @else <i style="font-size: 25px; color: red; cursor: pointer; margin-left: 10px;" class="ri-delete-bin-2-fill" onclick="remove_Content_list($(this));"></i> @endif </div>
                                                             </div>
                                                         </div>
                                                         </br>

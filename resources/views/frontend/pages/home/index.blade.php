@@ -61,7 +61,12 @@ assistance for startups, FDI, Property law, IP, and more')
 --}}
 @php
     $banner = json_decode(get_settings('Banner_1'));
-    $banner1 = array_shift($banner);
+
+    if(count($banner) != 1){
+        $banner1 = array_shift($banner);
+    } else {
+        $banner1 = $banner[0];
+    }
 @endphp
 
 @if(!empty($banner)) 
@@ -73,11 +78,13 @@ assistance for startups, FDI, Property law, IP, and more')
         <img loading="lazy" src="{{ asset('storage/' . $banner1) }}" class="d-block w-100" alt="...">
         </div>
 
-        @foreach ($banner as $row)
-            <div class="carousel-item">
-            <img loading="lazy" src="{{ asset('storage/' . $row) }}" class="d-block w-100" alt="...">
-            </div>
-        @endforeach
+        
+            @foreach ($banner as $row)
+                <div class="carousel-item">
+                <img loading="lazy" src="{{ asset('storage/' . $row) }}" class="d-block w-100" alt="...">
+                </div>
+            @endforeach
+        
         
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
