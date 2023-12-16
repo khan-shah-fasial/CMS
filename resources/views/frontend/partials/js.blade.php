@@ -36,7 +36,7 @@
 <script src="/assets/frontend/js/whatsapp-chat-support.js"></script>
 
 <!--Google capcha js-->
-<script src="https://www.google.com/recaptcha/api.js" defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" defer></script> -->
 <!--<script src="/assets/frontend/js/api.js"></script>-->
 
 <!--Custom Js-->
