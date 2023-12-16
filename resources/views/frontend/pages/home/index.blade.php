@@ -75,7 +75,7 @@ assistance for startups, FDI, Property law, IP, and more')
     <div class="carousel-inner">
 
         <div class="carousel-item active">
-        <img loading="lazy" src="{{ asset('storage/' . $banner1) }}" class="d-block w-100" alt="...">
+        <img src="{{ asset('storage/' . $banner1) }}" class="d-block w-100" alt="...">
         </div>
 
         
