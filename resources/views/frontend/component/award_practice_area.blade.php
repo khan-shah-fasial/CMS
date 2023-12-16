@@ -6,7 +6,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
 <!------=================== Awards Practice Area =====================------------------------->
 
 <section class="practice">
-    <div class="container">
+    <div class="container">   
         <div class="row">
             <div class="col-md-12">
                 <div class="underline_heading d-flex align-items-center justify-content-center mb-md-0 mb-3">
