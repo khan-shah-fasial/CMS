@@ -5,7 +5,7 @@
 <script src="/assets/frontend/js/aos.js"></script>
 
 <!-- Animation Typing--------- -->
-<script src="/assets/frontend/js/core.js"></script>
+<!-- <script src="/assets/frontend/js/core.js"></script> -->
 
 
 <!-- International Phone Number--------- -->
@@ -27,10 +27,10 @@
 <script defer src="/assets/frontend/js/toastr.min.js"></script>
 
 <!--select2-->
-<script src="/assets/frontend/js/select2.full.min.js"></script>
+<!-- <script src="/assets/frontend/js/select2.full.min.js"></script> -->
 
 <!--select2-->
-<!-- <script src="/assets/frontend/js/select2.min.js"></script> -->
+<script src="/assets/frontend/js/select2.min.js"></script>
 
 <!--whatsapp js-->
 <script src="/assets/frontend/js/whatsapp-chat-support.js"></script>

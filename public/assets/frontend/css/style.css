@@ -16,6 +16,7 @@ body {
 a:hover {
     color: #e36d6a !important;
 }
+
 section {
     padding: 45px 0px;
 }
@@ -23,6 +24,7 @@ section {
 .mt105 {
     margin-top: 105px;
 }
+
 p {
     font-size: 14px !important;
     line-height: 26px !important;
@@ -90,6 +92,7 @@ p {
     background: #e7403b;
     transition: all 0.5s;
 }
+
 .underline_heading .main_heading:hover::after {
     left: 120px;
 }
@@ -98,20 +101,24 @@ p {
     border: 1px solid black !important;
     padding: 10px !important;
 }
+
 .blog_details_page_title_desc table {
     width: 100% !important;
     table-layout: fixed !important;
 }
+
 .blog_details_page_title_desc blockquote {
     font-size: 14px !important;
     text-align: justify !important;
     line-height: 26px !important;
 }
+
 .blog_details_page_title_desc span {
     font-size: 14px !important;
     text-align: justify !important;
     line-height: 26px !important;
 }
+
 .blog_details_page_title_desc a {
     font-size: 14px !important;
     text-align: justify !important;
@@ -127,6 +134,7 @@ header {
     top: 36px;
     z-index: 999;
 }
+
 .bottom_nav_links .nav_links a img {
     margin-left: auto;
     margin-right: auto;
@@ -183,6 +191,7 @@ header {
     border: 1px solid #d3d3d382;
     font-size: 13px;
 }
+
 .search-box .search_bar_field button {
     line-height: 20px;
     padding: 13px 22px;
@@ -191,17 +200,21 @@ header {
     border-radius: 0px 5px 5px 0px;
     color: white;
 }
+
 .search-box .search_bar_field button:hover {
     background: #333;
 }
+
 .bottom_nav_links .nav_links li {
     padding: 10px 0;
     line-height: 17px;
     text-align: center;
 }
+
 .form-control:focus {
     box-shadow: none !important;
 }
+
 .bottom_nav_links .nav_links a {
     color: #333;
     text-decoration: none;
@@ -219,9 +232,11 @@ header {
 .bottom_nav_links .nav_links li ul.dropdown li:hover {
     background: #e36d6a;
 }
+
 .bottom_nav_links .nav_links li ul.dropdown li:hover a {
     color: white;
 }
+
 .bottom_nav_links .nav_links li ul.dropdown li:last-child {
     border-bottom: none;
 }
@@ -241,10 +256,12 @@ header {
     column-count: 2;
     padding-bottom: 10px;
 }
+
 .bottom_nav_links .nav_links li:hover ul.dropdown {
     display: block;
     padding-left: 0;
 }
+
 header ul.dropdown li a:hover {
     color: #fff !important;
 }
@@ -266,15 +283,19 @@ header ul.dropdown li a:hover {
 .nav_button img {
     width: 25px;
 }
+
 .nav_button img:nth-child(2) {
     display: none !important;
 }
+
 .nav_button:hover img:nth-child(2) {
     display: flex !important;
 }
+
 .nav_button:hover img:nth-child(1) {
     display: none !important;
 }
+
 .nav_button:hover {
     background: #d3d3d34f;
     color: #444444b0;
@@ -290,6 +311,7 @@ header ul.dropdown li a:hover {
     text-decoration: none;
     font-size: 14px;
 }
+
 .top_baar a span {
     color: #fff;
     text-decoration: none;
@@ -329,6 +351,7 @@ header ul.dropdown li a:hover {
 .container-xl {
     max-width: 1600px !important;
 }
+
 .pd-0 {
     padding: 0px !important;
 }
@@ -367,6 +390,7 @@ header ul.dropdown li a:hover {
     .menu_left_fixed {
         display: none;
     }
+
     body .nav_bar {
         display: none !important;
     }
@@ -381,6 +405,7 @@ header ul.dropdown li a:hover {
         width: 266px !important;
     }
 }
+
 @media (min-width: 1466px) {
     .menu_left_fixed {
         width: 249px;
@@ -415,6 +440,7 @@ header ul.dropdown li a:hover {
 .banner_section {
     position: relative;
 }
+
 .overlay_banner {
     position: absolute;
     width: 100%;
@@ -439,6 +465,7 @@ header ul.dropdown li a:hover {
     font-weight: 400;
     line-height: 20px;
 }
+
 .banner_section .banner_content h3 {
     color: #e7403b;
 }
@@ -469,6 +496,7 @@ header ul.dropdown li a:hover {
     justify-content: space-evenly;
     height: 130px;
 }
+
 .awards_section .awards_box h4 {
     font-size: 14px;
     font-weight: 700;
@@ -498,9 +526,11 @@ header ul.dropdown li a:hover {
     transition: background-color 0.3s, color 0.3s;
     right: 0;
 }
+
 .awards_section button i {
     font-size: 30px;
 }
+
 .team button.owl-prev {
     position: absolute;
     top: 45%;
@@ -516,6 +546,7 @@ header ul.dropdown li a:hover {
     transition: background-color 0.3s, color 0.3s;
     right: 0;
 }
+
 .team button i {
     font-size: 30px;
 }
@@ -524,9 +555,11 @@ header ul.dropdown li a:hover {
     background: transparent !important;
     color: #f00 !important;
 }
+
 .awards_section .owl-carousel .owl-nav.disabled {
     display: block;
 }
+
 /*about us open*/
 
 .about_bg {
@@ -580,6 +613,7 @@ header ul.dropdown li a:hover {
     line-height: 45px !important;
     margin-bottom: 0;
 }
+
 .about_counter_para {
     font-size: 14px;
     font-weight: 400;
@@ -620,6 +654,7 @@ header ul.dropdown li a:hover {
     flex-direction: column;
     transition: all 0.6s ease 0s;
 }
+
 .practice_w_box a {
     text-decoration: none;
 }
@@ -630,6 +665,7 @@ header ul.dropdown li a:hover {
     outline: 0 !important;
     outline-offset: 0;
 }
+
 /* ::before,
 ::after {
     position: absolute;
@@ -646,6 +682,7 @@ header ul.dropdown li a:hover {
     cursor: pointer;
     margin: 0px 0px 15px;
 }
+
 .practice_w_box .btn_hover span {
     position: relative;
     display: inline-block;
@@ -665,6 +702,7 @@ header ul.dropdown li a:hover {
     background-color: #f4f4f4;
     padding: 37px 10px;
 }
+
 .practice_w_box .btn-3::before,
 .practice_w_box .btn-3::after {
     background: transparent;
@@ -680,6 +718,7 @@ header ul.dropdown li a:hover {
     height: 0%;
     opacity: 0;
 }
+
 .practice_w_box .btn_hover.hover-border-5::before {
     position: absolute;
     content: "";
@@ -690,6 +729,7 @@ header ul.dropdown li a:hover {
     transition: width 0.2s 0.5s ease-out, height 0.15s 0.35s linear,
         opacity 0s 0.7s;
 }
+
 .practice_w_box .btn_hover.hover-border-5::after {
     position: absolute;
     content: "";
@@ -699,6 +739,7 @@ header ul.dropdown li a:hover {
     border-right: 2px solid #e7403b;
     transition: width 0.2s 0.15s linear, height 0.15s ease-in, opacity 0s 0.35s;
 }
+
 .practice_w_box .btn_hover.hover-border-5:hover::before,
 .practice_w_box .btn_hover.hover-border-5:hover::after {
     position: absolute;
@@ -707,11 +748,14 @@ header ul.dropdown li a:hover {
     height: 96%;
     opacity: 1;
 }
+
 .practice_w_box .btn_hover.hover-border-5:hover::before {
     position: absolute;
     content: "";
-    transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s; /* 1,2 */
+    transition: width 0.2s ease-in, height 0.15s 0.2s linear, opacity 0s;
+    /* 1,2 */
 }
+
 .practice_w_box .btn_hover.hover-border-5:hover::after {
     position: absolute;
     content: "";
@@ -739,6 +783,7 @@ header ul.dropdown li a:hover {
     transition: all 0.6s ease 0s;
     margin: auto;
 }
+
 .practice_box .hover_box p {
     font-size: 14px;
 }
@@ -814,6 +859,7 @@ header ul.dropdown li a:hover {
 .team .team_box {
     margin-top: 20px;
 }
+
 .team_main_img {
     overflow: hidden;
     margin-bottom: 12px;
@@ -827,6 +873,7 @@ header ul.dropdown li a:hover {
 .team_main_img img {
     transition: 0.5s all;
 }
+
 #banner_slider_carousel {
     margin-bottom: -58px;
 }
@@ -835,14 +882,17 @@ header ul.dropdown li a:hover {
     width: 100% !important;
     transition: all 0.5s;
 }
+
 #banner_slider_carousel .team_box .hover_img {
     width: 359px;
     height: 399px;
     overflow: hidden;
 }
+
 #banner_slider_carousel .team_box .team_img:hover {
     transform: scale(1.1);
 }
+
 #banner_slider_carousel .owl-dots {
     display: none;
 }
@@ -946,6 +996,7 @@ header ul.dropdown li a:hover {
     background-position: center;
     background-size: cover;
 }
+
 section.blog p.desc {
     margin-bottom: 0;
     display: -webkit-box;
@@ -953,6 +1004,7 @@ section.blog p.desc {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 .blog_big_box {
     background: rgba(236, 236, 236, 1);
 }
@@ -962,10 +1014,12 @@ section.blog p.desc {
     object-fit: cover;
     height: 216px;
 }
+
 .blog_details_page_title_desc li {
     font-size: 14px !important;
     line-height: 26px !important;
 }
+
 .blog_big_box .blog_content {
     padding: 23px 15px;
 }
@@ -1013,6 +1067,7 @@ section.blog p.desc {
     gap: 23px;
     margin-bottom: 20px;
 }
+
 .blog .blog_right_box img {
     width: 160px;
     height: 101px;
@@ -1039,6 +1094,7 @@ section.blog p.desc {
 .contact .contact_info_box img {
     width: 200px;
 }
+
 .contact .contact_info_box a {
     font-size: 14px;
     font-weight: 700;
@@ -1068,6 +1124,7 @@ section.blog p.desc {
     color: white;
     text-decoration: none;
 }
+
 .contact .quick_links_box ul li a:hover {
     color: white;
 }
@@ -1085,6 +1142,7 @@ section.blog p.desc {
     line-height: 30px;
     color: #e7403b;
 }
+
 .contact .contact_form select,
 .contact .contact_form input {
     padding: 9px 20px;
@@ -1108,6 +1166,7 @@ section.blog p.desc {
     line-height: 19px;
     transition: all 0.5s;
 }
+
 .contact .contact_form .contact_form_button:hover {
     background: lightgray;
     color: black;
@@ -1151,6 +1210,7 @@ section.blog p.desc {
     break-inside: avoid;
     counter-increment: brick-counter;
 }
+
 .footer {
     background-image: url("/assets/frontend/images/practice.webp");
     background-repeat: no-repeat;
@@ -1226,21 +1286,26 @@ hr {
     color: #e36d6a !important;
     text-decoration: none !important;
 }
+
 .service_title_desc p span {
     font-size: 14px !important;
 }
+
 .service_title_desc h1 {
     font-size: 28px !important;
     font-weight: 600;
 }
+
 .service_title_desc h2 {
     font-size: 24px !important;
     font-weight: 600;
 }
+
 .service_title_desc h3 {
     font-size: 20px !important;
     font-weight: 600;
 }
+
 .service_title_desc h4 {
     font-size: 18px !important;
     font-weight: 600;
@@ -1250,6 +1315,7 @@ hr {
     font-size: 14px;
     line-height: 28px;
 }
+
 /* --------------------service title desc end----------------- */
 
 /* --------------------service image start----------------- */
@@ -1257,12 +1323,14 @@ hr {
 .service_img img {
     width: 100%;
 }
+
 .service_title_desc ol li {
     font-size: 14px;
     font-size: 14px;
     line-height: 26px;
     margin-bottom: 12px;
 }
+
 /* --------------------service image end----------------- */
 
 /* --------------------service why choose start----------------- */
@@ -1309,10 +1377,12 @@ hr {
     min-width: 320px;
     color: #000;
 }
+
 .service_why_choose h3 {
     font-size: 20px;
     font-weight: 600;
 }
+
 .service_why_choose .nav-pills .nav-link.active {
     background: rgba(231, 64, 59, 1);
     color: #fff;
@@ -1370,6 +1440,7 @@ hr {
 .blog_page_cards .blog_big_box .hover_effect_img {
     position: relative;
 }
+
 .blog_page_cards .blog_big_box .hover_effect_img .overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
@@ -1429,6 +1500,7 @@ hr {
     padding: 10px 0 0 0;
     color: rgba(152, 152, 152, 1);
 }
+
 .blog_details_page_breadcrumb ul li a {
     color: #e36d6a !important;
 }
@@ -1437,24 +1509,29 @@ hr {
     color: #e36d6a !important;
     text-decoration: none !important;
 }
+
 .blog_details_page_title_desc ul li,
 .blog_details_page_title_desc p span {
     font-size: 14px !important;
 }
+
 .blog_details_page_title_desc h1 {
     font-size: 28px !important;
     font-weight: 600 !important;
 }
+
 .blog_details_page_title_desc h2 {
     font-size: 24px !important;
     font-weight: 600 !important;
     margin-top: 30px !important;
 }
+
 .blog_details_page_title_desc h3 {
     font-size: 20px !important;
     font-weight: 600 !important;
     margin-top: 30px !important;
 }
+
 .blog_details_page_title_desc h4 {
     font-size: 18px !important;
     font-weight: 600 !important;
@@ -1493,6 +1570,7 @@ hr {
 .testimonial .text {
     width: 100%;
 }
+
 .testimonial .text p {
     max-width: 552px;
     font-size: 22px;
@@ -1553,6 +1631,7 @@ hr {
     line-height: 22px;
     padding-left: 20px;
 }
+
 .blog_details_page_comments .date {
     font-size: 16px;
     font-weight: 400;
@@ -1561,6 +1640,7 @@ hr {
     margin-bottom: 20px;
     padding-left: 20px;
 }
+
 .blog_details_page_comments .comment {
     font-size: 16px !important;
     font-weight: 400 !important;
@@ -1584,6 +1664,7 @@ hr {
     font-weight: 700;
     line-height: 30px;
 }
+
 .blog_details_page_comments .post_comment {
     font-size: 20px;
     font-weight: 400;
@@ -1613,6 +1694,7 @@ hr {
 .team_wrapper {
     background: rgba(255, 255, 255, 0.2);
 }
+
 .team_wrapper .team_box {
     margin-bottom: 37px;
     margin-top: 0px;
@@ -1623,6 +1705,7 @@ hr {
     height: 360px;
     object-fit: cover;
 }
+
 .team_wrapper .team_box .name {
     font-size: 18px;
     font-weight: 700;
@@ -1645,6 +1728,7 @@ hr {
     text-decoration: none;
     color: #e7403b;
 }
+
 .team_box p.desc {
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -1652,6 +1736,7 @@ hr {
     overflow: hidden;
     margin-bottom: 10px;
 }
+
 /* ------------------ Team Card end ------------- */
 /* ------------------ Team page end ------------- */
 
@@ -1677,6 +1762,7 @@ hr {
 .team_d_content .team_img {
     width: 100%;
 }
+
 .team_d_content .content {
     padding-left: 70px;
 }
@@ -1686,9 +1772,11 @@ hr {
     font-weight: 400;
     line-height: 38px;
 }
+
 .team_d_content .content .mail {
     margin-bottom: 50px;
 }
+
 .team_d_content .content .sub_heading {
     font-size: 24px;
     font-weight: 700;
@@ -1696,12 +1784,15 @@ hr {
     color: #e7403b;
     margin-bottom: 15px;
 }
+
 .team_d_content .content .mail {
     margin-bottom: 50px;
 }
+
 .team_d_content .content ul li {
     margin-bottom: 6px;
 }
+
 /* ------------------ Team Details content end ------------- */
 
 /* ------------------ Team Details page end ------------- */
@@ -1744,11 +1835,13 @@ hr {
 .contact_p_form .address {
     margin-bottom: 41px;
 }
+
 .contact_p_form .info_heading {
     font-size: 15px;
     font-weight: 700;
     line-height: 23px;
 }
+
 .contact_p_form .phone_email {
     font-size: 15px;
     font-weight: 400;
@@ -1767,6 +1860,7 @@ hr {
     width: 100%;
     padding: 0 60px;
 }
+
 .contact_p_form form textarea,
 .contact_p_form form input {
     width: 100%;
@@ -1852,10 +1946,12 @@ hr {
     background-size: cover;
     color: white;
 }
+
 section.career_page_content li span {
     line-height: 26px;
     font-size: 14px;
 }
+
 /* ----------------- career  Page Banner End ------------------ */
 /* ----------------- career  Page Banner Start ------------------ */
 
@@ -1893,16 +1989,19 @@ section.career_page_content li span {
     padding: 15px 20px 30px 20px;
     position: relative;
 }
+
 .career_popup_form .btn-close {
     position: absolute;
     top: 24px;
     right: 0;
 }
+
 .career_popup_form form h3 {
     font-size: 20px;
     font-weight: 700;
     line-height: 40px;
 }
+
 .career_popup_form form textarea,
 .career_popup_form form select,
 .career_popup_form form input {
@@ -1913,6 +2012,7 @@ section.career_page_content li span {
     border-radius: 10px;
     width: 100%;
 }
+
 .career_popup_form form button {
     padding: 10px 48px;
     border: none;
@@ -1948,12 +2048,14 @@ section.career_page_content li span {
     line-height: 26px;
     margin-bottom: 6px;
 }
+
 .accordion-button:focus {
     z-index: 3;
     border-color: transparent !important;
     outline: 0;
     box-shadow: none !important;
 }
+
 /* ----------------- faq  Page Banner End ------------------ */
 /* ----------------- faq  Page faqs Start ------------------ */
 
@@ -1966,10 +2068,7 @@ section.career_page_content li span {
     border-radius: none !important;
 }
 
-.faq_page_accordion
-    .accordion
-    .accordion-item
-    .accordion-button:not(.collapsed) {
+.faq_page_accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
     color: black;
     background-color: white;
     box-shadow: none;
@@ -1977,9 +2076,11 @@ section.career_page_content li span {
     font-weight: 700;
     line-height: 26px;
 }
+
 .faq_page_accordion .accordion .accordion-item .accordion-button {
     padding: 1.5rem 2.25rem;
 }
+
 .faq_page_accordion .accordion .accordion-item .accordion-body {
     padding: 0 2.25rem 2rem 2.25rem;
 }
@@ -1995,9 +2096,11 @@ section.career_page_content li span {
     flex-direction: column;
     transition: all 0.5s;
 }
+
 .practice_w_card:hover {
     background: #e36d6a47;
 }
+
 .practice_w_card .heading {
     font-size: 20px;
     font-weight: 700;
@@ -2014,11 +2117,13 @@ section.career_page_content li span {
 .faq_page_accordion .accordion-button {
     font-weight: 700;
 }
+
 .heading2 {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
 }
+
 .career_page_content a {
     font-weight: 800;
     color: #000;
@@ -2031,16 +2136,19 @@ section.career_page_content li span {
     font-weight: 700;
     line-height: 161px;
 }
+
 .container_404 h4 {
     font-size: 32px;
     font-weight: 700;
     line-height: 40px;
 }
+
 .container_404 p {
     font-size: 20px;
     font-weight: 700;
     line-height: 52px;
 }
+
 .container_404 button {
     padding: 12px 48px;
     font-size: 18px;
@@ -2060,11 +2168,13 @@ section.career_page_content li span {
     font-weight: 700;
     line-height: 80px;
 }
+
 .thankyou_container h6 {
     font-size: 32px;
     font-weight: 700;
     line-height: 36px;
 }
+
 .thankyou_container p {
     font-size: 20px;
     font-weight: 700;
@@ -2080,6 +2190,7 @@ section.career_page_content li span {
     background: #f00;
     color: white;
 }
+
 .contact_form .error {
     font-size: 10px;
     color: #f00;
@@ -2105,6 +2216,7 @@ select.aos-init.aos-animate.error {
     background: transparent !important;
     color: rgba(159, 159, 159, 1) !important;
 }
+
 .searc_boxex {
     background: #f4f4f4;
     padding: 24px 40px;
@@ -2118,13 +2230,16 @@ select.aos-init.aos-animate.error {
     font-weight: 600;
     line-height: 28px;
 }
+
 .searc_boxex a {
     color: #e7403b;
 }
+
 .search_right img {
     cursor: pointer;
     margin-top: -5px;
 }
+
 /* ------------ thank you page end ----------------- */
 
 /*-- cookies css open--*/
@@ -2141,6 +2256,7 @@ select.aos-init.aos-animate.error {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 99;
 }
+
 .cookies_section.show {
     right: 20px;
 }
@@ -2148,36 +2264,44 @@ select.aos-init.aos-animate.error {
 .cookies_section .title-box i {
     font-size: 32px;
 }
+
 .cookies_section .title-box h3 {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 10px;
 }
+
 .cookies_section .info {
     margin-bottom: 15px;
 }
+
 .cookies_section img {
     width: 58px;
     padding-right: 12px;
 }
+
 .cookies_section .info p {
     font-size: 16px;
     font-weight: 400;
     color: #333;
 }
+
 .cookies_section .info p a {
     color: #e7403b;
     text-decoration: none;
 }
+
 .cookies_section .info p a:hover {
     text-decoration: underline;
 }
+
 .cookies_section .button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .cookies_section .cookies_button {
     width: calc(100% / 2 - 10px);
     padding: 8px 0;
@@ -2188,6 +2312,7 @@ select.aos-init.aos-animate.error {
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
 .cookies_section .cookies_button:hover {
     background-color: #e7403b;
 }
@@ -2200,13 +2325,16 @@ select.aos-init.aos-animate.error {
     text-decoration: none;
     transition: all 0.5s;
 }
+
 .blog_filter_btn.active {
     background: #e73f3a;
     color: white;
 }
+
 .blog_filter_btn.active:hover {
     color: white !important;
 }
+
 .blog_filter_btn:hover {
     color: black !important;
 }
@@ -2233,6 +2361,7 @@ select.aos-init.aos-animate.error {
     0% {
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
     }
+
     80% {
         box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
     }
@@ -2250,6 +2379,7 @@ select.aos-init.aos-animate.error {
     border: none;
     border-radius: 30px;
 }
+
 .common_btn {
     background: #e36d6a;
     color: white;
@@ -2258,6 +2388,7 @@ select.aos-init.aos-animate.error {
     transition: all 0.5s;
     text-decoration: none;
 }
+
 .common_btn:hover {
     background: lightgray;
     color: black !important;
@@ -2273,9 +2404,11 @@ select.aos-init.aos-animate.error {
     position: relative;
     cursor: pointer;
 }
+
 ol.sub-menu li {
     padding-bottom: 0;
 }
+
 .sidebar_item span {
     font-size: 16px;
     text-decoration: none;
@@ -2283,6 +2416,7 @@ ol.sub-menu li {
     padding-bottom: 0px;
     color: black;
 }
+
 .sidebar_item .sub-menu a {
     font-size: 16px;
     text-decoration: none;
@@ -2291,6 +2425,7 @@ ol.sub-menu li {
     color: black;
     text-align: left;
 }
+
 .sidebar_item i {
     margin-right: 15px;
 }
@@ -2330,6 +2465,7 @@ ol.sub-menu li {
     transition: all 0.5s;
     position: relative;
 }
+
 .menu_btn::after {
     background-color: #e36d6a;
     content: "";
@@ -2353,6 +2489,7 @@ ol.sub-menu li {
         transform: scale3d(1, 1, 1);
         opacity: 0.8;
     }
+
     100% {
         transform: scale3d(1.1, 1.3, 1.1);
         opacity: 0;
@@ -2362,9 +2499,11 @@ ol.sub-menu li {
 .w160 {
     width: 160px;
 }
+
 .w145 {
     width: 145px;
 }
+
 .h386 {
     height: 386px;
 }
@@ -2389,9 +2528,11 @@ input#mobile-number1 {
 .service_why_choose p {
     text-align: justify;
 }
+
 .blog_details_page_title_desc p {
     text-align: justify;
 }
+
 .logo img {
     width: 164px;
 }
@@ -2400,6 +2541,7 @@ input#mobile-number1 {
     color: #000 !important;
     font-size: 13px;
 }
+
 .intl-tel-input .flag-dropdown .country-list .flag,
 .intl-tel-input .flag-dropdown .country-list .country-name {
     margin-right: 6px;
@@ -2442,6 +2584,7 @@ span.select2-selection.select2-selection--single {
     padding: 5px 14px;
     border-radius: 10px;
 }
+
 .select2.select2-container {
     width: 100% !important;
     font-size: 12px;
@@ -2462,6 +2605,7 @@ span#select2-services-gq-container {
     padding: 5px 20px;
     height: auto !important;
 }
+
 input#mobile-number1 {
     height: 38px !important;
 }
@@ -2478,10 +2622,7 @@ form#add_footer_form span.select2-selection.select2-selection--single {
     color: #fff !important;
 }
 
-form#add_footer_form
-    .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
+form#add_footer_form .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #9f9f9f !important;
     font-size: 10px !important;
 }
@@ -2494,6 +2635,7 @@ form#add_footer_form
     vertical-align: middle;
     z-index: 9999;
 }
+
 input#mobile-number2 {
     padding-left: 43px !important;
     height: 42px;
@@ -2543,6 +2685,7 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
     position: absolute;
     content: ",";
 }
+
 .team_box ul {
     margin: 0;
     padding: 0;
@@ -2563,6 +2706,7 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
 #blog_slider .owl-nav {
     display: none;
 }
+
 #blog_slider .owl-dots {
     display: none;
 }
