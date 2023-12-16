@@ -530,7 +530,7 @@ header ul.dropdown li a:hover {
 /*about us open*/
 
 .about_bg {
-    background-image: url(/assets/frontend/images/about_bg.png);
+    background-image: url(/assets/frontend/images/about_bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -590,7 +590,7 @@ header ul.dropdown li a:hover {
 
 /*------------------practice ---------------- */
 .practice {
-    background-image: url("/assets/frontend/images/practice_bg_new.jpg");
+    background-image: url("/assets/frontend/images/practice_bg_new.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -605,7 +605,7 @@ header ul.dropdown li a:hover {
     justify-content: center;
     flex-direction: column;
     padding: 35px;
-    background-image: url("/assets/frontend/images/practice_box_bg.png");
+    background-image: url("/assets/frontend/images/practice_box_bg.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -941,7 +941,7 @@ header ul.dropdown li a:hover {
 /* ---------------------blog ------------------------- */
 
 .blog {
-    background-image: url("/assets/frontend/images/blog_bg.png");
+    background-image: url("/assets/frontend/images/blog_bg.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1029,7 +1029,7 @@ section.blog p.desc {
 /* ---------------------Contact ------------------------- */
 
 .contact {
-    background-image: url("/assets/frontend/images/practice.png");
+    background-image: url("/assets/frontend/images/practice.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1152,7 +1152,7 @@ section.blog p.desc {
     counter-increment: brick-counter;
 }
 .footer {
-    background-image: url("/assets/frontend/images/practice.png");
+    background-image: url("/assets/frontend/images/practice.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
