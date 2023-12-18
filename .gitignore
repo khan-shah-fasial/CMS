@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/sitemap
 /public/robots.txt
 /storage/*.key
 /vendor
