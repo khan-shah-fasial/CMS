@@ -1,9 +1,7 @@
 <link rel="preload" as="style" href="/assets/frontend/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
 
 <!-- <link rel="stylesheet" href="/assets/frontend/css/bootstrap.min.css" /> -->
-<link rel="preload" href="/assets/frontend/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/assets/frontend/css/style.css"></noscript>
-<!-- <link rel="stylesheet" href="/assets/frontend/css/style.css" /> -->
+<link rel="stylesheet" href="/assets/frontend/css/style.css" />
 <link rel="stylesheet" href="/assets/frontend/css/responsive.css" />
 <link rel="stylesheet" href="/assets/frontend/css/aos.css" />
 
