@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /public/
 Sitemap: https://www.ahlawatassociates.com/sitemap/sitemap.xml
