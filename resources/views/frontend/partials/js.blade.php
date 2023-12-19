@@ -13,16 +13,16 @@
 <script src="/assets/frontend/js/intlTelInput.js"></script>
 
 <!--owl carousel js-->
-<script src="/assets/frontend/js/owl.carousel.js"></script>
+<script  src="/assets/frontend/js/owl.carousel.js"></script>
 
 <!--google translate js-->
-<script src="/assets/frontend/js/google_translate.js"></script>
+<script defer src="/assets/frontend/js/google_translate.js"></script>
 
 <!--moment js-->
 <script src="/assets/frontend/js/moment.min.js"></script>
 
 <!--jQuery Validate-->
-<script src="/assets/frontend/js/jquery.validate.min.js"></script>
+<script defer src="/assets/frontend/js/jquery.validate.min.js"></script>
 
 <!--Toast Js-->
 <script defer src="/assets/frontend/js/toastr.min.js"></script>
@@ -31,10 +31,10 @@
 <!-- <script src="/assets/frontend/js/select2.full.min.js"></script> -->
 
 <!--select2-->
-<script src="/assets/frontend/js/select2.min.js"></script>
+<script defer src="/assets/frontend/js/select2.min.js"></script>
 
 <!--whatsapp js-->
-<script src="/assets/frontend/js/whatsapp-chat-support.js"></script>
+<script defer src="/assets/frontend/js/whatsapp-chat-support.js"></script>
 
 <!--Google capcha js-->
 <script src="https://www.google.com/recaptcha/api.js" defer></script>
