@@ -1,6 +1,4 @@
-<link rel="preload" as="style" href="/assets/frontend/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
-
-<!-- <link rel="stylesheet" href="/assets/frontend/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/assets/frontend/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/assets/frontend/css/style.css" />
 <link rel="stylesheet" href="/assets/frontend/css/responsive.css" />
 <link rel="stylesheet" href="/assets/frontend/css/aos.css" />
