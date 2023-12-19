@@ -1525,8 +1525,18 @@ hr {
     font-weight: 600 !important;
     margin-top: 30px !important;
 }
+.blog_details_page_title_desc h2 strong span {
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    margin-top: 30px !important;
+}
 
 .blog_details_page_title_desc h3 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-top: 30px !important;
+}
+.blog_details_page_title_desc h3 strong span {
     font-size: 20px !important;
     font-weight: 600 !important;
     margin-top: 30px !important;
@@ -2068,7 +2078,10 @@ section.career_page_content li span {
     border-radius: none !important;
 }
 
-.faq_page_accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
+.faq_page_accordion
+    .accordion
+    .accordion-item
+    .accordion-button:not(.collapsed) {
     color: black;
     background-color: white;
     box-shadow: none;
@@ -2622,7 +2635,10 @@ form#add_footer_form span.select2-selection.select2-selection--single {
     color: #fff !important;
 }
 
-form#add_footer_form .select2-container--default .select2-selection--single .select2-selection__rendered {
+form#add_footer_form
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
     color: #9f9f9f !important;
     font-size: 10px !important;
 }
