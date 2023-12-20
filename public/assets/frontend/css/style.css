@@ -1185,6 +1185,11 @@ section.blog p.desc {
     text-decoration: none;
     color: white;
 }
+.contact_p_address .address_box a {
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+}
 
 .contact .address_box p {
     font-size: 12px;
@@ -1379,7 +1384,7 @@ hr {
 }
 
 .service_why_choose h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -1490,7 +1495,7 @@ hr {
 }
 
 .w120 {
-    width: 120px;
+    width: 165px;
 }
 
 /* ------------------ blog Details page banner end ------------- */
@@ -1778,7 +1783,7 @@ hr {
 }
 
 .team_d_content .content .role {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 38px;
 }
@@ -1844,6 +1849,10 @@ hr {
 
 .contact_p_form .address {
     margin-bottom: 41px;
+}
+.contact_p_form .address a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact_p_form .info_heading {
@@ -2331,7 +2340,7 @@ select.aos-init.aos-animate.error {
 }
 
 .blog_filter_btn {
-    padding: 10px 25px;
+    padding: 8px 15px;
     background: lightgray;
     border-radius: 30px;
     color: black;
@@ -2649,7 +2658,7 @@ form#add_footer_form
     margin: 0;
     position: relative;
     vertical-align: middle;
-    z-index: 9999;
+    z-index: 99;
 }
 
 input#mobile-number2 {

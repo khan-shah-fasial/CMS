@@ -48,7 +48,7 @@
 
 <script src="/assets/frontend/js/jquery.marquee.min.js"></script>
 
-<script>
+<!-- <script>
     $(".marquee").marquee({
     duration: 18000,
     gap: 0,
@@ -58,5 +58,26 @@
     pauseOnHover: true,
 });
 
+</script> -->
+
+
+<script>
+    $(document).ready(function() {
+        var scrollCount = 100;
+
+        $(".marquee").marquee({
+            duration: 18000,
+            gap: 0,
+            delayBeforeStart: 0,
+            direction: "up",
+            duplicated: true,
+            pauseOnHover: true,
+            startVisible: true,
+            // Add a callback for each iteration
+            onBefore: function() {
+                console.log("Scroll Count:", ++scrollCount);
+            }
+        });
+    });
 </script>
 

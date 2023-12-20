@@ -14,12 +14,18 @@ $(document).ready(function () {
         autoplayTimeout: 5000,
         responsive: {
             0: {
-                items: 1,
+                items: 1.1,
             },
             600: {
                 items: 2.2,
             },
             1000: {
+                items: 2.4,
+            },
+            1100: {
+                items: 3.1,
+            },
+            1200: {
                 items: 3.5,
             },
         },
@@ -311,7 +317,7 @@ $(document).ready(function () {
 //     .pauseFor(2500)
 //     .deleteAll()
 //     .start();
-// var typewriter = new Typewriter(text2, {    
+// var typewriter = new Typewriter(text2, {
 //     loop: true,
 // });
 
@@ -325,5 +331,3 @@ $(document).ready(function () {
 //     .pauseFor(2500)
 //     .deleteAll()
 //     .start();
-
-

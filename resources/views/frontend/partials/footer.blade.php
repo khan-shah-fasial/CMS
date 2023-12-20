@@ -85,7 +85,7 @@ $practice_Area = DB::table('practice_areas')
             <div class="col-md-6">
                 @include('frontend.component.footer_form')
             </div>
-            <div class="col-md-4 mt-4 col-12">
+            <div class="col-md-4 mt-md-4 col-12">
                 <a href="https://www.google.com/maps/place/%23TheHub/@28.5495141,77.2648649,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce362dba5bca1:0x191c6dd29ebbec30!8m2!3d28.5495094!4d77.2674398!16s%2Fg%2F11h18n3l7n" class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up"  >Delhi (Head Office)</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -93,7 +93,7 @@ $practice_Area = DB::table('practice_areas')
                     </p>
                 </a>
             </div>
-            <div class="col-md-4 mt-4 col-12">
+            <div class="col-md-4 mt-md-4 col-12">
                 <a href="https://maps.app.goo.gl/RcJ5axxjePFqYTX68" class="address_box" >
                     <p class="title" data-aos-once="true" data-aos="fade-up" >Mumbai</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -101,7 +101,7 @@ $practice_Area = DB::table('practice_areas')
                     </p>
                 </a>
             </div>
-            <div class="col-md-4 mt-4">
+            <div class="col-md-4 mt-md-4">
                 <a href="https://maps.app.goo.gl/NGnUVsVvMeb6ERFv7" class="address_box">
                     <p class="title" data-aos-once="true" data-aos="fade-up" >Chandigarh</p>
                     <p data-aos-once="true" data-aos="fade-up">
@@ -158,10 +158,11 @@ $practice_Area = DB::table('practice_areas')
                     <?= nl2br(get_settings('footer_content')) ?>
                 </p>
                 <div
-                    class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column mb-md-0 mb-5">
-                    <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved.</p>
+                    class="footer_bottom d-flex align-items-center text-md-start text-center justify-content-md-between  justify-content-center flex-md-row flex-column mb-md-0 ">
+                    <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved. </p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
                         <li><a href="{{ url(route('privacy-policy')) }}">Privacy Policy </a></li>
+                        <li><a href="">Design By Nexgeno </a></li>
                         @if(!empty(get_settings('cookie_content')))
                             <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
                         @endif
