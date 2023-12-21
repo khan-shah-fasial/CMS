@@ -1185,6 +1185,7 @@ section.blog p.desc {
     text-decoration: none;
     color: white;
 }
+
 .contact_p_address .address_box a {
     margin-top: 30px;
     text-decoration: none;
@@ -1530,6 +1531,7 @@ hr {
     font-weight: 600 !important;
     margin-top: 30px !important;
 }
+
 .blog_details_page_title_desc h2 strong span {
     font-size: 24px !important;
     font-weight: 600 !important;
@@ -1541,6 +1543,7 @@ hr {
     font-weight: 600 !important;
     margin-top: 30px !important;
 }
+
 .blog_details_page_title_desc h3 strong span {
     font-size: 20px !important;
     font-weight: 600 !important;
@@ -1850,6 +1853,7 @@ hr {
 .contact_p_form .address {
     margin-bottom: 41px;
 }
+
 .contact_p_form .address a {
     text-decoration: none;
     color: inherit;
@@ -2087,10 +2091,7 @@ section.career_page_content li span {
     border-radius: none !important;
 }
 
-.faq_page_accordion
-    .accordion
-    .accordion-item
-    .accordion-button:not(.collapsed) {
+.faq_page_accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
     color: black;
     background-color: white;
     box-shadow: none;
@@ -2644,10 +2645,7 @@ form#add_footer_form span.select2-selection.select2-selection--single {
     color: #fff !important;
 }
 
-form#add_footer_form
-    .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
+form#add_footer_form .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #9f9f9f !important;
     font-size: 10px !important;
 }
@@ -2658,7 +2656,7 @@ form#add_footer_form
     margin: 0;
     position: relative;
     vertical-align: middle;
-    z-index: 99;
+    z-index: 9999;
 }
 
 input#mobile-number2 {
