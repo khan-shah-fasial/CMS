@@ -14,12 +14,18 @@ $(document).ready(function () {
         autoplayTimeout: 5000,
         responsive: {
             0: {
-                items: 1,
+                items: 1.1,
             },
             600: {
                 items: 2.2,
             },
             1000: {
+                items: 2.4,
+            },
+            1100: {
+                items: 3.1,
+            },
+            1200: {
                 items: 3.5,
             },
         },
@@ -261,61 +267,6 @@ const executeCodes = () => {
 
 window.addEventListener("load", executeCodes);
 
-/*-- cookies code close--*/
-
-$(document).ready(function () {
-    $(".sub-btn").click(function () {
-        $(this).next(".sub-menu").slideToggle();
-    });
-});
-
-var app = document.getElementById("ani_text");
-var text2 = document.getElementById("ani_2");
-var text3 = document.getElementById("ani_3");
-
-var typewriter = new Typewriter(app, {
-    loop: true,
-});
-
-typewriter
-    .typeString(
-        "Welcome to Ahlawat & Associates a full-service Indian law firm"
-    )
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString("catering to international & domestic clients since 1978")
-    .pauseFor(2500)
-    .deleteAll()
-    .start();
-var typewriter = new Typewriter(text3, {
-    loop: true,
-});
-
-typewriter
-    .typeString(
-        "Welcome to Ahlawat & Associates a full-service Indian law firm"
-    )
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString("catering to international & domestic clients since 1978")
-    .pauseFor(2500)
-    .deleteAll()
-    .start();
-var typewriter = new Typewriter(text2, {
-    loop: true,
-});
-
-typewriter
-    .typeString(
-        "Welcome to Ahlawat & Associates a full-service Indian law firm"
-    )
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString("catering to international & domestic clients since 1978")
-    .pauseFor(2500)
-    .deleteAll()
-    .start();
-
 // How to build international phone number input in HTML and JavaScript
 
 $("#mobile-number").intlTelInput();
@@ -325,3 +276,58 @@ $("#mobile-number2").intlTelInput();
 $(document).ready(function () {
     initSelect2(".select2");
 });
+
+/*-- cookies code close--*/
+
+$(document).ready(function () {
+    $(".sub-btn").click(function () {
+        $(this).next(".sub-menu").slideToggle();
+    });
+});
+
+// var app = document.getElementById("ani_text");
+// var text2 = document.getElementById("ani_2");
+// var text3 = document.getElementById("ani_3");
+
+// var typewriter = new Typewriter(app, {
+//     loop: true,
+// });
+
+// typewriter
+//     .typeString(
+//         "Welcome to Ahlawat & Associates a full-service Indian law firm"
+//     )
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .typeString("catering to international & domestic clients since 1978")
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .start();
+// var typewriter = new Typewriter(text3, {
+//     loop: true,
+// });
+
+// typewriter
+//     .typeString(
+//         "Welcome to Ahlawat & Associates a full-service Indian law firm"
+//     )
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .typeString("catering to international & domestic clients since 1978")
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .start();
+// var typewriter = new Typewriter(text2, {
+//     loop: true,
+// });
+
+// typewriter
+//     .typeString(
+//         "Welcome to Ahlawat & Associates a full-service Indian law firm"
+//     )
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .typeString("catering to international & domestic clients since 1978")
+//     .pauseFor(2500)
+//     .deleteAll()
+//     .start();

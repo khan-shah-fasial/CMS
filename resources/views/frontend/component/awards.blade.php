@@ -1,9 +1,9 @@
 @php
-$awards = DB::table('awards')->orderBy('series', 'asc')->get();
+$awards = DB::table('awards')->where('status', 1)->orderBy('series', 'asc')->get();
 @endphp
 
 <!--------=========== Awards =========================------------------------>
-
+@if(count($awards) >= 1)
 <section class="awards_section about_bg">
     <div class="container">
         <div class="row">
@@ -34,6 +34,7 @@ $awards = DB::table('awards')->orderBy('series', 'asc')->get();
         </div>
     </div>
 </section>
+@endif
 
 
 <!--------------================= end Awards ================------------------->

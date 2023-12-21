@@ -179,6 +179,9 @@
 }
 
 @media (max-width: 767px) {
+    .footer_bottom {
+        margin-bottom: 83px !important;
+    }
     .breadcrumb ol {
         align-items: center;
         text-align: center;
@@ -188,6 +191,7 @@
         position: fixed;
         bottom: 70px;
         right: 10px;
+        z-index: 999999;
     }
 
     .blog_details_page_breadcrumb .author {
@@ -396,7 +400,7 @@
         font-size: 20px;
     }
     .faq_page_accordion .accordion .accordion-item .accordion-button {
-        padding: 1.5rem 1rem;
+        padding: 12px;
     }
     .faq_page_accordion .accordion .accordion-item .accordion-body {
         padding: 0 1rem 1rem 1rem;
@@ -538,11 +542,22 @@
         margin-top: 10px;
     }
     .blog_details_page_title_desc h1 {
-        font-size: 24px !important;
+        font-size: 19px !important;
+        line-height: 29px !important;
     }
 
     .blog_details_page_title_desc h2 {
-        font-size: 22px !important;
+        font-size: 18px !important;
+    }
+
+    .service_title_desc h3 {
+        font-size: 18px !important;
+        line-height: 27px !important;
+    }
+
+    .blog_details_page_title_desc h3 {
+        font-size: 16px !important;
+        line-height: 26px !important;
     }
 
     .practice_w_box .btn_hover {
@@ -570,8 +585,19 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .blog_details_page_banner img {
+        height: auto;
+    }
+
+    .footer_bottom {
+        margin-bottom: 30px !important;
+    }
     .practice_w_box .btn_hover span {
         font-size: 14px;
+    }
+
+    .footer_count {
+        column-count: 4;
     }
 
     .practice_w_box .btn-3 span {
@@ -637,6 +663,16 @@
 @media (min-width: 992px) and (max-width: 1024px) {
     .banner_content {
         height: 40vh;
+    }
+
+    .practice_w_box .btn_hover span {
+        font-size: 15px;
+    }
+
+    .awards_section .awards_box h4 {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 18px;
     }
 
     .contact .contact_info_box a {

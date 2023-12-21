@@ -28,7 +28,7 @@
                                         </div>
                                         
                                         <div class="col-sm-12">
-                                            <label>Banner <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*196)</span></label> 
+                                            <label>Banner <span class="red">*</span> <span class="font-size11">(Max file size 80kb - 1125*515)</span></label> 
 
                                             <div style="text-align: end;"> 
                                                 <i style="font-size: 25px; color: #0b0; cursor: pointer; margin-left: 10px;" class="ri-add-circle-fill" id="add_Content_list"></i>

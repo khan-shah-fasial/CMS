@@ -238,7 +238,7 @@ class IndexController extends Controller
         foreach ($contactData as $key => $value) {
                 if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
                     if($key == 'ip'){
-                        $body .= "</br><h4>User Location</h4></br>";
+                        $body .= "<tr><td></br><h4>User Location</h4></br></td></tr>";
                         $body .= "<tr><td>$key</td><td>$value</td></tr>";
                         $body .= "</br><tr><td><h5>" .$user_data['city'] . ' ' .$user_data['region'] . ' ' .$user_data['country'] . "</h5></td></tr></br>";
                     } else {

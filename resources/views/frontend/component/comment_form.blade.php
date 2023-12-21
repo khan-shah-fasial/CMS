@@ -16,21 +16,22 @@
                         <div class="d-flex align-items-center gap-3 mb-3">
                             <input type="hidden" name="blog_id" value="{{ $detail->id }}"/>
                             <input type="hidden" name="status" value="0"/>
-							
-							<div class="w-100">
-							<input type="text" name="name" class="form-control" placeholder="Name" data-aos-once="true" data-aos="fade-up" required/>
-                            
-							</div>
-							
-							<div class="w-100">
-							<input type="email" name="email" class="form-control" placeholder="Email" data-aos-once="true" data-aos="fade-up" required/>
-                            
-							</div>
-							
-							<div class="w-100">
-							<input type="number" name="number" class="form-control" placeholder="Phone No" data-aos-once="true" data-aos="fade-up" required/>
-                       
-							</div>
+
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                <input type="text" name="name" class="form-control" placeholder="Name" data-aos-once="true" data-aos="fade-up" required/>
+
+                                </div>
+                                <div class="col-md-4">
+                                <input type="email" name="email" class="form-control" placeholder="Email" data-aos-once="true" data-aos="fade-up" required/>
+
+                                </div>
+                                <div class="col-md-4">
+                                <input type="number" name="number" class="form-control" placeholder="Phone No" data-aos-once="true" data-aos="fade-up" required/>
+
+                                </div>
+                            </div>
 							
                              </div>
 

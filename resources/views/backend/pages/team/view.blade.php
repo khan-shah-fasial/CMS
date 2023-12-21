@@ -34,7 +34,7 @@
  
 </div>
     
-    <p><strong>Profile Image:</strong> <img src="{{url('storage/'.$team->image)}}"></p>
+    <p><strong>Profile Image:</strong> <img class="w-50" src="{{url('storage/'.$team->image)}}"></p>
     
    
     
