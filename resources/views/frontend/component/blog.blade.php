@@ -62,7 +62,7 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
             @foreach ($right_news as $row)
 
                 <div class="item">
-                  <div class="blog_right_box" data-aos-once="true" data-aos="fade-up">
+                  <div class="blog_right_box">
                     <img loading="lazy" src="{{ asset('storage/' .$row->main_image) }}" alt="" />
                     <div>
                         <p class="desc">
