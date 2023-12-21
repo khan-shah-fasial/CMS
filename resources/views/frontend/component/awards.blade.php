@@ -1,5 +1,5 @@
 @php
-$awards = DB::table('awards')->orderBy('series', 'asc')->get();
+$awards = DB::table('awards')->where('status', 1)->orderBy('series', 'asc')->get();
 @endphp
 
 <!--------=========== Awards =========================------------------------>
