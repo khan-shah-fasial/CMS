@@ -15,8 +15,8 @@
 <!--owl carousel js-->
 <script  src="/assets/frontend/js/owl.carousel.js"></script>
 
-<!--google translate js
-<script defer src="/assets/frontend/js/google_translate.js"></script>-->
+<!--google translate js-->
+<script defer src="/assets/frontend/js/google_translate.js"></script>
 
 <!--moment js-->
 <script src="/assets/frontend/js/moment.min.js"></script>
@@ -36,8 +36,8 @@
 <!--whatsapp js-->
 <script defer src="/assets/frontend/js/whatsapp-chat-support.js"></script>
 
-<!--Google capcha js
-<script src="https://www.google.com/recaptcha/api.js" defer></script>-->
+<!--Google capcha js-->
+<script src="https://www.google.com/recaptcha/api.js" defer></script>
 <!--<script src="/assets/frontend/js/api.js"></script>-->
 
 <!--Custom Js-->
