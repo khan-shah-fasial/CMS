@@ -20,16 +20,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
             @foreach ($practice_Area as $row)
 
             <div class="col-md-4 mb-4">
-                <div class="practice_box" data-aos-once="true" data-aos="fade-up">
-                    <div class="visible_box">
-                        <img loading="lazy" src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
-                        <h4>{{ $row->title }}</h4>
-                    </div>
-                    <div class="hover_box">
-                        <p>
-                            {{ $row->short_description }}
-                        </p>
-                        <a href="{{ 
+                <a href="{{ 
                                 $row->special_service == '1' ? 
                                     url(route('practicearea-detail-specialised', ['slug' => $row->slug] )) :
                                     (
@@ -41,11 +32,20 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                                                     url(route('practicearea-detail', ['slug' => $row->slug] ))
                                             )
                                     )
-                            }}">Learn 
-                            More <img loading="lazy" src="/assets/frontend/images/right.png" alt="" />
-                        </a>
+                            }}">
+							<div class="practice_box" data-aos-once="true" data-aos="fade-up">
+                    <div class="visible_box">
+                        <img loading="lazy" src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
+                        <h4>{{ $row->title }}</h4>
+                    </div>
+                    <div class="hover_box">
+                        <p>
+                            {{ $row->short_description }}
+                        </p>
+                        
                     </div>
                 </div>
+				</a>
             </div>
 
             @endforeach
