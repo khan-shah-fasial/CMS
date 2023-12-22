@@ -151,6 +151,7 @@ $(document).ready(function () {
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000,
+        dots: false,
         responsive: {
             0: {
                 items: 1.2,
