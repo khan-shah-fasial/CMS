@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/assets/frontend/css/aos.css" />
 
 <!-- select2 css -->
-<link href="/assets/frontend/css/select2.min.css" rel="stylesheet" type="text/css" />
+<link rel="preload" href="/assets/frontend/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <link rel="stylesheet" href="/assets/frontend/css/owl.carousel.min.css" />
 <link rel="stylesheet" href="/assets/frontend/css/owl.theme.default.min.css" />
