@@ -118,9 +118,9 @@ $practice_Area = DB::table('practice_areas')
                                             <span>Insights</span>
                                         </div>
                                         <ul>
-                                        <div class="sub-menu" style="display: block;">
+                                        <li class="sub-menu" style="display: block;">
                        
-                    </div>
+                    </li>
 
                                            
                                             <li>                <a href="{{ url(route('blog')) }}">Blogs</a>
