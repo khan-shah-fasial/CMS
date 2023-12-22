@@ -162,7 +162,7 @@ $practice_Area = DB::table('practice_areas')
                     <p class="mb-md-0 mb-2">2023 Ahlawat. All Rights Reserved. </p>
                     <ul class="d-flex align-items-center gap-md-5 gap-3  mb-md-0 mb-2">
                         <li><a href="{{ url(route('privacy-policy')) }}">Privacy Policy </a></li>
-                        <li><a href="">Design By Nexgeno </a></li>
+                        <li><a target="_blank" href="https://nexgeno.in/">Design By Nexgeno </a></li>
                         @if(!empty(get_settings('cookie_content')))
                             <li><a href="{{ url(route('cookie-policy')) }}">Cookie Policy</a></li>
                         @endif
