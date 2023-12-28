@@ -141,6 +141,7 @@ $url = url()->current();
        webvisor:true
   });
 </script>
+
 <noscript><div><img src="https://mc.yandex.ru/watch/95221741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 
@@ -152,13 +153,5 @@ $url = url()->current();
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-T93DNMW');</script>
 
-
-
-<!-- Google tag (gtag.js)  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0N029ZM0WG"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0N029ZM0WG'); </script>
-
-
-<!-- Google tag (gtag.js)  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLLQV0KXE"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GTLLQV0KXE'); </script>
 
 <base id="baseUrl" href="{{url('')}}">

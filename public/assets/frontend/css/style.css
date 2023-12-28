@@ -501,6 +501,7 @@ header ul.dropdown li a:hover {
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
+    text-align: center;
 }
 
 #awards_slider .awards_box img {
