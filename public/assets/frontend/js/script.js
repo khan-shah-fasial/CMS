@@ -270,9 +270,9 @@ window.addEventListener("load", executeCodes);
 
 // How to build international phone number input in HTML and JavaScript
 
-$("#mobile-number").intlTelInput();
-$("#mobile-number1").intlTelInput();
-$("#mobile-number2").intlTelInput();
+// $("#mobile-number").intlTelInput();
+// $("#mobile-number1").intlTelInput();
+// $("#mobile-number2").intlTelInput();
 
 $(document).ready(function () {
     initSelect2(".select2");
