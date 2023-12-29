@@ -1,20 +1,11 @@
 
-<script>
-  if (window.innerWidth <= 768) { // Adjust the window size condition as needed
-    var script = document.createElement('script');
-    script.src = '/assets/frontend/js/combine.js';
-    script.defer = true;
-    document.head.appendChild(script);
-  } else {
-    // If not mobile, you can add the script without defer
-    document.write('<script src="/assets/frontend/js/combine.js"><\/script>');
-  }
-</script>
+<script src="/assets/frontend/js/combine.js"></script>
+
 
 <!--
-    <script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/frontend/js/jquery.min.js"></script>
+<script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>
 -->
-<script src="/assets/frontend/js/jquery.min.js"></script>
 
 
 <!--aos js
