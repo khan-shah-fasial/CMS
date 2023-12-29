@@ -11,8 +11,10 @@
   }
 </script>
 
-<!--<script src="/assets/frontend/js/jquery.min.js"></script>
-<script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>-->
+<!--
+    <script src="/assets/frontend/js/bootstrap.bundle.min.js"></script>
+-->
+<script src="/assets/frontend/js/jquery.min.js"></script>
 
 
 <!--aos js
