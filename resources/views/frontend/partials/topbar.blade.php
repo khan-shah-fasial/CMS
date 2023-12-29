@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 px0">
 
-                <div class="search_right d-flex align-items-center gap-3">
+                <!-- <div class="search_right d-flex align-items-center gap-3">
                     <div id="google_translate_element"></div>
                     <div>
                         <img class="search_icon" src="/assets/frontend/images/search.png" alt="email icon" />
@@ -15,7 +15,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-6 px0">
 
