@@ -215,6 +215,8 @@ class IndexController extends Controller
         $contactData = $request->all();
         $contactData['cv'] = $cvPath;
 
+        $name = $contactData["name"];
+
         // Create the contact record
         Contact::create($contactData);
 
@@ -237,12 +239,17 @@ class IndexController extends Controller
         }
         foreach ($contactData as $key => $value) {
                 if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
-                    if($key == 'ip'){
-                        $body .= "<tr><td></br><h4>User Location</h4></br></td></tr>";
-                        $body .= "<tr><td>$key</td><td>$value</td></tr>";
-                        $body .= "</br><tr><td><h5>" .$user_data['city'] . ' ' .$user_data['region'] . ' ' .$user_data['country'] . "</h5></td></tr></br>";
+                    
+                    if ($key != 'ip') {
+
+                        $body .= "<tr><td><strong>" . ucwords($key) . ":</strong></td><td>$value</td></tr>";
+
                     } else {
-                        $body .= "<tr><td>$key</td><td>$value</td></tr>";
+
+
+                        $body .= "<tr><td><strong>User Location:</strong></td><td>" . $user_data['city'] . ' ' . $user_data['region'] . ' ' . $user_data['country'] . "</td></tr></br>";
+                        $body .= "<tr><td><strong>" . ucwords($key) . ":</strong></td><td>$value</td></tr>";
+
                     }
                     
                 }
@@ -254,7 +261,7 @@ class IndexController extends Controller
             $attachments = [
                 [
                     'path' => storage_path("app/public/$cvPath"), // Replace with the actual path
-                    'name' => 'CV.pdf', // Replace with the desired attachment name
+                    'name' => ''.$name.'.pdf', // Replace with the desired attachment name
                 ],
                 // Add more attachments if needed
             ];
@@ -262,9 +269,11 @@ class IndexController extends Controller
             // Send the email
             sendEmail($recipient, $subject, $body, $attachments);
 
+        } else {
+            sendEmail($recipient, $subject, $body);
         }
 
-        sendEmail($recipient, $subject, $body);
+        
 
     
         $response = [
@@ -273,6 +282,7 @@ class IndexController extends Controller
         ];
     
         return response()->json($response);
+    
     }
    //--------------=============================== contact form save ===========================--------------------------
    
