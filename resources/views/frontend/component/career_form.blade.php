@@ -12,7 +12,7 @@ if (!isset($session_data['country'])) {
     <h3 class="mb-4" data-aos-once="true" data-aos="fade-up">Want to know more</h3>
     <input type="hidden" name="section" value="Career Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+
     <div class="d-flex align-items-center flex-md-row flex-column gap-md-4">
         <div class="mb-3 w-100">
             <input type="text" class="form-control" name="name" placeholder="Enter Your Name" data-aos-once="true"
@@ -56,6 +56,8 @@ if (!isset($session_data['country'])) {
         </div>
     </div>
 
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ref_url" value="{{ url()->previous() }}" data-aos-once="true" data-aos="fade-up" />
 
     <div class="text-center">
         <button class="contact_form_button" data-aos-once="true" data-aos="fade-up">SUBMIT</button>

@@ -14,7 +14,7 @@ if (!isset($session_data['country'])) {
     @csrf
     <input type="hidden" name="section" value="Contact Us Now Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+
 
 
 
@@ -65,6 +65,8 @@ if (!isset($session_data['country'])) {
     </div> -->
     <textarea class="form-select" name="description" placeholder="Brief description of your legal issue"
         data-aos-once="true" data-aos="fade-up" rows="3" required></textarea>
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ref_url" value="{{ url()->previous() }}" data-aos-once="true" data-aos="fade-up" />
     <div class="w-100 mt-3">
         <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
     </div>

@@ -16,7 +16,7 @@ if (!isset($session_data['country'])) {
     <h3 data-aos-once="true" data-aos="fade-up">Any query? Let’s connect</h3>
     <input type="hidden" name="section" value="Footer Form" data-aos-once="true" data-aos="fade-up" />
     <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+   
     <div class="d-flex align-items-center gap-3 mb-3">
         <div class="w-100">
             <input type="text" class="form-control" placeholder="Write Your Name..." name="name" data-aos-once="true"
@@ -51,6 +51,9 @@ if (!isset($session_data['country'])) {
 
     <textarea class="form-select footer_textarea" name="description" placeholder="Brief description of your legal issue"
         data-aos-once="true" data-aos="fade-up" rows="2"></textarea>
+    
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ref_url" value="{{ url()->previous() }}" data-aos-once="true" data-aos="fade-up" />
 
     <div class="mt-3">
         <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>

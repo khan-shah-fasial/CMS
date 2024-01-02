@@ -215,7 +215,16 @@ class IndexController extends Controller
         $contactData = $request->all();
         $contactData['cv'] = $cvPath;
 
-        $name = $contactData["name"];
+        $name = isset($contactData["name"]) ? $contactData["name"] : ' - ';
+        $email = isset($contactData["email"]) ? $contactData["email"] : ' - ';
+        $phone = isset($contactData["phone"]) ? $contactData["phone"] : ' - ';
+        $services = isset($contactData["services"]) ? $contactData["services"] : ' - ';
+        $description = isset($contactData["description"]) ? $contactData["description"] : ' - ';
+        $ip = isset($contactData["ip"]) ? $contactData["ip"] : ' - ';
+        $section = isset($contactData["section"]) ? $contactData["section"] : ' - ';
+        $ref_url = isset($contactData["ref_url"]) ? $contactData["ref_url"] : ' - ';
+        $url = isset($contactData["url"]) ? $contactData["url"] : ' - ';
+        $qualification = isset($contactData["qualification"]) ? $contactData["qualification"] : ' - ';
 
         // Create the contact record
         Contact::create($contactData);
@@ -224,18 +233,50 @@ class IndexController extends Controller
 
         // Send email if $cvPath is not null
         if ($cvPath !== null) {
-            $recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
+            //$recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
+            $recipient = 'khanfaisal.makent@gmail.com';
             $subject = 'Career Enquiry';
         } else {
-            $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+            //$recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+            $recipient = 'khanfaisal.makent@gmail.com';
             $subject = 'Lead Enquiry';
         }
 
+        $body = '<table>';
+        $body .= "<tr><td><strong>From :</strong></td><td>" . $name . ' ' . $email . "</td></tr></br>";
+        $body .= "<tr><td><strong>Form Name :</strong></td><td>" . $section . "</td></tr></br>";
+        $body .= "<tr><td><strong>Page URL :</strong></td><td>" . $url . "</td></tr></br><p></p>";
+        
+        $body .= "<tr><td><strong>Full Name :</strong></td><td>" . $name . "</td></tr></br>";
+        $body .= "<tr><td><strong>Email Address :</strong></td><td>" . $email . "</td></tr></br>";
+
+        if (isset($contactData["description"]) || isset($contactData["services"])) {
+            $body .= "<tr><td><strong>Service Requested :</strong></td><td>" . ($services ?? 'Not provided') . "</td></tr></br>";
+            $body .= "<tr><td><strong>Description :</strong></td><td>" . ($description ?? 'Not provided') . "</td></tr></br><p></p>";
+        } else {
+            $body .= "<tr><td><strong>Qualification :</strong></td><td>" . ($qualification ?? 'Not provided') . "</td></tr></br><p></p>";
+        }
+        
+        
+        $body .= "<tr><td><strong>Ip :</strong></td><td>" . $ip . "</td></tr></br>";
+        $body .= "<tr><td><strong>User Location :</strong></td><td>" . 
+                    ($user_data['city'] ?? 'null') . ' ' . 
+                    ($user_data['region'] ?? 'null') . ' ' . 
+                    ($user_data['country'] ?? 'null') . 
+                "</td></tr></br>";
+        $body .= "<tr><td><strong>Referrer URL :</strong></td><td>" . $ref_url . "</td></tr></br>";
+        $body .= "<tr><td><strong>Submitted Data :</strong></td><td>" . date('Y-m-d') . "</td></tr></br>";
+        $body .= '</table>';
+
+
+        /*
         // Format $contactData into an HTML table
         if ($cvPath !== null) {
-            $body = '<h2>A Career inquiry from the website ahlawatassociates.com.</h2></br><table>';
+            //$body = '<h2>A Career inquiry from the website ahlawatassociates.com.</h2></br><table>';
+            $body = '<table>';
         } else {
-            $body = '<h2>A lead enquiry from the website ahlawatassociates.com.</h2></br><table>';
+            //$body = '<h2>A lead enquiry from the website ahlawatassociates.com.</h2></br><table>';
+            $body = '<table>';
         }
         foreach ($contactData as $key => $value) {
                 if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
@@ -255,6 +296,7 @@ class IndexController extends Controller
                 }
             }
         $body .= '</table>';
+        */
 
         if ($cvPath !== null) {
              // Optional attachments
