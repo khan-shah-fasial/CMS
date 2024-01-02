@@ -1013,7 +1013,7 @@ section.blog p.desc {
 .blog_big_box .blog_img {
     width: 100%;
     object-fit: cover;
-    height: 216px;
+    height: auto;
 }
 
 .blog_details_page_title_desc li {
