@@ -233,12 +233,10 @@ class IndexController extends Controller
 
         // Send email if $cvPath is not null
         if ($cvPath !== null) {
-            //$recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
-            $recipient = 'khanfaisal.makent@gmail.com';
+            $recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
             $subject = 'Career Enquiry';
         } else {
-            //$recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
-            $recipient = 'khanfaisal.makent@gmail.com';
+            $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
             $subject = 'Lead Enquiry';
         }
 
