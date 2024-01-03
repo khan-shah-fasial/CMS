@@ -192,7 +192,7 @@ class IndexController extends Controller
         $rules = [
             'cv' => 'nullable|mimetypes:application/pdf,application/msword',
             'phone' => 'required|regex:/^[0-9\s\+]{10,}$/',
-            'description' => 'nullable|regex:/^[a-zA-Z0-9\s,&-]+$/',
+            'description' => 'nullable|regex:/^[a-zA-Z0-9\s,&-’.@]+$/',
             'g-recaptcha-response' => 'required|captcha',
         ];
     
@@ -247,6 +247,7 @@ class IndexController extends Controller
         
         $body .= "<tr><td><strong>Full Name :</strong></td><td>" . $name . "</td></tr></br>";
         $body .= "<tr><td><strong>Email Address :</strong></td><td>" . $email . "</td></tr></br>";
+        $body .= "<tr><td><strong>Phone Number :</strong></td><td>" . $phone . "</td></tr></br>";
 
         if (isset($contactData["description"]) || isset($contactData["services"])) {
             $body .= "<tr><td><strong>Service Requested :</strong></td><td>" . ($services ?? 'Not provided') . "</td></tr></br>";
