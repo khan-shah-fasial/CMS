@@ -2,7 +2,8 @@
 
 @section('page.title', 'Ahlawat Associates: Top Lawyers &amp; Law Firms in Delhi, India')
 
-@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal assistance for startups, FDI, Property law, IP, and more')
+@section('page.description', 'Ahlawat &amp; Associates is one of the best law firms in Delhi, India. We provide legal
+assistance for startups, FDI, Property law, IP, and more')
 
 @section('page.type', 'website')
 
@@ -15,14 +16,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h4 class="heading">About Us</h4>
+                    <h4 class="heading">Our Journey</h4>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
                                 <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                About Us
+                                Our Journey
                             </li>
                         </ol>
                     </nav>
@@ -40,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 padd00mb">
-              
+
                 @php echo html_entity_decode(get_settings('about_us_content1')) @endphp
                 {{--<img src="/assets/frontend/images/aboutUs.png" alt="" class="about_content_img" data-aos-once="true"
                     data-aos="fade-up" />--}}

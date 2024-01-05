@@ -2,7 +2,8 @@
 
 @section('page.title', 'Practice Areas | Leading Law firms in India – Ahlawat & Associates')
 
-@section('page.description', 'Ahlawat & Associates is one of the leading law firms in India having expertise in diverse legal areas including corporate law, intellectual property, litigation, and real estate.')
+@section('page.description', 'Ahlawat & Associates is one of the leading law firms in India having expertise in diverse
+legal areas including corporate law, intellectual property, litigation, and real estate.')
 
 @section('page.type', 'practice area')
 
@@ -16,14 +17,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">Practice Area</h1>
+                    <h1 class="heading">Our Expertise</h1>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
                                 <a href="{{ url(route('index')) }}">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                Practice Area
+                                Our Expertise
                             </li>
                         </ol>
                     </nav>
@@ -51,8 +52,7 @@
                                         url(route('practicearea-detail', ['slug' => $row->slug] ))
                                 )
                         )
-                }}"
-                class="btn_hover btn-3 hover-border-5 text-center ">
+                }}" class="btn_hover btn-3 hover-border-5 text-center ">
                     <span>{{$row->title}}</span>
                 </a>
 
@@ -61,12 +61,12 @@
                 {{--
                  <a
                     href="{{ url(route('practicearea-detail', ['slug' => strtolower(str_replace(' ', '-',$row->slug))] )) }}">
-                    <div class="practice_w_card d-flex align-items-center justify-content-center m-2 py-5">
-                        <img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}"
+                <div class="practice_w_card d-flex align-items-center justify-content-center m-2 py-5">
+                    <img src="{{ asset('storage/' . $row->breadcrumb_image) }}" alt="{{$row->title}}"
                         class="mb-4 w-100" />
-                        <h4 class="heading text-center">{{$row->title}}</h4>
-                    </div>
-                </a> 
+                    <h4 class="heading text-center">{{$row->title}}</h4>
+                </div>
+                </a>
                 --}}
             </div>
             @endforeach
