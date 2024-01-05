@@ -241,30 +241,30 @@ class IndexController extends Controller
         }
 
         $body = '<table>';
-        $body .= "<tr><td><strong>From :</strong></td><td>" . $name . ' ' . $email . "</td></tr></br>";
-        $body .= "<tr><td><strong>Form Name :</strong></td><td>" . $section . "</td></tr></br>";
-        $body .= "<tr><td><strong>Page URL :</strong></td><td>" . $url . "</td></tr></br><p></p>";
+        $body .= "<tr><td style='width: 150px;'><strong>From :</strong></td><td>" . $name . ' ' . $email . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Form Name :</strong></td><td>" . $section . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Page URL :</strong></td><td>" . $url . "</td></tr></br><p></p>";
         
-        $body .= "<tr><td><strong>Full Name :</strong></td><td>" . $name . "</td></tr></br>";
-        $body .= "<tr><td><strong>Email Address :</strong></td><td>" . $email . "</td></tr></br>";
-        $body .= "<tr><td><strong>Phone Number :</strong></td><td>" . $phone . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Full Name :</strong></td><td>" . $name . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Email Address :</strong></td><td>" . $email . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Phone Number :</strong></td><td>" . $phone . "</td></tr></br>";
 
         if (isset($contactData["description"]) || isset($contactData["services"])) {
-            $body .= "<tr><td><strong>Service Requested :</strong></td><td>" . ($services ?? 'Not provided') . "</td></tr></br>";
-            $body .= "<tr><td><strong>Description :</strong></td><td>" . ($description ?? 'Not provided') . "</td></tr></br><p></p>";
+            $body .= "<tr><td style='width: 150px;'><strong>Service Requested :</strong></td><td>" . ($services ?? 'Not provided') . "</td></tr></br>";
+            $body .= "<tr><td style='width: 150px;'><strong>Description :</strong></td><td>" . ($description ?? 'Not provided') . "</td></tr></br><p></p>";
         } else {
-            $body .= "<tr><td><strong>Qualification :</strong></td><td>" . ($qualification ?? 'Not provided') . "</td></tr></br><p></p>";
+            $body .= "<tr><td style='width: 150px;'><strong>Qualification :</strong></td><td>" . ($qualification ?? 'Not provided') . "</td></tr></br><p></p>";
         }
         
         
-        $body .= "<tr><td><strong>Ip :</strong></td><td>" . $ip . "</td></tr></br>";
-        $body .= "<tr><td><strong>User Location :</strong></td><td>" . 
+        $body .= "<tr><td style='width: 150px;'><strong>Ip :</strong></td><td>" . $ip . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>User Location :</strong></td><td>" . 
                     ($user_data['city'] ?? 'null') . ' ' . 
                     ($user_data['region'] ?? 'null') . ' ' . 
                     ($user_data['country'] ?? 'null') . 
                 "</td></tr></br>";
-        $body .= "<tr><td><strong>Referrer URL :</strong></td><td>" . $ref_url . "</td></tr></br>";
-        $body .= "<tr><td><strong>Submitted Data :</strong></td><td>" . date('Y-m-d') . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Referrer URL :</strong></td><td>" . $ref_url . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Submitted Data :</strong></td><td>" . date('Y-m-d') . "</td></tr></br>";
         $body .= '</table>';
 
 
