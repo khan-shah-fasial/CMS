@@ -27,7 +27,7 @@ class BlogController extends Controller
     public function create(Request $request) {
         // Validate form data
         $validator = Validator::make($request->all(), [
-            'image' => 'image|mimes:jpeg,png,jpg,gif',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,webp',
             'slug' => 'required|unique:blogs',
         ]);
 
