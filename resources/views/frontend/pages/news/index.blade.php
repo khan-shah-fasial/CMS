@@ -2,7 +2,8 @@
 
 @section('page.title', 'News | Ahlawat & Associates')
 
-@section('page.description', 'Get yourself legally updated with the legal updates in India via the blogs written by the some of the best lawyers online in India')
+@section('page.description', 'Get yourself legally updated with the legal updates in India via the blogs written by the
+some of the best lawyers online in India')
 
 @section('page.type', 'news')
 
@@ -16,14 +17,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading">News</h1>
+                    <h1 class="heading">Newscast</h1>
                     <nav aria-label="breadcrumb" class="breadcrumb d-flex justify-content-center mb-0">
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home">
                                 <a href="{{ url(route('index')) }}" data-aos="fade-up" data-aos-once="true">Home</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                News
+                                Newscast
                             </li>
                         </ol>
                     </nav>
