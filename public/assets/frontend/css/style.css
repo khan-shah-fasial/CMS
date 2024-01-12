@@ -132,7 +132,7 @@ header {
     position: sticky;
     background: #fff;
     top: 36px;
-    z-index: 999;
+    z-index: 99999;
 }
 
 .bottom_nav_links .nav_links a img {
@@ -2091,10 +2091,7 @@ section.career_page_content li span {
     border-radius: none !important;
 }
 
-.faq_page_accordion
-    .accordion
-    .accordion-item
-    .accordion-button:not(.collapsed) {
+.faq_page_accordion .accordion .accordion-item .accordion-button:not(.collapsed) {
     color: black;
     background-color: white;
     box-shadow: none;
@@ -2648,10 +2645,7 @@ form#add_footer_form span.select2-selection.select2-selection--single {
     color: #fff !important;
 }
 
-form#add_footer_form
-    .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
+form#add_footer_form .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #9f9f9f !important;
     font-size: 10px !important;
 }
@@ -2746,4 +2740,8 @@ section.contact_p_form .intl-tel-input .flag-dropdown .selected-flag {
 
 section.practice a {
     text-decoration: none;
+}
+
+.bottom_nav_links .nav_links li:nth-child(7) ul.dropdown {
+    margin-left: -120px;
 }
