@@ -15,12 +15,10 @@ if (!isset($session_data['country'])) {
 
     <div class="d-flex align-items-center flex-md-row flex-column gap-md-4">
         <div class="mb-3 w-100">
-            <input type="text" class="form-control" name="name" placeholder="Enter Your Name" data-aos-once="true"
-                data-aos="fade-up" required />
+            <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required />
         </div>
         <div class="mb-3 w-100">
-            <input type="email" class="form-control" name="email" placeholder="Enter Your Email" data-aos-once="true"
-                data-aos="fade-up" required />
+            <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required />
         </div>
 
 

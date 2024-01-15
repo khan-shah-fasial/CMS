@@ -9,8 +9,7 @@
                     </h1>
                     
                     <a type="button" data-bs-toggle="modal" data-bs-target="#contact"
-                        class="d-flex align-items-center justify-content-center gap-2" data-aos-once="true"
-                        data-aos="fade-up">
+                        class="d-flex align-items-center justify-content-center gap-2">
 
                         <span class="mt-2">Contact Us Now</span>
                     </a>

@@ -23,19 +23,17 @@ if (!isset($session_data['country'])) {
 
     <div class="row">
         <div class="col-md-6 mb-3">
-            <input type="text" class="form-control" placeholder="Write Your Name..." name="name" data-aos-once="true"
-                data-aos="fade-up" required />
+            <input type="text" class="form-control" placeholder="Write Your Name..." name="name" required />
         </div>
         <div class="col-md-6 mb-3">
-        <input type="email" class="form-control" placeholder="Write Your Email..." name="email" data-aos-once="true"
-                data-aos="fade-up" required />
+        <input type="email" class="form-control" placeholder="Write Your Email..." name="email" required />
         </div>
         <div class="col-md-6 mb-3">
         <input id="mobile-number1" type="tel" class="form-control" placeholder="Write Your Phone No" name="phone"
                  required />
         </div>
         <div class="col-md-6 mb-3">
-        <select class="form-control select2" id="popup_select" data-aos-once="true" name="services" data-aos="fade-up" required>
+        <select class="form-control select2" id="popup_select" name="services" required>
                 <option value="">Select the Service</option>
                 @foreach ($practice_Area as $row)
                 <option value="{{ $row->title }}">{{ $row->title }}</option>
