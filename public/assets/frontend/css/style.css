@@ -6588,3 +6588,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         width: 220px;
     }
 }
+
+@media(max-width:767px) {
+    .width25 {
+        width: 25px;
+    }
+}

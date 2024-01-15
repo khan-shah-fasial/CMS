@@ -109,11 +109,7 @@ $practice_Area = DB::table('practice_areas')
                                     <div class="m-menu">
                                         <div class="m-menu__header">
                                             <label class="m-menu__toggle" for="blog">
-                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                                    stroke="#000000" stroke-width="2" stroke-linecap="butt"
-                                                    stroke-linejoin="arcs">
-                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
-                                                </svg>
+                                                <img class="width25" src="/assets/frontend/images/nex_arrow1.png" alt="logo" />
                                             </label>
                                             <span>Insights</span>
                                         </div>
@@ -150,11 +146,7 @@ $practice_Area = DB::table('practice_areas')
                                     <div class="m-menu">
                                         <div class="m-menu__header">
                                             <label class="m-menu__toggle" for="item-{{ $i }}">
-                                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                                                    stroke="#000000" stroke-width="2" stroke-linecap="butt"
-                                                    stroke-linejoin="arcs">
-                                                    <path d="M19 12H6M12 5l-7 7 7 7" />
-                                                </svg>
+                                                <img class="width25" src="/assets/frontend/images/nex_arrow1.png" alt="logo" />
                                             </label>
                                             <span>{{ $row->title }}</span>
                                         </div>
