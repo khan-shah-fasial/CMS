@@ -12,13 +12,13 @@ if (!isset($session_data['country'])) {
 <form class="contact_form" id="add_popup_form" action="{{url(route('contact.create'))}}" method="post"
     enctype="multipart/form-data">
     @csrf
-    <input type="hidden" name="section" value="Contact Us Now Form" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="section" value="Contact Us Now Form"  />
+    <input type="hidden" name="url" value="{{ url()->current() }}"  />
 
 
 
 
-    <h3 data-aos-once="true" data-aos="fade-up">Want to know more</h3>
+    <h3 >Want to know more</h3>
 
 
     <div class="row">
@@ -32,7 +32,7 @@ if (!isset($session_data['country'])) {
         </div>
         <div class="col-md-6 mb-3">
         <input id="mobile-number1" type="tel" class="form-control" placeholder="Write Your Phone No" name="phone"
-                data-aos-once="true" data-aos="fade-up" required />
+                 required />
         </div>
         <div class="col-md-6 mb-3">
         <select class="form-control select2" id="popup_select" data-aos-once="true" name="services" data-aos="fade-up" required>
@@ -64,14 +64,14 @@ if (!isset($session_data['country'])) {
         </div>
     </div> -->
     <textarea class="form-select" name="description" placeholder="Brief description of your legal issue"
-        data-aos-once="true" data-aos="fade-up" rows="3" required></textarea>
-    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="ref_url" value="{{ url()->previous() }}" data-aos-once="true" data-aos="fade-up" />
+         rows="3" required></textarea>
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}"  />
+    <input type="hidden" name="ref_url" value="{{ url()->previous() }}"  />
     <div class="w-100 mt-3">
         <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
     </div>
     <div class="text-center mt-4">
-        <button type="submit" class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
+        <button type="submit" class="contact_form_button" >SEND</button>
     </div>
 </form>
 <!--------=============== Popup Form start ==============------------------>

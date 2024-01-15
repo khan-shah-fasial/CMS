@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <h1 class="heading" data-aos-once="true" data-aos="fade-up">
+                    <h1 class="heading" >
                         GET IN TOUCH WITH US TODAY
                     </h1>
                     

@@ -8,9 +8,9 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
         <div class="row">
             <div class="col-md-12">
                 <div class="underline_heading d-flex align-items-center justify-content-center mt-5">
-                    <h5 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Media</h5>
+                    <h5 class="main_heading text-center" >Media</h5>
                 </div>
-                <h6 class="main_heading mb-md-2 text-center" data-aos-once="true" data-aos="fade-up">Media Coverages</h6>
+                <h6 class="main_heading mb-md-2 text-center" >Media Coverages</h6>
             </div>
 
             <div class="col-md-12">
@@ -20,7 +20,7 @@ $media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 
 
                     <div class="item">
                         <a href="{{ $row->url }}" class="media_link">
-                            <div class="media_box" data-aos-once="true" data-aos="fade-up">
+                            <div class="media_box" >
                                 <img loading="lazy" src="{{ asset('storage/' . $row->image) }}" alt="" />
                                 <h4 class="title">{{ htmlspecialchars_decode($row->title) }}</h4>
                             </div>

@@ -11,10 +11,10 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
         <div class="row">
 
             <div class="col-lg-8 px0">
-                <div class="underline_heading" data-aos-once="true" data-aos="fade-up">
+                <div class="underline_heading" >
                     <h6 class="main_heading">Latest Blogs</h6>
                 </div>
-                <h1 class="main_heading mb-4" data-aos-once="true" data-aos="fade-up">
+                <h1 class="main_heading mb-4" >
                     Enhance your legal knowledge <br> with <a href="{{ url(route('blog')) }}"
                         class="main_heading_color text-decoration-none cursor-pointer">Blogs</a>
                 </h1>
@@ -26,7 +26,7 @@ $right_news = DB::table('blogs')->where('status', 1)->whereJsonContains('blog_ca
 
                             @foreach ($blog as $row)
                                 <div class="item">
-                                    <div class="blog_big_box" data-aos-once="true" data-aos="fade-up">
+                                    <div class="blog_big_box" >
                                             <img loading="lazy" src="{{ asset('storage/' .$row->main_image) }}" alt="" class="blog_img" />
                                             <div class="blog_content">
                                                 <p>

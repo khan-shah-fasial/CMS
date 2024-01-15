@@ -10,9 +10,9 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
         <div class="row">
             <div class="col-md-12">
                 <div class="underline_heading d-flex align-items-center justify-content-center mb-md-0 mb-3">
-                    <h3 class="main_heading text-center" data-aos-once="true" data-aos="fade-up">Our <span class="main_heading_color"> Practice</span> Area</h3>
+                    <h3 class="main_heading text-center" >Our <span class="main_heading_color"> Practice</span> Area</h3>
                 </div>
-                <!-- <h1 class="main_heading text-center mb-md-4 mb-3" data-aos-once="true" data-aos="fade-up">
+                <!-- <h1 class="main_heading text-center mb-md-4 mb-3" >
                     Our <span class="main_heading_color"> Practice</span> Area
                 </h1> -->
             </div>
@@ -33,7 +33,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
                                             )
                                     )
                             }}">
-							<div class="practice_box" data-aos-once="true" data-aos="fade-up">
+							<div class="practice_box" >
                     <div class="visible_box">
                         <img loading="lazy" src="{{ asset('storage/' .$row->thumnail_image) }}" alt="" />
                         <h4>{{ $row->title }}</h4>
