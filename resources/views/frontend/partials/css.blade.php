@@ -6,7 +6,7 @@
 <!-- select2 css -->
 <link rel="preload" href="/assets/frontend/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-<!-- <link rel="stylesheet" href="/assets/frontend/css/owl.carousel.min.css" /> -->
+<link rel="stylesheet" href="/assets/frontend/css/owl.carousel.min.css" />
 <link rel="stylesheet" href="/assets/frontend/css/owl.theme.default.min.css" />
 <!-- <link rel="stylesheet" href="/assets/frontend/css/whatsapp-chat-support.css" /> -->
 <link rel="preload" href="/assets/frontend/css/toastr.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
