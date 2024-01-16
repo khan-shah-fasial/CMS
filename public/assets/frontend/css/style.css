@@ -132,7 +132,7 @@ header {
     position: sticky;
     background: #fff;
     top: 36px;
-    z-index: 99999;
+    z-index: 999;
 }
 
 .bottom_nav_links .nav_links a img {
@@ -975,6 +975,15 @@ header ul.dropdown li a:hover {
     transform: translateY(-50%);
     transition: background-color 0.3s, color 0.3s;
     left: 0;
+}
+
+form#add_footer_form .select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    z-index: 99;
 }
 
 .media button.owl-next {
@@ -6098,7 +6107,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 
     .about {
-        padding-bottom: 0;
+        padding-bottom: 30px !important;
     }
 
     .about .link_number .number {
@@ -6173,7 +6182,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         align-items: center;
         gap: 12px;
         text-align: center;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
     }
 
     .about_counter_img {
