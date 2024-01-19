@@ -14,6 +14,7 @@ use App\Models\Contact;
 use App\Models\BlogComment;
 use App\Models\MediaCoverage;
 use App\Models\Publication;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -196,7 +197,7 @@ class IndexController extends Controller
             'g-recaptcha-response' => 'required|captcha',
         ];
     
-        $validator = \Validator::make($request->all(), $rules); // Pass $request->all() as the first argument
+        $validator = Validator::make($request->all(), $rules); // Pass $request->all() as the first argument
     
         if ($validator->fails()) {
             return response()->json([
