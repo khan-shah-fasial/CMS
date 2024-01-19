@@ -1,6 +1,6 @@
 <!----================================= category Breadcrumb ==================---------------------->
 
-<div class="pt-4" >
+<div class="pt-4">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -11,21 +11,21 @@
                     </a>
                     <a href="{{ url(route('news')) }}"
                         class="blog_filter_btn @if(request()->routeIs('news') ) active @endif">
-                        News
+                        Newscast
                     </a>
                     {{--
                     <a href="{{ url(route('publication')) }}"
-                        class="blog_filter_btn @if(request()->routeIs('publication') ) active @endif">
-                        Publication
+                    class="blog_filter_btn @if(request()->routeIs('publication') ) active @endif">
+                    Publication
                     </a> --}}
                     <a href="{{ url(route('media-coverage')) }}"
                         class="blog_filter_btn @if(request()->routeIs('media-coverage') ) active @endif">
-                        Media Coverage
+                        Media Coverages
                     </a>
                     {{--
                     <a href="{{ url(route('deal-update')) }}"
-                        class="blog_filter_btn @if(request()->routeIs('deal-update') ) active @endif">
-                        Deal Update
+                    class="blog_filter_btn @if(request()->routeIs('deal-update') ) active @endif">
+                    Deal Update
                     </a>
                     --}}
                 </div>

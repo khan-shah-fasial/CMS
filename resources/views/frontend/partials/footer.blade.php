@@ -182,6 +182,11 @@ $practice_Area = DB::table('practice_areas')
                             <a href="{{ get_settings('twitter') }}" target="_blank" aria-label="Twitter Link"><img
                                     src="assets/frontend/images/twitter.png" alt="" /></a>
                         </li>
+                        <li>
+                            <a href="{{ get_settings('linkedin') }}" target="_blank" aria-label="Twitter Link"><img
+                                    src="assets/frontend/images/linkedin_1.png" alt="" /></a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>

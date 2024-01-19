@@ -1,6 +1,6 @@
 
 <script src="/assets/frontend/js/combine.js"></script>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!--
     <script src="/assets/frontend/js/jquery.min.js"></script>
@@ -42,8 +42,8 @@
 <!--whatsapp js
 <script defer src="/assets/frontend/js/whatsapp-chat-support.js"></script>-->
 
-<!--Google capcha js-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!--Google capcha js
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 
 <!--<script src="/assets/frontend/js/api.js"></script>-->
 

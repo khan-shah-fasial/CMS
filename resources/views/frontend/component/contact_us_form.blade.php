@@ -13,23 +13,23 @@ $practice_Area = DB::table('practice_areas')->get();
     @csrf
     <div class="mb-3">
 
-        <input type="hidden" name="section" value="Contact us Form" data-aos-once="true" data-aos="fade-up" />
+        <input type="hidden" name="section" value="Contact us Form"  />
     </div>
     <div class="mb-3">
 
-        <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+        <input type="hidden" name="url" value="{{ url()->current() }}"  />
     </div>
     <div class="mb-3">
 
-        <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
+        <input type="hidden" name="ip" value="{{ $session_data['ip'] }}"  />
     </div>
     <div class="mb-3">
 
-        <input type="text" placeholder="Name" name="name" data-aos-once="true" data-aos="fade-up" required />
+        <input type="text" placeholder="Name" name="name"  required />
     </div>
     <div class="mb-3">
 
-        <input type="email" placeholder="Email" name="email" data-aos-once="true" data-aos="fade-up" required />
+        <input type="email" placeholder="Email" name="email"  required />
     </div>
     <div class="mb-3">
 
@@ -57,7 +57,7 @@ $practice_Area = DB::table('practice_areas')->get();
     </div>
 
     <div class="">
-        <button type="submit" data-aos-once="true" data-aos="fade-up">
+        <button type="submit" >
             SUBMIT
         </button>
     </div>

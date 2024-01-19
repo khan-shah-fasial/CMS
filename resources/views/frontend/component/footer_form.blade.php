@@ -13,9 +13,9 @@ if (!isset($session_data['country'])) {
 <form class="contact_form" id="add_footer_form" action="{{url(route('contact.create'))}}" method="post"
     enctype="multipart/form-data">
     @csrf
-    <h3 data-aos-once="true" data-aos="fade-up">Any query? Let’s connect</h3>
-    <input type="hidden" name="section" value="Footer Form" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="url" value="{{ url()->current() }}" data-aos-once="true" data-aos="fade-up" />
+    <h3 >Any query? Let’s connect</h3>
+    <input type="hidden" name="section" value="Footer Form"  />
+    <input type="hidden" name="url" value="{{ url()->current() }}"  />
    
     <div class="d-flex align-items-center gap-3 mb-3">
         <div class="w-100">
@@ -33,7 +33,7 @@ if (!isset($session_data['country'])) {
 
         <div class="w-100">
             <input type="tel" id="mobile-number" class="form-control phone" placeholder="Write Your Phone No" name="phone"
-                data-aos-once="true" data-aos="fade-up" required />
+                 required />
         </div>
 
 
@@ -50,17 +50,17 @@ if (!isset($session_data['country'])) {
     </div>
 
     <textarea class="form-select footer_textarea" name="description" placeholder="Brief description of your legal issue"
-        data-aos-once="true" data-aos="fade-up" rows="2"></textarea>
+         rows="2"></textarea>
     
-    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}" data-aos-once="true" data-aos="fade-up" />
-    <input type="hidden" name="ref_url" value="{{ url()->previous() }}" data-aos-once="true" data-aos="fade-up" />
+    <input type="hidden" name="ip" value="{{ $session_data['ip'] }}"  />
+    <input type="hidden" name="ref_url" value="{{ url()->previous() }}"  />
 
     <div class="mt-3">
         <div class="g-recaptcha" data-sitekey="{{env('GOOGLE_CAPTCHA_SITEKEY')}}"></div>
     </div>
 
     <div class="text-center mt-4">
-        <button type="submit" class="contact_form_button" data-aos-once="true" data-aos="fade-up">SEND</button>
+        <button type="submit" class="contact_form_button" >SEND</button>
     </div>
 </form>
 

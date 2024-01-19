@@ -117,13 +117,13 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-lg-6 px0">
                 <div class="underline_heading">
-                    <h4 class="main_heading" data-aos-once="true" data-aos="fade-up">Our Journey</h4>
+                    <h4 class="main_heading" >Our Journey</h4>
                 </div>
-                <h2 class="main_heading mb-lg-4 mb-2" data-aos-once="true" data-aos="fade-up">{{ get_settings('oj_home') }}</h2>
+                <h2 class="main_heading mb-lg-4 mb-2" >{{ get_settings('oj_home') }}</h2>
                 @php echo html_entity_decode(get_settings('oj_content')) @endphp
             </div>
 
-            <div class="col-md-6 px0" data-aos-once="true" data-aos="fade-up">
+            <div class="col-md-6 px0" >
                 <img loading="lazy" src="/assets/frontend/images/about_us_img_new.jpg" alt="About Us" class="about_img" />
             </div>
         </div>
@@ -148,7 +148,7 @@ assistance for startups, FDI, Property law, IP, and more')
         <div class="row">
             <div class="col-md-12 px0">
                 <div class="news_box ">
-                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">{{ get_settings('ana_home') }}
+                    <h1 class="main_heading mb-md-4 mb-2" >{{ get_settings('ana_home') }}
                     </h1>
 
                 </div>
@@ -156,7 +156,7 @@ assistance for startups, FDI, Property law, IP, and more')
             <div class="col-lg-6 px0">
                 <div class="news_box">
 
-                    <img loading="lazy" src="/assets/frontend/images/india_law.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
+                    <img loading="lazy" src="/assets/frontend/images/india_law.jpg" alt=""  />
 
                 </div>
             </div>
@@ -172,10 +172,10 @@ assistance for startups, FDI, Property law, IP, and more')
             </div>
             <!-- <div class="col-md-6 px0">
                 <div class="news_box ms-xl-5">
-                    <h1 class="main_heading mb-md-4 mb-2" data-aos-once="true" data-aos="fade-up">Top Lawyer in Delhi
+                    <h1 class="main_heading mb-md-4 mb-2" >Top Lawyer in Delhi
                     </h1>
-                    <img src="/assets/frontend/images/delhi_img.jpg" alt="" data-aos-once="true" data-aos="fade-up" />
-                    <p class="desc" data-aos-once="true" data-aos="fade-up">
+                    <img src="/assets/frontend/images/delhi_img.jpg" alt=""  />
+                    <p class="desc" >
                         A&A adopted an approach that demands the highest levels
                         of understanding in each of their practice areas,
                         technical skill and service delivery allowing us to
@@ -185,7 +185,7 @@ assistance for startups, FDI, Property law, IP, and more')
                         abide by the system and ensure that the client’s needs
                         always come first.
                     </p>
-                    <p class="desc" data-aos-once="true" data-aos="fade-up">
+                    <p class="desc" >
                         This is reflected through our team of associates, who
                         abide by the system and ensure that the client’s needs
                         always come first.
