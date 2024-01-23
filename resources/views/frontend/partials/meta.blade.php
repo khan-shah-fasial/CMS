@@ -123,34 +123,8 @@ $url = url()->current();
 
 @yield('page.schema')
   
+<!-- Contact Address Schema end-->
 
-<!---------------- Contact Address Schema end ------------------->
-
-<!-- Yandex.Metrika counter-->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-  ym(95221741, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
-
-<noscript><div><img src="https://mc.yandex.ru/watch/95221741" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-
-<!-- Google tag (gtag.js)  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0N029ZM0WG"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0N029ZM0WG'); </script>
-
-
-<!-- Google tag (gtag.js)  -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTLLQV0KXE"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-GTLLQV0KXE'); </script>
 
 <!-- Google Tag Manager  -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

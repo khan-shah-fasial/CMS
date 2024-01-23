@@ -194,7 +194,7 @@ class IndexController extends Controller
             'cv' => 'nullable|mimetypes:application/pdf,application/msword',
             'phone' => 'required|regex:/^[0-9\s\+]{10,}$/',
             'description' => 'nullable|regex:/^[a-zA-Z0-9\s,&-’.@]+$/',
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ];
     
         $validator = Validator::make($request->all(), $rules); // Pass $request->all() as the first argument
