@@ -140,5 +140,88 @@ use Illuminate\Support\Facades\DB;
         }
     }
 
+    if(!function_exists('zoho_token')){
+        function zoho_token(){
+            
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://accounts.zoho.in/oauth/v2/token',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => 'refresh_token=1000.d55457585527e822e4e400a7445bf23c.86644df7fed25fcf5fe2f49f1a1b4208&client_id=1000.EIB30REY5ITAJGA7WEO4QBNNQV3KMD&client_secret=dc1140a7e5c9e52a0b59f738d553f19b6065b9e5c2&grant_type=refresh_token',
+            CURLOPT_HTTPHEADER => array(
+                'Content-Type: application/x-www-form-urlencoded',
+                'Cookie: 6e73717622=3bcf233c3836eb7934b6f3edc257f951; _zcsr_tmp=f23e9be0-5fc5-43f2-9040-1861acbac7a5; iamcsr=f23e9be0-5fc5-43f2-9040-1861acbac7a5'
+            ),
+            ));
+    
+            $response = curl_exec($curl);
+    
+            curl_close($curl);
+            return $response;
+
+        }
+    }
+
+
+    if(!function_exists('zoho_lead_create')){
+        function zoho_lead_create($access_token, $api_domain, $name, $email, $phone, $services, $description, $url, $state, $city){
+            
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => '' . $api_domain . '/crm/v6/Leads',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS =>'{
+                "data": [
+                    {
+                        "Lead_Source": "Website",
+                        "Company" : " - ",
+                        "Last_Name": " - ",
+                        "First_Name": "'.$name.'",
+                        "Email": "'.$email.'",
+                        "State": "'.$state.'",
+                        "Phone": "'.$phone.'",
+                        "Mobile": "'.$phone.'",
+                        "Designation": "'.$services.'",
+                        "City": "'.$city.'",
+                        "Description": "'.$description.'",
+                        "Brief_description_of_your_legal_issues": "'.$description.'",
+                        "Submitted_Page_URL": "'.$url.'",
+                        "Service_Requests": "'.$services.'"
+
+                    }
+                ],
+                "trigger": [
+                    "approval",
+                    "workflow",
+                    "blueprint"
+                ]
+            }',
+            CURLOPT_HTTPHEADER => array(
+                'Authorization: Zoho-oauthtoken ' . $access_token,
+                'Content-Type: application/json'
+            ),
+            ));
+
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+            return $response;
+
+        }
+    }
 
 

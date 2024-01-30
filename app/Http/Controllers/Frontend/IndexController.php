@@ -237,7 +237,7 @@ class IndexController extends Controller
             $recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
             $subject = 'Career Enquiry';
         } else {
-            $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
+            $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
             $subject = 'Lead Enquiry';
         }
 
@@ -265,38 +265,9 @@ class IndexController extends Controller
                     ($user_data['country'] ?? 'null') . 
                 "</td></tr></br>";
         $body .= "<tr><td style='width: 150px;'><strong>Referrer URL :</strong></td><td>" . $ref_url . "</td></tr></br>";
-        $body .= "<tr><td style='width: 150px;'><strong>Submitted Data :</strong></td><td>" . date('Y-m-d') . "</td></tr></br>";
+        $body .= "<tr><td style='width: 150px;'><strong>Submitted Date :</strong></td><td>" . date('Y-m-d') . "</td></tr></br>";
         $body .= '</table>';
 
-
-        /*
-        // Format $contactData into an HTML table
-        if ($cvPath !== null) {
-            //$body = '<h2>A Career inquiry from the website ahlawatassociates.com.</h2></br><table>';
-            $body = '<table>';
-        } else {
-            //$body = '<h2>A lead enquiry from the website ahlawatassociates.com.</h2></br><table>';
-            $body = '<table>';
-        }
-        foreach ($contactData as $key => $value) {
-                if($key != '_token' && $key != 'g-recaptcha-response' && $key != 'cv'){
-                    
-                    if ($key != 'ip') {
-
-                        $body .= "<tr><td><strong>" . ucwords($key) . ":</strong></td><td>$value</td></tr>";
-
-                    } else {
-
-
-                        $body .= "<tr><td><strong>User Location:</strong></td><td>" . $user_data['city'] . ' ' . $user_data['region'] . ' ' . $user_data['country'] . "</td></tr></br>";
-                        $body .= "<tr><td><strong>" . ucwords($key) . ":</strong></td><td>$value</td></tr>";
-
-                    }
-                    
-                }
-            }
-        $body .= '</table>';
-        */
 
         if ($cvPath !== null) {
              // Optional attachments
@@ -313,9 +284,26 @@ class IndexController extends Controller
 
         } else {
             sendEmail($recipient, $subject, $body);
+
+
+            $token = json_decode(zoho_token(), true);
+
+            $access_token = $token['access_token'];
+            $api_domain = $token['api_domain'];
+            $state = $user_data['region'];
+            $city = $user_data['city'];
+
+
+    
+            if($token['access_token'] && $token['api_domain']){
+                
+                zoho_lead_create($access_token, $api_domain, $name, $email, $phone, $services, $description, $url, $state, $city);
+
+            }
+    
+
         }
 
-        
 
     
         $response = [
@@ -472,5 +460,6 @@ class IndexController extends Controller
     {
         echo'hello';
     }
+
 
 }
