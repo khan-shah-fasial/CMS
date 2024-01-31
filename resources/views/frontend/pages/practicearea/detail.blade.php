@@ -54,7 +54,7 @@
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item home"><a href="{{ url(route('index')) }}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
-                                <a href="{{ url(route('practicearea')) }}">Practice Area</a>
+                                <a href="{{ url(route('practicearea')) }}">Our Expertise</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 {{ $detail->title }}
