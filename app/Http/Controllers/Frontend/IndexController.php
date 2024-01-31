@@ -237,7 +237,7 @@ class IndexController extends Controller
             $recipient = 'careers@ahlawatassociates.in'; // Replace with the actual recipient email
             $subject = 'Career Enquiry';
         } else {
-            $recipient = 'khanfaisal.makent@gmail.com'; // Replace with the actual recipient email
+            $recipient = 'contact@ahlawatassociates.in'; // Replace with the actual recipient email
             $subject = 'Lead Enquiry';
         }
 

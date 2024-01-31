@@ -5882,7 +5882,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     }
 
     .wrapper nav .m-menu ul {
-        height: 100vh;
+        height: 400px;
         overflow-y: auto;
         padding: 0;
     }
@@ -6013,7 +6013,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
         position: fixed;
         bottom: 70px;
         right: 10px;
-        z-index: 999999;
+        z-index: 99;
     }
 
     .blog_details_page_breadcrumb .author {
