@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/assets/frontend/css/bootstrap.min.css" />
 <link rel="stylesheet" href="/assets/frontend/css/style.css" />
+<link rel="stylesheet" href="/assets/frontend/css/font-style.css" />
 <!-- <link rel="stylesheet" href="/assets/frontend/css/responsive.css" /> -->
 <!-- <link rel="stylesheet" href="/assets/frontend/css/aos.css" /> -->
 
