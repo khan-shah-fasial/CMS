@@ -16,6 +16,7 @@ use App\Models\MediaCoverage;
 use App\Models\Publication;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\URL;
 
 
 
@@ -34,32 +35,39 @@ class IndexController extends Controller
     }
 
     public function practice_area_detail($slug){
+
         $detail = PracticeArea::where('slug', $slug)->where('status', 1)->first();
-
-        if($detail){
-            //$slug = str_replace('-', ' ', $slug);
-            $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
-
-            if(!empty($blog_Catg)){
-                $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
-            } else {
-                $blog = [];
-            }
-            
-
-        // if(empty($detail->parent_id)){  
-                $focusAreaIds = json_decode($detail->focus_area, true);
-                $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
-
-                $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
-            //} else  {
-                //$child_detail = [];
-            //} 
-
-            return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
-        } else {
+    
+        if (!$detail) {
             return view('frontend.pages.404.index');
         }
+    
+        $specificSegment = request()->segment(1);
+        $segmentCount = count(request()->segments());
+    
+        $validConditions = [
+            ($specificSegment == 'area-of-practice' && $detail->special_service == '0'),
+            ($specificSegment == 'specialised-services' && $detail->special_service == '1'),
+            ($segmentCount == 1 && $detail->special_service == '2'),
+            ($specificSegment == 'area-of-practice' && $detail->special_service == '3')
+        ];
+    
+        if (!in_array(true, $validConditions)) {
+            return view('frontend.pages.404.index');
+        }
+    
+        $blog_Catg = BlogCategory::where('slug', $slug)->where('status', 1)->first();
+        if(!empty($blog_Catg)){
+            $blog = Blog::where('status', 1)->whereJsonContains('blog_category_ids', ''.$blog_Catg->id.'')->limit(3)->orderBy('id', 'desc')->get();
+        } else {
+            $blog = [];
+        }
+    
+        $focusAreaIds = json_decode($detail->focus_area, true);
+        $focusAreaIds = is_array($focusAreaIds) ? $focusAreaIds : [];
+        $child_detail = PracticeArea::where('status', 1)->whereIn('id', $focusAreaIds)->get();
+    
+        return view('frontend.pages.practicearea.detail', compact('detail', 'child_detail', 'blog'));
     }
 //--------------=============================== practice area end =====================------------------------------
 
