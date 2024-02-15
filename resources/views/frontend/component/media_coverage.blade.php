@@ -1,5 +1,5 @@
 @php
-$media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 'desc')->get();
+$media = DB::table('media_coverage')->where('status', 1)->orderBy('created_at', 'desc')->take(12)->get();
 @endphp
 <!---========= Media coverage ==========--------------->
 

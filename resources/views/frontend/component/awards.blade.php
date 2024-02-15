@@ -12,9 +12,6 @@ $awards = DB::table('awards')->where('status', 1)->orderBy('series', 'asc')->get
                     <h2 class="main_heading text-center " >Awards &
                     Recognitions</h2>
                 </div>
-                <!-- <h2 class="main_heading text-center mb-md-4 mb-2" >Awards &
-                    Recognitions
-                </h2> -->
 
                 <div class="owl-carousel owl-theme" id="awards_slider">
 
