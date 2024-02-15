@@ -51,8 +51,7 @@ $practice_Area = DB::table('practice_areas')->whereIn('id', $ids)->get();
             @endforeach
 
             <div class="col-md-12">
-                <div class="d-flex align-items-center justify-content-center mt-2" data-aos-once="true"
-                    data-aos="fade-up">
+                <div class="d-flex align-items-center justify-content-center mt-2">
                     <a href="{{ url(route('practicearea')) }}">
                         <button class="practice_button">Know More</button>
                     </a>

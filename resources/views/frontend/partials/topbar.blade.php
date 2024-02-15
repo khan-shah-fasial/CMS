@@ -6,7 +6,7 @@
                 <div class="search_right d-flex align-items-center gap-3">
                     <div id="google_translate_element"></div>
                     <div>
-                        <img class="search_icon" src="/assets/frontend/images/search.png" alt="email icon" />
+                        <img class="search_icon" src="/assets/frontend/images/search_icons1.png" alt="email icon" />
                         <div class="search-box ">
                             <form method="get" action="{{url(route('search'))}}" class="search_bar_field">
                                 <input name="query" class="form-control" type="text" placeholder="Enter Here..." />
