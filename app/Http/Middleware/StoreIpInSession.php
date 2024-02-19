@@ -24,24 +24,28 @@ class StoreIpInSession
      
             $session_data = json_decode($user_ip, true);
 
-            if (!isset($session_data["ip"])) {
+
+            if ( !isset($session_data["region"]) ) {
                 
                 $user_ip = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
                 Session::put('user_ip', $user_ip);
             } else {
                 Session::put('user_ip', $user_ip);
             }
+
+
         } else {
             
             $session_data = json_decode(session('user_ip'), true);
-            if (!isset($session_data["ip"])) {
-                
+
+            if ( !isset($session_data["region"]) ) {
+          
                 $user_ip = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
                 Session::put('user_ip', $user_ip);
             }
            
         } 
-
+        
         return $next($request);
     }
 }
