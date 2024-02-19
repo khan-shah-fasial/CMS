@@ -1,4 +1,5 @@
 
+<!-- all js file in combined js -->
 <script src="/assets/frontend/js/combine.js"></script>
 <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 

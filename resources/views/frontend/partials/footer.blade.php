@@ -51,36 +51,33 @@ $practice_Area = DB::table('practice_areas')
         <div class="row">
             <div class="col-md-3 col-6">
                 <div class="contact_info_box d-flex  flex-column">
-                    <img loading="lazy" src="/assets/frontend/images/footer_logo.png" alt="" data-aos-once="true"
-                        data-aos="fade-up" />
-                    <a href="tel:{{ get_settings('mobile') }}" class="mobile" data-aos-once="true"
-                        data-aos="fade-up">{{ get_settings('mobile') }}</a>
-                    <a href="mailto:{{ get_settings('email') }}" class="email" data-aos-once="true"
-                        data-aos="fade-up">{{ get_settings('email') }}</a>
+                    <img loading="lazy" src="/assets/frontend/images/footer_logo.png" alt=""/>
+                    <a href="tel:{{ get_settings('mobile') }}" class="mobile">{{ get_settings('mobile') }}</a>
+                    <a href="mailto:{{ get_settings('email') }}" class="email">{{ get_settings('email') }}</a>
                 </div>
             </div>
             <div class="col-md-3 col-6">
                 <div class="right_push_mob">
                     <div class="quick_links_box">
-                        <h6 class="q_links_heading" data-aos-once="true" data-aos="fade-up">Quick Links</h6>
+                        <h6 class="q_links_heading">Quick Links</h6>
                         <ul>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('about')) }}">Our
+                            <li><a href="{{ url(route('about')) }}">Our
                                     Journey</a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up">
+                            <li >
                                 <a href="{{ url(route('practicearea')) }}">Our Expertise</a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('career')) }}">Career </a>
+                            <li><a href="{{ url(route('career')) }}">Career </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('team')) }}">Our
+                            <li><a href="{{ url(route('team')) }}">Our
                                     Professionals </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up">
+                            <li>
                                 <a href="{{ url(route('contact')) }}">Contact Us </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('blog')) }}">Blogs </a>
+                            <li><a href="{{ url(route('blog')) }}">Blogs </a>
                             </li>
-                            <li data-aos-once="true" data-aos="fade-up"><a href="{{ url(route('faq')) }}">FAQs </a></li>
+                            <li><a href="{{ url(route('faq')) }}">FAQs </a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,24 +88,24 @@ $practice_Area = DB::table('practice_areas')
             <div class="col-md-4 mt-md-4 col-12">
                 <a href="https://www.google.com/maps/place/%23TheHub/@28.5495141,77.2648649,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce362dba5bca1:0x191c6dd29ebbec30!8m2!3d28.5495094!4d77.2674398!16s%2Fg%2F11h18n3l7n"
                     class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Delhi (Head Office)</p>
-                    <p data-aos-once="true" data-aos="fade-up">
+                    <p class="title">Delhi (Head Office)</p>
+                    <p>
                         {{ get_settings('delhi_address') }}
                     </p>
                 </a>
             </div>
             <div class="col-md-4 mt-md-4 col-12">
                 <a href="https://maps.app.goo.gl/RcJ5axxjePFqYTX68" class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Mumbai</p>
-                    <p data-aos-once="true" data-aos="fade-up">
+                    <p class="title">Mumbai</p>
+                    <p>
                         {{ get_settings('mumbai_address') }}
                     </p>
                 </a>
             </div>
             <div class="col-md-4 mt-md-4">
                 <a href="https://maps.app.goo.gl/NGnUVsVvMeb6ERFv7" class="address_box">
-                    <p class="title" data-aos-once="true" data-aos="fade-up">Chandigarh</p>
-                    <p data-aos-once="true" data-aos="fade-up">
+                    <p class="title">Chandigarh</p>
+                    <p >
                         {{ get_settings('chandigarh_address') }}
                     </p>
                 </a>
@@ -131,10 +128,10 @@ $practice_Area = DB::table('practice_areas')
 
             @if(!$subcategory->isEmpty())
             <div class="footer_colums">
-                <h6 data-aos-once="true" data-aos="fade-up">{{ $row->title }}</h6>
+                <h6>{{ $row->title }}</h6>
                 <ul>
                     @foreach($subcategory as $item)
-                    <li data-aos-once="true" data-aos="fade-up"><a href="{{ 
+                    <li><a href="{{ 
                                 $item->special_service == '1' ? 
                                     url(route('practicearea-detail-specialised', ['slug' => $item->slug] )) :
                                     (
