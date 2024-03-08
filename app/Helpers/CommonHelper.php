@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
+use App\Models\Contact;
+
 
     if (!function_exists('datetimeFormatter')) {
         function datetimeFormatter($value)
@@ -220,6 +222,91 @@ use Illuminate\Support\Facades\DB;
 
             curl_close($curl);
             return $response;
+
+        }
+    }
+
+
+
+    if(!function_exists('zoho_pending_lead')){
+        function zoho_pending_lead(){
+            
+            $contact = Contact::where('success','0')->get();
+
+            if(count($contact) > 0){
+                foreach($contact as $row){
+                    $location = json_decode($row->response);
+        
+                    $token = json_decode(zoho_token(), true);
+        
+                    $access_token = $token['access_token'];
+                    $api_domain = $token['api_domain'];
+                    $state = $location->state;
+                    $city = $location->city;
+        
+                    $name = $row->name;
+                    $email = $row->email;
+                    $phone = $row->phone;
+                    $services = $row->services;
+                    $description = $row->description;
+                    $url = $row->url;
+        
+        
+        
+                    if($token['access_token'] && $token['api_domain']){
+        
+                        // Remove newline characters and spaces
+                        $description = str_replace(array("\n", "\r"), '', $description);
+            
+                        $zoho = zoho_lead_create($access_token, $api_domain, $name, $email, $phone, $services, $description, $url, $state, $city);
+            
+                        $zoho_response = json_decode($zoho);
+            
+                        if(isset($zoho_response->data)){
+                            $zoho_status = $zoho_response->data[0]->code;
+                        } else {
+                            $zoho_status = '';
+                        }
+            
+            
+                        // Get the ID of the newly created contact
+                        $ContactId = $row->id;
+    
+    
+                        $zoho_data = [
+                            'zoho' => $zoho,
+                            'state' => $location->state,
+                            'city' => $location->city,
+                        ];
+            
+                        if($zoho_status == "SUCCESS"){
+            
+                            Contact::where('id', $ContactId)->update([
+                                'success' => '1',
+                                'response' => json_encode($zoho_data),
+                                'attempt' => '0'
+                            ]);
+            
+                        } else {
+            
+                            Contact::where('id', $ContactId)->update([
+                                'success' => '0',
+                                'response' => json_encode($zoho_data),
+                                'attempt' => $row->attempt + 1,
+                            ]);
+            
+                        }
+            
+                    } 
+                }
+    
+    
+    
+    
+    
+    
+            }
+
 
         }
     }

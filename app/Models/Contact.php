@@ -23,5 +23,9 @@ class Contact extends Model
         'url',
         'section',
         'cv',
+        'response',
+        'attempt',
+        'success',
+
     ];
 }

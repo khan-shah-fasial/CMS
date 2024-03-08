@@ -283,7 +283,7 @@ class IndexController extends Controller
         $qualification = isset($contactData["qualification"]) ? $contactData["qualification"] : ' - ';
 
         // Create the contact record
-        Contact::create($contactData);
+        $contact = Contact::create($contactData);
 
         $user_data = json_decode(session('user_ip'), true);
 
@@ -351,8 +351,46 @@ class IndexController extends Controller
 
     
             if($token['access_token'] && $token['api_domain']){
-                
-                zoho_lead_create($access_token, $api_domain, $name, $email, $phone, $services, $description, $url, $state, $city);
+
+                // Remove newline characters and spaces
+                $description = str_replace(array("\n", "\r"), '', $description);
+
+                $zoho = zoho_lead_create($access_token, $api_domain, $name, $email, $phone, $services, $description, $url, $state, $city);
+
+                $zoho_response = json_decode($zoho);
+
+                if(isset($zoho_response->data)){
+                    $zoho_status = $zoho_response->data[0]->code;
+                } else {
+                    $zoho_status = '';
+                }
+
+                $zoho_data = [
+                    'zoho' => $zoho,
+                    'state' => $user_data['region'],
+                    'city' => $user_data['city'],
+                ];
+
+                // Get the ID of the newly created contact
+                $ContactId = $contact->id;
+
+                if($zoho_status == "SUCCESS"){
+
+                    Contact::where('id', $ContactId)->update([
+                        'success' => '1',
+                        'response' => json_encode($zoho_data),
+                        'attempt' => '0'
+                    ]);
+
+                } else {
+
+                    Contact::where('id', $ContactId)->update([
+                        'success' => '0',
+                        'response' => json_encode($zoho_data),
+                        'attempt' => '0'
+                    ]);
+
+                }
 
             }
     
@@ -515,6 +553,9 @@ class IndexController extends Controller
     {
         echo'hello';
     }
+
+
+
 
 
 }

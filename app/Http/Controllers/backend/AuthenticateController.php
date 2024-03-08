@@ -22,6 +22,7 @@ class AuthenticateController extends Controller
         $authenticated = Auth::guard('web')->attempt($request->only(['email', 'password']));
         if($authenticated)
         {
+            zoho_pending_lead();
             return redirect()->route('backend.dashboard');
         }
         else
