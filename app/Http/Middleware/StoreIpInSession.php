@@ -25,7 +25,7 @@ class StoreIpInSession
             $session_data = json_decode($user_ip, true);
 
 
-            if ( !isset($session_data["region"]) ) {
+            if (!isset($session_data["ip"])) {
                 
                 $user_ip = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
                 Session::put('user_ip', $user_ip);
@@ -38,7 +38,7 @@ class StoreIpInSession
             
             $session_data = json_decode(session('user_ip'), true);
 
-            if ( !isset($session_data["region"]) ) {
+            if (!isset($session_data["ip"])) {
           
                 $user_ip = '{ "ip": "none", "city": "none", "region": "none", "country": "none", "loc": "none", "postal": "none", "timezone": "none", "readme": "none" }';
                 Session::put('user_ip', $user_ip);
@@ -46,6 +46,6 @@ class StoreIpInSession
            
         } 
         
-        return $next($request);
+        return $next($request); 
     }
 }
